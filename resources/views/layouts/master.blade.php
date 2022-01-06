@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>@yield('title','AdminLTE 3 | Dashboard')</title>
+  <title>@yield('title','Database Persediaan')</title>
 
   {{-- CSS Class Content --}}
   @stack('custom-css')
