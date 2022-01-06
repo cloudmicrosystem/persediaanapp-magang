@@ -21,7 +21,7 @@ CRUD
             <th>Kategori</th>
             <th colspan="2">Aksi</th>
         </tr>
-            @foreach ($data as $key=>$value)
+            @foreach ($master_barang as $key=>$value)
                 <tr>
                     <td>{{ $value->nama_barang }}</td>
                     <td>{{ $value->harga_barang }}</td>

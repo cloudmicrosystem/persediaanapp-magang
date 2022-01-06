@@ -21,7 +21,7 @@ class ContohController extends Controller
         //SELECT * FROM barang where nama_barang = 'Tees Snow'
         //$data_condition = Barang::where("nama_barang", "=", "Tees Snow")->get();
 
-        return view('barang.index', compact('data'));
+        // return view('barang.index', compact('data'));
     }
 
     /**
@@ -32,7 +32,7 @@ class ContohController extends Controller
     public function create()
     {
         $model = new Barang;
-        return view('barang.create', compact('model'));
+        // return view('barang.create', compact('model'));
         //INSERT INTO barang (id_barang, nama_barang .....) VALUESS (.....)
         // $model = new Barang;
         // $model->nama_barang = "Jemper Colleage";
@@ -94,7 +94,7 @@ class ContohController extends Controller
         $model = Barang::find($id);
         //echo '<pre>'; print_r($id); die;
         //$model = DB::select('SELECT * FROM barang WHERE id_barang = 0'); //Find berartikan menemukan berdasarkan ID Primery key nya
-        return view('barang.edit', compact('model'));
+        // return view('barang.edit', compact('model'));
     }
 
     /**

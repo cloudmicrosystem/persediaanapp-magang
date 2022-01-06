@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PersediaanController extends Controller
 {
@@ -13,7 +14,9 @@ class PersediaanController extends Controller
      */
     public function index()
     {
-        //
+        $master_barang = DB::select('SELECT * FROM master_barang');
+
+        return view('barang.index')->with(compact('master_barang'));
     }
 
     /**

@@ -3,6 +3,8 @@
 use App\Http\Controllers\ContohController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PersediaanController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,26 +16,18 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/halo', function () {
-    return ('Hallo Yovie');
-});
-
 // Jenis HTTP: GET, POST, PUT & DELETE
-Route::get('/home', [HomeController::class, 'index']);
-Route::get('/home/show_html', [HomeController::class, 'show_html']);
-Route::get('/home/belajar_blade', [HomeController::class, 'belajar_blade']);
-Route::get('/home/layout', [HomeController::class, 'layout']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/show_html', [HomeController::class, 'show_html']);
+Route::get('/belajar_blade', [HomeController::class, 'belajar_blade']);
+Route::get('/layout', [HomeController::class, 'layout']);
 
-Route::get('/home/contoh', [HomeController::class, 'contoh']);
+Route::get('/contoh', [HomeController::class, 'contoh']);
 Route::get('/layouts/adminlte', [HomeController::class, 'adminlte']);
-Route::post('/home/contoh', [HomeController::class, 'contoh_post']);
+Route::post('/contoh', [HomeController::class, 'contoh_post']);
 
 //Untuk menyimpelkan memanggil berbagai fungsi
-Route::resource('contoh', ContohController::class);
+Route::resource('barang', PersediaanController::class);
 //Route get => contoh => index
 //Route get => contoh/create => create
 //Route post => contoh => post => store
