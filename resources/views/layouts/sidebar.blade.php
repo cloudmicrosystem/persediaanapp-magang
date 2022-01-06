@@ -45,7 +45,7 @@
               </li>
 
           <li class="nav-item">
-            <a href="/barang" class="nav-link">
+            <a href="barang" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Stok Barang
@@ -124,14 +124,6 @@
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Tambah Admin
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="barang" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Crud
               </p>
             </a>
           </li>

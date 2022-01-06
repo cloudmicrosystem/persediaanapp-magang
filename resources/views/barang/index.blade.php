@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-CRUD
+Stok Barang
 @endsection
 
 @section('content')
