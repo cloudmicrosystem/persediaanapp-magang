@@ -18,13 +18,6 @@ use App\Http\Controllers\PersediaanController;
 
 // Jenis HTTP: GET, POST, PUT & DELETE
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/show_html', [HomeController::class, 'show_html']);
-Route::get('/belajar_blade', [HomeController::class, 'belajar_blade']);
-Route::get('/layout', [HomeController::class, 'layout']);
-
-Route::get('/contoh', [HomeController::class, 'contoh']);
-Route::get('/layouts/adminlte', [HomeController::class, 'adminlte']);
-Route::post('/contoh', [HomeController::class, 'contoh_post']);
 
 //Untuk menyimpelkan memanggil berbagai fungsi
 Route::resource('barang', PersediaanController::class);
