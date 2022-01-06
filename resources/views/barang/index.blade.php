@@ -6,35 +6,37 @@ CRUD
 @section('content')
     <table class="table-bordered table">
         <br>
-        <a class="btn btn-info" href="{{ url ('contoh/create')}}">Tambah</a>
+        <a class="btn btn-info" href="{{ url ('barang/create')}}">Tambah</a>
         <br>
         <br>
         <tr>
+            <th>Code</th>
             <th>Nama</th>
             <th>Harga</th>
-            <th>Stock</th>
-            <th>ID Kategori</th>
-            <th>Keterangan</th>
+            <th>Ukuran</th>
+            <th>Deskripsi</th>
             <th>Gambar</th>
-            <th>Created at</th>
-            <th>Updated at</th>
-            <th>Kategori</th>
+            <th>Date Created</th>
+            <th>Created By</th>
+            <th>Date Updated</th>
+            <th>Updated By</th>
             <th colspan="2">Aksi</th>
         </tr>
             @foreach ($master_barang as $key=>$value)
                 <tr>
+                    <td>{{ $value->code_barang }}</td>
                     <td>{{ $value->nama_barang }}</td>
                     <td>{{ $value->harga_barang }}</td>
-                    <td>{{ $value->stok_barang }}</td>
-                    <td>{{ $value->id_kategori }}</td>
-                    <td>{{ $value->keterangan }}</td>
-                    <td>{{ $value->gambar }}</td>
-                    <td>{{ $value->created_at }}</td>
-                    <td>{{ $value->updated_at }}</td>
-                    <td>{{ $value->jenis_kategori }}</td>
-                    <td><a class="btn btn-info" href="{{ url('contoh/'.$value->id.'/edit') }}">Update</a></td></td>
+                    <td>{{ $value->ukuran_barang }}</td>
+                    <td>{{ $value->deskripsi_barang }}</td>
+                    <td>{{ $value->gambar_barang }}</td>
+                    <td>{{ $value->date_created }}</td>
+                    <td>{{ $value->created_by }}</td>
+                    <td>{{ $value->date_updated }}</td>
+                    <td>{{ $value->update_by }}</td>
+                    <td><a class="btn btn-info" href="{{ url('barang/'.$value->id.'/edit') }}">Update</a></td></td>
                     <td>
-                        <form action="{{ url('contoh/'.$value->id) }}" method="POST">
+                        <form action="{{ url('barang/'.$value->id) }}" method="POST">
                             @csrf
                             <input type="hidden" name="_method" value="DELETE">
                             <button class="btn btn-danger" type="submit">DELETE</button>

@@ -26,7 +26,9 @@ class PersediaanController extends Controller
      */
     public function create()
     {
-        //
+        $master_barang = DB::select('SELECT * FROM master_barang');
+
+        return view('barang.create')->with(compact('master_barang'));
     }
 
     /**
@@ -37,7 +39,12 @@ class PersediaanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // echo '<pre>'; print_r($request->code_barang); die;
+        DB::select("INSERT INTO master_barang(code_barang, nama_barang,harga_barang,ukuran_barang,deskripsi_barang, gambar_barang,
+        date_created,created_by,date_updated,update_by)
+        VALUE('$request->code_barang','$request->nama_barang','$request->harga_barang','$request->ukuran_barang','$request->deskripsi_barang','$request->gambar_barang',NOW(),'$request->created_by',NOW(),'$request->update_by')");
+
+        return redirect('barang');
     }
 
     /**
@@ -59,7 +66,9 @@ class PersediaanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $master_barang = DB::select('SELECT * FROM master_barang WHERE id =?', [$id]);
+
+        return view('barang.edit')->with(compact('master_barang'));
     }
 
     /**
@@ -71,7 +80,10 @@ class PersediaanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::select("UPDATE master_barang SET code_barang='$request->code_barang', nama_barang='$request->nama_barang', harga_barang='$request->harga_barang', ukuran_barang='$request->ukuran_barang', deskripsi_barang='$request->deskripsi_barang',gambar_barang='$request->gambar_barang', created_by='$request->created_by', update_by='$request->update_by'
+        WHERE id=$id");
+
+        return redirect('barang');
     }
 
     /**
@@ -82,6 +94,8 @@ class PersediaanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::select("DELETE FROM master_barang WHERE id=$id");
+
+        return redirect('barang');
     }
 }

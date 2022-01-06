@@ -2,19 +2,23 @@
 
 @section('content')
     <br>
-    <form method="POST" action="{{ url('contoh/' .$model->id) }}">
-        @csrf
-        <input type="hidden" name="_method" value="PATCH">
-        Nama : <input type="text" name="nama_barang" value="{{ $model->nama_barang }}"><br>
-        Harga : <input type="text" name="harga_barang" value="{{ $model->harga_barang }}"><br>
-        Stock : <input type="text" name="stok_barang" value="{{ $model->stok_barang }}"><br>
-        ID Kategori : <input type="text" name="id_kategori" value="{{ $model->id_kategori }}"><br>
-        Keterangan : <input type="text" name="keterangan" value="{{ $model->keterangan }}"><br>
-        Gambar : <input type="text" name="gambar" value="{{ $model->gambar }}"><br>
-        Created at : <input type="text" name="created_at" value="{{ $model->created_at }}"><br>
-        Updated at : <input type="text" name="updated_at" value="{{ $model->updated_at }}"><br>
-        Kategori : <input type="text" name="jenis_kategori" value="{{ $model->jenis_kategori }}"><br>
-        <br>
-        <button type="submit">SIMPAN</button>
-    </form>
+    {{-- @foreach ($master_barang as $key=>$value)
+    <tr>
+    </tr>
+@endforeach --}}
+
+<form method="POST" action="{{ url('barang', [$master_barang[0]->id]) }}" enctype="multipart/form-data">
+    @csrf
+    @method('PUT')
+    Code : <input type="text" name="code_barang" value="{{$master_barang[0]->code_barang}}"><br>
+    Nama : <input type="text" name="nama_barang" value="{{$master_barang[0]->nama_barang}}"><br>
+    Harga : <input type="text" name="harga_barang" value="{{$master_barang[0]->harga_barang}}"><br>
+    Ukuran : <input type="text" name="ukuran_barang" value="{{$master_barang[0]->ukuran_barang}}"><br>
+    Deskripsi : <input type="text" name="deskripsi_barang" value="{{$master_barang[0]->deskripsi_barang}}"><br>
+    Gambar : <input type="text" name="gambar_barang" value="{{$master_barang[0]->gambar_barang}}"><br>
+    Created By : <input type="text" name="created_by" value="{{$master_barang[0]->created_by}}"><br>
+    Updated By : <input type="text" name="update_by" value="{{$master_barang[0]->update_by}}"><br>
+    <br>
+    <button type="submit">SIMPAN</button>
+</form>
 @endsection
