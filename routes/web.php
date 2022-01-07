@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PersediaanController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VendorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/', [HomeController::class, 'index']);
 //Untuk menyimpelkan memanggil berbagai fungsi
 Route::resource('barang', PersediaanController::class);
 Route::resource('user', UserController::class);
+Route::resource('vendor', VendorController::class);
 //Route get => contoh => index
 //Route get => contoh/create => create
 //Route post => contoh => post => store
