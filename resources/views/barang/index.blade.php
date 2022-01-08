@@ -6,7 +6,7 @@ Stok Barang
 @section('content')
 
     <div class="container-fluid">
-        <div class="col-sm-9">
+        <div class="col-sm-12">
             <table class="table-bordered table">
                 <br>
                 <a class="btn btn-info" href="{{ url ('barang/create')}}">Tambah</a>

@@ -6,7 +6,7 @@ Database Vendor
 @section('content')
     <div class="container-fluid">
         <div class="col-sm-40">
-            <table class="table-bordered table">
+            <table class="table-bordered table table-responsive">
                 <br>
                 <a class="btn btn-info" href="{{ url ('vendor/create')}}">Tambah</a>
                 <br>

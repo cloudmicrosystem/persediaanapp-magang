@@ -1,21 +1,98 @@
 @extends('layouts.master')
-
-@section('content')
-    <br>
-    <form method="POST" action="{{ url('user') }}">
-        @csrf
-        Nama : <input type="text" name="nama" ><br>
-        Alamat : <input type="text" name="alamat" ><br>
-        Email : <input type="text" name="email" ><br>
-        No Hp : <input type="text" name="no_hp" ><br>
-        Jabatan : <input type="text" name="jabatan" ><br>
-        Username : <input type="text" name="username" ><br>
-        Password : <input type="text" name="password" ><br>
-        Date Created : <input type="text" name="date_created" ><br>
-        Created By : <input type="text" name="created_by" ><br>
-        Date Updated : <input type="text" name="date_updated" ><br>
-        Updated By : <input type="text" name="update_by" ><br>
-        <br>
-        <button type="submit">SIMPAN</button>
-    </form>
+@section('title')
+Tambah Customer
 @endsection
+@section('content')
+
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- jquery validation -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Form Customer</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form id="quickForm"  method="POST" action="{{ url('user') }}">
+                @csrf
+                <div class="card-body">
+                <div class="form-group">
+                  <label >Nama</label>
+                  <input type="text" name="nama" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Alamat</label>
+                  <input type="text" name="alamat" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="text" name="email" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>No Hp</label>
+                  <input type="text" name="no_hp" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Jabatan</label>
+                  <input type="text" name="jabatan" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" name="username" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="text" name="password" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Date Created</label>
+                  <input type="text" name="date_created" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Created By</label>
+                  <input type="text" name="created_by" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Date Created</label>
+                  <input type="text" name="date_updated" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>Updated By </label>
+                    <input type="text" name="update_by" class="form-control" >
+                  </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
+          </div>
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-6">
+
+        </div>
+        <!--/.col (right) -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
