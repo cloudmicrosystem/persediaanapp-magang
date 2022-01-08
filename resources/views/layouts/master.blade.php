@@ -50,7 +50,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    @yield('content');
+    @yield('content')
     <!-- /.content -->
   </div>
 
