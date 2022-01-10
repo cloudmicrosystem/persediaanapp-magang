@@ -1,12 +1,6 @@
 <?php
 
-use App\Http\Controllers\ContohController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PersediaanController;
-use App\Http\Controllers\TransMasukController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\VendorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +13,10 @@ use App\Http\Controllers\VendorController;
 |
 */
 
-// Jenis HTTP: GET, POST, PUT & DELETE
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', [HomeController::class, 'index']);
 
 //Untuk menyimpelkan memanggil berbagai fungsi
@@ -28,12 +25,13 @@ Route::resource('user', UserController::class);
 Route::resource('vendors', VendorController::class);
 Route::resource('transmasuk', TransMasukController::class);
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-//Route get => contoh => index
-//Route get => contoh/create => create
-//Route post => contoh => post => store
-//Route get => contoh/{id} => show
-//Route put /patch=> contoh/{id} => update
-//Route delete => contoh/{id} => delete
-//Route get => contoh/{id}/edit => edit
+require __DIR__.'/auth.php';
+
+
+
+
 
