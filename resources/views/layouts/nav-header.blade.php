@@ -11,6 +11,18 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+            <form method='POST' action="{{ route('logout') }}">
+                @csrf
+                <button>
+                    <link :href="route('logout')"
+                    onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                    {{ __('Log Out') }}
+                    </link>
+                </button>
+            </form>
+      </li>
     </ul>
 
     <!-- Right navbar links -->

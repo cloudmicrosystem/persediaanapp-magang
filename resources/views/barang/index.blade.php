@@ -18,13 +18,13 @@ Stok Barang
                     <th>Ukuran</th>
                     <th>Deskripsi</th>
                     <th>Gambar</th>
-                    <th>Date Created</th>
                     <th>Created By</th>
-                    <th>Date Updated</th>
                     <th>Updated By</th>
+                    <th>Date Created</th>
+                    <th>Date Updated</th>
                     <th colspan="2">Aksi</th>
                 </tr>
-                    @foreach ($master_barang as $key=>$value)
+                    @foreach ($barang as $key=>$value)
                         <tr>
                             <td>{{ $value->code_barang }}</td>
                             <td>{{ $value->nama_barang }}</td>
@@ -32,11 +32,11 @@ Stok Barang
                             <td>{{ $value->ukuran_barang }}</td>
                             <td>{{ $value->deskripsi_barang }}</td>
                             <td><img src="{{ asset('storage/barang/'.$value->gambar_barang) }}" width=100px height=auto/></td>
-                            <td>{{ $value->date_created }}</td>
                             <td>{{ $value->created_by }}</td>
-                            <td>{{ $value->date_updated }}</td>
                             <td>{{ $value->update_by }}</td>
-                            <td><a class="btn btn-info" href="{{ url('barang/'.$value->id.'/edit') }}">Update</a></td></td>
+                            <td>{{ $value->created_at }}</td>
+                            <td>{{ $value->updated_at }}</td>
+                            <td><a class="btn btn-info" href="{{ url('barang/'.$value->id.'/edit') }}">Update</a></td>
                             <td>
                                 <form action="{{ url('barang/'.$value->id) }}" method="POST">
                                     @csrf

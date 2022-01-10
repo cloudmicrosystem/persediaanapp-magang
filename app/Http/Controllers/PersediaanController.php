@@ -14,9 +14,9 @@ class PersediaanController extends Controller
      */
     public function index()
     {
-        $master_barang = DB::select('SELECT * FROM master_barang');
+        $barang = DB::select('SELECT * FROM barang');
 
-        return view('barang.index')->with(compact('master_barang'));
+        return view('barang.index')->with(compact('barang'));
     }
 
     /**
@@ -26,9 +26,9 @@ class PersediaanController extends Controller
      */
     public function create()
     {
-        $master_barang = DB::select('SELECT * FROM master_barang');
+        $barang = DB::select('SELECT * FROM barang');
 
-        return view('barang.create')->with(compact('master_barang'));
+        return view('barang.create')->with(compact('barang'));
     }
 
     /**
@@ -61,9 +61,30 @@ class PersediaanController extends Controller
             $gambar_barang = null;
         }
 
-        DB::select("INSERT INTO master_barang(code_barang, nama_barang,harga_barang,ukuran_barang,deskripsi_barang, gambar_barang,
-        date_created,created_by,date_updated,update_by)
-        VALUE('$request->code_barang','$request->nama_barang','$request->harga_barang','$request->ukuran_barang','$request->deskripsi_barang','$gambar_barang','$request->date_created','$request->created_by','$request->date_updated','$request->update_by')");
+        DB::select("INSERT INTO barang(
+            code_barang,
+            nama_barang,
+            harga_barang,
+            ukuran_barang,
+            deskripsi_barang,
+            gambar_barang,
+            created_by,
+            update_by,
+            created_at,
+            updated_at
+            )
+        VALUE(
+        '$request->code_barang',
+        '$request->nama_barang',
+        '$request->harga_barang',
+        '$request->ukuran_barang',
+        '$request->deskripsi_barang',
+        '$gambar_barang',
+        '$request->created_by',
+        '$request->update_by',
+        '$request->created_at',
+        '$request->updated_at'
+        )");
 
         return redirect('barang')->with('toast_success', 'Data Berhasil Disimpan');
     }
@@ -87,9 +108,9 @@ class PersediaanController extends Controller
      */
     public function edit($id)
     {
-        $master_barang = DB::select('SELECT * FROM master_barang WHERE id =?', [$id]);
+        $barang = DB::select('SELECT * FROM barang WHERE id =?', [$id]);
 
-        return view('barang.edit')->with(compact('master_barang'));
+        return view('barang.edit')->with(compact('barang'));
     }
 
     /**
@@ -102,7 +123,7 @@ class PersediaanController extends Controller
     public function update(Request $request, $id)
     {
         // echo '<pre>'; print_r($request->code_barang); die;
-        $master_barang = DB::select('SELECT * FROM master_barang WHERE id=?', [$id]);
+        $barang = DB::select('SELECT * FROM barang WHERE id=?', [$id]);
         // dd($master_barang);
         // Validation
         $request->validate([
@@ -120,11 +141,22 @@ class PersediaanController extends Controller
             $file->move($location,$gambar_barang);
             // die;
         }else{
-            $gambar_barang = $master_barang[0]->gambar_barang;
+            $gambar_barang = $barang[0]->gambar_barang;
         }
 
-        DB::select("UPDATE master_barang SET code_barang='$request->code_barang', nama_barang='$request->nama_barang', harga_barang='$request->harga_barang', ukuran_barang='$request->ukuran_barang', deskripsi_barang='$request->deskripsi_barang',gambar_barang='$gambar_barang', date_created='$request->date_created',created_by='$request->created_by', date_updated='$request->date_updated',update_by='$request->update_by'
-        WHERE id=$id");
+        DB::select("UPDATE barang SET
+        code_barang='$request->code_barang',
+        nama_barang='$request->nama_barang',
+        harga_barang='$request->harga_barang',
+        ukuran_barang='$request->ukuran_barang',
+        deskripsi_barang='$request->deskripsi_barang',
+        gambar_barang='$gambar_barang',
+        created_by='$request->created_by',
+        update_by='$request->update_by',
+        created_at='$request->created_at',
+        updated_at='$request->updated_at'
+        WHERE id=$id
+        ");
 
         return redirect('barang')->with('toast_success', 'Data Berhasil Diupdate');
     }
@@ -137,7 +169,7 @@ class PersediaanController extends Controller
      */
     public function destroy($id)
     {
-        DB::select("DELETE FROM master_barang WHERE id=$id");
+        DB::select("DELETE FROM barang WHERE id=$id");
 
         return redirect('barang')->with('toast_success', 'Data Berhasil Dihapus');
     }

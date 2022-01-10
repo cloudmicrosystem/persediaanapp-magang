@@ -29,7 +29,7 @@ Tambah Stok Barang
                 </div>
                 <div class="form-group">
                   <label>Harga</label>
-                  <input type="text" name="harga_barang" class="form-control" >
+                  <input type="number" name="harga_barang" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Ukuran</label>
@@ -44,21 +44,21 @@ Tambah Stok Barang
                   <input type="file" name="gambar_barang" class="form-control" accept="image/*">
                 </div>
                 <div class="form-group">
-                  <label>Data Created</label>
-                  <input type="date" name="date_created" class="form-control" >
-                </div>
-                <div class="form-group">
                   <label>Created By</label>
                   <input type="text" name="created_by" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Date Updated</label>
-                  <input type="date" name="date_updated" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Updated By</label>
                   <input type="text" name="update_by" class="form-control" >
                 </div>
+                <div class="form-group">
+                    <label>Date Created</label>
+                    <input type="date" name="created_at" class="form-control" >
+                  </div>
+                  <div class="form-group">
+                    <label>Date Updated By</label>
+                    <input type="date" name="updated_at" class="form-control" >
+                  </div>
               </div>
               <!-- /.card-body -->
               <div class="card-footer">

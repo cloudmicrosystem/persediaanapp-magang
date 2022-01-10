@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PersediaanController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\VendorController;
+use App\Http\Controllers\TransMasukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,22 +21,17 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-Route::get('/', [HomeController::class, 'index']);
+require __DIR__ . '/auth.php';
 
-//Untuk menyimpelkan memanggil berbagai fungsi
-Route::resource('barang', PersediaanController::class);
-Route::resource('user', UserController::class);
-Route::resource('vendors', VendorController::class);
-Route::resource('transmasuk', TransMasukController::class);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-
-
-
-
-
+Route::middleware(['auth'])->group(function () {
+    //Untuk menyimpelkan memanggil berbagai fungsi
+    Route::get('/', [HomeController::class, 'index']);
+    Route::resource('barang', PersediaanController::class);
+    Route::resource('user', UserController::class);
+    Route::resource('vendors', VendorController::class);
+    Route::resource('transmasuk', TransMasukController::class);
+});

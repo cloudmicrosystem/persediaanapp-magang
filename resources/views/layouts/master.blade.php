@@ -57,6 +57,8 @@
   <!-- /.content-wrapper -->
   @include('layouts.footer')
   @include('sweetalert::alert')
+
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-d ark">
     <!-- Control sidebar content goes here -->

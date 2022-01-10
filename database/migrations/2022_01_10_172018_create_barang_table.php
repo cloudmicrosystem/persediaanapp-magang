@@ -13,16 +13,17 @@ class CreateBarangTable extends Migration
      */
     public function up()
     {
-        //schema sama dengan table
         Schema::create('barang', function (Blueprint $table) {
-            $table->id('id'); //id, primary key, auto increment
+            $table->id();
+            $table->integer('code_barang');
             $table->string('nama_barang');
-            $table->double('harga_barang');
-            $table->double('stok_barang');
-            $table->integer('id_kategori');
-            $table->string('keterangan');
-            $table->string('gambar');
-            $table->timestamps(); //created_at, updated_at, type timestamp(sesuai dengan waktu yang diisikan)
+            $table->decimal('harga_barang');
+            $table->string('ukuran_barang');
+            $table->string('deskripsi_barang');
+            $table->string('gambar_barang');
+            $table->string('created_by');
+            $table->string('update_by');
+            $table->timestamps();
         });
     }
 
