@@ -94,7 +94,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="vendor" class="nav-link">
+            <a href="vendors" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Database Vendor

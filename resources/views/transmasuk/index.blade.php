@@ -61,27 +61,27 @@ Transaksi Masuk
         <div class="modal-body">
             <form action="/action_page.php">
                 <div class="form-group">
-                  <label >Id Barang:</label>
+                  <label >Id Barang</label>
                   <input type="text" class="form-control" id="usr" name="username">
                 </div>
                 <div class="form-group">
-                  <label >Nama Barang:</label>
+                  <label >Nama Barang</label>
                   <input type="text" class="form-control" id="pwd" name="text">
                 </div>
                 <div class="form-group">
-                    <label >Qty:</label>
+                    <label >Qty</label>
                     <input type="text" class="form-control" id="pwd" name="text">
                   </div>
                   <div class="form-group">
-                    <label >Harga:</label>
+                    <label >Harga</label>
                     <input type="text" class="form-control" id="pwd" name="text">
                   </div>
                   <div class="form-group">
-                    <label >Diskon:</label>
+                    <label >Diskon</label>
                     <input type="text" class="form-control" id="pwd" name="text">
                   </div>
                   <div class="form-group">
-                    <label >Keterangan:</label>
+                    <label >Keterangan</label>
                     <input type="text" class="form-control" id="pwd" name="text">
                   </div>
               </form>

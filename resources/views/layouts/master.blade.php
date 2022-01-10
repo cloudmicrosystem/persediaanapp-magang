@@ -56,7 +56,7 @@
 
   <!-- /.content-wrapper -->
   @include('layouts.footer')
-
+  @include('sweetalert::alert')
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-d ark">
     <!-- Control sidebar content goes here -->
@@ -72,5 +72,6 @@
 <script src="{{ asset('') }}assets/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
+
 </body>
 </html>

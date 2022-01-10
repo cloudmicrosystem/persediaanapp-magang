@@ -25,7 +25,7 @@ Route::get('/', [HomeController::class, 'index']);
 //Untuk menyimpelkan memanggil berbagai fungsi
 Route::resource('barang', PersediaanController::class);
 Route::resource('user', UserController::class);
-Route::resource('vendor', VendorController::class);
+Route::resource('vendors', VendorController::class);
 Route::resource('transmasuk', TransMasukController::class);
 
 
