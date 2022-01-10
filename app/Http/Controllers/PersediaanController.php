@@ -65,7 +65,7 @@ class PersediaanController extends Controller
         date_created,created_by,date_updated,update_by)
         VALUE('$request->code_barang','$request->nama_barang','$request->harga_barang','$request->ukuran_barang','$request->deskripsi_barang','$gambar_barang','$request->date_created','$request->created_by','$request->date_updated','$request->update_by')");
 
-        return redirect('barang');
+        return redirect('barang')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -126,7 +126,7 @@ class PersediaanController extends Controller
         DB::select("UPDATE master_barang SET code_barang='$request->code_barang', nama_barang='$request->nama_barang', harga_barang='$request->harga_barang', ukuran_barang='$request->ukuran_barang', deskripsi_barang='$request->deskripsi_barang',gambar_barang='$gambar_barang', date_created='$request->date_created',created_by='$request->created_by', date_updated='$request->date_updated',update_by='$request->update_by'
         WHERE id=$id");
 
-        return redirect('barang');
+        return redirect('barang')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -139,6 +139,6 @@ class PersediaanController extends Controller
     {
         DB::select("DELETE FROM master_barang WHERE id=$id");
 
-        return redirect('barang');
+        return redirect('barang')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

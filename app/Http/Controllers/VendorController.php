@@ -16,7 +16,7 @@ class VendorController extends Controller
     {
         $master_vendor = DB::select('SELECT * FROM master_vendor');
 
-        return view('vendor.index')->with(compact('master_vendor'));
+        return view('vendors.index')->with(compact('master_vendor'));
     }
 
     /**
@@ -28,7 +28,7 @@ class VendorController extends Controller
     {
         $master_vendor = DB::select('SELECT * FROM master_vendor');
 
-        return view('vendor.create')->with(compact('master_vendor'));
+        return view('vendors.create')->with(compact('master_vendor'));
     }
 
     /**
@@ -42,7 +42,7 @@ class VendorController extends Controller
         DB::select(" INSERT INTO master_vendor (nama_vendor,email_vendor,no_hp_vendor,alamat_vendor,date_created,created_by,date_updated,updated_by)
         VALUE('$request->nama_vendor','$request->email_vendor','$request->no_hp_vendor','$request->alamat_vendor','$request->date_created','$request->created_by','$request->date_updated','$request->updated_by')");
 
-        return redirect('vendor');
+        return redirect('vendors')->with('toast_success', 'Data Berhasil Ditambah');
     }
 
 
@@ -67,7 +67,7 @@ class VendorController extends Controller
     {
         $master_vendor = DB::select('SELECT * FROM master_vendor WHERE id =?', [$id]);
 
-        return view('vendor.edit')->with(compact('master_vendor'));
+        return view('vendors.edit')->with(compact('master_vendor'));
     }
 
     /**
@@ -91,7 +91,7 @@ class VendorController extends Controller
         updated_by='$request->updated_by'
         WHERE id=$id");
 
-        return redirect('vendor');
+        return redirect('vendors')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -104,6 +104,6 @@ class VendorController extends Controller
     {
         DB::select("DELETE FROM master_vendor WHERE id=$id");
 
-        return redirect('vendor');
+        return redirect('vendors')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

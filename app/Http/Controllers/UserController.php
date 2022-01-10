@@ -41,7 +41,7 @@ class UserController extends Controller
         VALUE('$request->nama','$request->alamat','$request->email','$request->no_hp','$request->jabatan','$request->username',
         '$request->password','$request->date_created','$request->created_by','$request->date_updated','$request->update_by')");
 
-        return redirect('user');
+        return redirect('user')->with('toast_success', 'Data Berhasil Ditambah');
     }
 
     /**
@@ -92,7 +92,7 @@ class UserController extends Controller
         WHERE id=$id
         ");
 
-        return redirect('user');
+        return redirect('user')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -105,6 +105,6 @@ class UserController extends Controller
     {
         DB::select("DELETE FROM master_user WHERE id=$id");
 
-       return redirect('user');
+       return redirect('user')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

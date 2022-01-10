@@ -8,7 +8,6 @@ Stok Barang
     <div class="container-fluid">
         <div class="col-sm-12">
             <table class="table-bordered table table-responsive">
-                <br>
                 <a class="btn btn-info" href="{{ url ('barang/create')}}">Tambah</a>
                 <br>
                 <br>
