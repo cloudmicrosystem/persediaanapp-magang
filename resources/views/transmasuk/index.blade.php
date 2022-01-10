@@ -24,6 +24,7 @@ Transaksi Masuk
 
         {{-- dropdown --}}
       <label>Vendor :</label>
+      <br>
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
           Dropdown button
@@ -35,14 +36,14 @@ Transaksi Masuk
           <span class="dropdown-item-text">Just Text</span>
         </div>
       </div>
-
+      <br/>
       {{-- default --}}
       <label>Tanggal :</label>
-      <input type="date" class="form-control" name="email">
+      <input type="date" class="form-control" name="update_add" value="2022-01-10">
     </p>
     </div>
     <!-- Button to Open the Modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
     Add Item
   </button>
 
@@ -66,7 +67,16 @@ Transaksi Masuk
                 </div>
                 <div class="form-group">
                   <label >Nama Barang</label>
-                  <input type="text" class="form-control" id="pwd" name="text">
+                  <br/>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Dropdown Namabarang
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item-text" href="#">Text Link</a>
+                    <span class="dropdown-item-text">Just Text</span>
+                  </div>
                 </div>
                 <div class="form-group">
                     <label >Qty</label>
