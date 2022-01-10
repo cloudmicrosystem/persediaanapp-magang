@@ -33,11 +33,11 @@ Tambah Customer
                 </div>
                 <div class="form-group">
                   <label>No Hp</label>
-                  <input type="text" name="no_hp" class="form-control" >
+                  <input type="number" name="no_hp" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Jabatan</label>
-                  <input type="text" name="jabatan" class="form-control" >
+                  <input type="number" name="jabatan" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Username</label>
@@ -49,7 +49,7 @@ Tambah Customer
                 </div>
                 <div class="form-group">
                   <label>Date Created</label>
-                  <input type="text" name="date_created" class="form-control" >
+                  <input type="date" name="date_created" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Created By</label>
@@ -57,7 +57,7 @@ Tambah Customer
                 </div>
                 <div class="form-group">
                   <label>Date Created</label>
-                  <input type="text" name="date_updated" class="form-control" >
+                  <input type="date" name="date_updated" class="form-control" >
                 </div>
                 <div class="form-group">
                     <label>Updated By </label>

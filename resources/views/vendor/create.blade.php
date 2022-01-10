@@ -29,7 +29,7 @@ Tambah Vendor
                 </div>
                 <div class="form-group">
                   <label>No Hp</label>
-                  <input type="text" name="no_hp_vendor" class="form-control" >
+                  <input type="number" name="no_hp_vendor" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Alamat</label>
@@ -37,15 +37,15 @@ Tambah Vendor
                 </div>
                 <div class="form-group">
                   <label>Date Created</label>
-                  <input type="text" name="date_created" class="form-control" >
+                  <input type="date" name="date_created" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Created By</label>
                   <input type="text" name="created_by" class="form-control" >
                 </div>
                 <div class="form-group">
-                  <label>Date Created</label>
-                  <input type="text" name="date_updated" class="form-control" >
+                  <label>Date Updated</label>
+                  <input type="date" name="date_updated" class="form-control" >
                 </div>
                 <div class="form-group">
                     <label>Updated By </label>

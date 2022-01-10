@@ -7,7 +7,7 @@ Stok Barang
 
     <div class="container-fluid">
         <div class="col-sm-12">
-            <table class="table-bordered table">
+            <table class="table-bordered table table-responsive">
                 <br>
                 <a class="btn btn-info" href="{{ url ('barang/create')}}">Tambah</a>
                 <br>
@@ -29,10 +29,10 @@ Stok Barang
                         <tr>
                             <td>{{ $value->code_barang }}</td>
                             <td>{{ $value->nama_barang }}</td>
-                            <td>{{ $value->harga_barang }}</td>
+                            <td>Rp {{ $value->harga_barang }} </td>
                             <td>{{ $value->ukuran_barang }}</td>
                             <td>{{ $value->deskripsi_barang }}</td>
-                            <td>{{ $value->gambar_barang }}</td>
+                            <td><img src="{{ asset('storage/barang/'.$value->gambar_barang) }}" width=100px height=auto/></td>
                             <td>{{ $value->date_created }}</td>
                             <td>{{ $value->created_by }}</td>
                             <td>{{ $value->date_updated }}</td>

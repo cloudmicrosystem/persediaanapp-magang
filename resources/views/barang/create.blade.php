@@ -16,12 +16,12 @@ Tambah Stok Barang
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form id="quickForm"  method="POST" action="{{ url('barang') }}">
+            <form id="quickForm"  method="POST" action="{{ route('barang.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                 <div class="form-group">
                   <label >Code </label>
-                  <input type="text" name="code_barang" class="form-control" >
+                  <input type="number" name="code_barang" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Nama</label>
@@ -45,7 +45,7 @@ Tambah Stok Barang
                 </div>
                 <div class="form-group">
                   <label>Data Created</label>
-                  <input type="text" name="date_created" class="form-control" >
+                  <input type="date" name="date_created" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Created By</label>
@@ -53,7 +53,7 @@ Tambah Stok Barang
                 </div>
                 <div class="form-group">
                   <label>Date Updated</label>
-                  <input type="text" name="date_updated" class="form-control" >
+                  <input type="date" name="date_updated" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Updated By</label>

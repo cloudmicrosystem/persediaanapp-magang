@@ -22,7 +22,7 @@ Update Stok Barang
                 <div class="card-body">
                 <div class="form-group">
                   <label >Code </label>
-                  <input type="text" name="code_barang"  value="{{$master_barang[0]->code_barang}}" class="form-control" >
+                  <input type="number" name="code_barang"  value="{{$master_barang[0]->code_barang}}" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Nama</label>
@@ -42,11 +42,11 @@ Update Stok Barang
                 </div>
                 <div class="form-group">
                   <label>Gambar</label>
-                  <input type="text" name="gambar_barang" value="{{$master_barang[0]->gambar_barang}}" class="form-control" >
+                  <input type="file" name="gambar_barang" accept="image/*" value="{{$master_barang[0]->gambar_barang}}" class="form-control"  >
                 </div>
                 <div class="form-group">
                   <label>Data Created</label>
-                  <input type="text" name="date_created" value="{{$master_barang[0]->date_created}}" class="form-control" >
+                  <input type="date" name="date_created" value="{{$master_barang[0]->date_created}}" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Created By</label>
@@ -54,7 +54,7 @@ Update Stok Barang
                 </div>
                 <div class="form-group">
                   <label>Date Updated</label>
-                  <input type="text" name="date_updated" value="{{$master_barang[0]->date_updated}}" class="form-control" >
+                  <input type="date" name="date_updated" value="{{$master_barang[0]->date_updated}}" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Updated By</label>
