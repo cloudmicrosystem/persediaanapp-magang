@@ -21,10 +21,22 @@ Transaksi Masuk
   <form action="/action_page.php">
 
     <div class="form-group">
-        <p></p>
-      <label>Vendor :</label>
-      <input type="text" class="form-control" placeholder="Nama Vendor " name="email">
 
+        {{-- dropdown --}}
+      <label>Vendor :</label>
+      <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item-text" href="#">Text Link</a>
+          <span class="dropdown-item-text">Just Text</span>
+        </div>
+      </div>
+
+      {{-- default --}}
       <label>Tanggal :</label>
       <input type="date" class="form-control" name="email">
     </p>
