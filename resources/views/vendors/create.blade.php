@@ -36,22 +36,25 @@ Tambah Vendor
                   <input type="text" name="alamat_vendor" class="form-control" >
                 </div>
                 <div class="form-group">
-                  <label>Date Created</label>
-                  <input type="date" name="date_created" class="form-control" >
-                </div>
-                <div class="form-group">
                   <label>Created By</label>
                   <input type="text" name="created_by" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Date Updated</label>
-                  <input type="date" name="date_updated" class="form-control" >
                 </div>
                 <div class="form-group">
                     <label>Updated By </label>
                     <input type="text" name="updated_by" class="form-control" >
                   </div>
               </div>
+              <div class="form-group">
+                <label>Date Created </label>
+                <input type="date" name="created_at" class="form-control" >
+              </div>
+          </div>
+          <div class="form-group">
+            <label>Date Updated</label>
+            <input type="date" name="updated_at" class="form-control" >
+          </div>
+      </div>
+
               <!-- /.card-body -->
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>

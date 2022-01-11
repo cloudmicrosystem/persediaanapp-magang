@@ -20,13 +20,13 @@ Database Customer
                     <th>Jabatan</th>
                     <th>Username</th>
                     <th>Password</th>
-                    <th>Date Created</th>
                     <th>Created By</th>
-                    <th>Date Updated</th>
                     <th>Updated By</th>
+                    <th>Date Created</th>
+                    <th>Date Updated</th>
                     <th colspan="2">Aksi</th>
                 </tr>
-                    @foreach ($master_user as $key=>$value)
+                    @foreach ($users as $key=>$value)
                         <tr>
                             <td>{{ $value->nama }}</td>
                             <td>{{ $value->alamat }}</td>
@@ -35,10 +35,10 @@ Database Customer
                             <td>{{ $value->jabatan }}</td>
                             <td>{{ $value->username }}</td>
                             <td>{{ $value->password }}</td>
-                            <td>{{ $value->date_created }}</td>
                             <td>{{ $value->created_by }}</td>
-                            <td>{{ $value->date_updated }}</td>
-                            <td>{{ $value->update_by }}</td>
+                            <td>{{ $value->updated_by }}</td>
+                            <td>{{ $value->created_at }}</td>
+                            <td>{{ $value->updated_at }}</td>
                             <td><a class="btn btn-info" href="{{ url('user/'.$value->id.'/edit') }}">Update</a></td></td>
                             <td>
                                 <form action="{{ url('user/'.$value->id) }}" method="POST">

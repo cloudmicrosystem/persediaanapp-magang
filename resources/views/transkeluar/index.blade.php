@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Transaksi Masuk
+Transaksi Keluar
 @endsection
 
 @section('content')
@@ -23,7 +23,7 @@ Transaksi Masuk
     <div class="form-group">
 
         {{-- dropdown --}}
-      <label>Vendor</label>
+      <label>Customer</label>
       <br>
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -117,14 +117,14 @@ Transaksi Masuk
             <br>
 
             <tr>
-                <th>Id Vendor </th>
-                <th>Id_barang</th>
+                <th>Id_barang </th>
                 <th>Nama Barang</th>
                 <th>Qty</th>
                 <th>Harga</th>
                 <th>Diskon</th>
                 <th>Keterangan</th>
-
+                <th>Date Created</th>
+                <th>Date Update</th>
                 {{-- <th colspan="2">Aksi</th> --}}
             </tr>
                 {{-- @foreach ($master_vendor as $key=>$value)

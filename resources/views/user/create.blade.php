@@ -37,7 +37,7 @@ Tambah Customer
                 </div>
                 <div class="form-group">
                   <label>Jabatan</label>
-                  <input type="number" name="jabatan" class="form-control" >
+                  <input type="text" name="jabatan" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Username</label>
@@ -48,28 +48,30 @@ Tambah Customer
                   <input type="text" name="password" class="form-control" >
                 </div>
                 <div class="form-group">
-                  <label>Date Created</label>
-                  <input type="date" name="date_created" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Created By</label>
-                  <input type="text" name="created_by" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Date Created</label>
-                  <input type="date" name="date_updated" class="form-control" >
-                </div>
-                <div class="form-group">
-                    <label>Updated By </label>
-                    <input type="text" name="update_by" class="form-control" >
+                    <label>Created By</label>
+                    <input type="text" name="created_by" class="form-control" >
                   </div>
-              </div>
+                  <div class="form-group">
+                      <label>Updated By </label>
+                      <input type="text" name="updated_by" class="form-control" >
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label>Date Created </label>
+                  <input type="date" name="created_at" class="form-control" >
+                </div>
+                </div>
+                <div class="form-group">
+                      <label>Date Updated</label>
+                       <input type="date" name="updated_at" class="form-control" >
+                   </div>
+                 </div>
               <!-- /.card-body -->
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>
-              </div>
-            </form>
-          </div>
+             </div>
+        </form>
+    </div>
           <!-- /.card -->
           </div>
         <!--/.col (left) -->

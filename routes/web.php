@@ -6,6 +6,7 @@ use App\Http\Controllers\PersediaanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\TransMasukController;
+use App\Http\Controllers\TransKeluarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('user', UserController::class);
     Route::resource('vendors', VendorController::class);
     Route::resource('transmasuk', TransMasukController::class);
+    Route::resource('transkeluar', TransKeluarController::class);
 });
