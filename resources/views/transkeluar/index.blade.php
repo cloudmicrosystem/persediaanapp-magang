@@ -99,7 +99,7 @@ Transaksi Keluar
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button  class="btn btn-primary" data-dismiss="modal">Add</button>
+          <button  class="btn btn-primary" data-dismiss="modal" >Add</button>
         </div>
     </div>
 </div>
@@ -127,26 +127,26 @@ Transaksi Keluar
                 <th>Date Update</th>
                 {{-- <th colspan="2">Aksi</th> --}}
             </tr>
-                {{-- @foreach ($master_vendor as $key=>$value)
+                @foreach ($detail_transbarang_keluar as $key=>$value)
                     <tr>
-                        <td>{{ $value->nama_vendor }}</td>
-                        <td>{{ $value->email_vendor }}</td>
-                        <td>{{ $value->no_hp_vendor }}</td>
-                        <td>{{ $value->alamat_vendor }}</td>
-                        <td>{{ $value->date_created }}</td>
-                        <td>{{ $value->created_by }}</td>
-                        <td>{{ $value->date_updated }}</td>
-                        <td>{{ $value->updated_by }}</td>
-                        <td><a class="btn btn-info" href="{{ url('vendor/'.$value->id.'/edit') }}">Update</a></td></td>
+                        <td>{{ $value->id_barang }}</td>
+                        <td>{{ $value->nama_barang }}</td>
+                        <td>{{ $value->qty }}</td>
+                        <td>{{ $value->harga }}</td>
+                        <td>{{ $value->diskon }}</td>
+                        <td>{{ $value->keterangan }}</td>
+                        <td>{{ $value->created_at }}</td>
+                        <td>{{ $value->updated_at }}</td>
+                        {{-- <td><a class="btn btn-info" href="{{ url('vendor/'.$value->id.'/edit') }}">Update</a></td></td>
                         <td>
                             <form action="{{ url('vendor/'.$value->id) }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button class="btn btn-danger" type="submit">DELETE</button>
                             </form>
-                        </td>
+                        </td> --}}
                     </tr>
-                @endforeach --}}
+                @endforeach
         </table>
     </div>
 </div>

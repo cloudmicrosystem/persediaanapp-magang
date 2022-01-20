@@ -8,7 +8,7 @@ Database Admin
         <div class="col-sm-0">
             <table class="table-bordered table table-responsive">
                 <br>
-                <a class="btn btn-info" href="{{ url ('admin/create')}}">Tambah</a>
+                <a class="btn btn-info" href="{{ url ('admin/create')}}"><i class='fas fa-plus'></a>
 
                 <br>
                 <br>

@@ -60,11 +60,12 @@ Transaksi Masuk
 
         <!-- Isi Modal -->
         <div class="modal-body">
-            <form action="/action_page.php">
-                <div class="form-group">
+            <form action="/action_page.php" id="quickForm"  method="POST" >
+                @csrf
+                {{-- <div class="form-group">
                   <label >Id Barang</label>
-                  <input type="text" class="form-control" id="usr" name="username">
-                </div>
+                  <input type="text" class="form-control"  name="id_barang">
+                </div> --}}
                 <div class="form-group">
                   <label >Nama Barang</label>
                   <br/>
@@ -80,26 +81,26 @@ Transaksi Masuk
                 </div>
                 <div class="form-group">
                     <label >Qty</label>
-                    <input type="text" class="form-control" id="pwd" name="text">
+                    <input type="text" class="form-control"  name="qty">
                   </div>
                   <div class="form-group">
                     <label >Harga</label>
-                    <input type="text" class="form-control" id="pwd" name="text">
+                    <input type="text" class="form-control"  name="harga">
                   </div>
-                  <div class="form-group">
+                  {{-- <div class="form-group">
                     <label >Diskon</label>
                     <input type="text" class="form-control" id="pwd" name="text">
-                  </div>
+                  </div> --}}
                   <div class="form-group">
                     <label >Keterangan</label>
-                    <input type="text" class="form-control" id="pwd" name="text">
+                    <input type="text" class="form-control"  name="keterangan">
                   </div>
               </form>
         </div>
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button  class="btn btn-primary" data-dismiss="modal">Add</button>
+          <button  class="btn btn-primary" button type="submit" data-dismiss="modal">Add</button>
         </div>
     </div>
 </div>
@@ -117,36 +118,35 @@ Transaksi Masuk
             <br>
 
             <tr>
-                <th>Id Vendor </th>
+
                 <th>Id_barang</th>
                 <th>Nama Barang</th>
                 <th>Qty</th>
                 <th>Harga</th>
-                <th>Diskon</th>
                 <th>Keterangan</th>
-
+                <th>Date Created</th>
+                <th>Date Updated</th>
                 {{-- <th colspan="2">Aksi</th> --}}
             </tr>
-                {{-- @foreach ($master_vendor as $key=>$value)
+                @foreach ($detail_transbarang_masuk as $key=>$value)
                     <tr>
-                        <td>{{ $value->nama_vendor }}</td>
-                        <td>{{ $value->email_vendor }}</td>
-                        <td>{{ $value->no_hp_vendor }}</td>
-                        <td>{{ $value->alamat_vendor }}</td>
-                        <td>{{ $value->date_created }}</td>
-                        <td>{{ $value->created_by }}</td>
-                        <td>{{ $value->date_updated }}</td>
-                        <td>{{ $value->updated_by }}</td>
-                        <td><a class="btn btn-info" href="{{ url('vendor/'.$value->id.'/edit') }}">Update</a></td></td>
-                        <td>
+                        <td>{{ $value->id_barang }}</td>
+                        <td>{{ $value->nama_barang }}</td>
+                        <td>{{ $value->qty }}</td>
+                        <td>{{ $value->harga }}</td>
+                        <td>{{ $value->keterangan }}</td>
+                        <td>{{ $value->created_at }}</td>
+                        <td>{{ $value->updated_at }}</td>
+                        {{-- <td><a class="btn btn-info" href="{{ url('vendor/'.$value->id.'/edit') }}">Update</a></td></td> --}}
+                        {{-- <td>
                             <form action="{{ url('vendor/'.$value->id) }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button class="btn btn-danger" type="submit">DELETE</button>
                             </form>
-                        </td>
+                        </td> --}}
                     </tr>
-                @endforeach --}}
+                @endforeach
         </table>
     </div>
 </div>

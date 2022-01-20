@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 
@@ -14,7 +14,8 @@ class TransMasukController extends Controller
      */
     public function index()
     {
-        return view('transmasuk.index');
+        $detail_transbarang_masuk = DB::select('SELECT * FROM detail_transbarang_masuk');
+        return view('transmasuk.index')->with(compact('detail_transbarang_masuk'));
     }
 
 
@@ -24,8 +25,10 @@ class TransMasukController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
+
     {
-        //
+        // $detail_transbarang_masuk = DB::select('SELECT * FROM detail_transbarang_masuk');
+        // return view('transmasuk.index')->with(compact('detail_transbarang_masuk'));
     }
 
     /**
