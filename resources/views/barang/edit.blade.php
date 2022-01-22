@@ -20,6 +20,10 @@ Update Stok Barang
                 @csrf
                 @method('PUT')
                 <div class="card-body">
+                    <div class="form-group">
+                        <label>Nama Vendor</label>
+                        <input type="text" name="id_vendor"  value="{{$barang[0]->id_vendor}}" class="form-control" >
+                      </div>
                 <div class="form-group">
                   <label >Code </label>
                   <input type="number" name="code_barang"  value="{{$barang[0]->code_barang}}" class="form-control" >

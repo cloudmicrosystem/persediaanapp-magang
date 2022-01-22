@@ -34,6 +34,7 @@ Database Vendor
                             <td>{{ $value->updated_at }}</td>
 
                             <td><a class="btn btn-info" href="{{ url('vendors/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
+
                             <td>
                                 <form action="{{ url('vendors/'.$value->id) }}" method="POST">
                                     @csrf

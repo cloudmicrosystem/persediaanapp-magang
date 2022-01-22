@@ -18,6 +18,10 @@ Tambah Stok Barang
             <!-- form start -->
             <form id="quickForm"  method="POST" action="{{ route('barang.store') }}" enctype="multipart/form-data">
                 @csrf
+                <div class="form-group">
+                    <label>Nama vendor</label>
+                    <input type="text" name="id_vendor" class="form-control" >
+                  </div>
                 <div class="card-body">
                 <div class="form-group">
                   <label >Code </label>

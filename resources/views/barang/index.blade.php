@@ -12,6 +12,7 @@ Stok Barang
                 <br>
                 <br>
                 <tr>
+                    <th>Nama Vendor</th>
                     <th>Code</th>
                     <th>Nama</th>
                     <th>Harga</th>
@@ -26,6 +27,7 @@ Stok Barang
                 </tr>
                     @foreach ($barang as $key=>$value)
                         <tr>
+                            <td>{{ $value->id_vendor }}</td>
                             <td>{{ $value->code_barang }}</td>
                             <td>{{ $value->nama_barang }}</td>
                             <td>Rp {{ $value->harga_barang }} </td>

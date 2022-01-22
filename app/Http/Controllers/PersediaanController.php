@@ -62,6 +62,7 @@ class PersediaanController extends Controller
         }
 
         DB::select("INSERT INTO barang(
+            id_vendor,
             code_barang,
             nama_barang,
             harga_barang,
@@ -74,6 +75,7 @@ class PersediaanController extends Controller
             updated_at
             )
         VALUE(
+        '$request->id_vendor',
         '$request->code_barang',
         '$request->nama_barang',
         '$request->harga_barang',
@@ -145,6 +147,7 @@ class PersediaanController extends Controller
         }
 
         DB::select("UPDATE barang SET
+        id_vendor='$request->id_vendor',
         code_barang='$request->code_barang',
         nama_barang='$request->nama_barang',
         harga_barang='$request->harga_barang',
