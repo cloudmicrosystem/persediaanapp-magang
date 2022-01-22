@@ -16,6 +16,9 @@ class TransMasukController extends Controller
     {
         $detail_transbarang_masuk = DB::select('SELECT * FROM detail_transbarang_masuk');
         return view('transmasuk.index')->with(compact('detail_transbarang_masuk'));
+
+
+
     }
 
 

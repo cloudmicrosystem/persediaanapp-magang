@@ -10,5 +10,7 @@ class Barang extends Model
 {
     use HasFactory;
     protected $table = "barang";
+
+
     //disarankan untuk konsisten nama model sama dengan nama database
 }

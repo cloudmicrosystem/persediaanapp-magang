@@ -15,7 +15,7 @@ class CreateTransaksiBarangMasukTable extends Migration
     {
         Schema::create('transaksi_barang_masuk', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_vendor');
+            $table->integer('id_vendor')->nullable()->after('id');
             $table->date('tanggal');
             $table->string('keterangan');
             $table->string('created_by');

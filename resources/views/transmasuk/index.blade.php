@@ -17,13 +17,11 @@ Transaksi Masuk
 
 {{-- Modal  --}}
 <div class="container">
-
-  <form action="/action_page.php">
-
-    <div class="form-group">
+ <form action="/action_page.php">
+  <div class="form-group">
 
         {{-- dropdown --}}
-      <label>Vendor</label>
+      <label>Customer</label>
       <br>
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -81,11 +79,11 @@ Transaksi Masuk
                 </div>
                 <div class="form-group">
                     <label >Qty</label>
-                    <input type="text" class="form-control"  name="qty">
+                    <input type="text" class="form-control"  name="qty" placeholder="Qty">
                   </div>
                   <div class="form-group">
                     <label >Harga</label>
-                    <input type="text" class="form-control"  name="harga">
+                    <input type="text" class="form-control"  name="harga" placeholder="Harga">
                   </div>
                   {{-- <div class="form-group">
                     <label >Diskon</label>
@@ -93,22 +91,21 @@ Transaksi Masuk
                   </div> --}}
                   <div class="form-group">
                     <label >Keterangan</label>
-                    <input type="text" class="form-control"  name="keterangan">
+                    <input type="text" class="form-control"  name="keterangan" placeholder="Keterangan">
                   </div>
               </form>
         </div>
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button  class="btn btn-primary" button type="submit" data-dismiss="modal">Add</button>
+          <button  class="btn btn-primary" button type="submit" data-dismiss="modal" href="{{ url ('transmasuk/index')}}">Add</button>
         </div>
+
+      </div>
+     </div>
     </div>
-</div>
-</div>
-
-  </form>
-
-</div>
+   </form>
+  </div>
 
 
 {{-- Tabel --}}
