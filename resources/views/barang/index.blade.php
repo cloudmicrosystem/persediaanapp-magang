@@ -12,7 +12,6 @@ Stok Barang
                 <br>
                 <br>
                 <tr>
-                    <th>Nama Vendor</th>
                     <th>Code</th>
                     <th>Nama</th>
                     <th>Harga</th>
@@ -23,11 +22,11 @@ Stok Barang
                     <th>Updated By</th>
                     <th>Date Created</th>
                     <th>Date Updated</th>
+                    <th>Nama Vendor</th>
                     <th colspan="2">Aksi</th>
                 </tr>
                     @foreach ($barang as $key=>$value)
                         <tr>
-                            <td>{{ $value->id_vendor }}</td>
                             <td>{{ $value->code_barang }}</td>
                             <td>{{ $value->nama_barang }}</td>
                             <td>Rp {{ $value->harga_barang }} </td>
@@ -36,6 +35,7 @@ Stok Barang
                             <td><img src="{{ asset('storage/barang/'.$value->gambar_barang) }}" width=100px height=auto/></td>
                             <td>{{ $value->created_by }}</td>
                             <td>{{ $value->update_by }}</td>
+                            <td>{{ $value->id_vendor }}</td>
                             <td>{{ $value->created_at }}</td>
                             <td>{{ $value->updated_at }}</td>
                             <td><a class="btn btn-info" href="{{ url('barang/'.$value->id.'/edit') }}"><i class='fas fa-edit'></a></td>

@@ -43,17 +43,14 @@ Tambah Vendor
                     <label>Updated By </label>
                     <input type="text" name="updated_by" class="form-control" >
                   </div>
-              </div>
-              <div class="form-group">
-                <label>Date Created </label>
-                <input type="date" name="created_at" class="form-control" >
-              </div>
-          </div>
-          <div class="form-group">
-            <label>Date Updated</label>
-            <input type="date" name="updated_at" class="form-control" >
-          </div>
-      </div>
+                  <div class="form-group">
+                    <label>Date Created </label>
+                    <input type="date" name="created_at" class="form-control" >
+                  </div>
+                  <div class="form-group">
+                    <label>Date Updated</label>
+                    <input type="date" name="updated_at" class="form-control" >
+                  </div>
 
               <!-- /.card-body -->
               <div class="card-footer">

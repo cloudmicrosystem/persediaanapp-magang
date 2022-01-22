@@ -21,11 +21,11 @@ Transaksi Masuk
   <div class="form-group">
 
         {{-- dropdown --}}
-      <label>Customer</label>
+      <label>Vendor</label>
       <br>
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-          Dropdown button
+
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Link 1</a>
@@ -68,7 +68,7 @@ Transaksi Masuk
                   <label >Nama Barang</label>
                   <br/>
                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                    Dropdown Namabarang
+
                 </button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Link 1</a>

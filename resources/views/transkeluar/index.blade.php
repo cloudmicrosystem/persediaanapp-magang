@@ -27,7 +27,7 @@ Transaksi Keluar
       <br>
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-          Dropdown button
+
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Link 1</a>
@@ -62,14 +62,10 @@ Transaksi Keluar
         <div class="modal-body">
             <form action="/action_page.php">
                 <div class="form-group">
-                  <label >Id Barang</label>
-                  <input type="text" class="form-control" id="usr" name="username">
-                </div>
-                <div class="form-group">
                   <label >Nama Barang</label>
                   <br/>
                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                    Dropdown Namabarang
+
                 </button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Link 1</a>
