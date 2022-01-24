@@ -14,7 +14,8 @@ class TransKeluarController extends Controller
     public function index()
     {
         $detail_transbarang_keluar = DB::select('SELECT * FROM detail_transbarang_keluar');
-        return view('transkeluar.index')->with(compact('detail_transbarang_keluar'));
+
+        return view('transkeluar.index')->with(compact('detail_transbarang_keluar '));
 
     }
 
