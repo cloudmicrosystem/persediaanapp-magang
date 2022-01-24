@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Models\Barang;
 
 
 class TransMasukController extends Controller
@@ -15,7 +16,9 @@ class TransMasukController extends Controller
     public function index()
     {
         $detail_transbarang_masuk = DB::select('SELECT * FROM detail_transbarang_masuk');
-        return view('transmasuk.index')->with(compact('detail_transbarang_masuk'));
+        $vendor = DB::select('SELECT id,nama_vendor  FROM vendor');
+        $barang = DB::select('SELECT id,nama_barang  FROM barang');
+        return view('transmasuk.index')->with(compact('detail_transbarang_masuk' , 'vendor', 'barang'));
 
 
 
