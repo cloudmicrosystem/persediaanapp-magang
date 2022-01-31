@@ -22,14 +22,11 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
-<<<<<<< HEAD
-=======
                                     <label>Nama Vendor</label>
                                     <input type="text" name="id_vendor" value="{{ $barang[0]->id_vendor }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
->>>>>>> a0c58d5d529f90c721cd6f82e48d54542d5b6953
                                     <label>Code </label>
                                     <input type="number" name="code_barang" value="{{ $barang[0]->code_barang }}"
                                         class="form-control">
@@ -70,14 +67,6 @@
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
-<<<<<<< HEAD
-                                    <label>Nama Vendor</label>
-                                    <input type="text" name="id_vendor" value="{{ $barang[0]->id_vendor }}"
-                                        class="form-control">
-                                </div>
-                                <div class="form-group">
-=======
->>>>>>> a0c58d5d529f90c721cd6f82e48d54542d5b6953
                                     <label>Date Created</label>
                                     <input type="text" name="created_at" value="{{ $barang[0]->created_at }}"
                                         class="form-control">

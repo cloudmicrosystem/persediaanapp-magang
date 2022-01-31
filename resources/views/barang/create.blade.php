@@ -19,13 +19,6 @@
                         <form id="quickForm" method="POST" action="{{ route('barang.store') }}"
                             enctype="multipart/form-data">
                             @csrf
-<<<<<<< HEAD
-=======
-                            <div class="form-group">
-                                <label>Nama vendor</label>
-                                <input type="text" name="id_vendor" class="form-control">
-                            </div>
->>>>>>> a0c58d5d529f90c721cd6f82e48d54542d5b6953
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Code </label>
@@ -60,7 +53,6 @@
                                     <input type="text" name="update_by" class="form-control">
                                 </div>
                                 <div class="form-group">
-<<<<<<< HEAD
                                     <label>Nama vendor</label>
                                     <input type="number" name="id_vendor" class="form-control">
                                     {{-- <select name="users">
@@ -74,8 +66,6 @@
                                     </select> --}}
                                 </div>
                                 <div class="form-group">
-=======
->>>>>>> a0c58d5d529f90c721cd6f82e48d54542d5b6953
                                     <label>Date Created</label>
                                     <input type="date" name="created_at" class="form-control">
                                 </div>
