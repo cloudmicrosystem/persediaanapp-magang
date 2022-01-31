@@ -33,8 +33,8 @@ class TransMasukController extends Controller
     public function create()
 
     {
-        // $detail_transbarang_masuk = DB::select('SELECT * FROM detail_transbarang_masuk');
-        // return view('transmasuk.index')->with(compact('detail_transbarang_masuk'));
+        $detail_transbarang_masuk = DB::select('SELECT * FROM detail_transbarang_masuk');
+        return view('transmasuk.create')->with(compact('detail_transbarang_masuk'));
     }
 
     /**
@@ -45,7 +45,27 @@ class TransMasukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::select("INSERT INTO detail_transbarang_masuk
+        (
+            id_barang,
+            nama_barang,
+            qty,
+            harga,
+            keterangan,
+            created_at,
+            updated_at
+            )
+        VALUE(
+            '$request->id_barang',
+            '$request->nama_barang',
+            '$request->qty',
+            '$request->harga',
+            '$request->keterangan',
+            '$request->created_at',
+            '$request->updated_at'
+             )");
+
+        return redirect('transmasuk')->with('toast_success', 'Data Berhasil Ditambah');
     }
 
     /**
