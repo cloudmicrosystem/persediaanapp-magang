@@ -30,7 +30,7 @@ class TransKeluarController extends Controller
         $detail_transbarang_keluar = DB::select('SELECT * FROM detail_transbarang_keluar');
         $barang = DB::select('SELECT id,nama_barang  FROM barang');
 
-        return view('transkeluar.create')->with(compact('detail_transbarang_keluar', 'barang'));
+        return view('transkeluar.index')->with(compact('detail_transbarang_keluar', 'barang'));
     }
 
     /**

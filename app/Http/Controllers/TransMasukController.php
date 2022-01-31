@@ -45,9 +45,12 @@ class TransMasukController extends Controller
      */
     public function store(Request $request)
     {
+        $nama_barang = DB::select('SELECT nama_barang FROM barang WHERE id = "'.$request->barang.'" limit 0,1')[0]->nama_barang;
+
         DB::select("INSERT INTO detail_transbarang_masuk
         (
             id_barang,
+            id_vendor
             nama_barang,
             qty,
             harga,
@@ -56,16 +59,17 @@ class TransMasukController extends Controller
             updated_at
             )
         VALUE(
-            '$request->id_barang',
-            '$request->nama_barang',
+            '$request->barang',
+            '$nama_barang',
             '$request->qty',
             '$request->harga',
             '$request->keterangan',
-            '$request->created_at',
-            '$request->updated_at'
+            '$request->id_vendor',
+            NOW(),
+            NOW()
              )");
 
-        return redirect('transmasuk')->with('toast_success', 'Data Sukses Ditambah');
+        return redirect()->back()->with('toast_success', 'Data Sukses Ditambah');
     }
 
     /**
