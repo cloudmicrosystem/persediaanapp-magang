@@ -16,51 +16,39 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     </head>
 
-    <div class="form-group">
-        <label>Vendor</label>
-        <br>
-        <select name="vendor">
-            <option value="id">
-                <-- PILIH -->
-            </option>
-            @foreach ($vendor as $data)
-                <option value="{{ $data->id }}">{{ $data->nama_vendor }}</option>
-            @endforeach
-        </select>
-    </div>
+
 
     {{-- Modal --}}
     <div class="container">
         <form action="/action_page.php">
             <div class="form-group">
-
-                {{-- dropdown --}}
-                <label>Vendor</label>
-                <br>
-                <div class="dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item-text" href="#">Text Link</a>
-                        <span class="dropdown-item-text">Just Text</span>
-                    </div>
+                <div class="form-group">
+                    <label>Vendor</label>
+                    <br>
+                    <select name="vendor">
+                        <option value="id">
+                            <-- PILIH -->
+                        </option>
+                        @foreach ($vendor as $data)
+                            <option value="{{ $data->id }}">{{ $data->nama_vendor }}</option>
+                        @endforeach
+                    </select>
                 </div>
-                <br />
+
                 {{-- default --}}
                 <label>Tanggal</label>
-                <input type="datetime-local" class="form-control" name="update_add">
+                <input type="date" class="form-control" name="update_add" value="2022-01-10">
+
                 </p>
             </div>
             <!-- Button to Open the Modal -->
-            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#Modalcreate"
+                href="{{ url('transmasuk/create') }}" class="btn btn-info">
                 Add Item
             </button>
 
             <!-- The Modal -->
-            <div class="modal fade" id="myModal">
+            <div class="modal fade" id="Modalcreate">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
 
@@ -70,58 +58,7 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
-                        <!-- Isi Modal -->
-                        <div class="modal-body">
-                            <form id="quickForm"  method="POST" action="{{ url('detail_transbarang_masuk') }}">
-                                @csrf
-
-                                <div class="form-group">
-                                    <label>Nama Barang</label>
-                                    <br />
-                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Link 1</a>
-                                        <a class="dropdown-item" href="#">Link 2</a>
-                                        <a class="dropdown-item-text" href="#">Text Link</a>
-                                        <span class="dropdown-item-text">Just Text</span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Nama Barang</label>
-                                    <br>
-                                    <select name="barang">
-                                        <option value="id">
-                                            <-- PILIH -->
-                                        </option>
-                                        @foreach ($barang as $data)
-                                            <option value="{{ $data->id }}">{{ $data->nama_barang }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Qty</label>
-                                    <input type="text" class="form-control" name="qty" placeholder="Qty">
-                                </div>
-                                <div class="form-group">
-                                    <label>Harga</label>
-                                    <input type="text" class="form-control" name="harga" placeholder="Harga">
-                                </div>
-                                {{-- <div class="form-group">
-                    <label >Diskon</label>
-                    <input type="text" class="form-control" id="pwd" name="text">
-                  </div> --}}
-                                <div class="form-group">
-                                    <label>Keterangan</label>
-                                    <input type="text" class="form-control" name="keterangan" placeholder="Keterangan">
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button class="btn btn-primary" button type="submit" data-dismiss="modal">Add</button>
-                        </div>
+                        @include('transmasuk.create')
 
                     </div>
                 </div>
@@ -131,13 +68,13 @@
 
 
     {{-- Tabel --}}
+   
     <div class="container-fluid">
         <div class="col-sm-40">
             <table class="table-bordered table table-responsive">
                 <br>
 
                 <tr>
-
                     <th>Id_barang</th>
                     <th>Nama Barang</th>
                     <th>Qty</th>
