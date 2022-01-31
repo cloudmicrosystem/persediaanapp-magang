@@ -65,7 +65,7 @@ class TransMasukController extends Controller
             '$request->updated_at'
              )");
 
-        return redirect('transmasuk')->with('toast_success', 'Data Berhasil Ditambah');
+        return redirect('transmasuk')->with('toast_success', 'Data Sukses Ditambah');
     }
 
     /**
