@@ -20,9 +20,9 @@ Stok Barang
                     <th>Gambar</th>
                     <th>Created By</th>
                     <th>Updated By</th>
+                    <th>Nama Vendor</th>
                     <th>Date Created</th>
                     <th>Date Updated</th>
-                    <th>Nama Vendor</th>
                     <th colspan="2">Aksi</th>
                 </tr>
                     @foreach ($barang as $key=>$value)
