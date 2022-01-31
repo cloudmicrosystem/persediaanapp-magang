@@ -1,9 +1,9 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/" class="d-flex justify-content-center mb-4">
-                <x-application-logo width=64 height=64 />
-            </a>
+            <p class="d-flex justify-content-center mb-4">
+                <img src="/logo/logo1.jpg" alt="logo" width="200" >
+            </p>
         </x-slot>
 
         <!-- Session Status -->
@@ -40,7 +40,11 @@
                 </label>
             </div>
 
+
             <div class="d-flex justify-content-end mt-4">
+                <a class="text-muted" href="{{ route('register') }}" style="margin-right: 15px; margin-top: 15px;">
+                    {{ __('Register') }}
+                </a>
                 @if (Route::has('password.request'))
                     <a class="text-muted" href="{{ route('password.request') }}" style="margin-right: 15px; margin-top: 15px;">
                         {{ __('Forgot your password?') }}
