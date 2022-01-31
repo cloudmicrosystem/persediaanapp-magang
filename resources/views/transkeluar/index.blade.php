@@ -19,7 +19,7 @@
     {{-- Modal --}}
     <div class="container">
 
-        <form action="/action_page.php">
+        <form >
             <div class="form-group">
                 <label>Customer</label>
                 <br>
