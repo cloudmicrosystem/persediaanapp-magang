@@ -14,9 +14,10 @@ class TransKeluarController extends Controller
     public function index()
     {
         $detail_transbarang_keluar = DB::select('SELECT * FROM detail_transbarang_keluar');
+        $users = DB::select('SELECT id,nama  FROM users');
+        $barang = DB::select('SELECT id,nama_barang  FROM barang');
 
-        return view('transkeluar.index')->with(compact('detail_transbarang_keluar '));
-
+        return view('transkeluar.index')->with(compact('detail_transbarang_keluar', 'users', 'barang'));
     }
 
     /**
@@ -26,7 +27,10 @@ class TransKeluarController extends Controller
      */
     public function create()
     {
-        //
+        $detail_transbarang_keluar = DB::select('SELECT * FROM detail_transbarang_keluar');
+        $barang = DB::select('SELECT id,nama_barang  FROM barang');
+
+        return view('transkeluar.create')->with(compact('detail_transbarang_keluar', 'barang'));
     }
 
     /**
@@ -37,7 +41,33 @@ class TransKeluarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::select(" INSERT INTO detail_transbarang_keluar
+         (
+            id_barang,
+            nama_barang,
+            qty,
+            harga,
+            diskon,
+            keterangan,
+            created_by,
+            updated_by,
+            created_at,
+            updated_at
+            )
+        VALUE
+        ('$request->id_barang',
+        '$request->nama_barang',
+        '$request->qty',
+        '$request->harga',
+        '$request->diskon',
+        '$request->keterangan',
+        '$request->created_by',
+        '$request->updated_by',
+        '$request->created_at',
+        '$request->updated_at'
+        )");
+
+        return redirect('transkeluar')->with('toast_success', 'Data Berhasil Ditambah');
     }
 
     /**
