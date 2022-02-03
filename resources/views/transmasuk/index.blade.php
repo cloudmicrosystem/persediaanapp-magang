@@ -20,47 +20,48 @@
 
     {{-- Modal --}}
     <div class="container">
+        <div class="form-group">
             <div class="form-group">
-                <div class="form-group">
-                    <label>Vendor</label>
-                    <br>
-                    <select class="vendor-selected" name="vendor">
-                        <option value="id">
-                            <-- PILIH -->
-                        </option>
-                        @foreach ($vendor as $data)
-                            <option value="{{ $data->id }}">{{ $data->nama_vendor }}</option>
-                        @endforeach
-                    </select>
-                </div>
-
-                {{-- default --}}
-                <label>Tanggal</label>
-                <input type="date" class="form-control klik_update_add" name="update_add" value="2022-01-10">
-
-                </p>
+                <label>Vendor</label>
+                <br>
+                <select class="vendor-selected" name="vendor">
+                    <option value="id">
+                        <-- PILIH -->
+                    </option>
+                    @foreach ($vendor as $data)
+                        <option value="{{ $data->id }}">{{ $data->nama_vendor }}</option>
+                    @endforeach
+                </select>
             </div>
-            <!-- Button to Open the Modal -->
-            <button type="button" class="btn btn-primary float-right btn-tambah-item" data-toggle="modal" data-target="#Modalcreate"  class="btn btn-info">
-                Add Item
-            </button>
 
-            <!-- The Modal -->
-            <div class="modal fade" id="Modalcreate">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
+            {{-- default --}}
+            <label>Tanggal</label>
+            <input type="date" class="form-control klik_update_add" name="update_add" value="2022-01-10">
 
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Data Vendor</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
+            </p>
+        </div>
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary float-right btn-tambah-item" data-toggle="modal"
+            data-target="#Modalcreate" class="btn btn-info">
+            Add Item
+        </button>
 
-                        @include('transmasuk.create')
+        <!-- The Modal -->
+        <div class="modal fade" id="Modalcreate">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
 
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Data Vendor</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
+
+                    @include('transmasuk.create')
+
                 </div>
             </div>
+        </div>
     </div>
 
 
@@ -106,14 +107,13 @@
 
 @endsection
 
-{{-- Mengatur jarak table pakek container float --}}
 @push('custom-js')
-<script>
-    $('.btn-tambah-item').on('click', function() {
-        var vendor = $('.vendor-selected').val(),
-            update_add = $('.klik_update_add').val();
-        $('input.form-control.vendor').attr('value', vendor);
-        $('input.form-control.update_add').attr('value', update_add);
-    });
-</script>
+    <script>
+        $('.btn-tambah-item').on('click', function() {
+            var vendor = $('.vendor-selected').val(),
+                update_add = $('.klik_update_add').val();
+            $('input.form-control.vendor').attr('value', vendor);
+            $('input.form-control.update_add').attr('value', update_add);
+        });
+    </script>
 @endpush
