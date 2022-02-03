@@ -41,33 +41,31 @@ class TransKeluarController extends Controller
      */
     public function store(Request $request)
     {
-        DB::select(" INSERT INTO detail_transbarang_keluar
-         (
+        $nama_barang = DB::select('SELECT nama_barang FROM barang WHERE id = "'.$request->barang.'" limit 0,1')[0]->nama_barang;
+
+        DB::select("INSERT INTO dettail_transbarang_keluar
+        (
             id_barang,
             nama_barang,
             qty,
             harga,
             diskon,
             keterangan,
-            created_by,
-            updated_by,
             created_at,
             updated_at
             )
-        VALUE
-        ('$request->id_barang',
-        '$request->nama_barang',
-        '$request->qty',
-        '$request->harga',
-        '$request->diskon',
-        '$request->keterangan',
-        '$request->created_by',
-        '$request->updated_by',
-        '$request->created_at',
-        '$request->updated_at'
-        )");
+        VALUE(
+            '$request->barang',
+            '$nama_barang',
+            '$request->qty',
+            '$request->harga',
+            '$request->keterangan',
+            '$request->id_vendor',
+            NOW(),
+            NOW()
+             )");
 
-        return redirect('transkeluar')->with('toast_success', 'Data Berhasil Ditambah');
+        return redirect()->back()->with('toast_success', 'Data Sukses Ditambah');
     }
 
     /**
