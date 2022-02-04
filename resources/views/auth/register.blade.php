@@ -16,7 +16,22 @@
             <div>
                 <x-label for="name" :value="__('Nama')" />
 
-                <x-input id="name" class="" type="text" name="nama" :value="old('name')" required autofocus />
+                <x-input id="name" class="" type="text" name="nama" :value="old('name')" required
+                    autofocus />
+            </div>
+
+            <!-- Alamat -->
+            <div class="mt-4">
+                <x-label for="alamat" :value="__('Alamat')" />
+
+                <x-input id="alamat" class="" type="text" name="alamat" :value="old('alamat')" required/>
+            </div>
+
+            <!-- No Hp -->
+            <div class="mt-4">
+                <x-label for="no_hp" :value="__('No Hp')" />
+
+                <x-input id="no_hp" class="" type="number" name="no_hp" :value="old('no_hp')" required />
             </div>
 
             <!-- Email Address -->
@@ -30,19 +45,16 @@
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
 
-                <x-input id="password" class=""
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+                <x-input id="password" class="" type="password" name="password" required
+                    autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
                 <x-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                <x-input id="password_confirmation" class=""
-                                type="password"
-                                name="password_confirmation" required />
+                <x-input id="password_confirmation" class="" type="password" name="password_confirmation"
+                    required />
             </div>
 
             <div class="d-flex justify-content-end mt-4">

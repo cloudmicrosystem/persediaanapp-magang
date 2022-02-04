@@ -17,7 +17,6 @@ Database Customer
                     <th>Alamat</th>
                     <th>Email</th>
                     <th>No Hp</th>
-                    <th>Jabatan</th>
                     <th>Username</th>
                     <th>Password</th>
                     <th>Created By</th>
@@ -32,7 +31,6 @@ Database Customer
                             <td>{{ $value->alamat }}</td>
                             <td>{{ $value->email }}</td>
                             <td>{{ $value->no_hp }}</td>
-                            <td>{{ $value->jabatan }}</td>
                             <td>{{ $value->username }}</td>
                             <td>{{ $value->password }}</td>
                             <td>{{ $value->created_by }}</td>
