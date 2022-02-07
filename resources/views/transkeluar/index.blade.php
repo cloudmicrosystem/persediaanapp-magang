@@ -20,6 +20,7 @@
 
     {{-- Modal --}}
     <div class="container">
+        <div class="form-group">
             <div class="form-group">
                 <div class="form-group">
                     <label>Customer</label>
@@ -40,27 +41,35 @@
 
                 </p>
             </div>
-            <!-- Button to Open the Modal -->
-            <button type="button" class="btn btn-primary float-right btn-tambah-item" data-toggle="modal" data-target="#Modalcreate"  class="btn btn-info">
-                Add Item
-            </button>
 
-            <!-- The Modal -->
-            <div class="modal fade" id="Modalcreate">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
+            {{-- default --}}
+            <label>Tanggal</label>
+            <input type="date" class="form-control klik_update_add" name="update_add" value="2022-01-10">
 
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Data Vendor</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
+            </p>
+        </div>
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary float-right btn-tambah-item" data-toggle="modal"
+            data-target="#Modalcreate" class="btn btn-info">
+            Add Item
+        </button>
 
-                        @include('transkeluar.create')
+        <!-- The Modal -->
+        <div class="modal fade" id="Modalcreate">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
 
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Data Vendor</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
+
+                    @include('transkeluar.create')
+
                 </div>
             </div>
+        </div>
     </div>
 
 
