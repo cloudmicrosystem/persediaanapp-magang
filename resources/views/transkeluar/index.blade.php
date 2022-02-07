@@ -22,14 +22,14 @@
     <div class="container">
             <div class="form-group">
                 <div class="form-group">
-                    <label>Vendor</label>
+                    <label>Customer</label>
                     <br>
                     <select class="vendor-selected" name="vendor">
                         <option value="id">
                             <-- PILIH -->
                         </option>
-                        @foreach ($vendor as $data)
-                            <option value="{{ $data->id }}">{{ $data->nama_vendor }}</option>
+                        @foreach ($barang as $data)
+                            <option value="{{ $data->id }}">{{ $data->nama_barang }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -76,12 +76,12 @@
                     <th>Qty</th>
                     <th>Harga</th>
                     <th>Keterangan</th>
-                    <th>Nama Vendor</th>
+                    <th>Nama Customer</th>
                     <th>Date Created</th>
                     <th>Date Updated</th>
                     {{-- <th colspan="2">Aksi</th> --}}
                 </tr>
-                @foreach ($detail_transbarang_masuk as $key => $value)
+                @foreach ($detail_transbarang_keluar as $key => $value)
                     <tr>
                         <td>{{ $value->nama_barang }}</td>
                         <td>{{ $value->qty }}</td>
@@ -110,9 +110,9 @@
 @push('custom-js')
 <script>
     $('.btn-tambah-item').on('click', function() {
-        var vendor = $('.vendor-selected').val(),
+        var barang = $('.barang-selected').val(),
             update_add = $('.klik_update_add').val();
-        $('input.form-control.vendor').attr('value', vendor);
+        $('input.form-control.barang').attr('value', barang);
         $('input.form-control.update_add').attr('value', update_add);
     });
 </script>

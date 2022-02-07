@@ -1,45 +1,46 @@
-            <!-- Isi Modal -->
-            <div class="modal-body">
-                <form id="editForm" action="{{ route('transkeluar.store') }}" method="POST" enctype="multipart/form-data">
-               @csrf
-                    <div class="form-group">
-                    <label>Nama</label>
-                    <br>
-                    <select name="barang">
-                        <option value="id">
-                            Pilih Barang
-                        </option>
-                        @foreach ($barang as $data)
-                            <option value="{{ $data->id }}">{{ $data->nama_barang }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Qty</label>
-                    <input type="number" class="form-control" name="qty" placeholder="Masukkan Qty Barang">
-                </div>
-                <div class="form-group">
-                    <label>Harga</label>
-                    <input type="number" class="form-control" name="harga" placeholder="Masukkan Harga Barang">
-                </div>
-                <div class="form-group">
-                    <label>Diskon</label>
-                    <input type="number" class="form-control" name="diskon" placeholder="Masukkan Diskon Barang">
-                </div>
-                <div class="form-group">
-                    <label>Keterangan</label>
-                    <input type="text" class="form-control" name="keterangan" placeholder="Masukkan Keterangan Barang">
-                </div>
-            </div>
+<!-- Isi Modal -->
+<div class="modal-body">
+    <form id="editFrom" method="POST" action="{{ route('transkeluar.store') }}"  enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+            <input class="form-control barang" disabled type="text" name="barang" value="">
+        </div>
+        <div class="form-group">
+            <input class="form-control update_add" disabled type="text" name="update_add" value="">
+        </div>
 
-            <!-- Modal footer -->
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Add</button>
-            </div>
-            </form>
-
-            </div>
-            </div>
-            </div>
-            {{-- </form> --}}
+        <div class="form-group">
+            <label>Nama Barang</label>
+            <br>
+            <select class="form-control" name="barang">
+                <option value="id">
+                    <-- PILIH -->
+                </option>
+                @foreach ($barang as $data)
+                    <option value="{{ $data->id }}">{{ $data->nama_barang }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Qty</label>
+            <input type="text" class="form-control" name="qty" placeholder="Qty">
+        </div>
+        <div class="form-group">
+            <label>Harga</label>
+            <input type="text" class="form-control" name="harga" placeholder="Harga">
+        </div>
+        <div class="form-group">
+            <label>Diskon</label>
+            <input type="text" class="form-control" name="diskon" placeholder="Diskon">
+        </div>
+        <div class="form-group">
+            <label>Keterangan</label>
+            <input type="text" class="form-control" name="keterangan" placeholder="Keterangan">
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+    </form>
+</div>
