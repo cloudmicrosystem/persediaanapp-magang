@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HalcustController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PersediaanController;
@@ -37,3 +38,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('transmasuk', TransMasukController::class);
     Route::resource('transkeluar', TransKeluarController::class);
 });
+
+Route::get('/index', [HalcustController::class, 'index']);
