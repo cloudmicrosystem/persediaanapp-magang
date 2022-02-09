@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMutasiStockTable extends Migration
+class CreateCartTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateMutasiStockTable extends Migration
      */
     public function up()
     {
-        Schema::create('mutasi_stock', function (Blueprint $table) {
+        Schema::create('cart', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_barang');
-            $table->date('tanggal');
-            $table->string('keterangan');
-            $table->integer('no_ref');
-            $table->integer('qty');
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ class CreateMutasiStockTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mutasi_stock');
+        Schema::dropIfExists('cart');
     }
 }

@@ -16,11 +16,12 @@
                     <th>Nama</th>
                     <th>Harga</th>
                     <th>Ukuran</th>
+                    <th>Qty Awal</th>
+                    <th>Qty</th>
                     <th>Deskripsi</th>
                     <th>Gambar</th>
                     <th>Created By</th>
                     <th>Updated By</th>
-                    <th>Nama Vendor</th>
                     <th>Date Created</th>
                     <th>Date Updated</th>
                     <th colspan="2">Aksi</th>
@@ -31,12 +32,13 @@
                         <td>{{ $value->nama_barang }}</td>
                         <td>Rp {{ $value->harga_barang }} </td>
                         <td>{{ $value->ukuran_barang }}</td>
+                        <td>{{ $value->qty_awal }}</td>
+                        <td>{{ $value->qty }}</td>
                         <td>{{ $value->deskripsi_barang }}</td>
                         <td><img src="{{ asset('storage/barang/' . $value->gambar_barang) }}" width=100px height=auto />
                         </td>
                         <td>{{ $value->created_by }}</td>
                         <td>{{ $value->update_by }}</td>
-                        <td>{{ $value->id_vendor }}</td>
                         <td>{{ $value->created_at }}</td>
                         <td>{{ $value->updated_at }}</td>
                         <td><a class="btn btn-info" href="{{ url('barang/' . $value->id . '/edit') }}"><i

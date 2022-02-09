@@ -15,8 +15,7 @@ class PersediaanController extends Controller
     public function index()
     {
         $barang = DB::select('SELECT * FROM barang');
-        $vendor = DB::select('SELECT id,nama_vendor  FROM vendor');
-        return view('barang.index')->with(compact('barang','vendor'));
+        return view('barang.index')->with(compact('barang'));
     }
 
     /**
@@ -27,8 +26,7 @@ class PersediaanController extends Controller
     public function create()
     {
         $barang = DB::select('SELECT * FROM barang');
-        $vendor = DB::select('SELECT id,nama_vendor  FROM vendor');
-        return view('barang.create')->with(compact('barang','vendor'));
+        return view('barang.create')->with(compact('barang'));
     }
 
     /**
@@ -62,28 +60,32 @@ class PersediaanController extends Controller
         }
 
         DB::select("INSERT INTO barang(
+            id_admin,
             code_barang,
             nama_barang,
             harga_barang,
             ukuran_barang,
+            qty_awal,
+            qty,
             deskripsi_barang,
             gambar_barang,
             created_by,
             update_by,
-            id_vendor,
             created_at,
             updated_at
             )
         VALUE(
+        '$request->id_admin',    
         '$request->code_barang',
         '$request->nama_barang',
         '$request->harga_barang',
         '$request->ukuran_barang',
+        '$request->qty_awal',
+        '$request->qty',
         '$request->deskripsi_barang',
         '$gambar_barang',
         '$request->created_by',
         '$request->update_by',
-        '$request->id_vendor',
         '$request->created_at',
         '$request->updated_at'
         )");
@@ -126,7 +128,7 @@ class PersediaanController extends Controller
     {
         // echo '<pre>'; print_r($request->code_barang); die;
         $barang = DB::select('SELECT * FROM barang WHERE id=?', [$id]);
-        $vendor = DB::select('SELECT id,nama_vendor  FROM vendor WHERE id=?', [$id]);
+        // $vendor = DB::select('SELECT id,nama_vendor  FROM vendor WHERE id=?', [$id]);
         // dd($master_barang);
         // Validation
         $request->validate([
@@ -148,15 +150,17 @@ class PersediaanController extends Controller
         }
 
         DB::select("UPDATE barang SET
+        id_admin='$request->id_admin',
         code_barang='$request->code_barang',
         nama_barang='$request->nama_barang',
         harga_barang='$request->harga_barang',
         ukuran_barang='$request->ukuran_barang',
+        qty_awal='$request->qty_awal',
+        qty='$request->qty',
         deskripsi_barang='$request->deskripsi_barang',
         gambar_barang='$gambar_barang',
         created_by='$request->created_by',
         update_by='$request->update_by',
-        id_vendor='$request->id_vendor',
         created_at='$request->created_at',
         updated_at='$request->updated_at'
         WHERE id=$id
