@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HalcustController;
+use App\Http\Controllers\HalproductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PersediaanController;
@@ -39,4 +40,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('transkeluar', TransKeluarController::class);
 });
 
-Route::get('/index', [HalcustController::class, 'index']);
+    Route::get('/index', [HalcustController::class, 'index']);
+     Route::get('/halproduct', [HalproductController::class, 'index']);
+    Route::resource('halproduct', HalproductController::class);
