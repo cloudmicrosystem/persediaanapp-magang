@@ -31,13 +31,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
     <!--===============================================================================================-->
-     <!-- Google Font: Source Sans Pro -->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-     <!-- Font Awesome -->
-     <link rel="stylesheet" href="{{ asset('') }}assets/plugins/fontawesome-free/css/all.min.css">
-     <!-- Theme style -->
-     <link rel="stylesheet" href="{{ asset('') }}assets/dist/css/adminlte.min.css">
-     <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-free/css/all.min.css') }}">
+    <!--===============================================================================================-->
 </head>
 
 <body class="animsition">
@@ -117,6 +112,121 @@
         </div>
     </section>
 
+      <!-- Sidebar kategori -->
+      <section class="slider-section pt-4 pb-4">
+        <div class="container">
+            <div class="slider-inner">
+                <div class="row">
+                    <div class="col-md-3">
+                        <nav class="nav-category">
+                            <h2>Kategori Product</h2>
+                            <ul class="menu-category">
+                                <li><a href="#">Hoodie</a></li>
+                                <li><a href="#">Kaos</a></li>
+                                <li><a href="#">Polo</a></li>
+                                <li><a href="#">Tas</a></li>
+                                <li><a href="#">Sepatu</a></li>
+                                <li><a href="#">Jacket</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    {{-- Product Card --}}
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="card" >
+                            <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title m-1">Hodiie Jangkar</h5>
+                              <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                              <p style="color: orange" class="m-1">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                              </p>
+                              <a href="#" class="btn btn-primary">Masukkan Keranjanag</a>
+                              <a href="#" class="btn btn-success">Beli</a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card" >
+                              <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title m-1">Hodiie Jangkar</h5>
+                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                <p style="color: orange" class="m-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </p>
+                                <a href="#" class="btn btn-primary">Masukkan Keranjanag</a>
+                                <a href="#" class="btn btn-success">Beli</a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-3">
+                            <div class="card" >
+                              <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title m-1">Hodiie Jangkar</h5>
+                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                <p style="color: orange" class="m-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </p>
+                                <a href="#" class="btn btn-primary">Masukkan Keranjanag</a>
+                                <a href="#" class="btn btn-success">Beli</a>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    {{-- <div class="col-md-9">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner shadow-sm rounded">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="./assets/img/slides/slide1.jpg" alt="First slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Mountains, Nature Collection</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="./assets/img/slides/slide2.jpg" alt="Second slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Freedom, Sea Collection</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="./assets/img/slides/slide3.jpg" alt="Third slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Living the Dream, Lost Island</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+                        <!-- End Slider -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     @include('halcust.footer')
@@ -175,6 +285,14 @@
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/main.js') }}"></script>
+    <!--===============================================================================================-->
+        <script src="{{ asset('') }}assets/plugins/jquery/jquery.min.js"></script>
+    @stack('custom-js')
+    <!-- AdminLTE App -->
+    <script src="{{ asset('') }}assets/dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
+
 </body>
 
 </html>
