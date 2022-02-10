@@ -15,10 +15,10 @@ class ExcelSeeder extends SpreadsheetSeeder
     public function run()
     {
 
-        $this->file = '/database/FileExcel/DataSeed.xlsx';
+        $this->file = '/database/FileExcel/DataSeeder.xlsx';
         $this->worksheetTableMapping = [
-            'jabatan' => 'jabatan',
-            'barang' => 'barang'
+            'barang' => 'barang',
+            'users' => 'users'
             ];
         $this->timestamps = new \DateTime;
 

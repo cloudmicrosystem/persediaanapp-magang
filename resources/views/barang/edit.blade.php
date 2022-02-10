@@ -22,11 +22,6 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Nama Vendor</label>
-                                    <input type="text" name="id_vendor" value="{{ $barang[0]->id_vendor }}"
-                                        class="form-control">
-                                </div>
-                                <div class="form-group">
                                     <label>Code </label>
                                     <input type="number" name="code_barang" value="{{ $barang[0]->code_barang }}"
                                         class="form-control">
@@ -63,7 +58,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Updated By</label>
-                                    <input type="text" name="update_by" value="{{ $barang[0]->update_by }}"
+                                    <input type="text" name="updated_by" value="{{ $barang[0]->updated_by }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">

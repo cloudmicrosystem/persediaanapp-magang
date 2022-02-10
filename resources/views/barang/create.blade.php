@@ -50,20 +50,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Updated By</label>
-                                    <input type="text" name="update_by" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Nama vendor</label>
-                                    <input type="number" name="id_vendor" class="form-control">
-                                    {{-- <select name="users">
-                                        <option value="id">
-                                            Pilih Vendor
-                                        </option>
-                                        @foreach ($vendor as $data)
-                                            <option value="{{ $data->id }}">{{ $data->nama_vendor }}</option>
-                                        @endforeach
-                                        <br>
-                                    </select> --}}
+                                    <input type="text" name="updated_by" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Date Created</label>

@@ -18,6 +18,7 @@
                     <th>Ukuran</th>
                     <th>Qty Awal</th>
                     <th>Qty</th>
+                    <th>Qty Akhir</th>
                     <th>Deskripsi</th>
                     <th>Gambar</th>
                     <th>Created By</th>
@@ -34,11 +35,12 @@
                         <td>{{ $value->ukuran_barang }}</td>
                         <td>{{ $value->qty_awal }}</td>
                         <td>{{ $value->qty }}</td>
+                        <td>{{ $value->qty_akhir }}</td>
                         <td>{{ $value->deskripsi_barang }}</td>
                         <td><img src="{{ asset('storage/barang/' . $value->gambar_barang) }}" width=100px height=auto />
                         </td>
                         <td>{{ $value->created_by }}</td>
-                        <td>{{ $value->update_by }}</td>
+                        <td>{{ $value->updated_by }}</td>
                         <td>{{ $value->created_at }}</td>
                         <td>{{ $value->updated_at }}</td>
                         <td><a class="btn btn-info" href="{{ url('barang/' . $value->id . '/edit') }}"><i

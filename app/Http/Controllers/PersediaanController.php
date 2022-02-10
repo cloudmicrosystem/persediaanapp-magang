@@ -67,25 +67,27 @@ class PersediaanController extends Controller
             ukuran_barang,
             qty_awal,
             qty,
+            qty_akhir,
             deskripsi_barang,
             gambar_barang,
             created_by,
-            update_by,
+            updated_by,
             created_at,
             updated_at
             )
         VALUE(
-        '$request->id_admin',    
+        '$request->id_admin',
         '$request->code_barang',
         '$request->nama_barang',
         '$request->harga_barang',
         '$request->ukuran_barang',
         '$request->qty_awal',
         '$request->qty',
+        '$request->qty_akhir',
         '$request->deskripsi_barang',
         '$gambar_barang',
         '$request->created_by',
-        '$request->update_by',
+        '$request->updated_by',
         '$request->created_at',
         '$request->updated_at'
         )");
@@ -157,10 +159,11 @@ class PersediaanController extends Controller
         ukuran_barang='$request->ukuran_barang',
         qty_awal='$request->qty_awal',
         qty='$request->qty',
+        qty_akhir='$request->qty_akhir',
         deskripsi_barang='$request->deskripsi_barang',
         gambar_barang='$gambar_barang',
         created_by='$request->created_by',
-        update_by='$request->update_by',
+        update_by='$request->updated_by',
         created_at='$request->created_at',
         updated_at='$request->updated_at'
         WHERE id=$id

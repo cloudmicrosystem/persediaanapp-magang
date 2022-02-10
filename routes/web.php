@@ -41,5 +41,5 @@ Route::middleware(['auth'])->group(function () {
 });
 
     Route::get('/index', [HalcustController::class, 'index']);
-     Route::get('/halproduct', [HalproductController::class, 'index']);
+    Route::get('/halproduct', [HalproductController::class, 'index']);
     Route::resource('halproduct', HalproductController::class);
