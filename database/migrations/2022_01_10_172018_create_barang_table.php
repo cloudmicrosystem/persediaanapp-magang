@@ -21,10 +21,7 @@ class CreateBarangTable extends Migration
             $table->integer('code_barang');
             $table->string('nama_barang');
             $table->decimal('harga_barang');
-            $table->string('ukuran_barang');
-            $table->integer('qty_awal');
-            $table->integer('qty')->nullable();
-            $table->integer('qty_akhir')->nullable();
+            $table->string('ukgit uran_barang');
             $table->string('deskripsi_barang');
             $table->string('gambar_barang');
             $table->timestamps();
