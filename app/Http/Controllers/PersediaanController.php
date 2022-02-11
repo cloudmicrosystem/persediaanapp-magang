@@ -38,56 +38,49 @@ class PersediaanController extends Controller
     public function store(Request $request)
     {
         // echo '<pre>'; print_r($request->code_barang); die;
-        $gambar_barang = null;
+        $gambar = null;
 
         // Validation
         $request->validate([
-            'gambar_barang' => 'mimes:png,jpg,jpeg|max:6144 '
+            'gambar' => 'mimes:png,jpg,jpeg|max:6144 '
         ]);
 
-        if($request->file('gambar_barang')) {
-            $file = $request->file('gambar_barang');
-            $gambar_barang = time().'_'.$file->getClientOriginalName();
+        if($request->file('gambar')) {
+            $file = $request->file('gambar');
+            $gambar = time().'_'.$file->getClientOriginalName();
 
             // File upload location
             $location = 'storage/barang';
 
             // Upload file
-            $file->move($location,$gambar_barang);
+            $file->move($location,$gambar);
             // die;
         }else{
-            $gambar_barang = null;
+            $gambar = null;
         }
 
         DB::select("INSERT INTO barang(
-            id_admin,
-            code_barang,
+            id_category,
             nama_barang,
-            harga_barang,
-            ukuran_barang,
-            qty_awal,
+            slug,
+            deskripsi,
+            price,
+            size,
             qty,
-            qty_akhir,
-            deskripsi_barang,
-            gambar_barang,
-            created_by,
-            updated_by,
-            created_at,
-            updated_at
+            gambar,
+            status_stok,
+
             )
         VALUE(
-        '$request->id_admin',
-        '$request->code_barang',
+        '$request->id_category',
         '$request->nama_barang',
-        '$request->harga_barang',
-        '$request->ukuran_barang',
-        '$request->qty_awal',
+        '$request->slug',
+        '$request->deskripsi',
+        '$request->price',
+        '$request->size',
         '$request->qty',
-        '$request->qty_akhir',
-        '$request->deskripsi_barang',
-        '$gambar_barang',
-        '$request->created_by',
-        '$request->updated_by',
+        '$gambar',
+        '$request->status_stok',
         '$request->created_at',
         '$request->updated_at'
         )");
@@ -134,36 +127,33 @@ class PersediaanController extends Controller
         // dd($master_barang);
         // Validation
         $request->validate([
-            'gambar_barang' => 'mimes:png,jpg,jpeg|max:6144 '
+            'gambar' => 'mimes:png,jpg,jpeg|max:6144 '
         ]);
 
-        if($request->file('gambar_barang')) {
-            $file = $request->file('gambar_barang');
-            $gambar_barang = time().'_'.$file->getClientOriginalName();
+        if($request->file('gambar')) {
+            $file = $request->file('gambar');
+            $gambar = time().'_'.$file->getClientOriginalName();
 
             // File upload location
             $location = 'storage/barang';
 
             // Upload file
-            $file->move($location,$gambar_barang);
+            $file->move($location,$gambar);
             // die;
         }else{
-            $gambar_barang = $barang[0]->gambar_barang;
+            $gambar = $barang[0]->gambar;
         }
 
         DB::select("UPDATE barang SET
-        id_admin='$request->id_admin',
-        code_barang='$request->code_barang',
+        id_category='$request->id_category',
         nama_barang='$request->nama_barang',
-        harga_barang='$request->harga_barang',
-        ukuran_barang='$request->ukuran_barang',
-        qty_awal='$request->qty_awal',
+        slug='$request->slug',
+        deskripsi='$request->deskripsi',
+        price='$request->crpriceeated_at',
+        size='$request->size',
         qty='$request->qty',
-        qty_akhir='$request->qty_akhir',
-        deskripsi_barang='$request->deskripsi_barang',
-        gambar_barang='$gambar_barang',
-        created_by='$request->created_by',
-        update_by='$request->updated_by',
+        gambar='$request->gambar',
+        status_stok='$request->status_stok',
         created_at='$request->created_at',
         updated_at='$request->updated_at'
         WHERE id=$id

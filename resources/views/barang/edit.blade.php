@@ -22,53 +22,38 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Code </label>
-                                    <input type="number" name="code_barang" value="{{ $barang[0]->code_barang }}"
-                                        class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Nama</label>
+                                    <label>Nama </label>
                                     <input type="text" name="nama_barang" value="{{ $barang[0]->nama_barang }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Harga</label>
-                                    <input type="number" name="harga_barang" value="{{ $barang[0]->harga_barang }}"
+                                    <label>Deskripsi </label>
+                                    <input type="text" name="deskripsi" value="{{ $barang[0]->deskripsi }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Ukuran</label>
-                                    <input type="text" name="ukuran_barang" value="{{ $barang[0]->ukuran_barang }}"
+                                    <label>Harga </label>
+                                    <input type="decimal" name="price" value="{{ $barang[0]->price }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Deskripsi</label>
-                                    <input type="text" name="deskripsi_barang" value="{{ $barang[0]->deskripsi_barang }}"
+                                    <label>Ukuran </label>
+                                    <input type="text" name="size" value="{{ $barang[0]->size }}"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Qty </label>
+                                    <input type="number" name="qty" value="{{ $barang[0]->qty }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Gambar</label>
-                                    <input type="file" name="gambar_barang" accept="image/*"
-                                        value="{{ $barang[0]->gambar_barang }}" class="form-control">
+                                    <input type="file" name="gambar" accept="image/*"
+                                        value="{{ $barang[0]->gambar }}" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Created By</label>
-                                    <input type="text" name="created_by" value="{{ $barang[0]->created_by }}"
-                                        class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Updated By</label>
-                                    <input type="text" name="updated_by" value="{{ $barang[0]->updated_by }}"
-                                        class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Date Created</label>
-                                    <input type="text" name="created_at" value="{{ $barang[0]->created_at }}"
-                                        class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Date Updated</label>
-                                    <input type="text" name="updated_at" value="{{ $barang[0]->updated_at }}"
+                                    <label>Status Stok </label>
+                                    <input type="number" name="status_stok" value="{{ $barang[0]->status_stok }}"
                                         class="form-control">
                                 </div>
                             </div>

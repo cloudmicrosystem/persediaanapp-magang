@@ -12,39 +12,27 @@
                 <br>
                 <br>
                 <tr>
-                    <th>Code</th>
+                    <th>Category</th>
                     <th>Nama</th>
+                    <th>Deskripsi</th>
                     <th>Harga</th>
                     <th>Ukuran</th>
-                    <th>Qty Awal</th>
                     <th>Qty</th>
-                    <th>Qty Akhir</th>
-                    <th>Deskripsi</th>
                     <th>Gambar</th>
-                    <th>Created By</th>
-                    <th>Updated By</th>
-                    <th>Date Created</th>
-                    <th>Date Updated</th>
+                    <th>Status Stok</th>
                     <th colspan="2">Aksi</th>
                 </tr>
                 @foreach ($barang as $key => $value)
                     <tr>
-                        <td>{{ $value->code_barang }}</td>
+                        <td>{{ $value->id_category }}</td>
                         <td>{{ $value->nama_barang }}</td>
-                        <td>Rp {{ $value->harga_barang }} </td>
-                        <td>{{ $value->ukuran_barang }}</td>
-                        <td>{{ $value->qty_awal }}</td>
+                        <td>{{ $value->deskripsi }} </td>
+                        <td>{{ $value->price }}</td>
+                        <td>{{ $value->size }}</td>
                         <td>{{ $value->qty }}</td>
-                        <td>{{ $value->qty_akhir }}</td>
-                        <td>{{ $value->deskripsi_barang }}</td>
-                        <td><img src="{{ asset('storage/barang/' . $value->gambar_barang) }}" width=100px height=auto />
-                        </td>
-                        <td>{{ $value->created_by }}</td>
-                        <td>{{ $value->updated_by }}</td>
-                        <td>{{ $value->created_at }}</td>
-                        <td>{{ $value->updated_at }}</td>
-                        <td><a class="btn btn-info" href="{{ url('barang/' . $value->id . '/edit') }}"><i
-                                    class='fas fa-edit'></a></td>
+                        <td><img src="{{ asset('storage/barang/' . $value->gambar) }}" width=100px height=auto /></td>
+                        <td>{{ $value->status_stok }}</td>
+                        <td><a class="btn btn-info" href="{{ url('barang/' . $value->id . '/edit') }}"><i class='fas fa-edit'></a></td>
                         <td>
                             <form action="{{ url('barang/' . $value->id) }}" method="POST">
                                 @csrf
