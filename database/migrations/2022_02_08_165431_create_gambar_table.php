@@ -15,6 +15,7 @@ class CreateGambarTable extends Migration
     {
         Schema::create('gambar', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_barang');
             $table->string('url_gambar');
             $table->timestamps();
         });

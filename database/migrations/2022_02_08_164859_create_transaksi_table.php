@@ -15,8 +15,8 @@ class CreateTransaksiTable extends Migration
     {
         Schema::create('transaksi', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_users') -> nullable();
-            $table->integer('no_nota');
+            $table->integer('id_users')->nullable();
+            $table->integer('no_nota')->unique();
             $table->timestamps();
         });
     }
