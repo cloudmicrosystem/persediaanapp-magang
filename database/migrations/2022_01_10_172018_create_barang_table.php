@@ -17,13 +17,12 @@ class CreateBarangTable extends Migration
             $table->id();
             $table->integer('id_category');
             $table->string('nama_barang');
-            $table->string('slug');
-            $table->text('deskripsi');
+            $table->string('slug')->unique();
+            $table->decimal('hpp');
             $table->decimal('price');
+            $table->text('deskripsi');
             $table->string('size');
             $table->integer('qty');
-            $table->string('gambar');
-            $table->integer('status_stok');
             $table->timestamps();
         });
     }

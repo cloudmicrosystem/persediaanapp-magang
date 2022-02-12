@@ -15,8 +15,8 @@ class CreateDetailtransTable extends Migration
     {
         Schema::create('detailtrans', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_barang') -> nullable();
-            $table->integer('id_transaksi') -> nullable();
+            $table->integer('id_barang')->nullable();
+            $table->integer('id_transaksi')->nullable();
             $table->string('jenis_transaksi');
             $table->string('is_confirm');
             $table->integer('qty_barang');
