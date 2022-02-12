@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Database\Seeders\ExcelSeeder;
-
+use Database\Seeders\BarangSeeder;
+use Database\Seeders\CategorySeeder;
+use Database\Seeders\GambarSeeder;
+use Database\Seeders\UsersSeeder;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -16,7 +18,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call([
-            ExcelSeeder::class,
+            BarangSeeder::class,
+            CategorySeeder::class,
+            GambarSeeder::class,
+            UsersSeeder::class
             // PermissionTableSeeder::class,
         ]);
     }
