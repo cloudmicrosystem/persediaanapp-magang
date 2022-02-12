@@ -16,7 +16,7 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="index">Home</a>
                             </li>
 
                             <li>
@@ -24,7 +24,7 @@
                             </li>
 
                             <li>
-                                <a href="reservation.html">Reservation</a>
+                                <a href="halproduct">Kategori Product</a>
                             </li>
 
                             <li>

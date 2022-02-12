@@ -10,12 +10,12 @@
                 <ul class="m-b-70">
                     <li class="txt14 m-b-14">
                         <i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
-                        8th floor, 379 Hudson St, New York, NY 10018
+                        Jl. Sukun Kota Malang & Jl. Slorok Kabupaten Malang
                     </li>
 
                     <li class="txt14 m-b-14">
                         <i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i>
-                        (+1) 96 716 6879
+                        (+62) 887-4116-4285
                     </li>
 
                     <li class="txt14 m-b-14">

@@ -45,7 +45,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/slide1-01.jpg);">
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/slide-1.jpeg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                         <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
                             data-appear="fadeInDown">
@@ -53,7 +53,7 @@
                         </span>
 
                         <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                            Pato Place
+                            MORFEEN THIRTEEN
                         </h2>
 
                         <div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
@@ -119,16 +119,15 @@
                 <div class="col-md-6 p-t-45 p-b-30">
                     <div class="wrap-text-welcome t-center">
                         <span class="tit2 t-center">
-                            Italian Restaurant
+                            DISTRO
                         </span>
 
                         <h3 class="tit3 t-center m-b-35 m-t-5">
-                            Welcome
+                            MORFEEN THIRTEEN
                         </h3>
 
                         <p class="t-center m-b-22 size3 m-l-r-auto">
-                            Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed
-                            imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
+                            Toko Distro yang berdiri pada tahun 2013, Menjual Beberapa aparel kaos Dll
                         </p>
 
                         <a href="about.html" class="txt4">
@@ -140,7 +139,7 @@
 
                 <div class="col-md-6 p-b-30">
                     <div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-                        <img src="images/our-story-01.jpg" alt="IMG-OUR">
+                        <img src="images/welcome1.jpeg" alt="IMG-OUR">
                     </div>
                 </div>
             </div>
@@ -1049,7 +1048,7 @@
             <div class="wrap-video-mo-01">
                 <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
                 <div class="video-mo-01">
-                    <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0"
+                    <iframe src="https://www.youtube.com/watch?v=suxwY9BhxaA"
                         allowfullscreen></iframe>
                 </div>
             </div>

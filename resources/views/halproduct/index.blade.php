@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Home</title>
+    <title>Product</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.png') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('images/icons/logo11.png') }}" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/bootstrap/css/bootstrap.min.css') }}">
     <!--===============================================================================================-->
@@ -28,8 +28,8 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/lightbox2/css/lightbox.min.css') }}">
     <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-free/css/all.min.css') }}">
     <!--===============================================================================================-->
@@ -38,7 +38,7 @@
 <body class="animsition">
 
     <!-- Header -->
-     @include('halcust.header')
+    @include('halcust.header')
 
     <!-- Sidebar -->
     @include('halcust.sidebar')
@@ -112,15 +112,15 @@
         </div>
     </section>
 
-      <!-- Sidebar kategori -->
-      <section class="slider-section pt-4 pb-4">
+    <!-- Sidebar kategori -->
+    <section class="slider-section pt-4 pb-4">
         <div class="container">
             <div class="slider-inner">
                 <div class="row">
                     <div class="col-md-3">
-                        <nav class="nav-category">
-                            <h2>Kategori Product</h2>
-                            <ul class="menu-category">
+                        <nav class="nav-category" style="border-right: 1px solid #bbb; height: 100%">
+                            <h3><b><i>Kategori Product</i></b></h3>
+                            <ul class="menu-category mt-3">
                                 <li><a href="#">Hoodie</a></li>
                                 <li><a href="#">Kaos</a></li>
                                 <li><a href="#">Polo</a></li>
@@ -131,66 +131,150 @@
                         </nav>
                     </div>
 
-                    {{-- Product Card --}}
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-3">
-                          <div class="card" >
-                            <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title m-1">Hodiie Jangkar</h5>
-                              <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                              <p style="color: orange" class="m-1">
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                              </p>
-                              <a href="#" class="btn btn-primary">Masukkan Keranjanag</a>
-                              <a href="#" class="btn btn-success">Beli</a>
-                            </div>
-                          </div>
-                        </div>
+                            {{-- Product Card --}}
+                            <div class="col-md-8 m-auto w-100">
+                                <div class="row">
+                                    <div class="col-md-4 mb-5">
+                                        <div class="card">
+                                            <a href="haldetailproduct">
+                                                <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
+                                            </a>
+                                            <div class="card-body">
+                                                <a href="haldetailproduct">
+                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas </h2>
+                                                </a>
+                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                                <p class="my-2">Rp. 100.000,00</p>
+                                                <p style="color: orange" class="m-1">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                                <a href="#" class="btn btn-success">Beli</a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                        <div class="col-md-3">
-                            <div class="card" >
-                              <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title m-1">Hodiie Jangkar</h5>
-                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                <p style="color: orange" class="m-1">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </p>
-                                <a href="#" class="btn btn-primary">Masukkan Keranjanag</a>
-                                <a href="#" class="btn btn-success">Beli</a>
-                              </div>
-                            </div>
-                          </div>
+                                    <div class="col-md-4 mb-5">
+                                        <div class="card">
+                                            <a href="haldetailproduct">
+                                            <img src="images\d2.jpeg" class="card-img-top" alt="...">
+                                            </a>
+                                            <div class="card-body">
+                                                <a href="haldetailproduct">
+                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos </h2>
+                                                </a>
+                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                                <p class="my-2">Rp. 150.000,00</p>
+                                                <p style="color: orange" class="m-1">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                                <a href="#" class="btn btn-success">Beli</a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                          <div class="col-md-3">
-                            <div class="card" >
-                              <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title m-1">Hodiie Jangkar</h5>
-                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                <p style="color: orange" class="m-1">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </p>
-                                <a href="#" class="btn btn-primary">Masukkan Keranjanag</a>
-                                <a href="#" class="btn btn-success">Beli</a>
-                              </div>
+                                    <div class="col-md-4 mb-5">
+                                        <div class="card">
+                                            <a href="haldetailproduct">
+                                            <img src="images/d3.jpeg" class="card-img-top" alt="...">
+                                            </a>
+                                            <div class="card-body">
+                                                <a href="haldetailproduct">
+                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos </h2>
+                                                </a>
+                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                                <p class="my-2">Rp. 120.000,00</p>
+                                                <p style="color: orange" class="m-1">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                                <a href="#" class="btn btn-success">Beli</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-5">
+                                        <div class="card">
+                                            <a href="haldetailproduct">
+                                            <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                                            </a>
+                                            <div class="card-body">
+                                                <a href="haldetailproduct">
+                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas </h2>
+                                                </a>
+                                                <p class="my-2">Rp. 130.000,00</p>
+                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                                <p style="color: orange" class="m-1">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                                <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
+                                            </div>
+
+
+                                    </div>
+{{--
+                                    <div class="col-md-4 mb-5">
+                                        <div class="card">
+                                            <a href="haldetailproduct">
+                                                <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
+                                            </a>
+                                            <div class="card-body">
+                                                <a href="haldetailproduct">
+                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas </h2>
+                                                </a>
+                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                                <p class="my-2">Rp. 100.000,00</p>
+                                                <p style="color: orange" class="m-1">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                                <a href="#" class="btn btn-success">Beli</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-5">
+                                        <div class="card">
+                                            <a href="haldetailproduct">
+                                                <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
+                                            </a>
+                                            <div class="card-body">
+                                                <a href="haldetailproduct">
+                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas </h2>
+                                                </a>
+                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                                <p class="my-2">Rp. 100.000,00</p>
+                                                <p style="color: orange" class="m-1">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                                <a href="#" class="btn btn-success">Beli</a>
+                                            </div>
+                                        </div>
+                                    </div> --}}
+
+                                </div>
                             </div>
-                          </div>
-                      </div>
                     </div>
                     {{-- <div class="col-md-9">
                         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
@@ -220,10 +304,10 @@
                                 </div>
                             </div>
                         </div> --}}
-                        <!-- End Slider -->
-                    </div>
+                    <!-- End Slider -->
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -261,7 +345,7 @@
 
 
     <!--===============================================================================================-->
-<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/animsition/js/animsition.min.js') }}"></script>
     <!--===============================================================================================-->
@@ -274,7 +358,7 @@
     <script type="text/javascript" src="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.js') }}"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/slick/slick.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('assetcus/js/slick-custom.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assetcus/js/slick-custom.js') }}"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/parallax100/parallax100.js') }}"></script>
     <script type="text/javascript">
@@ -286,7 +370,7 @@
     <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/main.js') }}"></script>
     <!--===============================================================================================-->
-        <script src="{{ asset('') }}assets/plugins/jquery/jquery.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/jquery/jquery.min.js"></script>
     @stack('custom-js')
     <!-- AdminLTE App -->
     <script src="{{ asset('') }}assets/dist/js/adminlte.js"></script>

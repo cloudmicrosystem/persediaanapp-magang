@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HalcustController;
+use App\Http\Controllers\HaldetailproductController;
 use App\Http\Controllers\HalproductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -41,5 +42,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
     Route::get('/index', [HalcustController::class, 'index']);
-     Route::get('/halproduct', [HalproductController::class, 'index']);
+    Route::get('/halproduct', [HalproductController::class, 'index']);
+    Route::get('/haldetailproduct', [HaldetailproductController::class, 'index']);
     Route::resource('halproduct', HalproductController::class);

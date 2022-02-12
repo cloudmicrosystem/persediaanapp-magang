@@ -6,11 +6,15 @@
     <!-- - -->
     <ul class="menu-sidebar p-t-95 p-b-70">
         <li class="t-center m-b-13">
-            <a href="index.html" class="txt19">Home</a>
+            <a href="index" class="txt19">Home</a>
         </li>
 
         <li class="t-center m-b-13">
             <a href="menu.html" class="txt19">Menu</a>
+        </li>
+
+        <li class="t-center m-b-13">
+            <a href="halproduct" class="txt19">Kategori Product</a>
         </li>
 
         <li class="t-center m-b-13">
