@@ -1,15 +1,14 @@
 <?php
 
-use App\Http\Controllers\HalcustController;
-use App\Http\Controllers\HaldetailproductController;
-use App\Http\Controllers\HalproductController;
+use App\Http\Controllers\Users\HalcustController;
+use App\Http\Controllers\Users\HaldetailproductController;
+use App\Http\Controllers\Users\HalproductController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PersediaanController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\VendorController;
-use App\Http\Controllers\TransMasukController;
-use App\Http\Controllers\TransKeluarController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\PersediaanController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,9 +35,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', [HomeController::class, 'index']);
     Route::resource('barang', PersediaanController::class);
     Route::resource('user', UserController::class);
-    Route::resource('vendors', VendorController::class);
-    Route::resource('transmasuk', TransMasukController::class);
-    Route::resource('transkeluar', TransKeluarController::class);
 });
 
     Route::get('/index', [HalcustController::class, 'index']);

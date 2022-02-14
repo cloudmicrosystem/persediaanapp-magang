@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class PersediaanController extends Controller
 {
@@ -15,7 +17,9 @@ class PersediaanController extends Controller
     public function index()
     {
         $barang = DB::select('SELECT * FROM barang');
-        return view('barang.index')->with(compact('barang'));
+        $category = DB::select('SELECT id,nama_category FROM category');
+
+        return view('barang.index')->with(compact('barang', 'category'));
     }
 
     /**
@@ -37,27 +41,27 @@ class PersediaanController extends Controller
      */
     public function store(Request $request)
     {
-        // echo '<pre>'; print_r($request->code_barang); die;
-        $gambar = null;
+        // // echo '<pre>'; print_r($request->code_barang); die;
+        // $gambar = null;
 
-        // Validation
-        $request->validate([
-            'gambar' => 'mimes:png,jpg,jpeg|max:6144 '
-        ]);
+        // // Validation
+        // $request->validate([
+        //     'gambar' => 'mimes:png,jpg,jpeg|max:6144 '
+        // ]);
 
-        if($request->file('gambar')) {
-            $file = $request->file('gambar');
-            $gambar = time().'_'.$file->getClientOriginalName();
+        // if($request->file('gambar')) {
+        //     $file = $request->file('gambar');
+        //     $gambar = time().'_'.$file->getClientOriginalName();
 
-            // File upload location
-            $location = 'storage/barang';
+        //     // File upload location
+        //     $location = 'storage/barang';
 
-            // Upload file
-            $file->move($location,$gambar);
-            // die;
-        }else{
-            $gambar = null;
-        }
+        //     // Upload file
+        //     $file->move($location,$gambar);
+        //     // die;
+        // }else{
+        //     $gambar = null;
+        // }
 
         DB::select("INSERT INTO barang(
             id_category,
@@ -68,19 +72,12 @@ class PersediaanController extends Controller
             size,
             qty,
             gambar,
-            status_stok,
 
             )
         VALUE(
         '$request->id_category',
         '$request->nama_barang',
         '$request->slug',
-        '$request->deskripsi',
-        '$request->price',
-        '$request->size',
-        '$request->qty',
-        '$gambar',
-        '$request->status_stok',
         '$request->created_at',
         '$request->updated_at'
         )");

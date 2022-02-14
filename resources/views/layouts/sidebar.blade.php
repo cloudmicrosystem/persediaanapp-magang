@@ -51,64 +51,6 @@
                 Stok Barang
               </p>
             </a>
-
-        <li class="nav-item">
-             <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Mutasi
-              </p>
-            </a>
-
-          <li class="nav-item">
-            <a href="transmasuk" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Transaksi Masuk
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="transkeluar" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Transaksi Keluar
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="admin" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Database Admin
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="user" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Database Customer
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="vendors" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Database Vendor
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Tambah Admin
-              </p>
-            </a>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
