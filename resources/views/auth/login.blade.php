@@ -72,39 +72,42 @@
                     <span class="m-in">Sign In</span>
                 </div>
             </div>
+            
             <div class="form sign-up">
-
                 <!-- Validation Errors -->
                 <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-                <form method="POST" action="{{ route('register') }}" style="overflow:auto">
+                <form method="POST" action="{{ route('register') }}">
                     @csrf
 
                     <h2>Sign Up</h2>
-                    <div >
+                    <div class="overflow-auto">
                         <div class="menu">
-                            <label>
-                                <x-label for="name" :value="__('Nama')" />
+                            <div class="col">
+                                <label>
+                                    <x-label for="name" :value="__('Nama')" />
 
-                                <x-input id="name" class="" type="text" name="nama" :value="old('name')"
-                                    required autofocus />
-                            </label>
-                            <label>
-                                <div class="mt-4">
-                                    <x-label for="alamat" :value="__('Alamat')" />
+                                    <x-input id="name" class="" type="text" name="nama" :value="old('name')"
+                                        required autofocus />
+                                </label>
+                                <label>
+                                    <div class="mt-4">
+                                        <x-label for="alamat" :value="__('Alamat')" />
 
-                                    <x-input id="alamat" class="" type="text" name="alamat"
-                                        :value="old('alamat')" required />
-                                </div>
-                            </label>
-                            <label>
-                                <div class="mt-4">
-                                    <x-label for="no_hp" :value="__('No Hp')" />
+                                        <x-input id="alamat" class="" type="text" name="alamat"
+                                            :value="old('alamat')" required />
+                                    </div>
+                                </label>
+                                <label>
+                                    <div class="mt-4">
+                                        <x-label for="no_hp" :value="__('No Hp')" />
 
-                                    <x-input id="no_hp" class="" type="number" name="no_hp"
-                                        :value="old('no_hp')" required />
-                                </div>
-                            </label>
+                                        <x-input id="no_hp" class="" type="number" name="no_hp"
+                                            :value="old('no_hp')" required />
+                                    </div>
+                                </label>
+                            </div>
+
                             <label>
                                 <div class="mt-4">
                                     <x-label for="email" :value="__('Email')" />
@@ -133,6 +136,7 @@
                             <x-button class="ml-4">
                                 {{ __('Register') }}
                             </x-button>
+                            <br>
                         </div>
                     </div>
                 </form>
