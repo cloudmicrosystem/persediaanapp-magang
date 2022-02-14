@@ -51,6 +51,15 @@
                 Stok Barang
               </p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a href="user" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Data Customer
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

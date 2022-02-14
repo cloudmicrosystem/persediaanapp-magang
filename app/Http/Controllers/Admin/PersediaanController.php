@@ -16,10 +16,13 @@ class PersediaanController extends Controller
      */
     public function index()
     {
-        $barang = DB::select('SELECT * FROM barang');
-        $category = DB::select('SELECT id,nama_category FROM category');
+        $barang = DB::select(
+            'SELECT barang.*,
+                (SELECT nama_category FROM category WHERE id = barang.id_category)
+                    AS nama_category FROM barang ORDER BY id '
+        );
 
-        return view('barang.index')->with(compact('barang', 'category'));
+        return view('barang.index')->with(compact('barang'));
     }
 
     /**

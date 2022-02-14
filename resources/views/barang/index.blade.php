@@ -12,7 +12,7 @@
                 <br>
                 <br>
                 <tr>
-                    <th>Category</th>
+                    <th>Kategori</th>
                     <th>Nama</th>
                     <th>Slug</th>
                     <th>Harga Produksi</th>
@@ -20,20 +20,15 @@
                     <th>Deskripsi</th>
                     <th>Ukuran</th>
                     <th>Qty</th>
-                    <th>Gambar</th>
                     <th colspan="2">Aksi</th>
                 </tr>
                 @foreach ($barang as $key => $value)
                     <tr>
-                        <td>
-                            @foreach ($category as $item)
-                                <option value="{{ $item->id }}" => {{ $item->nama_category }}></option>
-                            @endforeach
-                        </td>
+                        <td>{{ $value->nama_category }}</td>
                         <td>{{ $value->nama_barang }}</td>
                         <td>{{ $value->slug }} </td>
-                        <td>{{ $value->hpp }} </td>
-                        <td>{{ $value->price }} </td>
+                        <td>Rp {{ $value->hpp }} ,-</td>
+                        <td>Rp {{ $value->price }} ,-</td>
                         <td>{{ $value->deskripsi }} </td>
                         <td>{{ $value->size }}</td>
                         <td>{{ $value->qty }}</td>
