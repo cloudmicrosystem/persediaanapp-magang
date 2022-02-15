@@ -131,151 +131,185 @@
                         </nav>
                     </div>
 
-                            {{-- Product Card --}}
-                            <div class="col-md-8 m-auto w-100">
-                                <div class="row">
-                                    <div class="col-md-4 mb-5">
-                                        <div class="card">
-                                            <a href="haldetailproduct">
-                                                <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
-                                            </a>
-                                            <div class="card-body">
-                                                <a href="haldetailproduct">
-                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas </h2>
-                                                </a>
-                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                                <p class="my-2">Rp. 100.000,00</p>
-                                                <p style="color: orange" class="m-1">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </p>
-                                                <a href="#" class="btn btn-success">Beli</a>
-                                            </div>
-                                        </div>
+                    {{-- Product Card --}}
+                    <div class="col-md-8 m-auto w-100">
+                        <div class="row">
+
+                            <div class="col-md-4 mb-5">
+                                <div class="card">
+                                    <a href="haldetailproduct">
+                                        <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="haldetailproduct">
+                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
+                                            </h2>
+                                        </a>
+                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                        <p class="my-2">Rp. 100.000,00</p>
+                                        <p style="color: orange" class="m-1">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                        <a href="#" class="btn btn-success">Beli</a>
                                     </div>
-
-                                    <div class="col-md-4 mb-5">
-                                        <div class="card">
-                                            <a href="haldetailproduct">
-                                            <img src="images\d2.jpeg" class="card-img-top" alt="...">
-                                            </a>
-                                            <div class="card-body">
-                                                <a href="haldetailproduct">
-                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos </h2>
-                                                </a>
-                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                                <p class="my-2">Rp. 150.000,00</p>
-                                                <p style="color: orange" class="m-1">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </p>
-                                                <a href="#" class="btn btn-success">Beli</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 mb-5">
-                                        <div class="card">
-                                            <a href="haldetailproduct">
-                                            <img src="images/d3.jpeg" class="card-img-top" alt="...">
-                                            </a>
-                                            <div class="card-body">
-                                                <a href="haldetailproduct">
-                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos </h2>
-                                                </a>
-                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                                <p class="my-2">Rp. 120.000,00</p>
-                                                <p style="color: orange" class="m-1">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </p>
-                                                <a href="#" class="btn btn-success">Beli</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 mb-5">
-                                        <div class="card">
-                                            <a href="haldetailproduct">
-                                            <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
-                                            </a>
-                                            <div class="card-body">
-                                                <a href="haldetailproduct">
-                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas </h2>
-                                                </a>
-                                                <p class="my-2">Rp. 130.000,00</p>
-                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                                <p style="color: orange" class="m-1">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </p>
-                                                <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
-                                            </div>
-
-
-                                    </div>
-{{--
-                                    <div class="col-md-4 mb-5">
-                                        <div class="card">
-                                            <a href="haldetailproduct">
-                                                <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
-                                            </a>
-                                            <div class="card-body">
-                                                <a href="haldetailproduct">
-                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas </h2>
-                                                </a>
-                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                                <p class="my-2">Rp. 100.000,00</p>
-                                                <p style="color: orange" class="m-1">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </p>
-                                                <a href="#" class="btn btn-success">Beli</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4 mb-5">
-                                        <div class="card">
-                                            <a href="haldetailproduct">
-                                                <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
-                                            </a>
-                                            <div class="card-body">
-                                                <a href="haldetailproduct">
-                                                    <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas </h2>
-                                                </a>
-                                                <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                                <p class="my-2">Rp. 100.000,00</p>
-                                                <p style="color: orange" class="m-1">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </p>
-                                                <a href="#" class="btn btn-success">Beli</a>
-                                            </div>
-                                        </div>
-                                    </div> --}}
-
                                 </div>
                             </div>
+
+                            <div class="col-md-4 mb-5">
+                                <div class="card">
+                                    <a href="haldetailproduct">
+                                        <img src="images\d2.jpeg" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="haldetailproduct">
+                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos
+                                            </h2>
+                                        </a>
+                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                        <p class="my-2">Rp. 150.000,00</p>
+                                        <p style="color: orange" class="m-1">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                        <a href="#" class="btn btn-success">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-5">
+                                <div class="card">
+                                    <a href="haldetailproduct">
+                                        <img src="images/d3.jpeg" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="haldetailproduct">
+                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos
+                                            </h2>
+                                        </a>
+                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                        <p class="my-2">Rp. 120.000,00</p>
+                                        <p style="color: orange" class="m-1">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                        <a href="#" class="btn btn-success">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-5">
+                                <div class="card">
+                                    <a href="haldetailproduct">
+                                        <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="haldetailproduct">
+                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
+                                            </h2>
+                                        </a>
+                                        <p class="my-2">Rp. 130.000,00</p>
+                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                        <p style="color: orange" class="m-1">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                        <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
+                                    </div>
+
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="col-md-4 mb-5">
+                                <div class="card">
+                                    <a href="haldetailproduct">
+                                        <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="haldetailproduct">
+                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
+                                            </h2>
+                                        </a>
+                                        <p class="my-2">Rp. 130.000,00</p>
+                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                        <p style="color: orange" class="m-1">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                        <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
+                                    </div>
+
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="col-md-4 mb-5">
+                                <div class="card">
+                                    <a href="haldetailproduct">
+                                        <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="haldetailproduct">
+                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
+                                            </h2>
+                                        </a>
+                                        <p class="my-2">Rp. 130.000,00</p>
+                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
+                                        <p style="color: orange" class="m-1">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </p>
+                                        <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
+                                    </div>
+
+
+                                </div>
+
+
+
+                            </div>
+
+                            {{-- Pagenation --}}
+                            <div class="container">
+                                <ul class="pagination">
+                                  <li class="page-item "><a class="page-link" href="#">Previous</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                              </div>
+
+                        </div>
                     </div>
+
+
+
                     {{-- <div class="col-md-9">
                         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                             <ol class="carousel-indicators">
@@ -308,8 +342,8 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
+
 
 
     <!-- Footer -->

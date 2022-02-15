@@ -20,19 +20,19 @@
                             </li>
 
                             <li>
-                                <a href="menu.html">Menu</a>
+                                <a href="halproduct">Product</a>
                             </li>
 
                             <li>
-                                <a href="halproduct">Kategori Product</a>
+                                <a href="gallery.html">Store</a>
                             </li>
 
                             <li>
-                                <a href="gallery.html">Gallery</a>
+                                <a href="gallery.html">Artikel</a>
                             </li>
 
                             <li>
-                                <a href="about.html">About</a>
+                                <a href="halabout">About</a>
                             </li>
 
                             <li>
@@ -48,8 +48,8 @@
 
                 <!-- Social -->
                 <div class="social flex-w flex-l-m p-r-20">
-                    <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram m-l-21" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
 
                     <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
