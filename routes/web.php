@@ -37,6 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', [HomeController::class, 'index']);
     Route::resource('barang', PersediaanController::class);
     Route::resource('user', UserController::class);
+    Route::resource('kategori', CategoryController::class);
 });
 
     Route::get('/index', [HalcustController::class, 'index']);

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use stdClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class PersediaanController extends Controller
@@ -22,7 +23,18 @@ class PersediaanController extends Controller
                     AS nama_category FROM barang ORDER BY id '
         );
 
-        return view('barang.index')->with(compact('barang'));
+
+        $newBarang = array();
+        foreach ($barang as $key => $value) {
+            $newValue = json_decode(json_encode($value), true);
+            $gambarBarang =  json_decode(json_encode(DB::select('SELECT * FROM gambar WHERE id_barang ='.$value->id)), true);
+
+            $data = array_merge($newValue, ['gambar' => $gambarBarang]);
+            // echo '<pre>'; print_r($data); die;
+            array_push($newBarang, $data);
+        }
+
+        return view('barang.index')->with(compact('newBarang'));
     }
 
     /**
@@ -44,45 +56,47 @@ class PersediaanController extends Controller
      */
     public function store(Request $request)
     {
-        // // echo '<pre>'; print_r($request->code_barang); die;
-        // $gambar = null;
+        // echo '<pre>'; print_r($request->code_barang); die;
+        $gambar = null;
 
-        // // Validation
-        // $request->validate([
-        //     'gambar' => 'mimes:png,jpg,jpeg|max:6144 '
-        // ]);
+        // Validation
+        $request->validate([
+            'gambar' => 'mimes:png,jpg,jpeg|max:6144 '
+        ]);
 
-        // if($request->file('gambar')) {
-        //     $file = $request->file('gambar');
-        //     $gambar = time().'_'.$file->getClientOriginalName();
+        if($request->file('gambar')) {
+            $file = $request->file('gambar');
+            $gambar = time().'_'.$file->getClientOriginalName();
 
-        //     // File upload location
-        //     $location = 'storage/barang';
+            // File upload location
+            $location = 'storage/barang';
 
-        //     // Upload file
-        //     $file->move($location,$gambar);
-        //     // die;
-        // }else{
-        //     $gambar = null;
-        // }
+            // Upload file
+            $file->move($location,$gambar);
+            // die;
+        }else{
+            $gambar = null;
+        }
 
         DB::select("INSERT INTO barang(
             id_category,
             nama_barang,
             slug,
-            deskripsi,
+            hpp,
             price,
+            deskripsi,
             size,
-            qty,
-            gambar,
-
+            qty
             )
         VALUE(
         '$request->id_category',
         '$request->nama_barang',
         '$request->slug',
-        '$request->created_at',
-        '$request->updated_at'
+        '$request->hpp',
+        '$request->price',
+        '$request->deskripsi',
+        '$request->size',
+        '$request->qty'
         )");
 
         return redirect('barang')->with('toast_success', 'Data Berhasil Disimpan');
@@ -148,14 +162,11 @@ class PersediaanController extends Controller
         id_category='$request->id_category',
         nama_barang='$request->nama_barang',
         slug='$request->slug',
+        hpp='$request->hpp',
+        price='$request->price',
         deskripsi='$request->deskripsi',
-        price='$request->crpriceeated_at',
         size='$request->size',
-        qty='$request->qty',
-        gambar='$request->gambar',
-        status_stok='$request->status_stok',
-        created_at='$request->created_at',
-        updated_at='$request->updated_at'
+        qty='$request->qty'
         WHERE id=$id
         ");
 

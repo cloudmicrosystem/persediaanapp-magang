@@ -45,12 +45,7 @@ class UserController extends Controller
             email,
             no_hp,
             username,
-            PASSWORD,
-            created_by,
-            updated_by,
-            created_at,
-            updated_at
-
+            PASSWORD
             )
         VALUE(
             '$request->nama',
@@ -58,11 +53,7 @@ class UserController extends Controller
             '$request->email',
             '$request->no_hp',
             '$request->username',
-            '$request->password',
-            '$request->created_by',
-            '$request->updated_by',
-            '$request->created_at',
-            '$request->updated_at'
+            '$request->password'
              )");
 
         return redirect('user')->with('toast_success', 'Data Berhasil Ditambah');
@@ -107,11 +98,7 @@ class UserController extends Controller
         email='$request->email',
         no_hp = '$request->no_hp',
         username='$request->username',
-        password ='$request->password',
-        created_by='$request->created_by',
-        updated_by='$request->updated_by',
-        created_at='$request->created_at',
-        updated_at='$request->updated_at'
+        password ='$request->password'
         WHERE id=$id
         ");
 

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Database Customer
+Database Kategori
 @endsection
 
 @section('content')
@@ -9,31 +9,24 @@ Database Customer
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-bordered table-responsive">
+                        <table class="table table-bordered table-hover">
                             <thead>
-                                <a class="btn btn-info" href="{{ url ('user/create')}}"><i class='fas fa-plus'></i></a>
+                                <a class="btn btn-info" href="{{ url ('kategori/create')}}"><i class='fas fa-plus'></i></a>
                                 <br>
                                 <br>
                                 <tr>
                                     <th>Nama</th>
-                                    <th>Alamat</th>
-                                    <th>Email</th>
-                                    <th>No Hp</th>
-                                    <th>Username</th>
-                                    <th>Password</th>
+                                    <th>Slug</th>
                                     <th colspan="2">Aksi</th>
                                 </tr>
-                                    @foreach ($users as $key=>$value)
+                                    @foreach ($category as $key=>$value)
                                         <tr>
-                                            <td>{{ $value->nama }}</td>
-                                            <td>{{ $value->alamat }}</td>
-                                            <td>{{ $value->email }}</td>
-                                            <td>{{ $value->no_hp }}</td>
-                                            <td>{{ $value->username }}</td>
-                                            <td>{{ $value->password }}</td>
-                                            <td><a class="btn btn-info" href="{{ url('user/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
+                                            <td>{{ $value->nama_category }}</td>
+                                            <td>{{ $value->slug }}</td>
+
+                                            <td><a class="btn btn-info" href="{{ url('kategori/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
                                             <td>
-                                                <form action="{{ url('user/'.$value->id) }}" method="POST">
+                                                <form action="{{ url('kategori/'.$value->id) }}" method="POST">
                                                     @csrf
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i></button>

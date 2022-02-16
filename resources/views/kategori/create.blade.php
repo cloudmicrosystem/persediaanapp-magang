@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Tambah Customer
+Tambah Kategori
 @endsection
 @section('content')
 
@@ -12,36 +12,20 @@ Tambah Customer
           <!-- jquery validation -->
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Form Customer</h3>
+              <h3 class="card-title">Form Kategori</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form id="quickForm"  method="POST" action="{{ url('user') }}">
+            <form id="quickForm"  method="POST" action="{{ url('kategori') }}">
                 @csrf
                 <div class="card-body">
                 <div class="form-group">
                   <label >Nama</label>
-                  <input type="text" name="nama" class="form-control" >
+                  <input type="text" name="nama_category" class="form-control" >
                 </div>
                 <div class="form-group">
-                  <label>Alamat</label>
-                  <input type="text" name="alamat" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="text" name="email" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>No Hp</label>
-                  <input type="number" name="no_hp" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Username</label>
-                  <input type="text" name="username" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Password</label>
-                  <input type="text" name="password" class="form-control" >
+                  <label>Slug</label>
+                  <input type="text" name="slug" class="form-control" >
                 </div>
               <!-- /.card-body -->
               <div class="card-footer">

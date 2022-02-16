@@ -37,32 +37,12 @@ Update Customer
                   <input type="number" name="no_hp" value="{{$users[0]->no_hp}}" class="form-control" >
                 </div>
                 <div class="form-group">
-                  <label>Jabatan</label>
-                  <input type="text" name="jabatan"  value="{{$users[0]->jabatan}}" class="form-control" >
-                </div>
-                <div class="form-group">
                   <label>Username</label>
                   <input type="text" name="username" value="{{$users[0]->username}}" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Password</label>
                   <input type="text" name="password" value="{{$users[0]->password}}" class="form-control" >
-                </div>
-                <div class="form-group">
-                    <label>Created By</label>
-                    <input type="text" name="created_by" value="{{$users[0]->created_by}}" class="form-control" >
-                  </div>
-                  <div class="form-group">
-                    <label>Updated By </label>
-                    <input type="text" name="updated_by" value="{{$users[0]->updated_by}}" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Date Created</label>
-                  <input type="text" name="created_at" value="{{$users[0]->created_at}}" class="form-control" >
-                </div>
-                <div class="form-group">
-                  <label>Date Updated</label>
-                  <input type="text"  name="updated_at" value="{{$users[0]->updated_at}}" class="form-control" >
                 </div>
               <!-- /.card-body -->
               <div class="card-footer">
