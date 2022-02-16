@@ -10,15 +10,15 @@
         </li>
 
         <li class="t-center m-b-13">
-            <a href="menu.html" class="txt19">Menu</a>
+            <a href="menu.html" class="txt19">Product</a>
         </li>
 
         <li class="t-center m-b-13">
-            <a href="halproduct" class="txt19">Kategori Product</a>
+            <a href="halproduct" class="txt19">Store</a>
         </li>
 
         <li class="t-center m-b-13">
-            <a href="gallery.html" class="txt19">Gallery</a>
+            <a href="gallery.html" class="txt19">Artikel</a>
         </li>
 
         <li class="t-center m-b-13">
@@ -42,7 +42,7 @@
     </ul>
 
     <!-- - -->
-    <div class="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
+    {{-- <div class="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
         <!-- - -->
         <h4 class="txt20 m-b-33">
             Gallery
@@ -95,5 +95,5 @@
                 <img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY">
             </a>
         </div>
-    </div>
+    </div> --}}
 </aside>

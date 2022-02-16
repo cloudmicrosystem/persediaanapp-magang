@@ -3,12 +3,14 @@
 use App\Http\Controllers\Users\HalcustController;
 use App\Http\Controllers\Users\HaldetailproductController;
 use App\Http\Controllers\Users\HalproductController;
+use App\Http\Controllers\Users\HalaboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Admin\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +43,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/index', [HalcustController::class, 'index']);
     Route::get('/halproduct', [HalproductController::class, 'index']);
     Route::get('/haldetailproduct', [HaldetailproductController::class, 'index']);
+    Route::get('/halabout', [HalaboutController::class, 'index']);
     Route::resource('halproduct', HalproductController::class);

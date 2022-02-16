@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.png') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('images/icons/logo11.png') }}" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/bootstrap/css/bootstrap.min.css') }}">
     <!--===============================================================================================-->
@@ -147,10 +147,10 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="product-detail">
-                        <h2 class="product-name">Casual Shirt With Ruffle Hem</h2>
+                        <h2 class="product-name">JUDUL</h2>
                         <div class="product-price">
-                            <span class="price">IDR 299.000</span><span class="price-muted">IDR
-                                499.000</span>
+                            <span class="price">IDR 299.000</span>
+                            <span class="pace-center-circle-blue">IDR 499.000</span>
                         </div>
                         <div class="product-short-desc">
                             <p>Compact sport shoe for running, consectetur adipisicing elit, sed do eiusmod
@@ -195,7 +195,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="product-categories">
+                        {{-- <div class="product-categories">
                             <ul>
                                 <li class="categories-title">Categories :</li>
                                 <li><a href="#">fashion</a></li>
@@ -222,10 +222,12 @@
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
+            <br>
+
             <div class="row">
                 <div class="col-12">
                     <div class="product-details">
@@ -290,7 +292,7 @@
         </div>
     </section>
 
-    <section class="other-products pb-4 pt-4">
+    {{-- <section class="other-products pb-4 pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -362,7 +364,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <!-- Footer -->

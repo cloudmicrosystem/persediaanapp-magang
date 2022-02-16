@@ -10,7 +10,12 @@
                 <ul class="m-b-70">
                     <li class="txt14 m-b-14">
                         <i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
-                        Jl. Sukun Kota Malang & Jl. Slorok Kabupaten Malang
+                        Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang, Jawa Timur 65147
+                    </li>
+
+                    <li class="txt14 m-b-14">
+                        <i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                        Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang, Jawa Timur 65165
                     </li>
 
                     <li class="txt14 m-b-14">
@@ -43,52 +48,62 @@
             <div class="col-sm-6 col-md-4 p-t-50">
                 <!-- - -->
                 <h4 class="txt13 m-b-33">
-                    Latest twitter
+                    SOSIAL MEDIA
                 </h4>
-
-                <div class="m-b-25">
-                    <span class="fs-13 color2 m-r-5">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </span>
-                    <a href="#" class="txt15">
-                        @colorlib
-                    </a>
-
-                    <p class="txt14 m-b-18">
-                        Activello is a good option. It has a slider built into that displays the featured image in
-                        the slider.
-                        <a href="#" class="txt15">
-                            https://buff.ly/2zaSfAQ
-                        </a>
-                    </p>
-
-                    <span class="txt16">
-                        21 Dec 2017
-                    </span>
-                </div>
 
                 <div>
                     <span class="fs-13 color2 m-r-5">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
                     </span>
                     <a href="#" class="txt15">
-                        @colorlib
+                        Morfeen Official
                     </a>
 
                     <p class="txt14 m-b-18">
                         Activello is a good option. It has a slider built into that displays
                         <a href="#" class="txt15">
-                            https://buff.ly/2zaSfAQ
+
                         </a>
                     </p>
 
-                    <span class="txt16">
-                        21 Dec 2017
-                    </span>
+
                 </div>
+
+                <div class="m-b-25">
+                    <span class="fs-13 color2 m-r-5">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </span>
+                    <a href="#" class="txt15">
+                        Morfeen_oficcial
+                    </a>
+
+                    <p class="txt14 m-b-18">
+                        Activello is a good option. It has a slider built into that displays the featured image in
+                        the slider.
+                    </p>
+                </div>
+
+                <div>
+                    <span class="fs-13 color2 m-r-5">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </span>
+                    <a href="#" class="txt15">
+                        Morfeen Official
+                    </a>
+
+                    <p class="txt14 m-b-18">
+                        Activello is a good option. It has a slider built into that displays
+                        <a href="#" class="txt15">
+
+                        </a>
+                    </p>
+
+
+                </div>
+
             </div>
 
-            <div class="col-sm-6 col-md-4 p-t-50">
+            {{-- <div class="col-sm-6 col-md-4 p-t-50">
                 <!-- - -->
                 <h4 class="txt13 m-b-38">
                     Gallery
@@ -158,6 +173,7 @@
                 </div>
 
             </div>
+             --}}
         </div>
     </div>
 
@@ -165,13 +181,13 @@
         <div class="container">
             <div class="flex-sb-m flex-w p-t-22 p-b-22">
                 <div class="p-t-5 p-b-5">
-                    <a href="#" class="fs-15 c-white"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
                     <a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+                    <a href="#" class="fs-15 c-white"><i class="fa fa-instagram m-l-18" aria-hidden="true"></i></a>
                     <a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a>
                 </div>
 
                 <div class="txt17 p-r-20 p-t-5 p-b-5">
-                    Copyright &copy; 2018 All rights reserved | This template is made with <i
+                    Copyright &copy; 2022 Morfeen Official <i
                         class="fa fa-heart"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                 </div>
             </div>
