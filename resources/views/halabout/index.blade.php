@@ -47,16 +47,16 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/slide-1.jpeg);">
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/About.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                        <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
+                        {{-- <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
                             data-appear="fadeInDown">
                             Detail Product
                         </span>
 
                         <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
                             Morfeen Thirteen
-                        </h2>
+                        </h2> --}}
 
                         {{-- <div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
                             <!-- Button1 -->
@@ -120,12 +120,12 @@
                     <div id="product-images" class="carousel slide" data-ride="carousel">
                         <!-- slides -->
                         <div class="carousel-inner">
-                            <div class="carousel-item active"> <img src="images/welcome1.jpeg" alt="Product 1"> </div>
+                            <div class="carousel-item active"> <img src="images/welcome2.jpg" alt="Product 1"> </div>
                         </div> <!-- Left right -->
-                        <a class="carousel-control-prev" href="#product-images" > <span
+                        {{-- <a class="carousel-control-prev" href="#product-images" > <span
                                 class="carousel-control-prev-icon"></span> </a>
                         <a class="carousel-control-next" href="#product-images" > <span
-                                class="carousel-control-next-icon"></span> </a>
+                                class="carousel-control-next-icon"></span> </a> --}}
                         <!-- Thumbnails -->
 
                     </div>
@@ -140,6 +140,7 @@
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                 consequat
                             </p>
+                            <br>
                             <p>Compact sport shoe for running, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

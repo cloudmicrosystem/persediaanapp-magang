@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('images/icons/logo11.png') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/bootstrap/css/bootstrap.min.css') }}">
     <!--===============================================================================================-->
@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item2-slick1" style="background-image: url(images/master-slides-02.jpg);">
+                <div class="item-slick1 item2-slick1" style="background-image: url(images/welcome2.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                         <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
                             Welcome to
@@ -85,7 +85,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item3-slick1" style="background-image: url(images/master-slides-01.jpg);">
+                <div class="item-slick1 item3-slick1" style="background-image: url(images/welcome4.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                         <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
                             data-appear="rotateInDownLeft">
@@ -127,10 +127,12 @@
                         </h3>
 
                         <p class="t-center m-b-22 size3 m-l-r-auto">
-                            Toko Distro yang berdiri pada tahun 2013, Menjual Beberapa aparel kaos Dll
+                            Morfeen adalah sebuah brand yang dibentuk dan di dirikan oleh Fandi Akhmad ketika dia masih bersekolah di bangku SMK, tepat nya pada tahun 2013
+                            bergerak di bidang fashion style & clothing line. Hingga saat ini Morfeen sudah memilik 2 toko offline di Sukun, Kota Malang & Slorok, Kab. Malang.
+
                         </p>
 
-                        <a href="about.html" class="txt4">
+                        <a href="halabout" class="txt4">
                             Our Story
                             <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                         </a>
@@ -139,7 +141,7 @@
 
                 <div class="col-md-6 p-b-30">
                     <div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-                        <img src="images/welcome1.jpeg" alt="IMG-OUR">
+                        <img src="images/halcus.jpg" alt="IMG-OUR">
                     </div>
                 </div>
             </div>
@@ -149,7 +151,7 @@
     <!-- Intro -->
     <section class="section-intro">
         <div class="header-intro parallax100 t-center p-t-135 p-b-158"
-            style="background-image: url(images/bg-intro-01.jpg);">
+            style="background-image: url(images/halcus1.jpg);">
             <span class="tit2 p-l-15 p-r-15">
                 Discover
             </span>

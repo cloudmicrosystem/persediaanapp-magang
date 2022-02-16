@@ -25,7 +25,7 @@
 
                     <li class="txt14 m-b-14">
                         <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
-                        contact@site.com
+                        morfeen.selfporject@gmail.com
                     </li>
                 </ul>
 
@@ -36,7 +36,7 @@
 
                 <ul>
                     <li class="txt14">
-                        09:30 AM – 11:00 PM
+                        12:00 AM – 9:00 PM
                     </li>
 
                     <li class="txt14">
