@@ -25,7 +25,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $category = DB::select('SELECT * FROM category');
+        return view('kategori.create')->with(compact('category'));
     }
 
     /**
@@ -36,7 +37,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::select("INSERT INTO category(
+            nama_category,
+            slug
+            )
+        VALUE(
+        '$request->nama_category',
+        '$request->slug'
+        )");
+
+        return redirect('kategori')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -58,7 +68,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = DB::select('SELECT * FROM category WHERE id =?', [$id]);
+
+        return view('kategori.edit')->with(compact('category'));
     }
 
     /**
@@ -70,7 +82,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        DB::select("UPDATE category SET
+        nama_category='$request->nama_category',
+        slug='$request->slug'
+        WHERE id=$id
+        ");
+
+return redirect('kategori')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -81,6 +100,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::select("DELETE FROM category WHERE id=$id");
+
+        return redirect('kategori')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

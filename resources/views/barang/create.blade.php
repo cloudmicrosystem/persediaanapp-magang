@@ -3,7 +3,6 @@
     Tambah Stok Barang
 @endsection
 @section('content')
-
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -21,36 +20,36 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Category</label>
+                                    <label>Kategori </label>
                                     <input type="text" name="id_category" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Nama</label>
+                                    <label>Nama </label>
                                     <input type="text" name="nama_barang" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Deskripsi</label>
-                                    <input type="text" name="deskripsi" class="form-control">
+                                    <label>Slug </label>
+                                    <input type="text" name="slug" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Harga</label>
+                                    <label>HPP </label>
+                                    <input type="decimal" name="hpp" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Harga Jual </label>
                                     <input type="decimal" name="price" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Ukuran</label>
+                                    <label>Deskripsi </label>
+                                    <input type="text" name="deskripsi" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ukuran </label>
                                     <input type="text" name="size" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Qty</label>
-                                    <input type="text" name="qty" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Gambar</label>
-                                    <input type="file" name="gambar_barang" class="form-control" accept="image/*">
-                                </div>
-                                <div class="form-group">
-                                    <label>Status Stok</label>
-                                    <input type="number" name="status_stok" class="form-control">
+                                    <label>Qty </label>
+                                    <input type="number" name="qty" class="form-control">
                                 </div>
                             </div>
                             <!-- /.card-body -->
