@@ -60,6 +60,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="kategori" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Data Kategori
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

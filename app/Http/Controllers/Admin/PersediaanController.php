@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use stdClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class PersediaanController extends Controller
@@ -22,7 +23,18 @@ class PersediaanController extends Controller
                     AS nama_category FROM barang ORDER BY id '
         );
 
-        return view('barang.index')->with(compact('barang'));
+
+        $newBarang = array();
+        foreach ($barang as $key => $value) {
+            $newValue = json_decode(json_encode($value), true);
+            $gambarBarang =  json_decode(json_encode(DB::select('SELECT * FROM gambar WHERE id_barang ='.$value->id)), true);
+
+            $data = array_merge($newValue, ['gambar' => $gambarBarang]);
+            // echo '<pre>'; print_r($data); die;
+            array_push($newBarang, $data);
+        }
+
+        return view('barang.index')->with(compact('newBarang'));
     }
 
     /**
