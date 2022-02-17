@@ -7,7 +7,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/icons/logo11.png" alt="IMG-LOGO" data-logofixed="images/icons/logo11.png">
+                        <img src="images/icons/logoa.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
                     </a>
                 </div>
 
@@ -42,15 +42,19 @@
                             <li>
                                 <a href="contact.html">Contact</a>
                             </li>
+
+                            <li>
+                                <a href="contact.html">|</a>
+                            </li>
+
                         </ul>
                     </nav>
                 </div>
 
                 <!-- Social -->
                 <div class="social flex-w flex-l-m p-r-20">
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram m-l-21" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
 
                     <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                 </div>

@@ -47,7 +47,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/slide-1.jpeg);">
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/halproduct.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                         <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
                             data-appear="fadeInDown">
@@ -161,7 +161,7 @@
                             <div class="col-md-4 mb-5">
                                 <div class="card">
                                     <a href="haldetailproduct">
-                                        <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                                        <img src="images/welcome2.jpg" class="card-img-top" alt="...">
                                     </a>
                                     <div class="card-body">
                                         <a href="haldetailproduct">
@@ -190,7 +190,7 @@
                             <div class="col-md-4 mb-5">
                                 <div class="card">
                                     <a href="haldetailproduct">
-                                        <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                                        <img src="images/halcus.jpg" class="card-img-top" alt="...">
                                     </a>
                                     <div class="card-body">
                                         <a href="haldetailproduct">
@@ -219,7 +219,7 @@
                             <div class="col-md-4 mb-5">
                                 <div class="card">
                                     <a href="haldetailproduct">
-                                        <img src="images/photo-gallery-thumb-01.jpg" class="card-img-top" alt="...">
+                                        <img src="images/welcome4.jpg" class="card-img-top" alt="...">
                                     </a>
                                     <div class="card-body">
                                         <a href="haldetailproduct">
