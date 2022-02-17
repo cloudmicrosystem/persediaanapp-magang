@@ -15,7 +15,7 @@ class HalstoreController extends Controller
     public function index()
     {
 
-            return view('halstore.index');
+            return view('frontend.halstore.index');
     }
 
     /**
