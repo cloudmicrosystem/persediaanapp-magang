@@ -36,10 +36,10 @@
 <body class="animsition">
 
     <!-- Header -->
-     @include('halcust.header')
+     @include('frontend.halcust.header')
 
     <!-- Sidebar -->
-    @include('halcust.sidebar')
+    @include('frontend.halcust.sidebar')
 
     <!-- Slide1 -->
     <section class="section-slide">
@@ -1028,7 +1028,7 @@
 
 
     <!-- Footer -->
-    @include('halcust.footer')
+    @include('frontend.halcust.footer')
 
 
     <!-- Back to top -->
