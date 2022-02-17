@@ -9,10 +9,10 @@ class HalcustController extends Controller
 {
     public function index(){
         // return "ini dari home controller";
-        return view('halcust.index');
+        return view('frontend.halcust.index');
     }
 
     public function adminlte(){
-        return view('layouts.master');
+        return view('backend.layouts.master');
     }
 }

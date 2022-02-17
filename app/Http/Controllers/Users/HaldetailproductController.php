@@ -14,7 +14,7 @@ class HaldetailproductController extends Controller
      */
     public function index()
     {
-        return view('haldetailproduct.index');
+        return view('frontend.haldetailproduct.index');
     }
 
     /**

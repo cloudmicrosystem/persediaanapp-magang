@@ -15,7 +15,7 @@ class HalproductController extends Controller
     public function index()
     {
 
-            return view('halproduct.index');
+            return view('frontend.halproduct.index');
     }
 
     /**

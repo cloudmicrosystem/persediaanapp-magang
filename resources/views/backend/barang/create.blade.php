@@ -1,6 +1,6 @@
-@extends('layouts.master')
+@extends('backend.layouts.master')
 @section('title')
-    Update Stok Barang
+    Tambah Stok Barang
 @endsection
 @section('content')
     <section class="content">
@@ -15,56 +15,46 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form id="quickForm" method="POST" action="{{ url('barang', [$barang[0]->id]) }}"
+                        <form id="quickForm" method="POST" action="{{ route('barang.store') }}"
                             enctype="multipart/form-data">
                             @csrf
-                            @method('PUT')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Kategori </label>
-                                    <input type="text" name="id_category" value="{{ $barang[0]->id_category }}"
-                                        class="form-control">
+                                    <input type="text" name="id_category" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Nama </label>
-                                    <input type="text" name="nama_barang" value="{{ $barang[0]->nama_barang }}"
-                                        class="form-control">
+                                    <input type="text" name="nama_barang" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Slug </label>
-                                    <input type="text" name="slug" value="{{ $barang[0]->slug }}" class="form-control">
+                                    <input type="text" name="slug" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>HPP </label>
-                                    <input type="decimal" name="hpp" value="{{ $barang[0]->hpp }}" class="form-control">
+                                    <input type="decimal" name="hpp" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Harga Jual </label>
-                                    <input type="decimal" name="price" value="{{ $barang[0]->price }}"
-                                        class="form-control">
+                                    <input type="decimal" name="price" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi </label>
-                                    <input type="text" name="deskripsi" value="{{ $barang[0]->deskripsi }}"
-                                        class="form-control">
+                                    <input type="text" name="deskripsi" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Ukuran </label>
-                                    <input type="text" name="size" value="{{ $barang[0]->size }}" class="form-control">
+                                    <input type="text" name="size" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Qty </label>
-                                    <input type="number" name="qty" value="{{ $barang[0]->qty }}" class="form-control">
+                                    <input type="number" name="qty" class="form-control">
                                 </div>
-                                {{-- <div class="form-group">
-                                    <label>Gambar</label>
-                                    <input type="file" name="url_gambar" accept="image/*"
-                                        value="{{ $barang[0]->gambar }}" class="form-control">
-                                </div> --}}
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
                         </form>
                     </div>

@@ -23,9 +23,9 @@ x
     <img class="animation__shake" src="{{ asset('') }}assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
-@include('layouts.nav-header')
+@include('backend.layouts.nav-header')
 
-@include('layouts.sidebar')
+@include('backend.layouts.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -55,7 +55,7 @@ x
   </div>
 
   <!-- /.content-wrapper -->
-  @include('layouts.footer')
+  @include('backend.layouts.footer')
   @include('sweetalert::alert')
 
 

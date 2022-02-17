@@ -23,6 +23,7 @@ class PersediaanController extends Controller
                     AS nama_category FROM barang ORDER BY id '
         );
 
+        // $gambar = DB::select('SELECT * FROM gambar WHERE id_barang =.$barang->id');
 
         $newBarang = array();
         foreach ($barang as $key => $value) {
@@ -34,7 +35,7 @@ class PersediaanController extends Controller
             array_push($newBarang, $data);
         }
 
-        return view('barang.index')->with(compact('newBarang'));
+        return view('backend.barang.index')->with(compact('newBarang'));
     }
 
     /**
@@ -45,7 +46,7 @@ class PersediaanController extends Controller
     public function create()
     {
         $barang = DB::select('SELECT * FROM barang');
-        return view('barang.create')->with(compact('barang'));
+        return view('backend.barang.create')->with(compact('barang'));
     }
 
     /**
@@ -99,7 +100,7 @@ class PersediaanController extends Controller
         '$request->qty'
         )");
 
-        return redirect('barang')->with('toast_success', 'Data Berhasil Disimpan');
+        return redirect('backend.barang')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -123,7 +124,7 @@ class PersediaanController extends Controller
     {
         $barang = DB::select('SELECT * FROM barang WHERE id =?', [$id]);
 
-        return view('barang.edit')->with(compact('barang'));
+        return view('backend.barang.edit')->with(compact('barang'));
     }
 
     /**
@@ -170,7 +171,7 @@ class PersediaanController extends Controller
         WHERE id=$id
         ");
 
-        return redirect('barang')->with('toast_success', 'Data Berhasil Diupdate');
+        return redirect('backend.barang')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -183,6 +184,6 @@ class PersediaanController extends Controller
     {
         DB::select("DELETE FROM barang WHERE id=$id");
 
-        return redirect('barang')->with('toast_success', 'Data Berhasil Dihapus');
+        return redirect('backend.barang')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }
