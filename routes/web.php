@@ -4,6 +4,7 @@ use App\Http\Controllers\Users\HalcustController;
 use App\Http\Controllers\Users\HaldetailproductController;
 use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HalaboutController;
+use App\Http\Controllers\Users\HalstoreController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
@@ -44,4 +45,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/halproduct', [HalproductController::class, 'index']);
     Route::get('/haldetailproduct', [HaldetailproductController::class, 'index']);
     Route::get('/halabout', [HalaboutController::class, 'index']);
-    Route::resource('halproduct', HalproductController::class);
+    Route::get('/halstore', [HalstoreController::class, 'index']);
+

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('images/icons/logo11.png') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/bootstrap/css/bootstrap.min.css') }}">
     <!--===============================================================================================-->
@@ -246,16 +246,12 @@
                             </div>
 
                             {{-- Pagenation --}}
-                            <div class="container">
-                                <ul class="pagination">
-                                  <li class="page-item "><a class="page-link" href="#">Previous</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                              </div>
 
+                            <div class=" pagination flex-c-m flex-w p-l-15 p-r-15 m-t-24 m-b-50">
+                                <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
+                                <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
+                                <a href="#" class="item-pagination flex-c-m trans-0-4">3</a>
+                            </div>
                         </div>
                     </div>
 
