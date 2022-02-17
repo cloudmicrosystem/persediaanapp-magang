@@ -1,6 +1,6 @@
-@extends('layouts.master')
+@extends('backend.layouts.master')
 @section('title')
-Tambah Kategori
+Update Kategori
 @endsection
 @section('content')
 
@@ -16,23 +16,24 @@ Tambah Kategori
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form id="quickForm"  method="POST" action="{{ url('kategori') }}">
+            <form id="quickForm"  method="POST" action="{{ url('kategori', [$category[0]->id]) }}" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="card-body">
                 <div class="form-group">
                   <label >Nama</label>
-                  <input type="text" name="nama_category" class="form-control" >
+                  <input type="text" name="nama_category" value="{{$category[0]->nama_category}}" class="form-control" >
                 </div>
                 <div class="form-group">
                   <label>Slug</label>
-                  <input type="text" name="slug" class="form-control" >
+                  <input type="text" name="slug" value="{{$category[0]->slug}}" class="form-control" >
                 </div>
               <!-- /.card-body -->
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>
-             </div>
-        </form>
-    </div>
+              </div>
+            </form>
+          </div>
           <!-- /.card -->
           </div>
         <!--/.col (left) -->

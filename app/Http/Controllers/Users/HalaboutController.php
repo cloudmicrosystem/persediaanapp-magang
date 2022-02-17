@@ -14,7 +14,7 @@ class HalaboutController extends Controller
      */
     public function index()
     {
-        return view('halabout.index');
+        return view('frontend.halabout.index');
     }
 
     /**

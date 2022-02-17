@@ -9,10 +9,10 @@ class HomeController extends Controller
 {
     public function index(){
         // return "ini dari home controller";
-        return view('layouts.content');
+        return view('backend.layouts.content');
     }
 
     public function adminlte(){
-        return view('layouts.master');
+        return view('backend.layouts.master');
     }
 }

@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index()
     {
         $users = DB::select('SELECT * FROM users');
-        return view('user.index')->with(compact('users'));
+        return view('backend.user.index')->with(compact('users'));
     }
 
     /**
@@ -27,7 +27,7 @@ class UserController extends Controller
     public function create()
     {
         $users = DB::select('SELECT * FROM users');
-        return view('user.create')->with(compact('users'));
+        return view('backend.user.create')->with(compact('users'));
     }
 
     /**
@@ -56,7 +56,7 @@ class UserController extends Controller
             '$request->password'
              )");
 
-        return redirect('user')->with('toast_success', 'Data Berhasil Ditambah');
+        return redirect('backend.user')->with('toast_success', 'Data Berhasil Ditambah');
     }
 
     /**
@@ -80,7 +80,7 @@ class UserController extends Controller
     {
         $users = DB::select('SELECT * FROM users WHERE id =?', [$id]);
 
-        return view('user.edit')->with(compact('users'));
+        return view('backend.user.edit')->with(compact('users'));
     }
 
     /**
@@ -102,7 +102,7 @@ class UserController extends Controller
         WHERE id=$id
         ");
 
-        return redirect('user')->with('toast_success', 'Data Berhasil Diupdate');
+        return redirect('backend.user')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -115,6 +115,6 @@ class UserController extends Controller
     {
         DB::select("DELETE FROM users WHERE id=$id");
 
-       return redirect('user')->with('toast_success', 'Data Berhasil Dihapus');
+       return redirect('backend.user')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

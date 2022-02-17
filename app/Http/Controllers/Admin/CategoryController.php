@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category = DB::select('SELECT * FROM category');
-        return view('kategori.index')->with(compact('category'));
+        return view('backend.kategori.index')->with(compact('category'));
     }
 
     /**
@@ -26,7 +26,8 @@ class CategoryController extends Controller
     public function create()
     {
         $category = DB::select('SELECT * FROM category');
-        return view('kategori.create')->with(compact('category'));
+
+        return view('backend.kategori.create')->with(compact('category'));
     }
 
     /**
@@ -57,7 +58,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = DB::select('SELECT * FROM barang WHERE id_category = $id_category');
     }
 
     /**
@@ -70,7 +71,7 @@ class CategoryController extends Controller
     {
         $category = DB::select('SELECT * FROM category WHERE id =?', [$id]);
 
-        return view('kategori.edit')->with(compact('category'));
+        return view('backend.kategori.edit')->with(compact('category'));
     }
 
     /**
@@ -89,7 +90,7 @@ class CategoryController extends Controller
         WHERE id=$id
         ");
 
-return redirect('kategori')->with('toast_success', 'Data Berhasil Diupdate');
+return redirect('backend.kategori')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -102,6 +103,6 @@ return redirect('kategori')->with('toast_success', 'Data Berhasil Diupdate');
     {
         DB::select("DELETE FROM category WHERE id=$id");
 
-        return redirect('kategori')->with('toast_success', 'Data Berhasil Dihapus');
+        return redirect('backend.kategori')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }
