@@ -33,6 +33,9 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-free/css/all.min.css') }}">
     <!--===============================================================================================-->
+    <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
+
+    <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
 </head>
 
 <body class="animsition">
@@ -53,7 +56,6 @@
                             data-appear="fadeInDown">
                             Halaman Product
                         </span>
-
                         <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
                             Morfeen Thirteen
                         </h2>
@@ -72,220 +74,61 @@
                         <nav class="nav-category" style="border-right: 1px solid #bbb; height: 100%">
                             <h3><b><i>Kategori Product</i></b></h3>
                             <ul class="menu-category mt-3">
-                                <li><a href="#">Hoodie</a></li>
-                                <li><a href="#">Kaos</a></li>
-                                <li><a href="#">Polo</a></li>
-                                <li><a href="#">Tas</a></li>
-                                <li><a href="#">Sepatu</a></li>
-                                <li><a href="#">Jacket</a></li>
+                                <li>
+                                    @foreach ($category as $key => $value)
+                                <li><a href=""> {{ $value->nama_category }}</a></li>
+                                @endforeach
+                                </li>
                             </ul>
                         </nav>
                     </div>
 
                     {{-- Product Card --}}
                     <div class="col-md-8 m-auto w-100">
-                        <div class="row">
-
-                            <div class="col-md-4 mb-5">
-                                <div class="card">
-                                    <a href="haldetailproduct">
-                                        <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
-                                    </a>
-                                    <div class="card-body">
-                                        <a href="haldetailproduct">
-                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
-                                            </h2>
-                                        </a>
-                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                        <p class="my-2">Rp. 100.000,00</p>
-                                        <p style="color: orange" class="m-1">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                        <a href="#" class="btn btn-success">Beli</a>
+                        <div class="container">
+                            <div class="row">
+                                <div class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="card">
+                                            @foreach ($barang as $items)
+                                                @foreach ($newBarang as $key => $value)
+                                                <li>
+                                                    <ul>
+                                                        <a href="haldetailproduct">
+                                                            @foreach ($value['gambar'] as $item)
+                                                                <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
+                                                                    alt="{{ $value['nama_barang'] }}" width="100px"
+                                                                    height="100px" />
+                                                            @endforeach
+                                                        </a>
+                                                    </ul>
+                                                </li>
+                                                    <div class="card-body">
+                                                        <a href="haldetailproduct">
+                                                            <h2 class="card-title"
+                                                                style="font-size: 20px; font-weight:bold">
+                                                                {{ $items->nama_barang }};
+                                                            </h2>
+                                                        </a>
+                                                        <p class="card-text"></p>
+                                                        <p class="my-2">{{ $items->price }}</p>
+                                                        <p style="color: orange" class="m-1">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </p>
+                                                        <a href="#" class="btn btn-success">Beli</a>
+                                                    </div>
+                                                    @endforeach
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-md-4 mb-5">
-                                <div class="card">
-                                    <a href="haldetailproduct">
-                                        <img src="images\d2.jpeg" class="card-img-top" alt="...">
-                                    </a>
-                                    <div class="card-body">
-                                        <a href="haldetailproduct">
-                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos
-                                            </h2>
-                                        </a>
-                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                        <p class="my-2">Rp. 150.000,00</p>
-                                        <p style="color: orange" class="m-1">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                        <a href="#" class="btn btn-success">Beli</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 mb-5">
-                                <div class="card">
-                                    <a href="haldetailproduct">
-                                        <img src="images/d3.jpeg" class="card-img-top" alt="...">
-                                    </a>
-                                    <div class="card-body">
-                                        <a href="haldetailproduct">
-                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos
-                                            </h2>
-                                        </a>
-                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                        <p class="my-2">Rp. 120.000,00</p>
-                                        <p style="color: orange" class="m-1">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                        <a href="#" class="btn btn-success">Beli</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 mb-5">
-                                <div class="card">
-                                    <a href="haldetailproduct">
-                                        <img src="images/welcome2.jpg" class="card-img-top" alt="...">
-                                    </a>
-                                    <div class="card-body">
-                                        <a href="haldetailproduct">
-                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
-                                            </h2>
-                                        </a>
-                                        <p class="my-2">Rp. 130.000,00</p>
-                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                        <p style="color: orange" class="m-1">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                        <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
-                                    </div>
-
-
-                                </div>
-
-
-
-                            </div>
-
-                            <div class="col-md-4 mb-5">
-                                <div class="card">
-                                    <a href="haldetailproduct">
-                                        <img src="images/halcus.jpg" class="card-img-top" alt="...">
-                                    </a>
-                                    <div class="card-body">
-                                        <a href="haldetailproduct">
-                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
-                                            </h2>
-                                        </a>
-                                        <p class="my-2">Rp. 130.000,00</p>
-                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                        <p style="color: orange" class="m-1">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                        <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
-                                    </div>
-
-
-                                </div>
-
-
-
-                            </div>
-
-                            <div class="col-md-4 mb-5">
-                                <div class="card">
-                                    <a href="haldetailproduct">
-                                        <img src="images/welcome4.jpg" class="card-img-top" alt="...">
-                                    </a>
-                                    <div class="card-body">
-                                        <a href="haldetailproduct">
-                                            <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
-                                            </h2>
-                                        </a>
-                                        <p class="my-2">Rp. 130.000,00</p>
-                                        <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                                        <p style="color: orange" class="m-1">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </p>
-                                        <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
-                                    </div>
-
-
-                                </div>
-
-
-
-                            </div>
-
-                            {{-- Pagenation --}}
-
-                            <div class=" pagination flex-c-m flex-w p-l-15 p-r-15 m-t-24 m-b-50">
-                                <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
-                                <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
-                                <a href="#" class="item-pagination flex-c-m trans-0-4">3</a>
                             </div>
                         </div>
                     </div>
-
-
-
-                    {{-- <div class="col-md-9">
-                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner shadow-sm rounded">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="./assets/img/slides/slide1.jpg" alt="First slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Mountains, Nature Collection</h5>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="./assets/img/slides/slide2.jpg" alt="Second slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Freedom, Sea Collection</h5>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="./assets/img/slides/slide3.jpg" alt="Third slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Living the Dream, Lost Island</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-                    <!-- End Slider -->
                 </div>
             </div>
         </div>
@@ -324,6 +167,8 @@
     </div>
 
 
+    <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
 
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
@@ -358,6 +203,26 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
 
+    @section('script')
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+        </script>
+    @endsection
 </body>
 
 </html>

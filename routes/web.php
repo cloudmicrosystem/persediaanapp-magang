@@ -41,9 +41,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('kategori', CategoryController::class);
 });
 
-    Route::get('/index', [HalcustController::class, 'index']);
-    Route::get('/halproduct', [HalproductController::class, 'index']);
-    Route::get('/haldetailproduct', [HaldetailproductController::class, 'index']);
-    Route::get('/halabout', [HalaboutController::class, 'index']);
-    Route::get('/halstore', [HalstoreController::class, 'index']);
+    Route::get('/home', [HalcustController::class, 'index']);
+    Route::get('/product', [HalproductController::class, 'index']);
+    Route::get('/detail', [HaldetailproductController::class, 'index']);
+    Route::get('/about', [HalaboutController::class, 'index']);
+    Route::get('/store', [HalstoreController::class, 'index']);
 

@@ -4,7 +4,6 @@
 @endsection
 
 @section('content')
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -39,17 +38,20 @@
                                         <td>{{ $value['qty'] }} pcs</td>
                                         <td>
                                             @foreach ($value['gambar'] as $item)
-                                            <img src="{{ $item['url_gambar'] }}" alt="{{$value['nama_barang']}}"/>
+                                                <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
+                                                    alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
                                             @endforeach
                                         </td>
                                         {{-- <td><img src="{{ asset('storage/barang/' . $value['gambar']) }}" width=100px height=auto /></td> --}}
-                                        <td><a class="btn btn-info" href="{{ url('barang/' . $value['id'] . '/edit') }}"><i
+                                        <td><a class="btn btn-info"
+                                                href="{{ url('barang/' . $value['id'] . '/edit') }}"><i
                                                     class='fas fa-edit'></a></td>
                                         <td>
                                             <form action="{{ url('barang/' . $value['id']) }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
-                                                <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i></button>
+                                                <button class="btn btn-danger" type="submit"><i
+                                                        class='fas fa-trash-alt'></i></button>
                                             </form>
                                         </td>
                                     </tr>

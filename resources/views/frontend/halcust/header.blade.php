@@ -16,15 +16,15 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="index">Home</a>
+                                <a href="home">Home</a>
                             </li>
 
                             <li>
-                                <a href="halproduct">Product</a>
+                                <a href="product">Product</a>
                             </li>
 
                             <li>
-                                <a href="halstore">Store</a>
+                                <a href="store">Store</a>
                             </li>
 
                             <li>
@@ -32,7 +32,7 @@
                             </li>
 
                             <li>
-                                <a href="halabout">About</a>
+                                <a href="about">About</a>
                             </li>
 
                             <li>
