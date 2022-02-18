@@ -24,7 +24,7 @@
                             </li>
 
                             <li>
-                                <a href="gallery.html">Store</a>
+                                <a href="halstore">Store</a>
                             </li>
 
                             <li>

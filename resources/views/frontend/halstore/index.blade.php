@@ -63,214 +63,53 @@
         </div>
     </section>
 
+    <br>
 
-    {{-- Product Card --}}
-    <div class="col-md-8 m-auto w-100">
-        <div class="col-md-4 mb-5">
-            <div class="card">
-                <a href="haldetailproduct">
-                    <img src="images/welcome1.jpeg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <a href="haldetailproduct">
-                        <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
-                        </h2>
-                    </a>
-                    <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                    <p class="my-2">Rp. 100.000,00</p>
-                    <p style="color: orange" class="m-1">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                    <a href="#" class="btn btn-success">Beli</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-5">
-            <div class="card">
-                <a href="haldetailproduct">
-                    <img src="images\d2.jpeg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <a href="haldetailproduct">
-                        <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos
-                        </h2>
-                    </a>
-                    <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                    <p class="my-2">Rp. 150.000,00</p>
-                    <p style="color: orange" class="m-1">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                    <a href="#" class="btn btn-success">Beli</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-5">
-            <div class="card">
-                <a href="haldetailproduct">
-                    <img src="images/d3.jpeg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <a href="haldetailproduct">
-                        <h2 class="card-title" style="font-size: 20px; font-weight:bold">Kaos
-                        </h2>
-                    </a>
-                    <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                    <p class="my-2">Rp. 120.000,00</p>
-                    <p style="color: orange" class="m-1">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                    <a href="#" class="btn btn-success">Beli</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-5">
-            <div class="card">
-                <a href="haldetailproduct">
-                    <img src="images/welcome2.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <a href="haldetailproduct">
-                        <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
-                        </h2>
-                    </a>
-                    <p class="my-2">Rp. 130.000,00</p>
-                    <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                    <p style="color: orange" class="m-1">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                    <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
+    <div class="container">
+        <h2 class="text-center"> LOKASI </h2>
+        <div class="row">
+            <div class="col-md-4 mb-8 m-2">
+                <div class="card">
+                    <ul class="list-inline social-media">
+                        <li class="list-inline item">
+                            <a
+                                href="https://www.google.com/maps/place/Jl.+Suwari+Sel.,+Sukun,+Kec.+Sukun,+Kota+Malang,+Jawa+Timur+65147/@-7.9917017,112.6175466,20z/data=!4m5!3m4!1s0x2e7882a7c6f811d9:0x2ef67369582b980e!8m2!3d-7.9917704!4d112.6178376">
+                                <img src="images/slide-1.jpeg" class="card-img-top" alt="...">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="m-3">
+                        <h4 class="text-center">MORFEEN THIRTEEN <br>KOTA MALANG</h4>
+                        <p class="m-1 text-center"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang, Jawa Timur
+                            65147<br />
+                            Mon-Sun 12.00-21:00<br />
+                            (+62) 887-4116-4285</p>
+                    </div>
                 </div>
             </div>
 
-
-
-        </div>
-
-        <div class="col-md-4 mb-5">
-            <div class="card">
-                <a href="haldetailproduct">
-                    <img src="images/halcus.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <a href="haldetailproduct">
-                        <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
-                        </h2>
-                    </a>
-                    <p class="my-2">Rp. 130.000,00</p>
-                    <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                    <p style="color: orange" class="m-1">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                    <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
+            <div class="col-md-4 mb-5 m-2">
+                <div class="card">
+                    <ul class="list-inline social-media">
+                        <li class="list-inline item">
+                            <a
+                                href="https://www.google.com/maps/place/Morfeen+2nd+Store,+Slorok/@-8.1425777,112.5211889,17z/data=!3m1!4b1!4m5!3m4!1s0x2e789f32d601ed31:0x27f74ee587bd47b2!8m2!3d-8.1425919!4d112.523373?shorturl=1">
+                                <img src="images/d3.jpeg" class="card-img-top" alt="...">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="m-3">
+                        <h4 class="text-center">MORFEEN THIRTEEN <br>KABUPATEN MALANG</h4>
+                        <p class="m-1 text-center"> Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang, Jawa
+                            Timur 65165<br />
+                            Mon-Sun 12.00-21:00<br />
+                            (+62) 887-4116-4285</p>
+                    </div>
                 </div>
-
-
             </div>
 
-
-
-        </div>
-
-        <div class="col-md-4 mb-5">
-            <div class="card">
-                <a href="haldetailproduct">
-                    <img src="images/welcome4.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <a href="haldetailproduct">
-                        <h2 class="card-title" style="font-size: 20px; font-weight:bold">Tas
-                        </h2>
-                    </a>
-                    <p class="my-2">Rp. 130.000,00</p>
-                    <p class="card-text">Dengan bahan yang bagus di desain dengan rapi</p>
-                    <p style="color: orange" class="m-1">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </p>
-                    <a href="#" class="btn btn-success bi bi-cart4">Beli</a>
-                </div>
-
-
-            </div>
-
-
-
-        </div>
-
-        {{-- Pagenation --}}
-
-        <div class=" pagination flex-c-m flex-w p-l-15 p-r-15 m-t-24 m-b-50">
-            <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
-            <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
-            <a href="#" class="item-pagination flex-c-m trans-0-4">3</a>
         </div>
     </div>
-    </div>
-
-
-
-    {{-- <div class="col-md-9">
-                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner shadow-sm rounded">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="./assets/img/slides/slide1.jpg" alt="First slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Mountains, Nature Collection</h5>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="./assets/img/slides/slide2.jpg" alt="Second slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Freedom, Sea Collection</h5>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="./assets/img/slides/slide3.jpg" alt="Third slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Living the Dream, Lost Island</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-    <!-- End Slider -->
-    </div>
-    </div>
-    </div>
-    </section>
-
-
-
     <!-- Footer -->
     @include('frontend.halcust.footer')
 

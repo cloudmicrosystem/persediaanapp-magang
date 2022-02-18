@@ -10,11 +10,11 @@
         </li>
 
         <li class="t-center m-b-13">
-            <a href="menu.html" class="txt19">Product</a>
+            <a href="halproduct" class="txt19">Product</a>
         </li>
 
         <li class="t-center m-b-13">
-            <a href="halproduct" class="txt19">Store</a>
+            <a href="halstore" class="txt19">Store</a>
         </li>
 
         <li class="t-center m-b-13">
