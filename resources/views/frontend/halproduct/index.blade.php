@@ -85,52 +85,43 @@
 
                     {{-- Product Card --}}
                     <div class="col-md-8 m-auto w-100">
-                        <div class="container">
-                            <div class="row">
-                                <div class="owl-carousel owl-theme">
-                                    <div class="item">
-                                        <div class="card">
-                                            @foreach ($barang as $items)
-                                                @foreach ($newBarang as $key => $value)
-                                                <li>
-                                                    <ul>
-                                                        <a href="haldetailproduct">
-                                                            @foreach ($value['gambar'] as $item)
-                                                                <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
-                                                                    alt="{{ $value['nama_barang'] }}" width="100px"
-                                                                    height="100px" />
-                                                            @endforeach
-                                                        </a>
-                                                    </ul>
-                                                </li>
-                                                    <div class="card-body">
-                                                        <a href="haldetailproduct">
-                                                            <h2 class="card-title"
-                                                                style="font-size: 20px; font-weight:bold">
-                                                                {{ $items->nama_barang }};
-                                                            </h2>
-                                                        </a>
-                                                        <p class="card-text"></p>
-                                                        <p class="my-2">{{ $items->price }}</p>
-                                                        <p style="color: orange" class="m-1">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                        </p>
-                                                        <a href="#" class="btn btn-success">Beli</a>
-                                                    </div>
-                                                    @endforeach
-                                            @endforeach
+                        <div class="row">
+                            @foreach ($barang as $items)
+                                <div class="item">
+                                    <div class="card">
+                                        <li class="">
+                                            <ul>
+                                                <a href="haldetailproduct">
+                                                    <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
+                                                        width="100px" height=" 100px" />
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <div class="card-body">
+                                            <a href="haldetailproduct">
+                                                <h2 class="card-title" style="font-size: 20px; font-weight:bold">
+                                                    {{ $items->nama_barang }}
+                                                </h2>
+                                            </a>
+                                            <p class="card-text"></p>
+                                            <p class="my-2">{{ $items->price }}</p>
+                                            <p style="color: orange" class="m-1">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="#" class="btn btn-success">Beli</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -166,10 +157,6 @@
         </div>
     </div>
 
-
-    <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
-
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->
@@ -202,6 +189,9 @@
     <script src="{{ asset('') }}assets/dist/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
+
+    <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
 
     @section('script')
         <script>

@@ -26,28 +26,26 @@
                                     <th>Gambar</th>
                                     <th colspan="2">Aksi</th>
                                 </tr>
-                                @foreach ($newBarang as $key => $value)
+                                @foreach ($barang as $key => $value)
                                     <tr>
-                                        <td>{{ $value['nama_category'] }}</td>
-                                        <td>{{ $value['nama_barang'] }}</td>
-                                        <td>{{ $value['slug'] }} </td>
-                                        <td>Rp {{ $value['hpp'] }} </td>
-                                        <td>Rp {{ $value['price'] }} </td>
-                                        <td>{{ $value['deskripsi'] }} </td>
-                                        <td>{{ $value['size'] }}</td>
-                                        <td>{{ $value['qty'] }} pcs</td>
-                                        <td>
-                                            @foreach ($value['gambar'] as $item)
-                                                <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
-                                                    alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
-                                            @endforeach
-                                        </td>
-                                        {{-- <td><img src="{{ asset('storage/barang/' . $value['gambar']) }}" width=100px height=auto /></td> --}}
+                                        <td>{{ $value->nama_category }}</td>
+                                        <td>{{ $value->nama_barang }}</td>
+                                        <td>{{ $value->slug }} </td>
+                                        <td>Rp {{ $value->hpp }} </td>
+                                        <td>Rp {{ $value->price }} </td>
+                                        <td>{{ $value->deskripsi }} </td>
+                                        <td>{{ $value->size }}</td>
+                                        <td>{{ $value->qty }} pcs</td>
+                                            {{-- @foreach ($value['gambar'] as $item)
+                                            //     <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
+                                            //         alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
+                                            // @endforeach --}}
+                                        <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}" width=100px height=auto /></td>
                                         <td><a class="btn btn-info"
-                                                href="{{ url('barang/' . $value['id'] . '/edit') }}"><i
+                                                href="{{ url('barang/' . $value->id . '/edit') }}"><i
                                                     class='fas fa-edit'></a></td>
                                         <td>
-                                            <form action="{{ url('barang/' . $value['id']) }}" method="POST">
+                                            <form action="{{ url('barang/' . $value->id) }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button class="btn btn-danger" type="submit"><i

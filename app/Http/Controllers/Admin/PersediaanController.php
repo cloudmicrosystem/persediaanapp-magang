@@ -25,17 +25,17 @@ class PersediaanController extends Controller
 
         // $gambar = DB::select('SELECT * FROM gambar WHERE id_barang =.$barang->id');
 
-        $newBarang = array();
-        foreach ($barang as $key => $value) {
-            $newValue = json_decode(json_encode($value), true);
-            $gambarBarang =  json_decode(json_encode(DB::select('SELECT * FROM gambar WHERE id_barang ='.$value->id)), true);
+        // $newBarang = array();
+        // foreach ($barang as $key => $value) {
+        //     $newValue = json_decode(json_encode($value), true);
+        //     $gambarBarang =  json_decode(json_encode(DB::select('SELECT * FROM gambar WHERE id_barang ='.$value->id)), true);
 
-            $data = array_merge($newValue, ['gambar' => $gambarBarang]);
-            // echo '<pre>'; print_r($data); die;
-            array_push($newBarang, $data);
-        }
+        //     $data = array_merge($newValue, ['gambar' => $gambarBarang]);
+        //     // echo '<pre>'; print_r($data); die;
+        //     array_push($newBarang, $data);
+        // }
 
-        return view('backend.barang.index')->with(compact('newBarang'));
+        return view('backend.barang.index')->with(compact('barang'));
     }
 
     /**
@@ -58,25 +58,25 @@ class PersediaanController extends Controller
     public function store(Request $request)
     {
         // echo '<pre>'; print_r($request->code_barang); die;
-        $gambar = null;
+        $$gambar_disply = null;
 
         // Validation
         $request->validate([
-            'gambar' => 'mimes:png,jpg,jpeg|max:6144 '
+            'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144 '
         ]);
 
-        if($request->file('gambar')) {
-            $file = $request->file('gambar');
-            $gambar = time().'_'.$file->getClientOriginalName();
+        if($request->file('gambar_disply')) {
+            $file = $request->file('gambar_disply');
+            $gambar_disply = time().'_'.$file->getClientOriginalName();
 
             // File upload location
-            $location = 'storage/barang';
+            $location = 'public/images/disply';
 
             // Upload file
-            $file->move($location,$gambar);
+            $file->move($location,$gambar_disply);
             // die;
         }else{
-            $gambar = null;
+            $gambar_disply = null;
         }
 
         DB::select("INSERT INTO barang(
@@ -87,7 +87,8 @@ class PersediaanController extends Controller
             price,
             deskripsi,
             size,
-            qty
+            qty,
+            gambar_disply
             )
         VALUE(
         '$request->id_category',
@@ -97,7 +98,8 @@ class PersediaanController extends Controller
         '$request->price',
         '$request->deskripsi',
         '$request->size',
-        '$request->qty'
+        '$request->qty',
+        '$gambar_disply'
         )");
 
         return redirect('backend.barang')->with('toast_success', 'Data Berhasil Disimpan');
@@ -142,21 +144,21 @@ class PersediaanController extends Controller
         // dd($master_barang);
         // Validation
         $request->validate([
-            'gambar' => 'mimes:png,jpg,jpeg|max:6144 '
+            'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144 '
         ]);
 
-        if($request->file('gambar')) {
-            $file = $request->file('gambar');
-            $gambar = time().'_'.$file->getClientOriginalName();
+        if($request->file('gambar_disply')) {
+            $file = $request->file('gambar_disply');
+            $gambar_disply = time().'_'.$file->getClientOriginalName();
 
             // File upload location
-            $location = 'storage/barang';
+            $location = 'public/images/disply';
 
             // Upload file
-            $file->move($location,$gambar);
+            $file->move($location,$gambar_disply);
             // die;
         }else{
-            $gambar = $barang[0]->gambar;
+            $gambar_disply = $barang[0]->gambar_disply;
         }
 
         DB::select("UPDATE barang SET
@@ -167,7 +169,8 @@ class PersediaanController extends Controller
         price='$request->price',
         deskripsi='$request->deskripsi',
         size='$request->size',
-        qty='$request->qty'
+        qty='$request->qty',
+        '$gambar_disply'
         WHERE id=$id
         ");
 

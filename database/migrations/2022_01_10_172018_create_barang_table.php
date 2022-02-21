@@ -23,6 +23,7 @@ class CreateBarangTable extends Migration
             $table->text('deskripsi');
             $table->string('size');
             $table->integer('qty');
+            $table->string('gambar_disply');
             $table->timestamps();
         });
     }
