@@ -84,7 +84,7 @@
                     </div>
 
                     {{-- Product Card --}}
-                    <div class="col-md-8 m-auto w-100">
+                    <div class="col-md-4 mb-8 m-2">
                         <div class="row">
                             @foreach ($barang as $items)
                                 <div class="item">
