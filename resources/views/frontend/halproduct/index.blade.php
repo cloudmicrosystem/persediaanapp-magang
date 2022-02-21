@@ -89,14 +89,14 @@
                             @foreach ($barang as $items)
                                 <div class="item">
                                     <div class="card">
-                                        <li class="">
-                                            <ul>
+                                        <ul class="">
+                                            <li>
                                                 <a href="haldetailproduct">
                                                     <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
                                                         width="100px" height=" 100px" />
                                                 </a>
-                                            </ul>
-                                        </li>
+                                            </li>
+                                        </ul>
                                         <div class="card-body">
                                             <a href="haldetailproduct">
                                                 <h2 class="card-title" style="font-size: 20px; font-weight:bold">
