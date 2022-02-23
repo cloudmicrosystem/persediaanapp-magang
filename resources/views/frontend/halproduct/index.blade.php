@@ -91,14 +91,14 @@
                                     <div class="card">
                                         <ul class="">
                                             <li>
-                                                <a href="haldetailproduct">
+                                                <a href="detail">
                                                     <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
                                                         width="100px" height=" 100px" />
                                                 </a>
                                             </li>
                                         </ul>
                                         <div class="card-body">
-                                            <a href="haldetailproduct">
+                                            <a href="detail">
                                                 <h2 class="card-title" style="font-size: 20px; font-weight:bold">
                                                     {{ $items->nama_barang }}
                                                 </h2>

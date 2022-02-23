@@ -93,32 +93,6 @@
         </div>
     </section>
 
-
-    <!-- default start -->
-    {{-- <section id="default" class="padding-top0">
-        <div class="row">
-            <div class="large-5 column">
-                <div class="xzoom-container">
-                    <img class="xzoom" id="xzoom-default" src="images/d2.jpeg"
-                        xoriginal="images/images/d2.jpeg" />
-                    <div class="xzoom-thumbs">
-                        <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80" src="images/d1.jpeg"
-                                xpreview="images/d1.jpeg" title="The description goes here"></a>
-                        <a href="images/d2.jpeg"><img class="xzoom-gallery" width="80" src="images/d2.jpeg"
-                                title="The description goes here"></a>
-                        <a href="images/d3.jpeg"><img class="xzoom-gallery" width="80" src="images/d3.jpeg"
-                                title="The description goes here"></a>
-                        <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80" src="images/d1.jpeg"
-                                title="The description goes here"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="large-7 column"></div>
-        </div>
-    </section> --}}
-    <!-- default end -->
-
-
     <section class="content" class="pading-top0 ">
 
         <div class="card card-solid">
