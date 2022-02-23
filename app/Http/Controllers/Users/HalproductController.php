@@ -37,9 +37,4 @@ class HalproductController extends Controller
 
         return view('frontend.halproduct.index')->with(compact('category','newBarang','barang'));
     }
-
-    public function category()
-    {
-        
-    }
 }
