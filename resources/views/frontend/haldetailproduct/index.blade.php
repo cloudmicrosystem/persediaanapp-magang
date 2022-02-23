@@ -223,7 +223,7 @@
                             </h4>
                         </div>
                         <div class="mt-4">
-                            <div class="btn btn-primary btn-lg btn-flat">
+                            <div class="btn btn-dark btn-lg btn-flat">
                                 <i class="fas fa-cart-plus fa-lg mr-2"></i>
                                 Add to Cart
                             </div>

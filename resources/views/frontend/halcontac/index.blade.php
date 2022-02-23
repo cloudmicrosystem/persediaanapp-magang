@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Store</title>
+    <title>Contac</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -78,9 +78,9 @@
             <div class="card-body row">
                 <div class="col-5 text-center d-flex align-items-center justify-content-center">
                     <div class="">
-                        <h2>Admin<strong>LTE</strong></h2>
-                        <p class="lead mb-5">123 Testing Ave, Testtown, 9876 NA<br>
-                            Phone: +1 234 56789012
+                        <h2><strong>MORFEEN THERTEEN</strong></h2>
+                        <p class="lead mb-5">MALANG<br>
+                            Phone: (+62)0877123456789
                         </p>
                     </div>
                 </div>
@@ -101,8 +101,8 @@
                         <label for="inputMessage">Message</label>
                         <textarea id="inputMessage" class="form-control" rows="4" placeholder="Message"></textarea>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Send message">
+                    <div class="form-group" >
+                        <input type="submit" class="btn btn-dark" value="Send message">
                     </div>
                 </div>
             </div>
