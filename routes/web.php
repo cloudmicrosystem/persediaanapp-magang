@@ -6,10 +6,10 @@ use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HalaboutController;
 use App\Http\Controllers\Users\HalstoreController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PersediaanController;
+use App\Http\Controllers\Admin\GambarController;
 use App\Http\Controllers\Admin\UserController;
 
 
@@ -39,10 +39,12 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('barang', PersediaanController::class);
     Route::resource('user', UserController::class);
     Route::resource('kategori', CategoryController::class);
+    Route::resource('gambar', GambarController::class);
 });
 
     Route::get('/home', [HalcustController::class, 'index']);
     Route::get('/product', [HalproductController::class, 'index']);
+    Route::get('/product/{category}', [HalproductController::class, 'category']);
     Route::get('/detail', [HaldetailproductController::class, 'index']);
     Route::get('/about', [HalaboutController::class, 'index']);
     Route::get('/store', [HalstoreController::class, 'index']);

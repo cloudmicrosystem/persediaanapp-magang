@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-    Stok Barang
+    Database Stock
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table-bordered table table-responsive">
+                        <table class="table-bordered table table-hover">
                             <thead>
                                 <a class="btn btn-info" href="{{ url('barang/create') }}"><i class='fas fa-plus'></i></a>
                                 <br>
