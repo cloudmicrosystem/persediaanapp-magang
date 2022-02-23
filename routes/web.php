@@ -5,6 +5,7 @@ use App\Http\Controllers\Users\HaldetailproductController;
 use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HalaboutController;
 use App\Http\Controllers\Users\HalstoreController;
+use App\Http\Controllers\Users\HalcontacController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
@@ -32,7 +33,7 @@ use App\Http\Controllers\Admin\UserController;
 // })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
-
+    // ADMIN
 Route::middleware(['auth'])->group(function () {
     //Untuk menyimpelkan memanggil berbagai fungsi
     Route::get('/', [HomeController::class, 'index']);
@@ -41,9 +42,11 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('kategori', CategoryController::class);
 });
 
+    // USER
     Route::get('/home', [HalcustController::class, 'index']);
     Route::get('/product', [HalproductController::class, 'index']);
     Route::get('/detail', [HaldetailproductController::class, 'index']);
     Route::get('/about', [HalaboutController::class, 'index']);
     Route::get('/store', [HalstoreController::class, 'index']);
+    Route::get('/contac', [HalcontacController::class, 'index']);
 
