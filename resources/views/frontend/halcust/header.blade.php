@@ -1,9 +1,9 @@
 <!-- Header -->
 <header>
     <!-- Header desktop -->
-    <div class="wrap-menu-header gradient1 trans-0-4">
+    <div class="wrap-menu-header ">
         <div class="container h-full">
-            <div class="wrap_header trans-0-3">
+            <div class="wrap_header ">
                 <!-- Logo -->
                 <div class="logo">
                     <a href="index.html">
@@ -28,7 +28,7 @@
                             </li>
 
                             <li>
-                                <a href="gallery.html">Artikel</a>
+                                <a href="artikel">Artikel</a>
                             </li>
 
                             <li>
@@ -36,11 +36,7 @@
                             </li>
 
                             <li>
-                                <a href="blog.html">Blog</a>
-                            </li>
-
-                            <li>
-                                <a href="halcontac">Contact</a>
+                                <a href="contac">Contact</a>
                             </li>
 
                             <li>

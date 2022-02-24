@@ -6,6 +6,7 @@ use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HalaboutController;
 use App\Http\Controllers\Users\HalstoreController;
 use App\Http\Controllers\Users\HalcontacController;
+use App\Http\Controllers\Users\HalartikelController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
@@ -61,4 +62,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/store', [HalstoreController::class, 'index']);
 
     Route::get('/contac', [HalcontacController::class, 'index']);
+
+    Route::get('/artikel', [HalartikelController::class, 'index']);
+
 
