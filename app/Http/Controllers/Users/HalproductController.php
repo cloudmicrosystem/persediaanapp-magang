@@ -37,4 +37,12 @@ class HalproductController extends Controller
 
         return view('frontend.halproduct.index')->with(compact('category','newBarang','barang'));
     }
+
+    public function category($request)
+    {
+        $category = DB::select('SELECT * FROM category');
+
+        $barang = DB::select("SELECT * FROM barang WHERE id_category = (SELECT id FROM category WHERE slug = '".$request."' LIMIT 0,1)");
+        return view('frontend.halproduct.productByCategory', compact('category','barang'));
+    }
 }

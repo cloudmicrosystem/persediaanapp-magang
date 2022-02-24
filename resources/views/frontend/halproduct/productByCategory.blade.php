@@ -50,7 +50,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/halproduct.jpg);">
+                <div class="item-slick1 item1-slick1" style="background-image: url(/images/halproduct.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                         <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
                             data-appear="fadeInDown">
@@ -64,7 +64,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Sidebar kategori -->
     <section class="slider-section pt-4">
@@ -84,12 +83,12 @@
                                     </div>
                                 </div>
                             </form>
-                            <ul class="menu-category mt-3">
-                                <li>
-                                    @foreach ($category as $key => $value)
-                                        <li><a href="/product/{{ $value->slug }}"> {{ $value->nama_category }}</a></li>
-                                    @endforeach
+                            <ul class="menu-category mt-3 navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                                @foreach ($category as $key => $value)
+                                <li class="{{ request()->is('product/'.$value->slug) ? 'active' : ''}} nav-item">
+                                    <a style="font-weight: {{request()->is('product/'.$value->slug) ? '900' : ''}}" href="/product/{{$value->slug}}"> {{ $value->nama_category }}</a>
                                 </li>
+                                @endforeach
                             </ul>
                         </nav>
                     </div>
@@ -99,37 +98,31 @@
                         <div class="row">
                             @foreach ($barang as $items)
                                 <div class="col-md-3">
-                                    <div class="row">
-                                        <div class="card" style="border: transparent">
-                                            <ul class="">
-                                                <li>
-                                                    <a href="detail">
-                                                        <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
-                                                            class="img-fluid img-thumbnail"
-                                                            alt="{{ $items->nama_barang }}"
-                                                            style="border: transparent" />
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-md-center">
-                                                    <a href="detail">
-                                                        <h1 class="card-title"
-                                                            style="font-size: 20px; font-weight:bold">
-                                                            {{ $items->nama_barang }}
-                                                        </h1>
-                                                        <p class="">Rp {{ $items->price }}</p>
-                                                    </a>
-                                                </div>
-                                                {{-- <p style="color: orange" class="m-1">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </p> --}}
-                                                {{-- <a href="#" class="btn btn-success">Beli</a> --}}
+                                    <div class="card" style="border: transparent">
+                                        <ul class="">
+                                            <li>
+                                                <a href="detail">
+                                                    <img src="{{ asset('images/disply/' . $items->gambar_disply) }}" class="img-fluid img-thumbnail" alt="{{$items->nama_barang}}" style="border: transparent"/>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="card-body">
+                                            <div  class="d-flex justify-content-md-center">
+                                                <a href="detail">
+                                                    <h1 class="card-title" style="font-size: 20px; font-weight:bold">
+                                                        {{ $items->nama_barang }}
+                                                    </h1>
+                                                    <p class="">Rp {{ $items->price }}</p>
+                                                </a>
                                             </div>
+                                            {{-- <p style="color: orange" class="m-1">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </p>
+                                            <a href="#" class="btn btn-success">Beli</a> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -141,8 +134,6 @@
         </div>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     @include('frontend.halcust.footer')
