@@ -183,9 +183,9 @@
                 <div class="p-t-5 p-b-5">
                     <ul class="list-inline social-media">
                     <a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
-                       <li class="list-inline item">
+                    <li class="list-inline item">
                         <a href="https://www.instagram.com/morfeen.official/" target="_blank" class="fs-15 c-white"><i class="fa fa-instagram m-l-18" aria-hidden="true"></i></a>
-                       </li>
+                    </li>
                     <a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a>
                     </ul>
                 </div>
