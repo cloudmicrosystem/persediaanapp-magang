@@ -104,7 +104,7 @@
                                             <ul class="">
                                                 <li>
                                                     <a href="detail">
-                                                        <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
+                                                        <img src="{{ asset('images/disply/' . $items->gambar_disply . $value->slug) }}"
                                                             class="img-fluid img-thumbnail"
                                                             alt="{{ $items->nama_barang }}"
                                                             style="border: transparent" />
