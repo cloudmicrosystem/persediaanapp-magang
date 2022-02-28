@@ -49,6 +49,7 @@
 
                 <!-- Social -->
                 <div class="social flex-w flex-l-m p-r-20">
+
                     <a href="#"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
 

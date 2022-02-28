@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Artikel</title>
+    <title>Detail Artikel </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -47,184 +47,251 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/halproduct.jpg);">
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/About.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                        <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-                            data-appear="fadeInDown">
-                            ARTIKEL
-                        </span>
-
-                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                            Morfeen Thirteen
-                        </h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <br>
+    {{-- Isi halamanAbout --}}
+    <section>
+		<div class="bread-crumb bo5-b p-t-17 p-b-17">
+			<div class="container">
+				<a href="home" class="txt27">
+					Home
+				</a>
 
-     <!-- ARTIKEL -->
-     <section class="section-blog bg-white p-t-115 p-b-123">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/welcome1.jpeg" alt="IMG-INTRO"></a>
+				<span class="txt29 m-l-10 m-r-10">/</span>
 
-                            <div class="time-blog">
-                                21 Dec 2017
-                            </div>
-                        </div>
+				<a href="artikel" class="txt27">
+					Artikel
+				</a>
 
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Best Places for Wine
-                                </h4>
-                            </a>
+				<span class="txt29 m-l-10 m-r-10">/</span>
 
-                            <p class="m-b-20">
-                                Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+				<span class="txt29">
+					Morfeen
+				</span>
+			</div>
+		</div>
 
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/d2.jpeg" alt="IMG-INTRO"></a>
+		<div class="container">
+			<div class="row ">
+				<div class="col-md-8 col-lg-9">
+					<div class="p-t-80 p-b-124 bo5-r p-r-50 h-full p-r-0-md bo-none-md">
+						<!-- Block4 -->
+						<div class="blo4 p-b-63">
+							<!-- - -->
+							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
+									<img src="images/ar1.jpg" alt="IMG-BLOG">
+								</a>
 
-                            <div class="time-blog">
-                                15 Dec 2017
-                            </div>
-                        </div>
+								<div class="date-blo4 flex-col-c-m">
+									<span class="txt30 m-b-4">
+										21
+									</span>
 
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Eggs and Cheese
-                                </h4>
-                            </a>
+									<span class="txt31">
+										Jan, 2021
+									</span>
+								</div>
+							</div>
 
-                            <p class="m-b-20">
-                                Duis elementum, risus sit amet lobortis nunc justo condimentum ligula, vitae feugiat
-                            </p>
+							<!-- - -->
+							<div class="text-blo4 p-t-33">
+								<h4 class="p-b-16">
+									<a href="blog-detail.html" class="tit9">Daddyteddy Band Pop Punk Asal Malang Awali 2021 dengan Luncurkan Video Clip Sirna</a>
+								</h4>
 
-                        </div>
-                    </div>
-                </div>
+								<div class="txt32 flex-w p-b-24">
+									<span>
+										by Admin
+										<span class="m-r-6 m-l-4">|</span>
+									</span>
 
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/d3.jpeg" alt="IMG-INTRO"></a>
+									<span>
+										27 Januari, 2021
+										<span class="m-r-6 m-l-4">|</span>
+									</span>
 
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
+									<span>
+										Cooking, Food
+										<span class="m-r-6 m-l-4">|</span>
+									</span>
 
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
-                                </h4>
-                            </a>
+									<span>
+										8 Comments
+									</span>
+								</div>
 
-                            <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+								<p>
+                                    Band Pop Punk yang terbentuk pada tahun 2012 ini beranggotakan Ivan sebagai vokalis, Rangga dan Ryan sebagai gitaris, Dwiki sebagai bassist dan Taufan sebagai drummer. Awal tahun ini, mereka meluncurkan karya terbarunya dalam format Music Video (MV) yang berjudul Sirna.
+                                    <br>
+                                    <br>
+                                    "Dalam peluncurkan MV terbaru ini, kita bekerja sama dengan brand lokal Malang, yakni Morfeen Thirteen. Kenapa begitu, karena selain kita ingin menunjukan eksistensi, kita juga ingin bahwa Malang ini punya segudang hal yang bisa dibanggakan oleh masyarakatnya, khususnya anak muda," ujar Taufan, Rabu (27/01/2021).
+                                    <br>
+                                    <br>
+                                    Taufan menjelaskan, lagu Sirna sendiri merupakan salah satu single yang masuk dalam album terbaru mereka yang saat ini masih dalam proses penggarapan. Pastinya juga Daddyteddy bakal menyuguhkan warna berbeda dari lagu-lagu sebelumnya.
+								</p>
+							</div>
+						</div>
 
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/d1.jpeg" alt="IMG-INTRO"></a>
+					</div>
+				</div>
 
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
+				<div class="col-md-4 col-lg-3">
+					<div class="sidebar2 p-t-80 p-b-80 p-l-20 p-l-0-md p-t-0-md">
+						<!-- Search -->
+						<div class="search-sidebar2 size12 bo2 pos-relative">
+							<input class="input-search-sidebar2 txt10 p-l-20 p-r-55" type="text" name="search" placeholder="Search">
+							<button class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
+						</div>
 
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
-                                </h4>
-                            </a>
+						<!-- Categories -->
+						<div class="categories">
+							<h4 class="txt33 bo5-b p-b-35 p-t-58">
+								Categories
+							</h4>
 
-                            <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+							<ul>
+								<li class="bo5-b p-t-8 p-b-8">
+									<a href="#" class="txt27">
+										1
+									</a>
+								</li>
 
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/About.jpg" alt="IMG-INTRO"></a>
+								<li class="bo5-b p-t-8 p-b-8">
+									<a href="#" class="txt27">
+										2
+									</a>
+								</li>
 
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
+								<li class="bo5-b p-t-8 p-b-8">
+									<a href="#" class="txt27">
+										3
+									</a>
+								</li>
 
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
-                                </h4>
-                            </a>
+								<li class="bo5-b p-t-8 p-b-8">
+									<a href="#" class="txt27">
+										4
+									</a>
+								</li>
 
-                            <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
-                            </p>
+								<li class="bo5-b p-t-8 p-b-8">
+									<a href="#" class="txt27">
+				                        5
+									</a>
+								</li>
+							</ul>
+						</div>
 
-                        </div>
-                    </div>
-                </div>
+						<!-- Most Popular -->
+						<div class="popular">
+							<h4 class="txt33 p-b-35 p-t-58">
+								Most popular
+							</h4>
 
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/detail.jpeg" alt="IMG-INTRO"></a>
+							<ul>
+								<li class="flex-w m-b-25">
+									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
+										<a href="#">
+											<img src="images/blog-11.jpg" alt="IMG-BLOG">
+										</a>
+									</div>
 
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
+									<div class="size28">
+										<a href="#" class="dis-block txt28 m-b-8">
+											Best Places for Wine
+										</a>
 
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
-                                </h4>
-                            </a>
+										<span class="txt14">
+											3 days ago
+										</span>
+									</div>
+								</li>
 
-                            <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
-                            </p>
+								<li class="flex-w m-b-25">
+									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
+										<a href="#">
+											<img src="images/blog-12.jpg" alt="IMG-BLOG">
+										</a>
+									</div>
 
-                        </div>
-                    </div>
-                </div>
+									<div class="size28">
+										<a href="#" class="dis-block txt28 m-b-8">
+											Eggs and Cheese
+										</a>
 
-            </div>
-        </div>
-    </section>
+										<span class="txt14">
+											July 2, 2017
+										</span>
+									</div>
+								</li>
+
+								<li class="flex-w m-b-25">
+									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
+										<a href="#">
+											<img src="images/blog-13.jpg" alt="IMG-BLOG">
+										</a>
+									</div>
+
+									<div class="size28">
+										<a href="#" class="dis-block txt28 m-b-8">
+											Style the Wedding Party
+										</a>
+
+										<span class="txt14">
+											May 28, 2017
+										</span>
+									</div>
+								</li>
+
+								<li class="flex-w m-b-25">
+									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
+										<a href="#">
+											<img src="images/blog-14.jpg" alt="IMG-BLOG">
+										</a>
+									</div>
+
+									<div class="size28">
+										<a href="#" class="dis-block txt28 m-b-8">
+											Cooking recipe Delicious
+										</a>
+
+										<span class="txt14">
+											May 25, 2017
+										</span>
+									</div>
+								</li>
+
+								<li class="flex-w m-b-25">
+									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
+										<a href="#">
+											<img src="images/blog-15.jpg" alt="IMG-BLOG">
+										</a>
+									</div>
+
+									<div class="size28">
+										<a href="#" class="dis-block txt28 m-b-8">
+											Pizza is prepared fresh
+										</a>
+
+										<span class="txt14">
+											May 2, 2017
+										</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
     <!-- Footer -->
@@ -256,7 +323,6 @@
             </div>
         </div>
     </div>
-
 
 
     <!--===============================================================================================-->

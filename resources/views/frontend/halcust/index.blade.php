@@ -595,7 +595,12 @@
             <div class="wrap-video-mo-01">
                 <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
                 <div class="video-mo-01">
-                    <iframe src="https://www.youtube.com/watch?v=suxwY9BhxaA"
+                    <ul class="list-inline social-media">
+                        <li class="list-inline item">
+                            <a href=" https://www.youtube.com/watch?v=suxwY9BhxaA" target="_blank" class="fs-15 c-white"></a>
+
+                        </li>
+                    </ul>
                         allowfullscreen></iframe>
                 </div>
             </div>
