@@ -66,7 +66,7 @@
 
     {{-- css keranjang --}}
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -340,7 +340,7 @@
     {{-- js keranjang --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/js/bootstrap.min.js"></script>
-		<script src="cart.js"></script>
+		<script src="{{ asset('assetcus/js/cart.js') }}"></script>
 
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     @stack('custom-js')

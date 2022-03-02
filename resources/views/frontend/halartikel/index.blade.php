@@ -65,15 +65,15 @@
 
     <br>
 
-     <!-- ARTIKEL -->
-     <section class="section-blog bg-white p-t-115 p-b-123">
+    <!-- ARTIKEL -->
+    <section class="section-blog bg-white p-t-115 p-b-123">
         <div class="container">
             <div class="row">
+                <!-- ARTIKEL 1 -->
                 <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/welcome1.jpeg" alt="IMG-INTRO"></a>
+                            <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
 
                             <div class="time-blog">
                                 21 Dec 2017
@@ -83,45 +83,48 @@
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Best Places for Wine
+                                    Daddyteddy Band Pop Punk Asal Malang Awali 2021 dengan Luncurkan Video Clip Sirna
                                 </h4>
                             </a>
 
                             <p class="m-b-20">
-                                Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
+                                Band Pop Punk yang terbentuk pada tahun 2012 ini beranggotakan Ivan sebagai vokalis, Rangga dan Ryan sebagai gitaris, Dwiki sebagai bassist dan Taufan sebagai drummer.
+                                Awal tahun ini, mereka meluncurkan karya terbarunya dalam format Music Video (MV) yang berjudul Sirna.
                             </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- ARTIKEL 2 -->
                 <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
                             <a href="detailartikel"><img src="images/d2.jpeg" alt="IMG-INTRO"></a>
 
                             <div class="time-blog">
-                                15 Dec 2017
+                                2019
                             </div>
                         </div>
 
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Eggs and Cheese
+                                    "SELF REMINDER", SEBUAH RENUNGAN HIDUP HARI INI
                                 </h4>
                             </a>
-
                             <p class="m-b-20">
-                                Duis elementum, risus sit amet lobortis nunc justo condimentum ligula, vitae feugiat
+                                Fandi Akhmad (vocal), Romy Fatchurrozi (drum). Rizal Nandha (lead
+                                guitar) dan Trinanda/Landang (Rhythm Guitar) adalah TDALV atau Today
+                                Alive, <br> sebuah band pop punk dari Malang, mungkin salah satu yang paling
+                                bekerja keras dan rajin tour dan merilis materi, bersosialisasi dan bergerak.
                             </p>
 
                         </div>
                     </div>
                 </div>
 
+                <!-- ARTIKEL 3 -->
                 <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
                             <a href="detailartikel"><img src="images/d3.jpeg" alt="IMG-INTRO"></a>
@@ -134,19 +137,28 @@
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
+                                    LEPAS MUSIC VIDEO "SOUND OF WEAPON"
+                                    EXCROWDED BERSIAP UNTUK FULL ALBUM TERBARU
                                 </h4>
                             </a>
 
                             <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
+                                Excrowded adalah band hardcore sal Malang yang memilik ciri khas
+                                gitar yang berat dengan ketukan drum ala Madball Trapped Under Ice,
+                                Expire. Get The Shot diL
+                                <br>
+                                Dengan personil awal Hazbi (vocal) Rijaldi (Drum) Gilang (guitar) Hang&-
+                                ayuh (guitar |) Corong (bass), yang kemudian seiring berjalannya waktu
+                                hanggayuh (guitar ll) dan corong (bass) mengundurkan diri dari Excrowd-
+                                ed. Akhirnya excrowded tetap bertahan dengan 3 trisula tetap yaitu
+                                hazbi (vocal) gilang (gutar) rijaldi (drum).
                             </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- ARTIKEL 4 -->
                 <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
                             <a href="detailartikel"><img src="images/d1.jpeg" alt="IMG-INTRO"></a>
@@ -159,22 +171,32 @@
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
+                                    UNGKAPKAN BERBAGAI KEGAGALAN
+                                    LEWAT SINGLE "UNSEEN"
                                 </h4>
                             </a>
 
                             <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
+                                Setelah merilis single bertajuk Unseen pada bulan Desember tahun 2018,
+                                Oddwain, band Alternative Rock Kepanjen, Malang ini akhirnya mengu-
+                                mumkan dirilisnya EP mereka pada tanggal 22 Januari 2019 dengan nama
+                                La Cosa Nostra. EP ini merupakan kumpulan lagu yang direkam sejak awal
+                                berdirinya Oddwain hingga menjelang dirilisnya Unseen dalam waktu
+                                yang terpisah. La Cosa Nostra berisi lima lagu yang sarat akan perenungan
+                                atas pencarian diri, ketersesatan, dan kepasrahan dengan nuansa musik
+                                alternatif pop / indie rock. Lima lag tersebut masing-masing berjudul
+                                Genuine Wanderer,Space Voyage.Unfinished Meaning Of Marital,
+                                Unseen, dan Rid The Needles.
                             </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- ARTIKEL 5 -->
                 <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/About.jpg" alt="IMG-INTRO"></a>
+                            <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
 
                             <div class="time-blog">
                                 12 Dec 2017
@@ -184,23 +206,34 @@
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
+                                    MINI ALBUM TERBARU DARI
+                                    NOOSE BERJUDUL
+                                    "FLAWLESS DARKNESS"
                                 </h4>
                             </a>
-
                             <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
+                                Noose diinisiasi oleh tiga pemuda tanggung pengibar bendera heavy rock
+                                di Kota Malang Mereka adalah Fadly (vocal &gitar), Kevin (bass) dan Dendi
+                                (drum) yang mencoba meleburkan musk stoner, doom metal dan rock &
+                                roll menjadi satu frekuensi - yang mereka sebut dengan Misantrophie
+                                Stoner Rock.
+                                <br>
+                                "Noose memiliki visi dan juga keinginan bear untuk memanaskangeliat
+                                musikrock purba dengan soundyang modern, "ungkap band yang mengaku
+                                musiknya dipengaruhi ole band seperti Black Sabbath, Budgie. Deep
+                                Purple serta meraciknya dengan sentuhan rock kantemparer ala Mast-
+                                odon, Phestess, dan Baroness
                             </p>
 
                         </div>
                     </div>
                 </div>
 
+                <!-- ARTIKEL 6 -->
                 <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/detail.jpeg" alt="IMG-INTRO"></a>
+                            <a href="detailartikel"><img src="images/detail.jpg" alt="IMG-INTRO"></a>
 
                             <div class="time-blog">
                                 12 Dec 2017
@@ -210,18 +243,21 @@
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
+                                    BARU SAJA MEMPRODUKSI DEBUT ALBUM
+                                    BERNAMA "REFERENCES"
                                 </h4>
                             </a>
 
                             <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
+                                References adalah sebuah fragmen yang mengandung keangkuhan namun
+                                juga diksi solid yang berisi tumpukan perasaan kuat dan akan perlahan
+                                memba wa kita ke kegelapan pekat. Berangkat dari fase transisi, Ultravio-
+                                lence akhirnya menjad lebih baik dengan perasaan posesif yang kuat.
                             </p>
 
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

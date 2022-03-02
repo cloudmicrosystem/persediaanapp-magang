@@ -150,7 +150,7 @@
 						</div>
 
 						<!-- Categories -->
-						<div class="categories">
+						{{-- <div class="categories">
 							<h4 class="txt33 bo5-b p-b-35 p-t-58">
 								Categories
 							</h4>
@@ -186,7 +186,7 @@
 									</a>
 								</li>
 							</ul>
-						</div>
+						</div> --}}
 
 						<!-- Most Popular -->
 						<div class="popular">
