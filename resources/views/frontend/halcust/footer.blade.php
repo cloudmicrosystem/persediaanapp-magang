@@ -45,64 +45,56 @@
                 </ul>
             </div>
 
-            <div class="col-sm-6 col-md-4 p-t-50">
-                <!-- - -->
-                <h4 class="txt13 m-b-33">
-                    SOSIAL MEDIA
-                </h4>
+            <ul class="list-inline social-media">
+                <li class="list-inline item">
+                    <div class="col-sm-6 col-md-4 p-t-50">
+                        <!-- - -->
+                        <h4 class="txt13 m-b-33">
+                            SOSIAL MEDIA
+                        </h4>
 
-                <div>
-                    <span class="fs-13 color2 m-r-5">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </span>
-                    <a href="#" class="txt15">
-                        Morfeen Official
-                    </a>
+                        <div class="m-b-25">
+                            <span class="fs-13 color2 m-r-5">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </span>
+                                    <a href="https://www.facebook.com/MorfeenStore/photos/?ref=page_internal" class="txt15">
+                                        Morfeen Official
+                                    </a>
+                                    <p class="txt14 m-b-18">
+                                        Activello is a good option. It has a slider built into that displays
+                                    </p>
+                        </div>
 
-                    <p class="txt14 m-b-18">
-                        Activello is a good option. It has a slider built into that displays
-                        <a href="#" class="txt15">
+                        <div class="m-b-25">
+                            <span class="fs-13 color2 m-r-5">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </span>
+                                    <a href="https://www.instagram.com/morfeen.official/" class="txt15">
+                                        Morfeen_oficcial
+                                    </a>
+                            <p class="txt14 m-b-18">
+                                Activello is a good option. It has a slider built into that displays the featured image
+                                in
+                                the slider.
+                            </p>
+                        </div>
 
-                        </a>
-                    </p>
-
-
-                </div>
-
-                <div class="m-b-25">
-                    <span class="fs-13 color2 m-r-5">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </span>
-                    <a href="#" class="txt15">
-                        Morfeen_oficcial
-                    </a>
-
-                    <p class="txt14 m-b-18">
-                        Activello is a good option. It has a slider built into that displays the featured image in
-                        the slider.
-                    </p>
-                </div>
-
-                <div>
-                    <span class="fs-13 color2 m-r-5">
-                        <i class="fa fa-youtube" aria-hidden="true"></i>
-                    </span>
-                    <a href="#" class="txt15">
-                        Morfeen Official
-                    </a>
-
-                    <p class="txt14 m-b-18">
-                        Activello is a good option. It has a slider built into that displays
-                        <a href="#" class="txt15">
-
-                        </a>
-                    </p>
+                        <div class="m-b-25">
+                            <span class="fs-13 color2 m-r-5">
+                                <i class="fa fa-youtube" aria-hidden="true"></i>
+                            </span>
+                            <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg" class="txt15">
+                                Morfeen Official
+                            </a>
+                            <p class="txt14 m-b-18">
+                                Activello is a good option. It has a slider built into that displays
+                            </p>
 
 
-                </div>
-
-            </div>
-
+                        </div>
+                    </div>
+                </li>
+            </ul>
             {{-- <div class="col-sm-6 col-md-4 p-t-50">
                 <!-- - -->
                 <h4 class="txt13 m-b-38">
@@ -172,29 +164,35 @@
                     </a>
                 </div>
 
-            </div>
-             --}}
+            </div> --}}
         </div>
     </div>
 
     <div class="end-footer bg2">
         <div class="container">
-            <div class="flex-sb-m flex-w p-t-22 p-b-22">
-                <div class="p-t-5 p-b-5">
-                    <ul class="list-inline social-media">
-                    <a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
-                    <li class="list-inline item">
-                        <a href="https://www.instagram.com/morfeen.official/" target="_blank" class="fs-15 c-white"><i class="fa fa-instagram m-l-18" aria-hidden="true"></i></a>
-                    </li>
-                    <a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a>
-                    </ul>
-                </div>
 
+            <div class="flex-sb-m flex-w p-t-22 p-b-22">
+                <ul class="list-inline social-media">
+                    <li class="list-inline item">
+                        <div class="p-t-5 p-b-5">
+
+                            <a href="https://www.facebook.com/MorfeenStore/photos/?ref=page_internal"
+                                    class="fs-15 c-white"><i class="fa fa-facebook m-l-18"
+                                    aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg" class="fs-15 c-white"><i class="fa fa-youtube m-l-18"
+                                    aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/morfeen.official/" class="fs-15 c-white"><i
+                                    class="fa fa-instagram m-l-18" aria-hidden="true"></i></a>
+
+                        </div>
+                    </li>
+                </ul>
                 <div class="txt17 p-r-20 p-t-5 p-b-5">
-                    Copyright &copy; 2022 Morfeen Official <i
-                        class="fa fa-heart"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    Copyright &copy; 2022 Morfeen Official <i class="fa fa-heart"></i> by <a
+                        href="https://colorlib.com" target="_blank">Colorlib</a>
                 </div>
             </div>
+
         </div>
     </div>
 </footer>

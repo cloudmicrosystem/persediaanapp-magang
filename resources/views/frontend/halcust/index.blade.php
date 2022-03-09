@@ -163,11 +163,13 @@
 
     </section>
     <br>
+    <br>
+
     <!-- Event -->
     <section class="section-event">
         <div class="wrap-slick2">
             <div class="slick2">
-                <div class="item-slick2 item1-slick2" style="background-image: url(images/bg-event-01.jpg);">
+                <div class="item-slick2 item1-slick2" style="background-image: url(images/slide-1.jpeg);">
                     <div class="wrap-content-slide2 p-t-115 p-b-208">
                         <div class="container">
                             <!-- - -->
@@ -186,7 +188,7 @@
                                 data-appear="zoomIn">
                                 <!-- Pic block2 -->
                                 <a href="#" class="wrap-pic-blo2 bg1-blo2"
-                                    style="background-image: url(images/event-02.jpg);">
+                                    style="background-image: url(images/event-1.jpg);">
                                     <div class="time-event size10 txt6 effect1">
                                         <span class="txt-effect1 flex-c-m t-center">
                                             08:00 PM Tuesday - 21 November 2018
@@ -443,25 +445,25 @@
         </div>
     </section>
     <br>
+
     <!-- Video -->
     <section class="section-video parallax100" style="background-image: url(images/bg-cover-video-02.jpg);">
-        <div class="content-video t-center p-t-225 p-b-250">
-            <span class="tit2 p-l-15 p-r-15">
-                Discover
-            </span>
+		<div class="content-video t-center p-t-225 p-b-250">
+			<span class="tit2 p-l-15 p-r-15">
+				Discover
+			</span>
 
-            <h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
-                Our Video
-            </h3>
+			<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+				Our Video
+			</h3>
 
-            <div class="btn-play ab-center size16 hov-pointer m-l-r-auto m-t-43 m-b-33" data-toggle="modal"
-                data-target="#modal-video-01">
-                <div class="flex-c-m sizefull bo-cir bgwhite color1 hov1 trans-0-4">
-                    <i class="fa fa-play fs-18 m-l-2" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+			<div class="btn-play ab-center size16 hov-pointer m-l-r-auto m-t-43 m-b-33" data-toggle="modal" data-target="#modal-video-01">
+				<div class="flex-c-m sizefull bo-cir bgwhite color1 hov1 trans-0-4">
+					<i class="fa fa-play fs-18 m-l-2" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+	</section>
 
     <!-- Blog -->
     <section class="section-blog bg-white p-t-115 p-b-123">
@@ -481,7 +483,7 @@
                     <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
+                            <a href="detailartikel"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
 
                             <div class="time-blog">
                                 21 Dec 2017
@@ -489,7 +491,7 @@
                         </div>
 
                         <div class="wrap-text-blo1 p-t-35">
-                            <a href="blog-detail.html">
+                            <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
                                     Best Places for Wine
                                 </h4>
@@ -511,7 +513,7 @@
                     <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="blog-detail.html"><img src="images/blog-02.jpg" alt="IMG-INTRO"></a>
+                            <a href="detailartikel"><img src="images/blog-02.jpg" alt="IMG-INTRO"></a>
 
                             <div class="time-blog">
                                 15 Dec 2017
@@ -519,7 +521,7 @@
                         </div>
 
                         <div class="wrap-text-blo1 p-t-35">
-                            <a href="blog-detail.html">
+                            <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
                                     Eggs and Cheese
                                 </h4>
@@ -541,7 +543,7 @@
                     <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="blog-detail.html"><img src="images/blog-03.jpg" alt="IMG-INTRO"></a>
+                            <a href="detailartikel"><img src="images/blog-03.jpg" alt="IMG-INTRO"></a>
 
                             <div class="time-blog">
                                 12 Dec 2017
@@ -549,7 +551,7 @@
                         </div>
 
                         <div class="wrap-text-blo1 p-t-35">
-                            <a href="blog-detail.html">
+                            <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
                                     Style the Wedding Party
                                 </h4>
@@ -589,28 +591,20 @@
     <!-- Modal Video 01-->
     <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
 
-        <div class="modal-dialog" role="document" data-dismiss="modal">
-            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+		<div class="modal-dialog" role="document" data-dismiss="modal">
+			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
 
-            <div class="wrap-video-mo-01">
-                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-                <div class="video-mo-01">
-                    <ul class="list-inline social-media">
-                        <li class="list-inline item">
-                            <a href=" https://www.youtube.com/watch?v=suxwY9BhxaA" target="_blank" class="fs-15 c-white"></a>
-
-                        </li>
-                    </ul>
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
+			<div class="wrap-video-mo-01">
+				<div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
+				<div class="video-mo-01">
+                    <iframe src="https://www.youtube.com/embed/suxwY9BhxaA?start=1" title="YouTube video player" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
 
 
     <!--===============================================================================================-->
-<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/animsition/js/animsition.min.js') }}"></script>
     <!--===============================================================================================-->
@@ -634,6 +628,7 @@
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/main.js') }}"></script>
+
 </body>
 
 </html>

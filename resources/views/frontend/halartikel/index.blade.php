@@ -137,8 +137,7 @@
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    LEPAS MUSIC VIDEO "SOUND OF WEAPON"
-                                    EXCROWDED BERSIAP UNTUK FULL ALBUM TERBARU
+                                    LEPAS MUSIC VIDEO "SOUND OF WEAPON" EXCROWDED BERSIAP UNTUK FULL ALBUM TERBARU
                                 </h4>
                             </a>
 
@@ -148,10 +147,11 @@
                                 Expire. Get The Shot diL
                                 <br>
                                 Dengan personil awal Hazbi (vocal) Rijaldi (Drum) Gilang (guitar) Hang&-
-                                ayuh (guitar |) Corong (bass), yang kemudian seiring berjalannya waktu
+                                ayuh (guitar |) Corong (bass) ...
+                                {{-- yang kemudian seiring berjalannya waktu
                                 hanggayuh (guitar ll) dan corong (bass) mengundurkan diri dari Excrowd-
                                 ed. Akhirnya excrowded tetap bertahan dengan 3 trisula tetap yaitu
-                                hazbi (vocal) gilang (gutar) rijaldi (drum).
+                                hazbi (vocal) gilang (gutar) rijaldi (drum). --}}
                             </p>
                         </div>
                     </div>
@@ -181,12 +181,12 @@
                                 Oddwain, band Alternative Rock Kepanjen, Malang ini akhirnya mengu-
                                 mumkan dirilisnya EP mereka pada tanggal 22 Januari 2019 dengan nama
                                 La Cosa Nostra. EP ini merupakan kumpulan lagu yang direkam sejak awal
-                                berdirinya Oddwain hingga menjelang dirilisnya Unseen dalam waktu
-                                yang terpisah. La Cosa Nostra berisi lima lagu yang sarat akan perenungan
+                                berdirinya Oddwain hingga menjelang dirilisnya Unseen dalam waktu...
+                                {{-- yang terpisah. La Cosa Nostra berisi lima lagu yang sarat akan perenungan
                                 atas pencarian diri, ketersesatan, dan kepasrahan dengan nuansa musik
                                 alternatif pop / indie rock. Lima lag tersebut masing-masing berjudul
                                 Genuine Wanderer,Space Voyage.Unfinished Meaning Of Marital,
-                                Unseen, dan Rid The Needles.
+                                Unseen, dan Rid The Needles. --}}
                             </p>
                         </div>
                     </div>
@@ -217,12 +217,12 @@
                                 (drum) yang mencoba meleburkan musk stoner, doom metal dan rock &
                                 roll menjadi satu frekuensi - yang mereka sebut dengan Misantrophie
                                 Stoner Rock.
-                                <br>
+                                {{-- <br>
                                 "Noose memiliki visi dan juga keinginan bear untuk memanaskangeliat
                                 musikrock purba dengan soundyang modern, "ungkap band yang mengaku
                                 musiknya dipengaruhi ole band seperti Black Sabbath, Budgie. Deep
                                 Purple serta meraciknya dengan sentuhan rock kantemparer ala Mast-
-                                odon, Phestess, dan Baroness
+                                odon, Phestess, dan Baroness --}}
                             </p>
 
                         </div>

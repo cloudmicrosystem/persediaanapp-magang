@@ -5,6 +5,16 @@
     <title>Contac</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{-- CSS Class Content --}}
+    @stack('custom-css')
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
@@ -33,15 +43,6 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-free/css/all.min.css') }}">
     <!--===============================================================================================-->
-    {{-- CSS Class Content --}}
-    @stack('custom-css')
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/fontawesome-free/css/all.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('') }}assets/dist/css/adminlte.min.css">
 </head>
 
 <body class="animsition">
@@ -73,7 +74,6 @@
     </section>
 
     <section class="content">
-
         <div class="card">
             <div class="card-body row">
                 <div class="col-5 text-center d-flex align-items-center justify-content-center">
@@ -133,14 +133,19 @@
             <div class="wrap-video-mo-01">
                 <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
                 <div class="video-mo-01">
-                    <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0"
-                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uB9czZIzJGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 
 
+    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+    @stack('custom-js')
+    <!-- AdminLTE App -->
+    <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
 
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
@@ -156,7 +161,7 @@
     <script type="text/javascript" src="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.js') }}"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/slick/slick.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assetcus/js/slick-custom.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('assetcus/js/slick-custom.js') }}"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/parallax100/parallax100.js') }}"></script>
     <script type="text/javascript">
@@ -167,13 +172,6 @@
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/main.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('') }}assets/plugins/jquery/jquery.min.js"></script>
-    @stack('custom-js')
-    <!-- AdminLTE App -->
-    <script src="{{ asset('') }}assets/dist/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
 
 </body>
 
