@@ -90,7 +90,7 @@ class CategoryController extends Controller
         WHERE id=$id
         ");
 
-return redirect('backend.kategori')->with('toast_success', 'Data Berhasil Diupdate');
+        return redirect('kategori')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -103,6 +103,6 @@ return redirect('backend.kategori')->with('toast_success', 'Data Berhasil Diupda
     {
         DB::select("DELETE FROM category WHERE id=$id");
 
-        return redirect('backend.kategori')->with('toast_success', 'Data Berhasil Dihapus');
+        return redirect('kategori')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

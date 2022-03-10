@@ -45,8 +45,9 @@ class PersediaanController extends Controller
      */
     public function create()
     {
+        $category = DB::select('SELECT * FROM category');
         $barang = DB::select('SELECT * FROM barang');
-        return view('backend.barang.create')->with(compact('barang'));
+        return view('backend.barang.create')->with(compact('barang','category'));
     }
 
     /**
@@ -58,7 +59,7 @@ class PersediaanController extends Controller
     public function store(Request $request)
     {
         // echo '<pre>'; print_r($request->code_barang); die;
-        $$gambar_disply = null;
+        $gambar_disply = null;
 
         // Validation
         $request->validate([
@@ -70,7 +71,7 @@ class PersediaanController extends Controller
             $gambar_disply = time().'_'.$file->getClientOriginalName();
 
             // File upload location
-            $location = 'public/images/disply';
+            $location = 'images/disply';
 
             // Upload file
             $file->move($location,$gambar_disply);
@@ -102,7 +103,7 @@ class PersediaanController extends Controller
         '$gambar_disply'
         )");
 
-        return redirect('backend.barang')->with('toast_success', 'Data Berhasil Disimpan');
+        return redirect('barang')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -152,7 +153,7 @@ class PersediaanController extends Controller
             $gambar_disply = time().'_'.$file->getClientOriginalName();
 
             // File upload location
-            $location = 'public/images/disply';
+            $location = 'images/disply';
 
             // Upload file
             $file->move($location,$gambar_disply);
@@ -174,7 +175,7 @@ class PersediaanController extends Controller
         WHERE id=$id
         ");
 
-        return redirect('backend.barang')->with('toast_success', 'Data Berhasil Diupdate');
+        return redirect('barang')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -187,6 +188,6 @@ class PersediaanController extends Controller
     {
         DB::select("DELETE FROM barang WHERE id=$id");
 
-        return redirect('backend.barang')->with('toast_success', 'Data Berhasil Dihapus');
+        return redirect('barang')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

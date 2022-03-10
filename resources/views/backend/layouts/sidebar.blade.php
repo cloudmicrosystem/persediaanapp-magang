@@ -31,6 +31,24 @@
                               </a>
                           </li>
                           <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>Database Artikel
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="user" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Data Artikel
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                          <li class="nav-item">
                               <a href="#" class="nav-link">
                                   <i class="nav-icon fas fa-table"></i>
                                   <p>Database Product
@@ -82,6 +100,42 @@
                                   </li>
                               </ul>
                           </li>
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>Database Transaksi
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="user" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Data Transaksi
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>Database Laporan
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="user" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Laporan Laba Rugi
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                       </ul>
                   </li>
               </ul>

@@ -56,7 +56,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/product/{category}', [HalproductController::class, 'category']);
 
-    Route::get('/detail/{barang}', [HaldetailproductController::class, 'barang']);
+    Route::get('/detail', [HaldetailproductController::class, 'index']);
 
     Route::get('/about', [HalaboutController::class, 'index']);
 

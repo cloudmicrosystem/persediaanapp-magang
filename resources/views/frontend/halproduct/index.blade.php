@@ -65,7 +65,6 @@
         </div>
     </section>
 
-
     <!-- Sidebar kategori -->
     <section class="slider-section pt-4">
         <div class="container">
@@ -103,12 +102,14 @@
                                         <div class="card" style="border: transparent">
                                             <ul class="">
                                                 <li>
-                                                    <a href="detail">
-                                                        <img src="{{ asset('images/disply/' . $items->gambar_disply . $value->slug) }}"
-                                                            class="img-fluid img-thumbnail"
-                                                            alt="{{ $items->nama_barang }}"
-                                                            style="border: transparent" />
-                                                    </a>
+                                                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                                                        <a href="detail">
+                                                            <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
+                                                                class="img-fluid img-thumbnail"
+                                                                alt="{{ $items->nama_barang }}"
+                                                                style="border: transparent" />
+                                                        </a>
+                                                    </div>
                                                 </li>
                                             </ul>
                                             <div class="card-body">
@@ -141,8 +142,6 @@
         </div>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     @include('frontend.halcust.footer')

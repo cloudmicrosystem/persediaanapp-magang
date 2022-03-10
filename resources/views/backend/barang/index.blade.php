@@ -9,7 +9,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table-bordered table table-hover">
+                        <table class="table-bordered table table-responsive">
                             <thead>
                                 <a class="btn btn-info" href="{{ url('barang/create') }}"><i class='fas fa-plus'></i></a>
                                 <br>
@@ -40,7 +40,10 @@
                                             //     <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
                                             //         alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
                                             // @endforeach --}}
-                                        <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}" width=100px height=auto /></td>
+                                        <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}"
+                                            alt="{{ ($value->nama_barang) }}"
+                                            width=150px height=auto /></td>
+
                                         <td><a class="btn btn-info"
                                                 href="{{ url('barang/' . $value->id . '/edit') }}"><i
                                                     class='fas fa-edit'></a></td>

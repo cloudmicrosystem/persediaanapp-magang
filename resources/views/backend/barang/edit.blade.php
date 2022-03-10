@@ -22,8 +22,9 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Kategori </label>
-                                    <input type="text" name="id_category" value="{{ $barang[0]->id_category }}"
-                                        class="form-control">
+                                    <select class="selectpicker form-control " name="" id=""></select>
+                                    {{-- <input type="text" name="id_category" value="{{ $barang[0]->id_category }}"
+                                        class="form-control"> --}}
                                 </div>
                                 <div class="form-group">
                                     <label>Nama </label>
@@ -56,11 +57,11 @@
                                     <label>Qty </label>
                                     <input type="number" name="qty" value="{{ $barang[0]->qty }}" class="form-control">
                                 </div>
-                                {{-- <div class="form-group">
+                                <div class="form-group">
                                     <label>Gambar</label>
-                                    <input type="file" name="url_gambar" accept="image/*"
-                                        value="{{ $barang[0]->gambar }}" class="form-control">
-                                </div> --}}
+                                    <input type="file" name="gambar_disply" accept="image/*"
+                                        value="{{ $barang[id]->gambar_disply }}" class="form-control">
+                                </div>
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">

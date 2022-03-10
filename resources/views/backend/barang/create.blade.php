@@ -20,7 +20,7 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Kategori </label>
+                                    <label>Kategori </label> <br>
                                     <input type="text" name="id_category" class="form-control">
                                 </div>
                                 <div class="form-group">
@@ -50,6 +50,10 @@
                                 <div class="form-group">
                                     <label>Qty </label>
                                     <input type="number" name="qty" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Gambar </label>
+                                    <input type="file" name="gambar_disply" class="form-control">
                                 </div>
                             </div>
                             <!-- /.card-body -->
