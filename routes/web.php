@@ -15,7 +15,6 @@ use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Admin\GambarController;
 use App\Http\Controllers\Admin\UserController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,13 +25,6 @@ use App\Http\Controllers\Admin\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
     // ADMIN

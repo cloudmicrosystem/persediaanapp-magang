@@ -117,14 +117,6 @@
                                                     <p class="">Rp {{ $items->price }}</p>
                                                 </a>
                                             </div>
-                                            {{-- <p style="color: orange" class="m-1">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </p>
-                                            <a href="#" class="btn btn-success">Beli</a> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -202,27 +194,6 @@
 
     <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
-
-    @section('script')
-        <script>
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-        </script>
-    @endsection
 </body>
 
 </html>
