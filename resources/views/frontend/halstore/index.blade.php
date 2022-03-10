@@ -66,7 +66,6 @@
     <br>
 
     <div class="container" >
-        <h2 class="text-center"> LOKASI </h2>
         <div class="row">
             <div class="d-flex justify-content-center">
             <div class="col-md-4 mb-8 m-2  p-t-115 p-b-123">
