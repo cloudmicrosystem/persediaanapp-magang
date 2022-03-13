@@ -86,7 +86,7 @@
                             <ul class="menu-category mt-3">
                                 <li>
                                     @foreach ($category as $key => $value)
-                                        <li><a href="/product/{{ $value->slug }}"> {{ $value->nama_category }}</a></li>
+                                        <li><a href="./product/{{ $value->slug }}"> {{ $value->nama_category }}</a></li>
                                     @endforeach
                                 </li>
                             </ul>

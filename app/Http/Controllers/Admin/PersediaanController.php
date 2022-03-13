@@ -20,7 +20,7 @@ class PersediaanController extends Controller
         $barang = DB::select(
             'SELECT barang.*,
                 (SELECT nama_category FROM category WHERE id = barang.id_category)
-                    AS nama_category FROM barang ORDER BY id '
+                    AS nama_category FROM barang ORDER BY id desc'
         );
 
         // $gambar = DB::select('SELECT * FROM gambar WHERE id_barang =.$barang->id');
@@ -46,7 +46,8 @@ class PersediaanController extends Controller
     public function create()
     {
         $category = DB::select('SELECT * FROM category');
-        $barang = DB::select('SELECT * FROM barang');
+
+        $barang = DB::select('SELECT id as id_category, nama_category FROM category ORDER BY id');
         return view('backend.barang.create')->with(compact('barang','category'));
     }
 
