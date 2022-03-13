@@ -109,7 +109,6 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     @include('frontend.halcust.footer')
 
