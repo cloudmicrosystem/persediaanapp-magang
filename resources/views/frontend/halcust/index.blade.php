@@ -28,9 +28,14 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/lightbox2/css/lightbox.min.css') }}">
     <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
     <!--===============================================================================================-->
+
+    {{-- css keranjang --}}
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body class="animsition">
@@ -127,8 +132,10 @@
                         </h3>
 
                         <p class="t-center m-b-22 size3 m-l-r-auto">
-                            Morfeen adalah sebuah brand yang dibentuk dan di dirikan oleh Fandi Akhmad ketika dia masih bersekolah di bangku SMK, tepat nya pada tahun 2013
-                            bergerak di bidang fashion style & clothing line. Hingga saat ini Morfeen sudah memilik 2 toko offline di Sukun, Kota Malang & Slorok, Kab. Malang.
+                            Morfeen adalah sebuah brand yang dibentuk dan di dirikan oleh Fandi Akhmad ketika dia masih
+                            bersekolah di bangku SMK, tepat nya pada tahun 2013
+                            bergerak di bidang fashion style & clothing line. Hingga saat ini Morfeen sudah memilik 2
+                            toko offline di Sukun, Kota Malang & Slorok, Kab. Malang.
 
                         </p>
 
@@ -447,34 +454,35 @@
     <br>
 
     <!-- Video -->
-    <section class="section-video parallax100" style="background-image: url(images/bg-cover-video-02.jpg);">
-		<div class="content-video t-center p-t-225 p-b-250">
-			<span class="tit2 p-l-15 p-r-15">
-				Discover
-			</span>
+    <section class="section-video parallax100" style="background-image: url(images/welcome3.jpg);">
+        <div class="content-video t-center p-t-225 p-b-250">
+            <span class="tit2 p-l-15 p-r-15">
+                Discover
+            </span>
 
-			<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
-				Our Video
-			</h3>
+            <h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+                Our Video
+            </h3>
 
-			<div class="btn-play ab-center size16 hov-pointer m-l-r-auto m-t-43 m-b-33" data-toggle="modal" data-target="#modal-video-01">
-				<div class="flex-c-m sizefull bo-cir bgwhite color1 hov1 trans-0-4">
-					<i class="fa fa-play fs-18 m-l-2" aria-hidden="true"></i>
-				</div>
-			</div>
-		</div>
-	</section>
+            <div class="btn-play ab-center size16 hov-pointer m-l-r-auto m-t-43 m-b-33" data-toggle="modal"
+                data-target="#modal-video-01">
+                <div class="flex-c-m sizefull bo-cir bgwhite color1 hov1 trans-0-4">
+                    <i class="fa fa-play fs-18 m-l-2" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Blog -->
     <section class="section-blog bg-white p-t-115 p-b-123">
         <div class="container">
             <div class="title-section-ourmenu t-center m-b-22">
                 <span class="tit2 t-center">
-                    Latest News
+                    Artikel
                 </span>
 
                 <h3 class="tit5 t-center m-t-2">
-                    The Blog
+                    Morfeen
                 </h3>
             </div>
 
@@ -591,43 +599,48 @@
     <!-- Modal Video 01-->
     <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
 
-		<div class="modal-dialog" role="document" data-dismiss="modal">
-			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+        <div class="modal-dialog" role="document" data-dismiss="modal">
+            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
 
-			<div class="wrap-video-mo-01">
-				<div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-				<div class="video-mo-01">
-                    <iframe src="https://www.youtube.com/embed/suxwY9BhxaA?start=1" title="YouTube video player" allowfullscreen></iframe>
-			</div>
-		</div>
-	</div>
+            <div class="wrap-video-mo-01">
+                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
+                <div class="video-mo-01">
+                    <iframe src="https://www.youtube.com/embed/suxwY9BhxaA?start=1" title="YouTube video player"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
 
+        {{-- js keranjang --}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/js/bootstrap.min.js"></script>
+        <script src="{{ asset('assetcus/js/cart.js') }}"></script>
 
-    <!--===============================================================================================-->
-    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/animsition/js/animsition.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/bootstrap/js/popper.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/bootstrap/js/bootstrap.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/select2/select2.min.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/daterangepicker/moment.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/slick/slick.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('assetcus/js/slick-custom.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/parallax100/parallax100.js') }}"></script>
-    <script type="text/javascript">
-        $('.parallax100').parallax100();
-    </script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/countdowntime/countdowntime.js') }}"></script>
-    <!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
-    <script src="{{ asset('assetcus/js/main.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/animsition/js/animsition.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/bootstrap/js/popper.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/bootstrap/js/bootstrap.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/select2/select2.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/daterangepicker/moment.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.js') }}"></script>
+        <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/slick/slick.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assetcus/js/slick-custom.js') }}"></script>
+        <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/parallax100/parallax100.js') }}"></script>
+        <script type="text/javascript">
+            $('.parallax100').parallax100();
+        </script>
+        <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/countdowntime/countdowntime.js') }}"></script>
+        <!--===============================================================================================-->
+        <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
+        <script src="{{ asset('assetcus/js/main.js') }}"></script>
 
 </body>
 

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="{{ asset('assetcus/css/normalize.css') }}" />
     <link rel="stylesheet" href="{{ asset('assetcus/css/foundation.css') }}" />
     <link rel="stylesheet" href="{{ asset('assetcus/css/demo.css') }}" />
-    <script src="assetcus/js/vendor/modernizr.js"></script>
-    <script src="assetcus/js/vendor/jquery.js"></script>
+    <script src="{{ asset('assetcus/js/vendor/modernizr.js') }}"></script>
+    <script src="{{ asset('assetcus/js/vendor/jquery.js') }}"></script>
     <!-- xzoom plugin here -->
-    <script type="text/javascript" src="assetcus/js/xzoom.min.js"></script>
+    <script type="text/javascript" src="{{ asset('assetcus/js/xzoom.min.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/xzoom.css') }}" media="all" />
     <!-- hammer plugin here -->
     <script type="text/javascript" src="assetcus/hammer.js/1.0.5/jquery.hammer.min.js"></script>
@@ -105,20 +105,20 @@
 
     <section class="content" class="pading-top0 ">
         <div class="bread-crumb bo5-b p-t-17 p-b-17">
-			<div class="container">
-				<a href="home" class="txt27">
-					Home
-				</a>
+            <div class="container">
+                <a href="home" class="txt27">
+                    Home
+                </a>
 
-				<span class="txt29 m-l-10 m-r-10">/</span>
+                <span class="txt29 m-l-10 m-r-10">/</span>
 
-				<a href="product" class="txt27">
-					Product
-				</a>
+                <a href="product" class="txt27">
+                    Product
+                </a>
 
-				<span class="txt29 m-l-10 m-r-10">/</span>
-			</div>
-		</div>
+                <span class="txt29 m-l-10 m-r-10">/</span>
+            </div>
+        </div>
 
         <div class="d-flex justify-content-center">
             <div class="card card-solid">
@@ -163,24 +163,53 @@
                                     $80.00
                                 </h1>
                             </div>
+
                             <div class="mt-2">
-                                <div class="btn btn-dark btn-lg btn-flat">
-                                    <i class="fas fa-cart-plus "></i>
-                                    Add to Cart
-                                </div>
-                                <div class="btn btn-default btn-lg btn-flat">
-                                    <i class="fas fa-heart fa-lg mr-2"></i>
-                                    Add to Wishlist
+                                {{-- <div class="product-select">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <label>Color</label>
+                                            <select class="form-control">
+                                                <option>-- Color --</option>
+                                            </select>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <input type="number" class="form-control" value="1"/>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <button type="button" class="btn btn-primary btn-block">Add to Cart</button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a href="#" class="btn btn-secondary"><i class="fa fa-heart-o"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div> --}}
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="number" class="form-control" value="1" />
+                                    </div>
+                                    <div class="btn btn-dark btn-lg btn-flat">
+                                        <i class="fas fa-cart-plus "></i>
+                                        Add to Cart
+                                    </div>
+                                    <div class="btn btn-default btn-lg btn-flat">
+                                        <i class="fas fa-heart fa-lg mr-2"></i>
+                                        Add to Wishlist
+                                    </div>
                                 </div>
                             </div>
 
+                            {{-- Keranjang --}}
                             <div class="mt-2">
                                 <div class="span6">
 
                                     <div class="product-Info">
                                         <span class="keranjang_quantity"></span> items
-                                        <a href="#myModal" role="button" class="product-view"
-                                            data-toggle="modal">keranjang</a>
+                                        <a href="#myModal" role="button" class="product-view" data-toggle="modal"><i
+                                                class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
                                     </div>
 
                                     <div id="myModal" class="modal hide fade">
@@ -206,7 +235,7 @@
 
 
 
-                                    <div class="product-total">
+                                    {{-- <div class="product-total">
 
                                         <p><b>Items:</b> <span class="keranjang_quantity"></span></p>
                                         <!--number of items in the cart-->
@@ -223,7 +252,7 @@
                                         <p><b>Final price:</b> <span class="keranjang_grandTotal"></span> </p>
                                         <!--total of the cart after tax & shipping -->
 
-                                    </div>
+                                    </div> --}}
                                 </div><!-- /span6 -->
                             </div>
 
@@ -241,7 +270,6 @@
                                     <i class="fas fa-rss-square fa-2x"></i>
                                 </a>
                             </div>
-
                         </div>
 
                         <div class="col-md-6 p-t-30">
@@ -337,9 +365,9 @@
     <!--===============================================================================================-->
 
     {{-- js keranjang --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/js/bootstrap.min.js"></script>
-		<script src="{{ asset('assetcus/js/cart.js') }}"></script>
+    <script src="{{ asset('assetcus/js/cart.js') }}"></script>
 
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     @stack('custom-js')

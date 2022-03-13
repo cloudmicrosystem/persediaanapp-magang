@@ -55,7 +55,7 @@
         </div>
     </section>
 
-    {{-- Isi halamanAbout --}}
+    {{-- Detail Artikel  --}}
     <section>
 		<div class="bread-crumb bo5-b p-t-17 p-b-17">
 			<div class="container">
