@@ -2,7 +2,8 @@
     <div class="d-flex justify-content-center">
         <div class="container p-t-10 p-b-30">
             <div class="row">
-                <div class="col-sm-6 col-md-4 p-t-50">
+
+                <div class="col-sm-6 col-md-6 p-t-50">
                     <!-- - -->
                     <h4 class="txt13 m-b-33">
                         Contact Us
@@ -45,68 +46,37 @@
                     </ul>
                 </div>
 
-
-                <div class="col-sm-6 col-md-4 p-t-50">
+                <div class="col-sm-6 col-md-6 p-t-50  d-flex align-items-center justify-content-center">
                     <!-- - -->
                     <ul class="list-inline social-media">
                         <li class="list-inline item">
-                            <h4 class="txt13 m-b-33">
-                                SOSIAL MEDIA
-                            </h4>
 
                             {{-- WA --}}
                             <div class="m-b-25">
-                                <span class="fs-13 color2 m-r-5">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </span>
-                                <a href="https://api.whatsapp.com/send/?phone=%2B6282229278641&text&app_absent=0"
-                                    class="txt15">
-                                    Morfeen Official
+                                <a href="refund"
+                                    class="txt35">
+                                    <h4>
+                                    Refund Policy
+                                    </h4>
                                 </a>
-                                <p class="txt14 m-b-18">
-                                    Activello is a good option. It has a slider built into that displays
-                                </p>
                             </div>
                             {{-- INTAGRAM --}}
                             <div class="m-b-25">
-                                <span class="fs-13 color2 m-r-5">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </span>
-                                <a href="https://www.instagram.com/morfeen.official/" class="txt15">
-                                    Morfeen_oficcial
+                                <a href="order"
+                                    class="txt35">
+                                    <h4>
+                                    How To Order
+                                    </h4>
                                 </a>
-                                <p class="txt14 m-b-18">
-                                    Activello is a good option. It has a slider built into that displays the featured
-                                    image
-                                    in
-                                    the slider.
-                                </p>
                             </div>
-                            {{-- FACEBOOK --}}
+                            {{-- FAQ --}}
                             <div class="m-b-25">
-                                <span class="fs-13 color2 m-r-5">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </span>
-                                <a href="https://www.facebook.com/MorfeenStore/photos/?ref=page_internal"
-                                    class="txt15">
-                                    Morfeen Official
+                                <a href=""
+                                    class="txt35">
+                                    <h4>
+                                    FAQ
+                                    </h4>
                                 </a>
-                                <p class="txt14 m-b-18">
-                                    Activello is a good option. It has a slider built into that displays
-                                </p>
-                            </div>
-                            {{-- YT --}}
-                            <div class="m-b-25">
-                                <span class="fs-13 color2 m-r-5">
-                                    <i class="fa fa-youtube" aria-hidden="true"></i>
-                                </span>
-                                <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg"
-                                    class="txt15">
-                                    Morfeen Official
-                                </a>
-                                <p class="txt14 m-b-18">
-                                    Activello is a good option. It has a slider built into that displays
-                                </p>
                             </div>
 
                         </li>
@@ -116,6 +86,8 @@
         </div>
     </div>
 
+
+    {{-- FOOTER BAWAH --}}
     <div class="end-footer bg2">
         <div class="container">
 
@@ -124,11 +96,11 @@
                     <li class="list-inline item">
                         <div class="p-t-5 p-b-5">
                             <a href="https://api.whatsapp.com/send/?phone=%2B6282229278641&text&app_absent=0"
-                                    class="fs-15 c-white"><i class="fa fa-whatsapp m-l-18" aria-hidden="true"></i></a>
+                                class="fs-15 c-white"><i class="fa fa-whatsapp m-l-18" aria-hidden="true"></i></a>
                             <a href="https://www.instagram.com/morfeen.official/" class="fs-15 c-white"><i
                                     class="fa fa-instagram m-l-18" aria-hidden="true"></i></a>
                             <a href="https://www.facebook.com/MorfeenStore/photos/?ref=page_internal"
-                                    class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+                                class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
                             <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg" class="fs-15 c-white"><i
                                     class="fa fa-youtube m-l-18" aria-hidden="true"></i></a>
                         </div>

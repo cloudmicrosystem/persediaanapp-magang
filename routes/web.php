@@ -8,12 +8,16 @@ use App\Http\Controllers\Users\HalstoreController;
 use App\Http\Controllers\Users\HalcontacController;
 use App\Http\Controllers\Users\HalartikelController;
 use App\Http\Controllers\Users\HaldetailartikelController;
+use App\Http\Controllers\Users\HalrefundController;
+use App\Http\Controllers\Users\HalorderController;
+use App\Http\Controllers\Users\HalfaqController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Admin\GambarController;
 use App\Http\Controllers\Admin\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -61,5 +65,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/artikel', [HalartikelController::class, 'index']);
 
     Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
+
+    Route::get('/refund', [HalrefundController::class, 'index']);
+
+    Route::get('/order', [HalorderController::class, 'index']);
+
+    Route::get('/faq', [HalfaqController::class, 'index']);
 
 
