@@ -1,9 +1,9 @@
 <footer class="bg1">
-    <div class="d-flex justify-content-center">
+    {{-- <div class="d-flex justify-content-center"> --}}
         <div class="container p-t-10 p-b-30">
             <div class="row">
 
-                <div class="col-sm-6 col-md-6 p-t-50">
+                <div class="col-sm-6 col-md-4 p-t-50">
                     <!-- - -->
                     <h4 class="txt13 m-b-33">
                         Contact Us
@@ -44,7 +44,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-sm-6 col-md-6 p-t-50  d-flex align-items-center justify-content-center">
+
+                <div class="col-sm-6 col-md-4 p-t-50  d-flex align-items-center justify-content-center">
                     <!-- - -->
                     <ul class="list-inline social-media">
                         <li class="list-inline item">
@@ -79,9 +80,18 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="col-sm-6 col-md-4 p-t-50  d-flex align-items-center justify-content-center">
+                    <!-- - -->
+                    <img src="images/icons/logofooter.png" alt="">
+                </div>
+
+
+
+
             </div>
         </div>
-    </div>
+    {{-- </div> --}}
 
 
     {{-- FOOTER BAWAH --}}
