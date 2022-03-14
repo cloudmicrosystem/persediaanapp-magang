@@ -36,7 +36,7 @@
                             </li>
 
                             <li>
-                                <a href="/contac">Contact</a>
+                                <a href="/contact">Contact</a>
                             </li>
 
                             <li>

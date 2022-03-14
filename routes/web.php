@@ -56,7 +56,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/store', [HalstoreController::class, 'index']);
 
-    Route::get('/contac', [HalcontacController::class, 'index']);
+    Route::get('/contact', [HalcontacController::class, 'index']);
 
     Route::get('/artikel', [HalartikelController::class, 'index']);
 

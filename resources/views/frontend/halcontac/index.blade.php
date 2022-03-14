@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Contac</title>
+    <title>Contact</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- CSS Class Content --}}
@@ -57,17 +57,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/halproduct.jpg);">
-                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                        <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-                            data-appear="fadeInDown">
-                            CONTAC
-                        </span>
-
-                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                            Morfeen Thirteen
-                        </h2>
-                    </div>
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgkontak.jpg);">
                 </div>
             </div>
         </div>
@@ -87,15 +77,15 @@
                 <div class="col-7">
                     <div class="form-group">
                         <label for="inputName">Name</label>
-                        <input type="text" id="inputName" class="form-control" placeholder="Name"/>
+                        <input type="text" class="form-control" placeholder="Name"/>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">E-Mail</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="E-mail"/>
+                        <input type="email" class="form-control" placeholder="E-mail"/>
                     </div>
                     <div class="form-group">
                         <label for="inputSubject">Subject</label>
-                        <input type="text" id="inputSubject" class="form-control" placeholder="Subject"/>
+                        <input type="text" class="form-control" placeholder="Subject"/>
                     </div>
                     <div class="form-group">
                         <label for="inputMessage">Message</label>

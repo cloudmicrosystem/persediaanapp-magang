@@ -47,17 +47,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/halproduct.jpg);">
-                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                        <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-                            data-appear="fadeInDown">
-                            STORE
-                        </span>
-
-                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                            Morfeen Thirteen
-                        </h2>
-                    </div>
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgstore.jpg);">
                 </div>
             </div>
         </div>
@@ -68,8 +58,8 @@
     <div class="container" >
         <div class="row">
             <div class="d-flex justify-content-center">
-            <div class="col-md-4 mb-8 m-2  p-t-115 p-b-123">
-                <div class="card">
+            <div class="col-md-6 mb-8 m-2  p-t-50 p-b-50">
+                <div class="card" style="border: transparent">
                     <ul class="list-inline social-media">
                         <li class="list-inline item">
                             <a
@@ -79,29 +69,27 @@
                         </li>
                     </ul>
                     <div class="m-3">
-                        <h4 class="text-center">MORFEEN THIRTEEN <br>KOTA MALANG</h4>
-                        <p class="m-1 text-center"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang, Jawa Timur
-                            65147<br />
+                        <h4 class="text-center" style="font-weight: bold">Morfeen Store Sukun
+                        <p class="m-1 text-center"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang<br />
                             Mon-Sun 12.00-21:00<br />
                             (+62) 887-4116-4285</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 mb-5 m-2  p-t-115 p-b-123">
-                <div class="card">
+            <div class="col-md-6 mb-5 m-2  p-t-50 p-b-10">
+                <div class="card" style="border: transparent">
                     <ul class="list-inline social-media">
-                        <li class="list-inline item">
+                        <li class="list-inline item" >
                             <a
                                 href="https://www.google.com/maps/place/Morfeen+2nd+Store,+Slorok/@-8.1425777,112.5211889,17z/data=!3m1!4b1!4m5!3m4!1s0x2e789f32d601ed31:0x27f74ee587bd47b2!8m2!3d-8.1425919!4d112.523373?shorturl=1">
-                                <img src="images/d3.jpeg" class="card-img-top" alt="...">
+                                <img src="images/slorok.jpeg" class="card-img-top" alt="...">
                             </a>
                         </li>
                     </ul>
                     <div class="m-3">
-                        <h4 class="text-center">MORFEEN THIRTEEN <br>KABUPATEN MALANG</h4>
-                        <p class="m-1 text-center"> Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang, Jawa
-                            Timur 65165<br />
+                        <h4 class="text-center" style="font-weight: bold">Morfeen Store Slorok
+                        <p class="m-1 text-center"> Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang<br />
                             Mon-Sun 12.00-21:00<br />
                             (+62) 887-4116-4285</p>
                     </div>

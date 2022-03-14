@@ -47,8 +47,8 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/About.jpg);">
-                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgartikel.jpg);">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-100">
                     </div>
                 </div>
             </div>
@@ -57,30 +57,10 @@
 
     {{-- Detail Artikel  --}}
     <section>
-		<div class="bread-crumb bo5-b p-t-17 p-b-17">
-			<div class="container">
-				<a href="home" class="txt27">
-					Home
-				</a>
-
-				<span class="txt29 m-l-10 m-r-10">/</span>
-
-				<a href="artikel" class="txt27">
-					Artikel
-				</a>
-
-				<span class="txt29 m-l-10 m-r-10">/</span>
-
-				<span class="txt29">
-					Morfeen
-				</span>
-			</div>
-		</div>
-
 		<div class="container">
 			<div class="row ">
 				<div class="col-md-8 col-lg-9">
-					<div class="p-t-80 p-b-124 bo5-r p-r-50 h-full p-r-0-md bo-none-md">
+					<div class="p-t-80 p-b-20 bo5-r p-r-50 h-full p-r-0-md bo-none-md">
 						<!-- Block4 -->
 						<div class="blo4 p-b-63">
 							<!-- - -->
@@ -198,7 +178,7 @@
 								<li class="flex-w m-b-25">
 									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
 										<a href="#">
-											<img src="images/blog-11.jpg" alt="IMG-BLOG">
+											<img src="images/sukun.jpg" alt="IMG-BLOG">
 										</a>
 									</div>
 
@@ -216,7 +196,7 @@
 								<li class="flex-w m-b-25">
 									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
 										<a href="#">
-											<img src="images/blog-12.jpg" alt="IMG-BLOG">
+											<img src="images/sukun.jpg" alt="IMG-BLOG">
 										</a>
 									</div>
 
@@ -234,7 +214,7 @@
 								<li class="flex-w m-b-25">
 									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
 										<a href="#">
-											<img src="images/blog-13.jpg" alt="IMG-BLOG">
+											<img src="images/sukun.jpg" alt="IMG-BLOG">
 										</a>
 									</div>
 
@@ -252,7 +232,7 @@
 								<li class="flex-w m-b-25">
 									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
 										<a href="#">
-											<img src="images/blog-14.jpg" alt="IMG-BLOG">
+											<img src="images/sukun.jpg" alt="IMG-BLOG">
 										</a>
 									</div>
 
@@ -270,7 +250,7 @@
 								<li class="flex-w m-b-25">
 									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
 										<a href="#">
-											<img src="images/blog-15.jpg" alt="IMG-BLOG">
+											<img src="images/sukun.jpg" alt="IMG-BLOG">
 										</a>
 									</div>
 

@@ -1,20 +1,10 @@
 <section class="section-event">
     <div class="wrap-slick2">
         <div class="slick2">
-            <div class="item-slick2 item1-slick2" style="background-image: url(images/bg2.jpg);">
-                <div class="wrap-content-slide2 p-t-100 p-b-208">
+            <div class="item-slick2 item1-slick2" style="background-image: url(images/event.jpg);">
+                <div class="wrap-content-slide2 p-t-100 p-b-50">
                     <div class="container">
                         <!-- - -->
-                        <div class="title-event t-center m-b-52">
-                            <span class="tit2 p-l-15 p-r-15" style="color: white">
-                                Upcomming
-                            </span>
-
-                            <h3 class="tit6 t-center p-l-15 p-r-15 p-t-3">
-                                Events
-                            </h3>
-                        </div>
-
                         <!-- Block2 -->
                         <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false"
                             data-appear="zoomIn">
@@ -88,6 +78,10 @@
                             </div>
                         </div>
                     </div>
+                        <h3 class="tit6 t-center p-l-15 p-r-15 p-t-30" style="color: red">
+                            Upcomming Events
+                        </h3>
+
                 </div>
             </div>
             {{-- <div class="item-slick2 item2-slick2" style="background-image: url(images/bg-event-02.jpg);">
@@ -269,7 +263,5 @@
                 </div>
             </div> --}}
         </div>
-
-        <div class="wrap-slick2-dots"></div>
     </div>
 </section>

@@ -109,13 +109,10 @@
                 <a href="home" class="txt27">
                     Home
                 </a>
-
                 <span class="txt29 m-l-10 m-r-10">/</span>
-
                 <a href="product" class="txt27">
                     Product
                 </a>
-
                 <span class="txt29 m-l-10 m-r-10">/</span>
             </div>
         </div>

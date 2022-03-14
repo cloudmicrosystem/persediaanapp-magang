@@ -72,7 +72,7 @@
                     <span class="m-in">Sign In</span>
                 </div>
             </div>
-            
+
             <div class="form sign-up">
                 <!-- Validation Errors -->
                 <x-auth-validation-errors class="mb-4" :errors="$errors" />
