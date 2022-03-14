@@ -44,7 +44,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('gambar', GambarController::class);
 });
-
     // USER
     Route::get('/home', [HalcustController::class, 'index']);
 
