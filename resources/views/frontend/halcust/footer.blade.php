@@ -49,7 +49,7 @@
                     <ul class="list-inline social-media">
                         <li class="list-inline item">
 
-                            {{-- WA --}}
+                            {{-- Refund --}}
                             <div class="m-b-25">
                                 <a href="refund"
                                     class="txt35">
@@ -58,7 +58,7 @@
                                     </h4>
                                 </a>
                             </div>
-                            {{-- INTAGRAM --}}
+                            {{-- How to  --}}
                             <div class="m-b-25">
                                 <a href="order"
                                     class="txt35">
@@ -69,7 +69,7 @@
                             </div>
                             {{-- FAQ --}}
                             <div class="m-b-25">
-                                <a href=""
+                                <a href="faq"
                                     class="txt35">
                                     <h4>
                                     FAQ
