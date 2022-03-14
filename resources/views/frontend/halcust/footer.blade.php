@@ -1,6 +1,6 @@
 <footer class="bg1">
     <div class="d-flex justify-content-center">
-        <div class="container p-t-40 p-b-70">
+        <div class="container p-t-10 p-b-30">
             <div class="row">
                 <div class="col-sm-6 col-md-4 p-t-50">
                     <!-- - -->
@@ -112,15 +112,6 @@
                         </li>
                     </ul>
                 </div>
-
-                <div class="ol-sm-6 col-md-4 p-t-50 text-center d-flex align-items-center justify-content-center">
-                    <div class="">
-                        <h4 class="txt13 m-b-10"><strong>MORFEEN THERTEEN</strong></h4>
-                        <img class="col-md-4" src="images/icons/logo2.png">
-                        <h4 class="txt13 m-10"><strong>MALANG</strong></h4>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -132,7 +123,6 @@
                 <ul class="list-inline social-media">
                     <li class="list-inline item">
                         <div class="p-t-5 p-b-5">
-
                             <a href="https://api.whatsapp.com/send/?phone=%2B6282229278641&text&app_absent=0"
                                     class="fs-15 c-white"><i class="fa fa-whatsapp m-l-18" aria-hidden="true"></i></a>
                             <a href="https://www.instagram.com/morfeen.official/" class="fs-15 c-white"><i
@@ -141,13 +131,11 @@
                                     class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
                             <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg" class="fs-15 c-white"><i
                                     class="fa fa-youtube m-l-18" aria-hidden="true"></i></a>
-
                         </div>
                     </li>
                 </ul>
                 <div class="txt17 p-r-20 p-t-5 p-b-5">
-                    Copyright &copy; 2022 Morfeen Official <i class="fa fa-heart"></i> by <a
-                        href="https://colorlib.com" target="_blank">Colorlib</a>
+                    Copyright &copy; 2022 Morfeen Official</i>
                 </div>
             </div>
 

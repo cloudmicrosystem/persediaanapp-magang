@@ -54,6 +54,7 @@
 
   <!-- /.content-wrapper -->
   @include('backend.layouts.footer')
+  
   @include('sweetalert::alert')
 
 
