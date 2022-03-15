@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>FAQ   </title>
+    <title>FAQ | Morfeen    </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -73,8 +73,19 @@
                                 Cara pemesanan silahkan klik disini. Harap isi data diri dengan benar agar tidak terjadi kesalahan saat pengiriman</dd>
                             <dd>- Bagaimana cara melacak pesanan? <br>
                                 Apabila anda sudah mendapatkan nomor resi via email, silahkan lacak pesanan anda di www.cekresi.com dan masukan nomor resi yang kami berikan</dd>
-                            <dd>5. Segera lakukan pembayaran. Sertakan KODE KONFIRMASI PEMBAYARAN pada saat anda melakukan pembayaran baik melalui ATM atau INTERNET BANKING.</dd>
-                            <dd>6. Setelah melakukan pembayaran segera lakukan konfirmasi dengan cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan memvalidasi status pembayaran dan mengirimkan order sesuai pesanan.</dd>
+                            <dd>- Kemana harus membayar pesanan? <br>
+                                Sementara ini kami hanya menyediakan 1 metode pembayaran yaitu via transfer bank (BCA).</dd>
+                            <dd>- Berapa lama batas waktu pembayaran pesanan? <br>
+                            Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda akan otomatis batal</dd>
+                            <dd>- Bagaimana cara mengkonfirmasi pembayaran?<br>
+                                Silahkan klik disini untuk mengkonfirmasi pembayaran</dd>
+                            <dd>- Apa jasa kurir yang digunakan?<br>
+                                Kurir yang kami gunakan untuk pengiriman ke seluruh Indonesia yaitu JNE, sedangkan pengiriman ke luar Indonesia kami menggunakan EMS.</dd>
+
+
+
+
+
                         </dl>
                     </div>
                 </div>
