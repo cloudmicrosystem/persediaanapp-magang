@@ -47,7 +47,7 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/About.jpg);">
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bghot.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                     </div>
                 </div>

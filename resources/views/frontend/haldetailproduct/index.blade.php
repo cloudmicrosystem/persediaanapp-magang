@@ -258,7 +258,7 @@
                                     <i class="fab fa-facebook-square fa-2x"></i>
                                 </a>
                                 <a href="#" class="text-gray">
-                                    <i class="fab fa-twitter-square fa-2x"></i>
+                                    <i classx="fab fa-twitter-square fa-2x"></i>
                                 </a>
                                 <a href="#" class="text-gray">
                                     <i class="fas fa-envelope-square fa-2x"></i>

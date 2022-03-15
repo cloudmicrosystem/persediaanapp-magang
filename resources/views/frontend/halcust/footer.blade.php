@@ -69,7 +69,7 @@
                             </div>
                             {{-- FAQ --}}
                             <div class="m-b-25">
-                                <a href=""
+                                <a href="faq"
                                     class="txt35">
                                     <h4>
                                     FAQ
