@@ -11,13 +11,13 @@ use App\Http\Controllers\Users\HaldetailartikelController;
 use App\Http\Controllers\Users\HalrefundController;
 use App\Http\Controllers\Users\HalorderController;
 use App\Http\Controllers\Users\HalfaqController;
+use App\Http\Controllers\Users\HalcheckoutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Admin\GambarController;
 use App\Http\Controllers\Admin\UserController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -71,4 +71,4 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/faq', [HalfaqController::class, 'index']);
 
-
+    Route::get('/checkout', [HalcheckoutController::class, 'index']);

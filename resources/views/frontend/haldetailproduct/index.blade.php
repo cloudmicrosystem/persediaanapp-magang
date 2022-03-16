@@ -128,7 +128,7 @@
                         <a href="#"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
 
                         {{-- KERANJANG --}}
-                        {{-- <div class="span6">
+                        <div class="span6">
                             <div class="product-Info">
                                 <span class="keranjang_quantity"></span>
                                 <a href="#myModal" role="button" class="product-view" data-toggle="modal"><i
@@ -158,7 +158,7 @@
 
 
 
-                            <div class="product-total">
+                            {{-- <div class="product-total">
 
                                 <p><b>Items:</b> <span class="keranjang_quantity"></span></p>
                                 <!--number of items in the cart-->
@@ -175,12 +175,13 @@
                                 <p><b>Final price:</b> <span class="keranjang_grandTotal"></span> </p>
                                 <!--total of the cart after tax & shipping -->
 
-                            </div>
-                        </div><!-- /span6 --> --}}
+                            </div> --}}
 
-                        <a href="#"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+                        </div><!-- /span6 -->
 
-                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+                        {{-- <a href="#"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a> --}}
+
+                        {{-- <button class="btn-show-sidebar m-l-33 trans-0-4"></button> --}}
                     </div>
 
                 </div>
@@ -189,7 +190,7 @@
     </header>
 
     <!-- Sidebar -->
-    <aside class="sidebar color accent-dark">
+    {{-- <aside class="sidebar color accent-dark">
         <!-- Button Hide sidebar -->
         <button class="btn-hide-sidebar ti-close color accent-dark "></button>
 
@@ -231,7 +232,7 @@
             </li>
         </ul>
 
-    </aside>
+    </aside> --}}
 
 
     <!-- Slide1 -->
