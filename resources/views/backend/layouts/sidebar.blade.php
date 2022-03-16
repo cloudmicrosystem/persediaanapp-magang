@@ -39,7 +39,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="user" class="nav-link">
+                                    <a href="/artikel" class="nav-link">
                                         <i class="fas fa-ellipsis-h nav-icon"></i>
                                         <p>
                                             Data Artikel
@@ -57,7 +57,7 @@
                               </a>
                               <ul class="nav nav-treeview">
                                   <li class="nav-item">
-                                      <a href="barang" class="nav-link">
+                                      <a href="/barang" class="nav-link">
                                           <i class="fas fa-ellipsis-h nav-icon"></i>
                                           <p>
                                               Data Stock
@@ -65,7 +65,7 @@
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="kategori" class="nav-link">
+                                      <a href="/kategori" class="nav-link">
                                           <i class="fas fa-ellipsis-h nav-icon"></i>
                                           <p>
                                               Data Kategori
@@ -73,7 +73,7 @@
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                    <a href="gambar" class="nav-link">
+                                    <a href="/gambar" class="nav-link">
                                         <i class="fas fa-ellipsis-h nav-icon"></i>
                                         <p>
                                             Data Detail Product
@@ -91,7 +91,7 @@
                               </a>
                               <ul class="nav nav-treeview">
                                   <li class="nav-item">
-                                      <a href="user" class="nav-link">
+                                      <a href="/user" class="nav-link">
                                           <i class="fas fa-ellipsis-h nav-icon"></i>
                                           <p>
                                               Data Customer
@@ -109,7 +109,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="user" class="nav-link">
+                                    <a href="/transaksi" class="nav-link">
                                         <i class="fas fa-ellipsis-h nav-icon"></i>
                                         <p>
                                             Data Transaksi

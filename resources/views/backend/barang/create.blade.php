@@ -37,31 +37,31 @@
                                 </div> --}}
                                 <div class="form-group">
                                     <label>Nama </label>
-                                    <input type="text" name="nama_barang" class="form-control">
+                                    <input type="text" name="nama_barang" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Slug </label>
-                                    <input type="text" name="slug" class="form-control">
+                                    <input type="text" name="slug" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>HPP </label>
-                                    <input type="decimal" name="hpp" class="form-control">
+                                    <input type="decimal" name="hpp" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Harga Jual </label>
-                                    <input type="decimal" name="price" class="form-control">
+                                    <input type="decimal" name="price" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi </label>
-                                    <input type="text" name="deskripsi" class="form-control">
+                                    <input type="text" name="deskripsi" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Ukuran </label>
-                                    <input type="text" name="size" class="form-control">
+                                    <input type="text" name="size" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Qty </label>
-                                    <input type="number" name="qty" class="form-control">
+                                    <input type="number" name="qty" class="form-control" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">

@@ -260,19 +260,6 @@
 
 
     <section class="content" class="pading-top0 ">
-        <div class="bread-crumb bo5-b p-t-17 p-b-17">
-            <div class="container">
-                <a href="home" class="txt27">
-                    Home
-                </a>
-                <span class="txt29 m-l-10 m-r-10">/</span>
-                <a href="product" class="txt27">
-                    Product
-                </a>
-                <span class="txt29 m-l-10 m-r-10">/</span>
-            </div>
-        </div>
-
         <div class="d-flex justify-content-center">
             <div class="card card-solid">
                 <div class="card-body">
@@ -342,7 +329,7 @@
                                 </div> --}}
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <input type="number" class="form-control" value="1" />
+                                        <input type="number" class="form-control" value="" />
                                     </div>
                                     <div class="btn btn-dark btn-lg btn-flat">
                                         <i class="fas fa-cart-plus "></i>
