@@ -177,44 +177,51 @@
     <br><br>
 
     <section class="content m-10">
-        <div class="d-flex justify-content-center">
-           <p class="text-uppercase" style="font-size: 20px"> Checkout </p>
+        <div class="d-flex justify-content-center col-12">
+            <p class="text-uppercase" style="font-size: 20px"> Checkout </p>
             <div class="row">
 
-                <div class="col-6 m-4">
+                <div class="col-6">
                     <form>
                         <div class="card-body">
-                            <div class="form-group " >
+                            <div class="form-group ">
                                 <label style="color: white" for="exampleInputName">Nama :</label>
-                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputName" placeholder="Nama">
+                                <input style="background-color: black" type="text"
+                                    class="form-control border border-white" id="exampleInputName" placeholder="Nama">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">No Hp :</label>
-                                <input style="background-color: black" type="text" class="form-control border border-white " id="exampleInputPassword1"
+                                <input style="background-color: black" type="text"
+                                    class="form-control border border-white " id="exampleInputPassword1"
                                     placeholder="No Hp">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">Negara :</label>
-                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputPassword1"
+                                <input style="background-color: black" type="text"
+                                    class="form-control border border-white" id="exampleInputPassword1"
                                     placeholder="Negara">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputEmail1">Kota :</label>
-                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputEmail1" placeholder="Kota">
+                                <input style="background-color: black" type="text"
+                                    class="form-control border border-white" id="exampleInputEmail1" placeholder="Kota">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">Alamat :</label>
-                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputPassword1"
+                                <input style="background-color: black" type="text"
+                                    class="form-control border border-white" id="exampleInputPassword1"
                                     placeholder="Alamat">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">Kodepos :</label>
-                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputPassword1"
+                                <input style="background-color: black" type="text"
+                                    class="form-control border border-white" id="exampleInputPassword1"
                                     placeholder="Kodepos">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="inputMessage">Keterangan :</label>
-                                <textarea style="background-color: black" id="inputMessage" class="form-control border border-white" rows="4" placeholder="Keterangan"></textarea>
+                                <textarea style="background-color: black" id="inputMessage" class="form-control border border-white" rows="4"
+                                    placeholder="Keterangan"></textarea>
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-dark" value="Send message">
@@ -224,18 +231,42 @@
                     </form>
                 </div>
 
-                {{-- <div class="col-6">
-                    <form>
-                        <div class="card-body">
+                <div class="col-6 my-4">
+                    <div class="card">
+                        <div class="card-body " style="background-color: black">
+                            <div class="row">
+                                <table class="table-bordered table table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-white" style="width: 150px; height: auto"><img src="images/katalog/akse1-1.jpg" alt=""></th>
+                                            <th class="text-white" style="width: 300px">Sandal <br> 1x2</th>
+                                            <th class="text-white ">100.000.00</th>
+                                        </tr>
+                                    </thead>
 
+                                    <thead class="mt-3">
+                                        <tr>
+                                            <th class="text-white" style="width: 150px; height: auto"><img src="images/katalog/akse1-1.jpg" alt=""></th>
+                                            <th class="text-white" style="width: 300px">Sandal <br> 1x2</th>
+                                            <th class="text-white ">100.000.00</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tr>
+                                        <td class="text-white" style="width: 600px">Subtotal</td>
+                                        <td class="text-white" >Rp. 200.000.00</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
-                    </form>
-                </div> --}}
+                    </div>
+                </div>
+
 
 
             </div>
         </div>
-
     </section>
 
 
