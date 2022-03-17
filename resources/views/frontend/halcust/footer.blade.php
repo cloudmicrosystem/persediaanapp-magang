@@ -47,9 +47,8 @@
 
                 <div class="col-sm-6 col-md-4 p-t-50  d-flex align-items-center justify-content-center">
                     <!-- - -->
-                    <ul class="list-inline social-media">
-                        <li class="list-inline item">
-
+                    <ul>
+                        <li>
                             {{-- Refund --}}
                             <div class="m-b-25">
                                 <a href="refund"
@@ -82,16 +81,10 @@
                 </div>
 
                 <div class="col-sm-6 col-md-4 p-t-50  d-flex align-items-center justify-content-center">
-                    <!-- - -->
-                    <img src="images/icons/logofooter.png" alt="">
+                    <img src="images/icons/logofooter.png" style="width: 100%">
                 </div>
-
-
-
-
             </div>
         </div>
-    {{-- </div> --}}
 
 
     {{-- FOOTER BAWAH --}}

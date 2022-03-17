@@ -35,7 +35,7 @@
     <!--===============================================================================================-->
 </head>
 
-<body class="animsition">
+<body class="animsition" style="background: black">
 
     <!-- Header -->
     @include('frontend.halcust.header')
@@ -55,11 +55,11 @@
 
     <br>
 
-    <div class="container" >
+    <div class="container">
         <div class="row">
             <div class="d-flex justify-content-center">
             <div class="col-md-6 mb-8 m-2  p-t-50 p-b-50">
-                <div class="card" style="border: transparent">
+                <div class="card" style="background-color: black">
                     <ul class="list-inline social-media">
                         <li class="list-inline item">
                             <a
@@ -69,27 +69,28 @@
                         </li>
                     </ul>
                     <div class="m-3">
-                        <h4 class="text-center" style="font-weight: bold">Morfeen Store Sukun
+                        <h4 class="text-center text-uppercase text-white" style="font-weight: bold"> Morfeen Store Sukun</h4>
                         <p class="m-1 text-center"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang<br />
                             Mon-Sun 12.00-21:00<br />
                             (+62) 887-4116-4285</p>
+
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 mb-5 m-2  p-t-50 p-b-10">
-                <div class="card" style="border: transparent">
+                <div class="card" style="background-color: black">
                     <ul class="list-inline social-media">
                         <li class="list-inline item" >
                             <a
                                 href="https://www.google.com/maps/place/Morfeen+2nd+Store,+Slorok/@-8.1425777,112.5211889,17z/data=!3m1!4b1!4m5!3m4!1s0x2e789f32d601ed31:0x27f74ee587bd47b2!8m2!3d-8.1425919!4d112.523373?shorturl=1">
-                                <img src="images/slorok.jpeg" class="card-img-top" alt="...">
+                                <img  src="images/slorok.jpeg" class="card-img-top" alt="...">
                             </a>
                         </li>
                     </ul>
                     <div class="m-3">
-                        <h4 class="text-center" style="font-weight: bold">Morfeen Store Slorok
-                        <p class="m-1 text-center"> Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang<br />
+                        <h4 class="text-center text-uppercase text-white" style="font-weight: bold">Morfeen Store Slorok </h4>
+                        <p class="m-1 text-center "> Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang<br />
                             Mon-Sun 12.00-21:00<br />
                             (+62) 887-4116-4285</p>
                     </div>

@@ -38,7 +38,7 @@
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
 </head>
 
-<body class="animsition">
+<body class="animsition" style="color: black">
 
     <!-- Header -->
     @include('frontend.halcust.header')

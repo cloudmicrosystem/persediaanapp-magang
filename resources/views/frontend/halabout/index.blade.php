@@ -35,7 +35,7 @@
     <!--===============================================================================================-->
 </head>
 
-<body class="animsition">
+<body class="animsition" style="background: black">
 
     <!-- Header -->
     @include('frontend.halcust.header')
@@ -56,7 +56,7 @@
     </section>
 
     {{-- Isi halamanAbout --}}
-    <section class="product-page pb-4 pt-4">
+    <section class="product-page pb-4 pt-4 ">
 
         <div class="container">
             <div class="row product-detail-inner">
@@ -64,14 +64,14 @@
                     <div id="product-images" class="carousel slide" data-ride="carousel">
                         <!-- slides -->
                         <div class="carousel-inner">
-                            <div class="carousel-item active"> <img src="images/welcome2.jpg" alt="Product 1"> </div>
+                            <div class="carousel-item active border border-white"> <img src="images/welcome2.jpg" alt="Product 1"> </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="product-detail">
                         <div class="product-short-desc">
-                            <p>Compact sport shoe for running, consectetur adipisicing elit, sed do eiusmod
+                            <p class="text-white">Compact sport shoe for running, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                 consequat. Duis aute irure dolor. Ut enim ad minim veniam,
@@ -79,7 +79,7 @@
                                 consequat
                             </p>
                             <br>
-                            <p>Compact sport shoe for running, consectetur adipisicing elit, sed do eiusmod
+                            <p class="text-white">Compact sport shoe for running, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                 consequat. Duis aute irure dolor. Ut enim ad minim veniam,
