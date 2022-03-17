@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-    Database Stock
+    Stock | Morfeen
 @endsection
 
 @section('content')
@@ -59,6 +59,8 @@
                                 @endforeach
                             </thead>
                         </table>
+                        <br>
+                        {{ $barang->links() }}
                     </div>
                 </div>
             </div>

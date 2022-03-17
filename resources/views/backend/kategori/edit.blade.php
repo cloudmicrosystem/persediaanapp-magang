@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-Update Kategori
+Kategori | Morfeen
 @endsection
 @section('content')
 

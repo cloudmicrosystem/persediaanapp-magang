@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-    Detail Product
+    Detail Stock | Morfeen
 @endsection
 
 @section('content')

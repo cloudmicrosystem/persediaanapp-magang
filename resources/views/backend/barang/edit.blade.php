@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-    Update Stok Barang
+    Stock | Morfeen
 @endsection
 @section('content')
     <section class="content">

@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-Database Customer
+User | Morfeen  
 @endsection
 
 @section('content')

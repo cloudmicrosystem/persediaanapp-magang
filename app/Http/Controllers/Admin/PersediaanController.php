@@ -6,6 +6,7 @@ use stdClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Pagination\LengthAwarePaginator;
 use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class PersediaanController extends Controller
@@ -22,6 +23,7 @@ class PersediaanController extends Controller
                 (SELECT nama_category FROM category WHERE id = barang.id_category)
                     AS nama_category FROM barang ORDER BY id desc'
         );
+        // $newbarang = DB::table('barang');
 
         // $gambar = DB::select('SELECT * FROM gambar WHERE id_barang =.$barang->id');
 
