@@ -32,6 +32,8 @@ class HaldetailproductController extends Controller
             array_push($newBarang, $data);
         }
 
-        return view('frontend.haldetailproduct.index', compact('barang','newBarang'));
+        $gambar = DB::select("SELECT * FROM gambar WHERE url_gambar = (SELECT id_barang FROM barang WHERE slug = '".$request."' LIMIT 0,1)");
+
+        return view('frontend.haldetailproduct.index', compact('barang','newBarang', 'gambar'));
     }
 }
