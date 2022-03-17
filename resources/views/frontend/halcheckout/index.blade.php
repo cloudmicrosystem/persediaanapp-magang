@@ -186,35 +186,35 @@
                         <div class="card-body">
                             <div class="form-group " >
                                 <label style="color: white" for="exampleInputName">Nama :</label>
-                                <input style="background-color: black" type="text" class="form-control" id="exampleInputName" placeholder="Nama">
+                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputName" placeholder="Nama">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">No Hp :</label>
-                                <input style="background-color: black" type="text" class="form-control " id="exampleInputPassword1"
+                                <input style="background-color: black" type="text" class="form-control border border-white " id="exampleInputPassword1"
                                     placeholder="No Hp">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">Negara :</label>
-                                <input style="background-color: black" type="text" class="form-control" id="exampleInputPassword1"
+                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputPassword1"
                                     placeholder="Negara">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputEmail1">Kota :</label>
-                                <input style="background-color: black" type="text" class="form-control" id="exampleInputEmail1" placeholder="Kota">
+                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputEmail1" placeholder="Kota">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">Alamat :</label>
-                                <input style="background-color: black" type="text" class="form-control" id="exampleInputPassword1"
+                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputPassword1"
                                     placeholder="Alamat">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">Kodepos :</label>
-                                <input style="background-color: black" type="text" class="form-control" id="exampleInputPassword1"
+                                <input style="background-color: black" type="text" class="form-control border border-white" id="exampleInputPassword1"
                                     placeholder="Kodepos">
                             </div>
                             <div class="form-group">
-                                <label style="color: white" for="inputMessage">Keterangan </label>
-                                <textarea style="background-color: black" id="inputMessage" class="form-control" rows="4" placeholder="Keterangan"></textarea>
+                                <label style="color: white" for="inputMessage">Keterangan :</label>
+                                <textarea style="background-color: black" id="inputMessage" class="form-control border border-white" rows="4" placeholder="Keterangan"></textarea>
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-dark" value="Send message">

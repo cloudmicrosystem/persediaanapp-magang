@@ -65,7 +65,7 @@
 
     {{-- ISI HALAMAN CONTAC --}}
     <section class="content ">
-        <div class="card">
+        <div class="card border border-dark">
             <div class="card-body row" style="background: black" >
                 <div class="col-5 text-center d-flex align-items-center justify-content-center">
                     <div class="">
@@ -78,21 +78,21 @@
                 <div class="col-7">
                     <div class="form-group">
                         <label style="color: white" for="inputName">Name</label>
-                        <input style="background-color: black "  type="text" class="form-control" placeholder="Name"/>
+                        <input style="background-color: black "  type="text" class="form-control border border-white" placeholder="Name"/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group ">
                         <label style="color: white" for="inputEmail">E-Mail</label>
-                        <input style="background-color: black" style="border: white" type="email" class="form-control" placeholder="E-mail"/>
+                        <input style="background-color: black" style="border: white" type="email" class="form-control border border-white" placeholder="E-mail"/>
                     </div>
                     <div class="form-group">
                         <label style="color: white" for="inputSubject">Subject</label>
-                        <input style="background-color: black" type="text" class="form-control" placeholder="Subject"/>
+                        <input style="background-color: black" type="text" class="form-control border border-white" placeholder="Subject"/>
                     </div>
                     <div class="form-group">
                         <label style="color: white" for="inputMessage">Message</label>
-                        <textarea style="background-color: black" id="inputMessage" class="form-control" rows="4" placeholder="Message"></textarea>
+                        <textarea style="background-color: black" id="inputMessage" class="form-control border border-white" rows="4" placeholder="Message"></textarea>
                     </div>
-                    <div class="form-group" >
+                    <div class="form-group m-3" >
                         <input type="submit" class="btn btn-dark" value="Send message">
                     </div>
                 </div>
