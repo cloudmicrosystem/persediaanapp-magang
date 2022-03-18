@@ -178,10 +178,10 @@
 
     <section class="content m-10">
         <div class="d-flex justify-content-center col-12">
-            <p class="text-uppercase" style="font-size: 20px"> Checkout </p>
             <div class="row">
 
-                <div class="col-6">
+                <div class="col-6 my-3">
+                    <p class="text-bold text-uppercase" style="font-size: 20px ; font-family: 'Trebuchet MS'"> Checkout </p>
                     <form>
                         <div class="card-body">
                             <div class="form-group ">
@@ -231,31 +231,39 @@
                     </form>
                 </div>
 
-                <div class="col-6 my-4">
-                    <div class="card">
-                        <div class="card-body " style="background-color: black">
+                <div class="col-6 my-3 " style="border: black">
+                    <p class="text-bold text-uppercase" style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
+                    <div class="card " style="border: black">
+                        <div class="card-body " style="background-color: black ; border: black">
                             <div class="row">
-                                <table class="table-bordered table table-responsive">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-white" style="width: 150px; height: auto"><img src="images/katalog/akse1-1.jpg" alt=""></th>
-                                            <th class="text-white" style="width: 300px">Sandal <br> 1x2</th>
-                                            <th class="text-white ">100.000.00</th>
-                                        </tr>
-                                    </thead>
-
-                                    <thead class="mt-3">
-                                        <tr>
-                                            <th class="text-white" style="width: 150px; height: auto"><img src="images/katalog/akse1-1.jpg" alt=""></th>
-                                            <th class="text-white" style="width: 300px">Sandal <br> 1x2</th>
-                                            <th class="text-white ">100.000.00</th>
-
+                                <table class="table-bordered table table-responsive ">
+                                    <thead class="border-color: black">
+                                        <tr class="border-color: black">
+                                            <th class="text-white" style="width: 150px; height: auto">Produk</th>
+                                            <th class="text-white" style="width: 300px">Nama Produk
+                                            </th>
+                                            <th class="text-white ">Harga</th>
                                         </tr>
                                     </thead>
 
                                     <tr>
+                                        <td class="text-white" style="width: 100px; height: auto"><img
+                                                src="images/katalog/akse1-1.jpg" alt=""></td>
+                                        <td class="text-white text-center" style="width: 300px">Sandal <br> 1x2</td>
+                                        <td class="text-white ">Rp. 100.000.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-white " style="width: 100px; height: auto"><img
+                                                src="images/katalog/akse2-1.jpg" alt=""></td>
+                                        <td class="text-white text-center" style="width: 300px">Kacamata <br> 1x2</td>
+                                        <td class="text-white ">Rp. 100.000.00</td>
+                                    </tr>
+
+                                    <tr>
                                         <td class="text-white" style="width: 600px">Subtotal</td>
-                                        <td class="text-white" >Rp. 200.000.00</td>
+                                        <td class="text-white text-center">=</td>
+                                        <td class="text-white">Rp. 200.000.00</td>
                                     </tr>
                                 </table>
                             </div>
@@ -269,8 +277,6 @@
         </div>
     </section>
 
-
-    <!-- Footer -->
     @include('frontend.halcust.footer')
 
     <!-- Back to top -->
