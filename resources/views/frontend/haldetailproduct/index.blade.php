@@ -421,14 +421,20 @@
                                 </div>
                                 <br>
                                 <div class="xzoom-thumbs">
-                                    <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80" src="images/d1.jpeg"
-                                            xpreview="images/d1.jpeg"></a>
-                                    <a href="images/d2.jpeg"><img class="xzoom-gallery" width="80"
-                                            src="images/d2.jpeg"></a>
-                                    <a href="images/d3.jpeg"><img class="xzoom-gallery" width="80"
-                                            src="images/d3.jpeg"></a>
-                                    <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80"
-                                            src="images/d1.jpeg"></a>
+                                    @foreach ($newBarang as $key => $value)
+                                        @foreach ($value['gambar'] as $item)
+                                            <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
+                                                alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
+                                        @endforeach
+                                    @endforeach
+                                    {{-- <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80" src="{{ $gambarproduk -> url_gambar }}"
+                                                xpreview="images/d1.jpeg"></a>
+                                        <a href="images/d2.jpeg"><img class="xzoom-gallery" width="80"
+                                                src="images/d2.jpeg"></a>
+                                        <a href="images/d3.jpeg"><img class="xzoom-gallery" width="80"
+                                                src="images/d3.jpeg"></a>
+                                        <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80"
+                                                src="images/d1.jpeg"></a> --}}
                                 </div>
                             </div>
                         </div>

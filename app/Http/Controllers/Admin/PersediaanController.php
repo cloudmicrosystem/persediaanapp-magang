@@ -143,9 +143,12 @@ class PersediaanController extends Controller
     public function update(Request $request, $id)
     {
         // echo '<pre>'; print_r($request->code_barang); die;
+        $category = DB::select('SELECT * FROM category');
+
+        // $barang = DB::select('SELECT id as id_category, nama_category FROM category ORDER BY id');
+
         $barang = DB::select('SELECT * FROM barang WHERE id=?', [$id]);
-        // $vendor = DB::select('SELECT id,nama_vendor  FROM vendor WHERE id=?', [$id]);
-        // dd($master_barang);
+
         // Validation
         $request->validate([
             'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144 '

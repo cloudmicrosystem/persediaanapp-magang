@@ -22,11 +22,11 @@ Kategori | Morfeen
                 <div class="card-body">
                 <div class="form-group">
                   <label >Nama</label>
-                  <input type="text" name="nama_category" value="{{$category[0]->nama_category}}" class="form-control" >
+                  <input type="text" name="nama_category" value="{{$category[0]->nama_category}}" class="form-control" requaired>
                 </div>
                 <div class="form-group">
                   <label>Slug</label>
-                  <input type="text" name="slug" value="{{$category[0]->slug}}" class="form-control" >
+                  <input type="text" name="slug" value="{{$category[0]->slug}}" class="form-control" requaired>
                 </div>
               <!-- /.card-body -->
               <div class="card-footer">

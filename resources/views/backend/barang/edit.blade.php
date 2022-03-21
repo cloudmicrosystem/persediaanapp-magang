@@ -20,11 +20,17 @@
                             @csrf
                             @method('PUT')
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label>Kategori </label>
-                                    <select class="selectpicker form-control " name="" id=""></select>
-                                    {{-- <input type="text" name="id_category" value="{{ $barang[0]->id_category }}"
-                                        class="form-control"> --}}
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="inputGroupSelect01">Kategori</label>
+                                    </div>
+                                    <select class="custom-select" name="id_category" id="inputGroupSelect01">
+                                        <option selected disabled><b>Pilih Kategori</b></option>
+                                        @foreach ($barang as $key => $value)
+                                            <option value="{{ $value->id_category }}" disabled>{{ $value->nama_category }}</option>
+                                        @endforeach
+                                        </>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Nama </label>

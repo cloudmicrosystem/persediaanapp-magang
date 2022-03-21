@@ -60,7 +60,7 @@
                             </thead>
                         </table>
                         <br>
-                        {{ $barang->links() }}
+                        {{-- {{ $barang->links() }} --}}
                     </div>
                 </div>
             </div>
