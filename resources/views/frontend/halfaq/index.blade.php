@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>FAQ | Morfeen    </title>
+    <title>FAQ | Morfeen </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -58,13 +58,11 @@
     {{-- Detail Artikel  --}}
     <div id="page" class="container py-3 py-md-4">
         <div class="row">
-            <p class="text-bold text-uppercase " style="font-size: 20px ; font-family: 'Trebuchet MS'">FAQ</p>
             <div class="col-12 page-content m-5 ">
                 <div class="tab-contents">
                     <div class="tab-content">
-
                         <dl>
-                            <dd class="text-white">- Bagaimana cara memiliki akun Maternal Disaster di website? <br>
+                            <dd class="text-white">- Bagaimana cara memiliki akun Morfeen Official di website? <br>
                                 Apabila anda memiliki member card, otomatis anda akan memiliki akun website Maternal Disaster</dd>
                             <dd class="text-white" >- Bagaimana cara melakukan pemesanan? <br>
                                 Cara pemesanan silahkan klik disini. Harap isi data diri dengan benar agar tidak terjadi kesalahan saat pengiriman</dd>
@@ -76,22 +74,14 @@
                             Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda akan otomatis batal</dd>
                             <dd class="text-white" >- Bagaimana cara mengkonfirmasi pembayaran?<br>
                                 Silahkan klik disini untuk mengkonfirmasi pembayaran</dd>
-                            <dd class="text-white" >>- Apa jasa kurir yang digunakan?<br>
+                            <dd class="text-white" >- Apa jasa kurir yang digunakan?<br>
                                 Kurir yang kami gunakan untuk pengiriman ke seluruh Indonesia yaitu JNE, sedangkan pengiriman ke luar Indonesia kami menggunakan EMS.</dd>
-
-
-
-
-
                         </dl>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
 
     <!-- Footer -->
     @include('frontend.halcust.footer')

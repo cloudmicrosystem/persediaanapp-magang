@@ -58,15 +58,11 @@
     {{-- Detail Artikel --}}
     <div id="page" class="container py-3 py-md-4">
         <div class="row">
-            <p class="text-bold text-uppercase " style="font-size: 20px ; font-family: 'Trebuchet MS' ">How To Order</p>
-
             <div class="col-12 page-content m-5 ">
                 <div class="tab-contents">
                     <div class="tab-content">
-
                         <dl>
-                            <dd class="text-white">1. Barang harus dikembalikan dalam waktu 5 hari setelah barang
-                                diterima.</dd>
+                            <dd class="text-white">1. Pilih barang yang akan dibeli pada halaman SHOP, lalu klik barang tersebut dan anda akan otomatis masuk ke halaman PRODUCT PAGE.</dd>
                             </dd>
                             <dd class="text-white">2. Isi berapa jumlah order pada kolom QUANTITY produk kemudian
                                 KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan order yang tidak

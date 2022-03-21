@@ -58,12 +58,10 @@
     {{-- Detail Artikel --}}
     <div id="page" class="container ">
         <div class="row">
-            <p class="text-bold text-uppercase " style="font-size: 20px ; font-family: 'Trebuchet MS' ">REFUND POLICY</p>
-
             <div class="col-12 page-content m-5 ">
                 <div class="tab-contents">
                     <div class="tab-content">
-                        <p><strong>KEBIJAKAN PENGEMBALIAN DANA</strong></p>
+                        <p><strong>KEBIJAKAN PENGEMBALIAN DANA</strong></p><br>
                         <dl>
                             <dd class="text-white">- Barang harus dikembalikan dalam waktu 5 hari setelah barang
                                 diterima.</dd>
@@ -94,7 +92,7 @@
                             <dd class="text-white">- Biaya pengiriman awal tidak dapat dikembalikan.</dd>
                         </dl>
 
-                        <p><strong>KEBIJAKAN PENUKARAN BARANG</strong></p>
+                        <p><strong>KEBIJAKAN PENUKARAN BARANG</strong></p><br>
                         <dl>
                             <dd class="text-white">1. Kami hanya dapat menukar barang untuk barang yang terapat
                                 kerusakan atau cacat, tidak
