@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Refund | Morfeen  </title>
+    <title>Refund | Morfeen </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -35,7 +35,7 @@
     <!--===============================================================================================-->
 </head>
 
-<body class="animsition">
+<body class="animsition boeder border-dark" style="background: black ;border-block-start-color: burlywood">
 
     <!-- Header -->
     @include('frontend.halcust.header')
@@ -54,46 +54,56 @@
             </div>
         </div>
     </section>
-<br>
-    {{-- Detail Artikel  --}}
-    <div id="page" class="container py-3 py-md-4">
+    <br>
+    {{-- Detail Artikel --}}
+    <div id="page" class="container ">
         <div class="row">
-            <div class="col-12">
-                <h2 class="title text15"><strong> REFUND POLICY </strong></h2>
-            </div>
+            <p class="text-bold text-uppercase " style="font-size: 20px ; font-family: 'Trebuchet MS' ">REFUND POLICY</p>
 
             <div class="col-12 page-content m-5 ">
                 <div class="tab-contents">
                     <div class="tab-content">
                         <p><strong>KEBIJAKAN PENGEMBALIAN DANA</strong></p>
                         <dl>
-                            <dd>- Barang harus dikembalikan dalam waktu 5 hari setelah barang diterima.</dd>
-                            <dd>- Barang harus memiliki tag asli seperti yang disertakan saat penerimaan.</dd>
-                            <dd>- Kami berhak untuk menolak pengembalian dana atau penukaran apabila barang tersebut
-                                telah berubahan bentuk, terjadi kerusakan, dicuci, atau ketidaklengkapan tag asli yangdisertakan.</dd>
-                            <dd>- Kami tidak menjamin penukaran atau pengembalian dana untuk barang yang tidak memenuhi
+                            <dd class="text-white">- Barang harus dikembalikan dalam waktu 5 hari setelah barang
+                                diterima.</dd>
+                            <dd class="text-white">- Barang harus memiliki tag asli seperti yang disertakan saat
+                                penerimaan.</dd>
+                            <dd class="text-white">- Kami berhak untuk menolak pengembalian dana atau penukaran
+                                apabila barang tersebut
+                                telah berubahan bentuk, terjadi kerusakan, dicuci, atau ketidaklengkapan tag asli
+                                yangdisertakan.</dd>
+                            <dd class="text-white">- Kami tidak menjamin penukaran atau pengembalian dana untuk
+                                barang yang tidak memenuhi
                                 kriteria pengembalian. Jika anda menerima produk yang mengalami kerusakan atau cacat
                                 pada saat menerima pengiriman silahkan memberikan pemberitahuan terlebih dahdlu dalam
                                 waktu 2 hari setelah anda menerima produk melalui email website@maternaldisaster.com
                                 sebelum mengirim barang kembali.</dd>
-                            <dd>- Anda dapat menggunakan jasa pengiriman lain untuk pengembalian barang. Untuk memastikan
+                            <dd class="text-white">- Anda dapat menggunakan jasa pengiriman lain untuk pengembalian
+                                barang. Untuk memastikan
                                 kami menerima barang yang anda kirim silahkan meminta nomor pelacakan dari pengirim dan
                                 konfirmasikan kepada pihak kami melalui email website@maternaldisaster.com beserta nomor
                                 KONFIRMASI PEMBAYARAN anda.</dd>
-                            <dd>- Kemas kembali barang pengembalian anda dengan aman.</dd>
-                            <dd>- Kirim barang pengembalian anda ke alamat : Maternal Disaster Jl Wira Angun Angun No 4,Bandung.</dd>
-                            <dd>- Barang baru akan di kirim setelah kami menerima barang penukaran anda dan mengkonfirmasi pengembalian atau penukaran anda.</dd>
-                            <dd>- Kami tidak bertanggungjawab atas kehilangan barang pengembalian saat pengiriman kembali.</dd>
-                            <dd>- Biaya pengiriman awal tidak dapat dikembalikan.</dd>
+                            <dd class="text-white">- Kemas kembali barang pengembalian anda dengan aman.</dd>
+                            <dd class="text-white">- Kirim barang pengembalian anda ke alamat : Maternal Disaster Jl
+                                Wira Angun Angun No 4,Bandung.</dd>
+                            <dd class="text-white">- Barang baru akan di kirim setelah kami menerima barang
+                                penukaran anda dan mengkonfirmasi pengembalian atau penukaran anda.</dd>
+                            <dd class="text-white">- Kami tidak bertanggungjawab atas kehilangan barang pengembalian
+                                saat pengiriman kembali.</dd>
+                            <dd class="text-white">- Biaya pengiriman awal tidak dapat dikembalikan.</dd>
                         </dl>
 
                         <p><strong>KEBIJAKAN PENUKARAN BARANG</strong></p>
                         <dl>
-                            <dd>1. Kami hanya dapat menukar barang untuk barang yang terapat kerusakan atau cacat, tidak
+                            <dd class="text-white">1. Kami hanya dapat menukar barang untuk barang yang terapat
+                                kerusakan atau cacat, tidak
                                 menerima penukaran size.</dd>
-                            <dd>2. Apabila barang yang bersangkutan telah habis, dana akan dikembaddkan penuh dikurangi
+                            <dd class="text-white">2. Apabila barang yang bersangkutan telah habis, dana akan
+                                dikembaddkan penuh dikurangi
                                 biaya pengiriman awal setelah kami menerima pengembaddan barang anda.</dd>
-                            <dd>3. Kami tidak bertanggungjawab atas kehilangan barang pengembaddan saat pengiriman
+                            <dd class="text-white">3. Kami tidak bertanggungjawab atas kehilangan barang
+                                pengembaddan saat pengiriman
                                 kembali.
                             </dd>
                         </dl>

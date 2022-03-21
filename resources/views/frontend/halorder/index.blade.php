@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>How To Order | Morfeen  </title>
+    <title>How To Order | Morfeen </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -35,7 +35,7 @@
     <!--===============================================================================================-->
 </head>
 
-<body class="animsition">
+<body class="animsition" style="background: black">
 
     <!-- Header -->
     @include('frontend.halcust.header')
@@ -55,24 +55,33 @@
         </div>
     </section>
     <br>
-    {{-- Detail Artikel  --}}
+    {{-- Detail Artikel --}}
     <div id="page" class="container py-3 py-md-4">
         <div class="row">
-            <div class="col-12">
-                <h2 class="title text15"><strong> How To Order </strong></h2>
-            </div>
+            <p class="text-bold text-uppercase " style="font-size: 20px ; font-family: 'Trebuchet MS' ">How To Order</p>
 
             <div class="col-12 page-content m-5 ">
                 <div class="tab-contents">
                     <div class="tab-content">
-                        <p><strong>Cara Pemensanan</strong></p>
+
                         <dl>
-                            <dd>1. Barang harus dikembalikan dalam waktu 5 hari setelah barang diterima.</dd> </dd>
-                            <dd>2. Isi berapa jumlah order pada kolom QUANTITY produk kemudian KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan order yang tidak diinginkan atau mengubah jumlah order pada halaman SHOPPING CART.</dd>
-                            <dd>3. Isi informasi diri pada halaman ORDER DETAIL. Apabila ingin memberikan instruksi khusus pada pemesanan yang anda lakukan, anda dapat memberikan catatan pada kolom CATATAN yang telah kami sediakan pada bagian terbawah halaman ORDER DETAIL.</dd>
-                            <dd>4. Setelah informasi lengkap, anda akan mendapatkan Email berupa INVOICE dan KODE KONFIRMASI PEMBAYARAN.</dd>
-                            <dd>5. Segera lakukan pembayaran. Sertakan KODE KONFIRMASI PEMBAYARAN pada saat anda melakukan pembayaran baik melalui ATM atau INTERNET BANKING.</dd>
-                            <dd>6. Setelah melakukan pembayaran segera lakukan konfirmasi dengan cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan memvalidasi status pembayaran dan mengirimkan order sesuai pesanan.</dd>
+                            <dd class="text-white">1. Barang harus dikembalikan dalam waktu 5 hari setelah barang
+                                diterima.</dd>
+                            </dd>
+                            <dd class="text-white">2. Isi berapa jumlah order pada kolom QUANTITY produk kemudian
+                                KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan order yang tidak
+                                diinginkan atau mengubah jumlah order pada halaman SHOPPING CART.</dd>
+                            <dd class="text-white">3. Isi informasi diri pada halaman ORDER DETAIL. Apabila ingin
+                                memberikan instruksi khusus pada pemesanan yang anda lakukan, anda dapat memberikan
+                                catatan pada kolom CATATAN yang telah kami sediakan pada bagian terbawah halaman ORDER
+                                DETAIL.</dd>
+                            <dd class="text-white">4. Setelah informasi lengkap, anda akan mendapatkan Email berupa
+                                INVOICE dan KODE KONFIRMASI PEMBAYARAN.</dd>
+                            <dd class="text-white">5. Segera lakukan pembayaran. Sertakan KODE KONFIRMASI PEMBAYARAN
+                                pada saat anda melakukan pembayaran baik melalui ATM atau INTERNET BANKING.</dd>
+                            <dd class="text-white">6. Setelah melakukan pembayaran segera lakukan konfirmasi dengan
+                                cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan memvalidasi status pembayaran
+                                dan mengirimkan order sesuai pesanan.</dd>
                         </dl>
                     </div>
                 </div>
