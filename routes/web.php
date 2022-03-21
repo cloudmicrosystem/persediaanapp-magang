@@ -32,7 +32,7 @@ use App\Http\Controllers\Admin\UserController;
 
 require __DIR__ . '/auth.php';
     // ADMIN
-Route::middleware(['auth'])->group(function () {
+    Route::middleware(['auth'])->group(function () {
     //Untuk menyimpelkan memanggil berbagai fungsi
     Route::get('/home', [HomeController::class, 'index']);
 

@@ -35,7 +35,7 @@
     <!--===============================================================================================-->
 </head>
 
-<body class="animsition">
+<body class="animsition" style="background: black">
 
     <!-- Header -->
     @include('frontend.halcust.header')
@@ -58,28 +58,25 @@
     {{-- Detail Artikel  --}}
     <div id="page" class="container py-3 py-md-4">
         <div class="row">
-            <div class="col-12">
-                <h2 class="title text15"><strong> FAQ </strong></h2>
-            </div>
-
+            <p class="text-bold text-uppercase " style="font-size: 20px ; font-family: 'Trebuchet MS'">FAQ</p>
             <div class="col-12 page-content m-5 ">
                 <div class="tab-contents">
                     <div class="tab-content">
-                        <p><strong>Cara Pemensanan</strong></p>
+
                         <dl>
-                            <dd>- Bagaimana cara memiliki akun Maternal Disaster di website? <br>
+                            <dd class="text-white">- Bagaimana cara memiliki akun Maternal Disaster di website? <br>
                                 Apabila anda memiliki member card, otomatis anda akan memiliki akun website Maternal Disaster</dd>
-                            <dd>- Bagaimana cara melakukan pemesanan? <br>
+                            <dd class="text-white" >- Bagaimana cara melakukan pemesanan? <br>
                                 Cara pemesanan silahkan klik disini. Harap isi data diri dengan benar agar tidak terjadi kesalahan saat pengiriman</dd>
-                            <dd>- Bagaimana cara melacak pesanan? <br>
+                            <dd class="text-white" >- Bagaimana cara melacak pesanan? <br>
                                 Apabila anda sudah mendapatkan nomor resi via email, silahkan lacak pesanan anda di www.cekresi.com dan masukan nomor resi yang kami berikan</dd>
-                            <dd>- Kemana harus membayar pesanan? <br>
+                            <dd class="text-white" >- Kemana harus membayar pesanan? <br>
                                 Sementara ini kami hanya menyediakan 1 metode pembayaran yaitu via transfer bank (BCA).</dd>
-                            <dd>- Berapa lama batas waktu pembayaran pesanan? <br>
+                            <dd class="text-white" >- Berapa lama batas waktu pembayaran pesanan? <br>
                             Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda akan otomatis batal</dd>
-                            <dd>- Bagaimana cara mengkonfirmasi pembayaran?<br>
+                            <dd class="text-white" >- Bagaimana cara mengkonfirmasi pembayaran?<br>
                                 Silahkan klik disini untuk mengkonfirmasi pembayaran</dd>
-                            <dd>- Apa jasa kurir yang digunakan?<br>
+                            <dd class="text-white" >>- Apa jasa kurir yang digunakan?<br>
                                 Kurir yang kami gunakan untuk pengiriman ke seluruh Indonesia yaitu JNE, sedangkan pengiriman ke luar Indonesia kami menggunakan EMS.</dd>
 
 
