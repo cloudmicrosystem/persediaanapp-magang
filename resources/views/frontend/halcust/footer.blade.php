@@ -1,8 +1,9 @@
 <footer class="bg1">
-    {{-- <div class="d-flex justify-content-center"> --}}
-        <div class="container">
+    <div class="container">
+        <div class="col-12">
             <div class="row">
-                <div class="col-sm-6 col-md-4 p-t-50">
+
+                <div class="col-4 col-md-4 p-t-50">
                     <!-- - -->
                     <h4 class="txt13 m-b-20">
                         Contact Us
@@ -30,7 +31,7 @@
                     </ul>
                 </div>
 
-                <div class="col-sm-6 col-md-4 p-t-50">
+                <div class="col-4 col-md-4 p-t-50">
                     <h4 class="txt13 m-b-20">
                         Opening Times
                     </h4>
@@ -42,25 +43,44 @@
                         <li class="txt14">
                             Every Day
                         </li> <br>
+
+                    </ul>
                         <h4 class="txt13 m-b-20">
                             Information
                         </h4>
+
+
+                        {{-- <ul class="footer">
+                            <li class="txt15">
+                                <a href="/refund">Refund</a>
+                            </li>
+
+                            <li class="txt15">
+                                <a href="/order">How To Order </a>
+                            </li>
+
+                            <li class="txt15">
+                                <a href="/faq">FAQ</a>
+                            </li>
+                        </ul> --}}
+
                         <ul>
                             <li class="txt14">
-                                <a href="/refund"> Refund</a>
+                                <a style="color: gray" href="/refund"> Refund</a>
                             </li>
                             <li class="txt14">
-                                <a href="/order"> How To Order</a>
+                                <a style="color: gray" href="/order"> How To Order</a>
                             </li>
                             <li class="txt14">
-                                <a href="/faq"> FAQ</a>
+                                <a style="color: gray" href="/faq"> FAQ</a>
                             </li>
                         </ul>
-                    </ul>
+
                 </div>
 
-                <div class="col-sm-6 col-md-4 d-flex align-items-lg-baseline justify-content-end">
-                    <ul><br><br>
+                <div class="col-4 col-md-4 d-flex align-items-lg-baseline justify-content-end">
+                    <ul>
+                        <br><br>
                         <h4 class="txt13 m-b-15">
                             Find Us On
                         </h4>
@@ -72,8 +92,8 @@
                                         class="fa fa-instagram m-l-18" aria-hidden="true"></i></a>
                                 <a href="https://www.facebook.com/MorfeenStore/photos/?ref=page_internal"
                                     class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
-                                <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg" class="fs-15 c-white"><i
-                                        class="fa fa-youtube m-l-18" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg"
+                                    class="fs-15 c-white"><i class="fa fa-youtube m-l-18" aria-hidden="true"></i></a>
                             </div>
                         </li><br>
                         <img src="images/icons/logo2.png" style="width: 150px">
@@ -81,6 +101,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
     {{-- FOOTER BAWAH --}}
     <div class="end-footer bg2">
