@@ -240,14 +240,14 @@
                                     <thead class="border-color: black">
                                         <tr class="border-color: black">
                                             <th class="text-white" style="width: 150px; height: auto">Produk</th>
-                                            <th class="text-white" style="width: 300px">Nama Produk
+                                            <th class="text-white" style="width: 250px">Nama Produk
                                             </th>
                                             <th class="text-white ">Harga</th>
                                         </tr>
                                     </thead>
 
                                     <tr>
-                                        <td class="text-white" style="width: 100px; height: auto"><img
+                                        <td class="text-white text-left" style="width: 100px; height: auto"><img
                                                 src="images/katalog/akse1-1.jpg" alt=""></td>
                                         <td class="text-white text-center" style="width: 300px">Sandal <br> 1x2</td>
                                         <td class="text-white ">Rp. 100.000.00</td>
