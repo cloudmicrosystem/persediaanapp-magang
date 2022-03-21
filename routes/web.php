@@ -34,26 +34,26 @@ require __DIR__ . '/auth.php';
     // ADMIN
 Route::middleware(['auth'])->group(function () {
     //Untuk menyimpelkan memanggil berbagai fungsi
-    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/home', [HomeController::class, 'index']);
 
-    Route::resource('barang', PersediaanController::class);
+    Route::resource('/barang', PersediaanController::class);
 
-    Route::resource('user', UserController::class);
+    Route::resource('/user', UserController::class);
 
-    Route::resource('kategori', CategoryController::class);
+    Route::resource('/kategori', CategoryController::class);
 
-    Route::resource('gambar', GambarController::class);
+    Route::resource('/gambar', GambarController::class);
 });
     // USER
-    Route::get('/home', [HalcustController::class, 'index']);
+    Route::get('/', [HalcustController::class, 'index']);
 
     Route::get('/product', [HalproductController::class, 'index']);
 
     Route::get('/product/{category}', [HalproductController::class, 'category']);
 
-    // Route::get('/detail', [HaldetailproductController::class, 'index']);
+    Route::get('/detail', [HaldetailproductController::class, 'index']);
 
-    Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
+    // Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
 
     Route::get('/about', [HalaboutController::class, 'index']);
 

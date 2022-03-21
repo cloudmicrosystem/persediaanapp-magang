@@ -16,7 +16,7 @@
                     <nav class="menu">
                         <ul class="main_menu">
                             <li>
-                                <a href="/home">Home</a>
+                                <a href="/">Home</a>
                             </li>
 
                             <li>
@@ -50,7 +50,7 @@
                 <!-- Social -->
                 <div class="social flex-w flex-l-m p-r-20">
 
-                    <a href="#"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
+                    <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
 
                     {{-- KERANJANG --}}
                     {{-- <div class="span6">
@@ -81,8 +81,6 @@
                             </div>
                         </div>
 
-
-
                         <div class="product-total">
 
                             <p><b>Items:</b> <span class="keranjang_quantity"></span></p>
@@ -103,7 +101,7 @@
                         </div>
                     </div><!-- /span6 --> --}}
 
-                    <a href="#"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+                    <a href="/checkout"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
 
                     <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                 </div>

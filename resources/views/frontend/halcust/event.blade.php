@@ -10,10 +10,10 @@
                             data-appear="zoomIn">
                             <!-- Pic block2 -->
                             <a href="#" class="wrap-pic-blo2 bg1-blo2"
-                                style="background-image: url(images/event-1.jpg);">
+                                style="background-image: url(images/katalog/akse1-3.jpg)">
                                 <div class="time-event size10 txt6 effect1">
                                     <span class="txt-effect1 flex-c-m t-center">
-                                        08:00 PM Tuesday - 21 November 2018
+                                        DISKON UP TO 50%
                                     </span>
                                 </div>
                             </a>
@@ -21,12 +21,13 @@
                             <!-- Text block2 -->
                             <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
                                 <h4 class="tit7 t-center m-b-10">
-                                    Wines during specific nights
+                                    Slide Sandal - Anchor Black
                                 </h4>
 
                                 <p class="t-center">
-                                    Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla,
-                                    nunc sed imperdiet lacinia
+                                    Dapatkan promo anda bisa langsung pesan terlebih dahulu karena
+                                    harga untuk pemesan lebih hemat di kantong daripada menunggu
+                                    barang readystock
                                 </p>
 
                                 <div class="flex-sa-m flex-w w-full m-t-40">
@@ -79,7 +80,7 @@
                         </div>
                     </div>
                         <h3 class="tit6 t-center p-l-15 p-r-15 p-t-30" style="color: red">
-                            Upcomming Events
+                            Upcoming Events
                         </h3>
 
                 </div>

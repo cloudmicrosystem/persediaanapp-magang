@@ -15,6 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category = DB::select('SELECT * FROM category');
+
         return view('backend.kategori.index')->with(compact('category'));
     }
 

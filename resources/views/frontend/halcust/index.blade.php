@@ -62,7 +62,6 @@
     <!-- Footer -->
     @include('frontend.halcust.footer')
 
-
     <!-- Back to top -->
     <div class="btn-back-to-top bg0-hov" id="myBtn">
         <span class="symbol-btn-back-to-top">

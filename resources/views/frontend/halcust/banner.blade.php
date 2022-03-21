@@ -2,7 +2,7 @@
 <section class="section-slide">
     <div class="wrap-slick1">
         <div class="slick1">
-            <div class="item-slick1 item1-slick1" style="background-image: url(images/cover1.JPG);">
+            <div class="item-slick1 item1-slick1" style="background-image: url(images/cover4.JPG);">
                 {{-- <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                         <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
                             data-appear="fadeInDown">
@@ -18,7 +18,7 @@
             <div class="item-slick1 item2-slick1" style="background-image: url(images/cover2.JPG);">
             </div>
 
-            <div class="item-slick1 item3-slick1" style="background-image: url(images/cover3.JPG);">
+            <div class="item-slick1 item3-slick1" style="background-image: url(images/cover5.jpg);">
             </div>
 
         </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="col-md-6 p-b-30">
                 <div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
-                    <img src="images/halcus.jpg" alt="IMG-OUR">
+                    <img src="images/official.jpg" alt="IMG-OUR">
                 </div>
             </div>
         </div>
