@@ -48,22 +48,6 @@
                         <h4 class="txt13 m-b-20">
                             Information
                         </h4>
-
-
-                        {{-- <ul class="footer">
-                            <li class="txt15">
-                                <a href="/refund">Refund</a>
-                            </li>
-
-                            <li class="txt15">
-                                <a href="/order">How To Order </a>
-                            </li>
-
-                            <li class="txt15">
-                                <a href="/faq">FAQ</a>
-                            </li>
-                        </ul> --}}
-
                         <ul>
                             <li class="txt14">
                                 <a style="color: gray" href="/refund"> Refund</a>
@@ -94,6 +78,9 @@
                                     class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
                                 <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg"
                                     class="fs-15 c-white"><i class="fa fa-youtube m-l-18" aria-hidden="true"></i></a>
+
+                                <a href="https://shopee.co.id/morfeen.official"
+                                    class="fs-15 c-white"><i aria-hidden="true"><img class="pr-5" style="width: 4%" src="images/icons/shp.png" alt=""></i></a>
                             </div>
                         </li><br>
                         <img src="images/icons/logo2.png" style="width: 150px">
