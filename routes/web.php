@@ -18,6 +18,8 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Admin\GambarController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\PayPalPaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,42 +35,29 @@ use App\Http\Controllers\Admin\UserController;
 require __DIR__ . '/auth.php';
     // ADMIN
     Route::middleware(['auth'])->group(function () {
-    //Untuk menyimpelkan memanggil berbagai fungsi
     Route::get('/home', [HomeController::class, 'index']);
-
     Route::resource('/barang', PersediaanController::class);
-
     Route::resource('/user', UserController::class);
-
     Route::resource('/kategori', CategoryController::class);
-
     Route::resource('/gambar', GambarController::class);
 });
     // USER
     Route::get('/', [HalcustController::class, 'index']);
-
     Route::get('/product', [HalproductController::class, 'index']);
-
     Route::get('/product/{category}', [HalproductController::class, 'category']);
-
     Route::get('/detail', [HaldetailproductController::class, 'index']);
-
     // Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
-
     Route::get('/about', [HalaboutController::class, 'index']);
-
     Route::get('/store', [HalstoreController::class, 'index']);
-
     Route::get('/contact', [HalcontacController::class, 'index']);
-
     Route::get('/artikel', [HalartikelController::class, 'index']);
-
     Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
-
     Route::get('/refund', [HalrefundController::class, 'index']);
-
     Route::get('/order', [HalorderController::class, 'index']);
-
     Route::get('/faq', [HalfaqController::class, 'index']);
-
     Route::get('/checkout', [HalcheckoutController::class, 'index']);
+    Route::get('/test', [TestController::class, 'index']);
+
+    Route::get('handle-payment', [PayPalPaymentController::class, 'handlePayment'])->name('make.payment');
+    Route::get('cancel-payment', [PayPalPaymentController::class, 'paymentCancel'])->name('cancel.payment');
+    Route::get('payment-success', [PayPalPaymentController::class, 'paymentSuccess'])->name('success.payment');

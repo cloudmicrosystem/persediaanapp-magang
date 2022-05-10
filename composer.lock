@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f970a6d2bce7f11e45f4c992f2a655bb",
+    "content-hash": "751927f2a0e324f88136a74b55ea2995",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3418,27 +3418,22 @@
         },
         {
             "name": "srmklive/paypal",
-            "version": "3.0.14",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/srmklive/laravel-paypal.git",
-                "reference": "c5e5ee440d1a3eecda9ff55d4284eb1941133344"
+                "reference": "188bb21f06f58aa3ad3dd6a25e91a1fc34bff68c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/srmklive/laravel-paypal/zipball/c5e5ee440d1a3eecda9ff55d4284eb1941133344",
-                "reference": "c5e5ee440d1a3eecda9ff55d4284eb1941133344",
+                "url": "https://api.github.com/repos/srmklive/laravel-paypal/zipball/188bb21f06f58aa3ad3dd6a25e91a1fc34bff68c",
+                "reference": "188bb21f06f58aa3ad3dd6a25e91a1fc34bff68c",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "~7.0",
-                "illuminate/support": "~6.0|~7.0|~8.0|~9.0",
-                "nesbot/carbon": "~2.0",
-                "php": ">=7.2|^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.0|^9.0",
-                "symfony/var-dumper": "~5.0"
+                "guzzlehttp/guzzle": "~6.0|~7.0",
+                "illuminate/support": "~5.1|~5.2|~5.3|~5.4|~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0|~9.0",
+                "nesbot/carbon": "~1.0|~2.0"
             },
             "type": "library",
             "extra": {
@@ -3476,9 +3471,9 @@
             ],
             "support": {
                 "issues": "https://github.com/srmklive/laravel-paypal/issues",
-                "source": "https://github.com/srmklive/laravel-paypal/tree/3.0.14"
+                "source": "https://github.com/srmklive/laravel-paypal/tree/1.10.0"
             },
-            "time": "2022-03-12T12:22:46+00:00"
+            "time": "2022-03-12T11:36:35+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
