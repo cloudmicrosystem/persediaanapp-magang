@@ -181,7 +181,7 @@
             <div class="row">
 
                 <div class="col-6 my-3">
-                    <p class="text-bold text-uppercase" style="font-size: 20px ; font-family: 'Trebuchet MS'"> Checkout </p>
+                    <p class="text-bold text-uppercase text-center" style="font-size: 20px ; font-family: 'Trebuchet MS'"> Checkout </p>
                     <form>
                         <div class="card-body">
                             <div class="form-group ">
@@ -232,7 +232,7 @@
                 </div>
 
                 <div class="col-6 my-3 " style="border: black">
-                    <p class="text-bold text-uppercase" style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
+                    <p class="text-bold text-uppercase text-center" style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
                     <div class="card " style="border: black">
                         <div class="card-body " style="background-color: black ; border: black">
                             <div class="row">
@@ -290,20 +290,6 @@
     <div id="dropDownSelect1"></div>
 
     <!-- Modal Video 01-->
-    <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <div class="modal-dialog" role="document" data-dismiss="modal">
-            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
-
-            <div class="wrap-video-mo-01">
-                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-                <div class="video-mo-01">
-                    <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!--===============================================================================================-->
     <script src="{{ asset('assetcus/js/foundation.min.js') }}"></script>

@@ -32,7 +32,8 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/select2/select2.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
@@ -64,19 +65,73 @@
     </section>
 
     {{-- ISI HALAMAN CONTAC --}}
+
+    {{-- <section>
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-6">
+                        <div class="content">
+                            <a href="https://api.whatsapp.com/send/?phone=%2B6282229278641&text&app_absent=0"
+                                ><i class="fa fa-whatsapp" aria-hidden="true" style="width: 21px"></i></a>
+                                <br>
+                            <a href="https://www.instagram.com/morfeen.official/" class="fs-15 c-white"><i
+                                    class="fa fa-instagram m-l-18" aria-hidden="true"></i></a>
+                                <br>
+                            <a href="https://www.facebook.com/MorfeenStore/photos/?ref=page_internal"
+                                class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+                                <br>
+                            <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg"
+                                class="fs-15 c-white"><i class="fa fa-youtube m-l-18" aria-hidden="true"></i></a>
+                                <br>
+                            <a href="https://shopee.co.id/morfeen.official"
+                                class="fs-15 c-white"><i aria-hidden="true"><img class="pr-5" style="width: 4%" src="images/icons/shp.png" alt=""></i></a>
+                        </div>
+                </div>
+                <div class="col-6">
+                    <h3>TES</h3>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+
     <section class="content ">
         <div class="card border border-dark">
-            <div class="card-body row" style="background: black" >
-                <div class="col-5 text-center d-flex align-items-center justify-content-center">
+            <div class="card-body row d-flex align-items-center justify-content-center" style="background: black" >
+                <div class="col-6 text-center ">
                     <div class="">
                         <h2 style="color: white"><strong>MORFEEN THERTEEN</strong></h2>
-                        <p class="lead mb-5" style="color: white">MALANG<br>
-                            Phone: (+62)0877123456789
-                        </p>
+                        <p class="lead mb-5" style="color: white">MALANG</p>
                     </div>
                 </div>
-                <div class="col-7">
-                    <div class="form-group">
+
+                <div class="col-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-20 ">
+                        SOSIAL MEDIA
+                    </h4>
+                    <ul class="m-b-70">
+                        <li class="txt14 m-b-14 " style="color: white">
+                            <i class="fa fa-whatsapp fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                            (+62) 887-4116-4285
+                        </li>
+
+                        <li class="txt14 m-b-14" style="color: white">
+                            <i class="fa fa-instagram fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                            morfeen_official
+                        </li>
+
+                        <li class="txt14 m-b-14" style="color: white">
+                            <i class="fa fa-facebook fs-16 dis-inline-block size19 " aria-hidden="true"></i>
+                            morfeen_official
+                        </li>
+
+                        <li class="txt14 m-b-14" style="color: white">
+                            <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+                            morfeen.selfporject@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                    {{-- <div class="form-group">
                         <label style="color: white" for="inputName">Name</label>
                         <input style="background-color: black "  type="text" class="form-control border border-white" placeholder="Name"/>
                     </div>
@@ -94,8 +149,8 @@
                     </div>
                     <div class="form-group m-3" >
                         <input type="submit" class="btn btn-dark" value="Send message">
-                    </div>
-                </div>
+                    </div> --}}
+
             </div>
         </div>
     </section>
@@ -113,21 +168,6 @@
 
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
-
-    <!-- Modal Video 01-->
-    <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <div class="modal-dialog" role="document" data-dismiss="modal">
-            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
-
-            <div class="wrap-video-mo-01">
-                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-                <div class="video-mo-01">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uB9czZIzJGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
@@ -151,7 +191,7 @@
     <script type="text/javascript" src="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.js') }}"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/slick/slick.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('assetcus/js/slick-custom.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assetcus/js/slick-custom.js') }}"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/parallax100/parallax100.js') }}"></script>
     <script type="text/javascript">
