@@ -58,6 +58,6 @@ require __DIR__ . '/auth.php';
     Route::get('/checkout', [HalcheckoutController::class, 'index']);
     Route::get('/test', [TestController::class, 'index']);
 
-    Route::get('handle-payment', [PayPalPaymentController::class, 'handlePayment'])->name('make.payment');
-    Route::get('cancel-payment', [PayPalPaymentController::class, 'paymentCancel'])->name('cancel.payment');
-    Route::get('payment-success', [PayPalPaymentController::class, 'paymentSuccess'])->name('success.payment');
+    // Route::get('handle-payment', [PayPalPaymentController::class, 'handlePayment'])->name('make.payment');
+    // Route::get('cancel-payment', [PayPalPaymentController::class, 'paymentCancel'])->name('cancel.payment');
+    // Route::get('payment-success', [PayPalPaymentController::class, 'paymentSuccess'])->name('success.payment');
