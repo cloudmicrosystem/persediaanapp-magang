@@ -35,7 +35,7 @@
     <!--===============================================================================================-->
 </head>
 
-<body class="animsition" style="background: black">
+<body class="animsition" style="background: black ; boder-color: white>
 
     <!-- Header -->
     @include('frontend.halcust.header')
@@ -70,7 +70,7 @@
                     </ul>
                     <div class="m-3">
                         <h4 class="text-center text-uppercase text-white" style="font-weight: bold"> Morfeen Store Sukun</h4>
-                        <p class="m-1 text-center"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang<br />
+                        <p class="m-1 text-center text-white"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang<br />
                             Mon-Sun 12.00-21:00<br />
                             (+62) 887-4116-4285</p>
 
@@ -90,7 +90,7 @@
                     </ul>
                     <div class="m-3">
                         <h4 class="text-center text-uppercase text-white" style="font-weight: bold">Morfeen Store Slorok </h4>
-                        <p class="m-1 text-center "> Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang<br />
+                        <p class="m-1 text-center text-white "> Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang<br />
                             Mon-Sun 12.00-21:00<br />
                             (+62) 887-4116-4285</p>
                     </div>
