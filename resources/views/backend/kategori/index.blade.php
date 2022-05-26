@@ -36,6 +36,7 @@ Kategori | Morfeen
                                     @endforeach
                             </thead>
                         </table>
+                        {{ $category->links() }}
                     </div>
                 </div>
             </div>
