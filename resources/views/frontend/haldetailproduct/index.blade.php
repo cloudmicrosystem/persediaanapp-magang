@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -15,13 +15,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/xzoom.css') }}" media="all" />
     <!-- hammer plugin here -->
     <script type="text/javascript" src="assetcus/hammer.js/1.0.5/jquery.hammer.min.js"></script>
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link type="text/css" rel="stylesheet" media="all"
-        href="{{ asset('assetcus/fancybox/source/jquery.fancybox.css') }}" />
-    <link type="text/css" rel="stylesheet" media="all"
-        href="{{ asset('assetcus/magnific-popup/css/magnific-popup.css') }}" />
+    <link type="text/css" rel="stylesheet" media="all" href="{{ asset('assetcus/fancybox/source/jquery.fancybox.css') }}" />
+    <link type="text/css" rel="stylesheet" media="all" href="{{ asset('assetcus/magnific-popup/css/magnific-popup.css') }}" />
     <script type="text/javascript" src="{{ asset('assetcus/fancybox/source/jquery.fancybox.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assetcus/magnific-popup/js/magnific-popup.js') }}"></script>
+
 
     <title>Detail | Morfeen </title>
     <!--===============================================================================================-->
@@ -41,10 +39,9 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/select2/select2.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
     <!--===============================================================================================-->
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/lightbox2/css/lightbox.min.css') }}">
     <!--===============================================================================================-->
@@ -64,201 +61,30 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
-
     {{-- css keranjang --}}
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" />
-
 </head>
 
-<body class="animation">
+<body class="animsition">
 
     <!-- Header -->
-    <header>
-        <!-- Header desktop -->
-        <div class="wrap-menu-header color accent-dark ">
-            <div class="container h-full">
-                <div class="wrap_header trans-10 ">
-                    <!-- Logo -->
-                    <div class="logo">
-                        <a href="home">
-                            <img src="images/icons/logoa.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
-                        </a>
-                    </div>
-
-                    <!-- Menu -->
-                    <div class="wrap_menu p-l-45 p-l-0-xl">
-                        <nav class="menu">
-                            <ul class="main_menu">
-                                <li>
-                                    <a href="/home">Home</a>
-                                </li>
-
-                                <li>
-                                    <a href="/product">Product</a>
-                                </li>
-
-                                <li>
-                                    <a href="/store">Store</a>
-                                </li>
-
-                                <li>
-                                    <a href="/artikel">Artikel</a>
-                                </li>
-
-                                <li>
-                                    <a href="/about">About</a>
-                                </li>
-
-                                <li>
-                                    <a href="/contact">Contact</a>
-                                </li>
-
-                                <li>
-                                    <a href="/contact.html">|</a>
-                                </li>
-
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <!-- Social -->
-                    <div class="social flex-w flex-l-m p-r-20">
-
-                        <a href="#"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
-
-                        {{-- KERANJANG --}}
-                        <div class="span6">
-                            <div class="product-Info">
-                                <span class="keranjang_quantity"></span>
-                                <a href="#myModal" role="button" class="product-view" data-toggle="modal"><i
-                                        class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-                            </div>
-
-                            <div id="myModal" class="modal hide fade">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">&times;</button>
-                                    <h3><span class="keranjang_quantity"></span> items</h3>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="keranjang_items"></div>
-                                    <!-- Yep it's that simple -->
-                                    <hr>
-                                    <div class="left"><strong>Items: </strong><span
-                                            class="keranjang_quantity"></span></div>
-                                    <div class="right"><strong>Total: </strong><span
-                                            class="keranjang_total"></span></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="javascript:;" class="keranjang_empty">Empty</a>
-                                    <a href="javascript:;" class="keranjang_checkout">Checkout</a>
-                                </div>
-                            </div>
-
-
-
-                            {{-- <div class="product-total">
-
-                                <p><b>Items:</b> <span class="keranjang_quantity"></span></p>
-                                <!--number of items in the cart-->
-
-                                <p><b>Total:</b> <span class="keranjang_total"></span></p>
-                                <!-- total cost of cart before tax & shipping-->
-
-                                <p><b>Tax rate:</b> <span class="keranjang_taxRate"></span></p>
-                                <!--will be display as a percentage ( ie 7% )-->
-
-                                <p><b>Tax:</b> <span class="keranjang_tax"></span></p>
-                                <!--taxRate X total displayed as currency-->
-
-                                <p><b>Final price:</b> <span class="keranjang_grandTotal"></span> </p>
-                                <!--total of the cart after tax & shipping -->
-
-                            </div> --}}
-
-                        </div><!-- /span6 -->
-
-                        {{-- <a href="#"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a> --}}
-
-                        {{-- <button class="btn-show-sidebar m-l-33 trans-0-4"></button> --}}
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </header>
+    @include('frontend.halcust.header')
 
     <!-- Sidebar -->
-    {{-- <aside class="sidebar color accent-dark">
-        <!-- Button Hide sidebar -->
-        <button class="btn-hide-sidebar ti-close color accent-dark "></button>
-
-        <!-- - -->
-        <ul class="menu-sidebar p-t-95 p-b-70">
-            <li class="t-center m-b-13">
-                <a href="home" class="txt19">Home</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="product" class="txt19">Product</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="store" class="txt19">Store</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="gallery.html" class="txt19">Artikel</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="about" class="txt19">About</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="blog.html" class="txt19">Blog</a>
-            </li>
-
-            <li class="t-center m-b-33">
-                <a href="contact.html" class="txt19">Contact</a>
-            </li>
-
-            <li class="t-center">
-                <!-- Button3 -->
-                <a href="reservation.html" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-                    Reservation
-                </a>
-            </li>
-        </ul>
-
-    </aside> --}}
-
+    @include('frontend.halcust.sidebar')
 
     <!-- Slide1 -->
-    {{-- <section class="section-slide">
+    <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/detail1.jpg);">
-                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                        <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-                            data-appear="fadeInDown">
-                            Detail Product
-                        </span>
-                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                            Morfeen Thirteen
-                        </h2>
+                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgartikel.jpg);">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-100">
                     </div>
                 </div>
             </div>
         </div>
-    </section> --}}
-
-
-    <br><br>
-
-    <br><br>
-
+    </section>
 
     <section class="content" class="pading-top0 ">
         <div class="d-flex justify-content-center">
@@ -415,7 +241,7 @@
 
                         <div class="col-md-6 p-t-30">
                             <div class="xzoom-container">
-                                <div class="col-14">
+                                <div class="col-20">
                                     <img class="xzoom" id="xzoom-default" src="images/d2.jpeg"
                                         xoriginal="images/images/d2.jpeg" />
                                 </div>
@@ -428,13 +254,13 @@
                                         @endforeach
                                     @endforeach --}}
                                     <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80"
-                                                xpreview="images/d1.jpeg"></a>
-                                        <a href="images/d2.jpeg"><img class="xzoom-gallery" width="80"
-                                                src="images/d2.jpeg"></a>
-                                        <a href="images/d3.jpeg"><img class="xzoom-gallery" width="80"
-                                                src="images/d3.jpeg"></a>
-                                        <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80"
-                                                src="images/d1.jpeg"></a>
+                                            xpreview="images/d1.jpeg"></a>
+                                    <a href="images/d2.jpeg"><img class="xzoom-gallery" width="80"
+                                            src="images/d2.jpeg"></a>
+                                    <a href="images/d3.jpeg"><img class="xzoom-gallery" width="80"
+                                            src="images/d3.jpeg"></a>
+                                    <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80"
+                                            src="images/d1.jpeg"></a>
                                 </div>
                             </div>
                         </div>
@@ -448,6 +274,7 @@
     <!-- Footer -->
     @include('frontend.halcust.footer')
 
+
     <!-- Back to top -->
     <div class="btn-back-to-top bg0-hov" id="myBtn">
         <span class="symbol-btn-back-to-top">
@@ -458,21 +285,7 @@
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
 
-    <!-- Modal Video 01-->
-    <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
 
-        <div class="modal-dialog" role="document" data-dismiss="modal">
-            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
-
-            <div class="wrap-video-mo-01">
-                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-                <div class="video-mo-01">
-                    <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!--===============================================================================================-->
     <script src="{{ asset('assetcus/js/foundation.min.js') }}"></script>

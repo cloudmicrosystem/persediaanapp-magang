@@ -264,9 +264,6 @@
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
 
-    <!-- Modal Video 01-->
-
-
 
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>

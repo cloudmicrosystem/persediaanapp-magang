@@ -59,7 +59,6 @@
                                 <a style="color: gray" href="/faq"> FAQ</a>
                             </li>
                         </ul>
-
                 </div>
 
                 <div class="col-4 col-md-4 d-flex align-items-lg-baseline justify-content-end">

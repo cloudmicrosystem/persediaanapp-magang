@@ -181,7 +181,7 @@
             <div class="row">
 
                 <div class="col-6 my-3">
-                    <p class="text-bold text-uppercase text-center" style="font-size: 20px ; font-family: 'Trebuchet MS'"> Checkout </p>
+                    <p class="text-bold text-uppercase text-center text-white" style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Checkout </p>
                     <form>
                         <div class="card-body">
                             <div class="form-group ">
@@ -232,7 +232,7 @@
                 </div>
 
                 <div class="col-6 my-3 " style="border: black">
-                    <p class="text-bold text-uppercase text-center" style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
+                    <p class="text-bold text-uppercase text-center text-white" style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
                     <div class="card " style="border: black">
                         <div class="card-body " style="background-color: black ; border: black">
                             <div class="row">
@@ -289,7 +289,6 @@
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
 
-    <!-- Modal Video 01-->
 
     <!--===============================================================================================-->
     <script src="{{ asset('assetcus/js/foundation.min.js') }}"></script>
