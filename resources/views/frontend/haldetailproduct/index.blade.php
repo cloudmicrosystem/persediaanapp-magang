@@ -15,8 +15,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/xzoom.css') }}" media="all" />
     <!-- hammer plugin here -->
     <script type="text/javascript" src="assetcus/hammer.js/1.0.5/jquery.hammer.min.js"></script>
-    <link type="text/css" rel="stylesheet" media="all" href="{{ asset('assetcus/fancybox/source/jquery.fancybox.css') }}" />
-    <link type="text/css" rel="stylesheet" media="all" href="{{ asset('assetcus/magnific-popup/css/magnific-popup.css') }}" />
+    <link type="text/css" rel="stylesheet" media="all"
+        href="{{ asset('assetcus/fancybox/source/jquery.fancybox.css') }}" />
+    <link type="text/css" rel="stylesheet" media="all"
+        href="{{ asset('assetcus/magnific-popup/css/magnific-popup.css') }}" />
     <script type="text/javascript" src="{{ asset('assetcus/fancybox/source/jquery.fancybox.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assetcus/magnific-popup/js/magnific-popup.js') }}"></script>
 
@@ -39,7 +41,8 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/select2/select2.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
@@ -91,7 +94,7 @@
             <div class="card card-solid">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6 p-t-30">
+                        <div class="col-4 pt-30 pl-3">
                             <h3 class="my-2">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
                             <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
                                 aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure
@@ -155,7 +158,7 @@
                                     </form>
                                 </div> --}}
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-12">
                                         <input type="number" class="form-control" value="" />
                                     </div>
                                     <div class="btn btn-dark btn-lg btn-flat">
@@ -239,30 +242,25 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 p-t-30">
+                        <div class="col-4 p-t-30 ">
                             <div class="xzoom-container">
-                                <div class="col-20">
-                                    <img class="xzoom" id="xzoom-default" src="images/d2.jpeg"
-                                        xoriginal="images/images/d2.jpeg" />
-                                </div>
-                                <br>
-                                <div class="xzoom-thumbs">
-                                    {{-- @foreach ($bar as $key => $value)
-                                        @foreach ($value['gambar'] as $item)
-                                            <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
-                                                alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
-                                        @endforeach
-                                    @endforeach --}}
-                                    <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80"
-                                            xpreview="images/d1.jpeg"></a>
-                                    <a href="images/d2.jpeg"><img class="xzoom-gallery" width="80"
-                                            src="images/d2.jpeg"></a>
-                                    <a href="images/d3.jpeg"><img class="xzoom-gallery" width="80"
-                                            src="images/d3.jpeg"></a>
-                                    <a href="images/d1.jpeg"><img class="xzoom-gallery" width="80"
-                                            src="images/d1.jpeg"></a>
-                                </div>
+                                <img class="xzoom" style="position: absolute; top: -441.621px; left: -1269.08px; opacity: 0; width: 2000px; height: 2000px; border: none; max-width: none; max-height: none;" id="xzoom-default" src="images/d2.jpeg"
+                                    xoriginal="images/images/d2.jpeg" />
                             </div>
+                        </div>
+
+
+                        <div class="xzoom-thumbs col-4">
+                            {{-- @foreach ($bar as $key => $value)
+                                @foreach ($value['gambar'] as $item)
+                                    <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
+                                        alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
+                                @endforeach
+                            @endforeach --}}
+                            <a href="images/d1.jpeg"><img class="xzoom-gallery" width="100" xpreview="images/d1.jpeg"></a>
+                            <a href="images/d2.jpeg"><img class="xzoom-gallery" width="100" src="images/d2.jpeg"></a>
+                            <a href="images/d3.jpeg"><img class="xzoom-gallery" width="100" src="images/d3.jpeg"></a>
+                            <a href="images/d1.jpeg"><img class="xzoom-gallery" width="100" src="images/d1.jpeg"></a>
                         </div>
                     </div>
                 </div>

@@ -77,8 +77,8 @@
                             <ul class="menu-category mt-3">
                                 <li>
                                     @foreach ($category as $key => $value)
-                                        <li><a href="./product/{{ $value->slug }}"> {{ $value->nama_category }}</a></li>
-                                    @endforeach
+                                <li><a href="./product/{{ $value->slug }}"> {{ $value->nama_category }}</a></li>
+                                @endforeach
                                 </li>
                             </ul>
                         </nav>
@@ -90,8 +90,8 @@
                             @foreach ($barang as $items)
                                 <div class="col-md-3">
                                     <div class="row">
-                                        <div class="card" style="border: transparent">
-                                            <ul class="">
+                                        <div class="card">
+                                            <ul>
                                                 <li>
                                                     <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
                                                         <a href="detail">
@@ -113,14 +113,15 @@
                                                         <p class="">Rp {{ $items->price }}</p>
                                                     </a>
                                                 </div>
-                                                {{-- <p style="color: orange" class="m-1">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </p>
-                                                <a href="detail" class="btn btn-success">Beli</a> --}}
+                                                <p style="color: orange" class="m-1 t-center">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                                <p class="t-center m-0">Terjual 10 </p>
+                                                {{-- <a href="detail" class="btn btn-success">Beli</a> --}}
                                             </div>
                                         </div>
                                     </div>
