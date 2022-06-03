@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
@@ -15,7 +17,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $category = DB::select('SELECT * FROM category');
+        $category = Kategori::paginate(5);
 
         return view('backend.kategori.index')->with(compact('category'));
     }
@@ -27,9 +29,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $category = DB::select('SELECT * FROM category');
-
-        return view('backend.kategori.create')->with(compact('category'));
+        return view('backend.kategori.create');
     }
 
     /**
@@ -40,14 +40,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        DB::select("INSERT INTO category(
-            nama_category,
-            slug
-            )
-        VALUE(
-        '$request->nama_category',
-        '$request->slug'
-        )");
+        $this->validate($request, [
+            'nama_category' => 'required|min:4',
+        ]);
+
+        $category = Kategori::create([
+            'nama_category' => $request->nama_category,
+            'slug'=> Str::slug($request->nama_category)
+        ]);
 
         return redirect('kategori')->with('toast_success', 'Data Berhasil Disimpan');
     }
@@ -60,7 +60,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        $category = DB::select('SELECT * FROM barang WHERE id_category = $id_category');
+        $category = Kategori::findOrFail($id);
     }
 
     /**
@@ -71,7 +71,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category = DB::select('SELECT * FROM category WHERE id =?', [$id]);
+        $category = Kategori::findOrFail($id);
 
         return view('backend.kategori.edit')->with(compact('category'));
     }
@@ -85,12 +85,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $category = $request->all();
+        $category['slug'] = Str::slug($request->nama_category);
 
-        DB::select("UPDATE category SET
-        nama_category='$request->nama_category',
-        slug='$request->slug'
-        WHERE id=$id
-        ");
+        $category = Kategori::findOrFail($id);
+        $category->update();
 
         return redirect('kategori')->with('toast_success', 'Data Berhasil Diupdate');
     }
@@ -103,7 +102,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        DB::select("DELETE FROM category WHERE id=$id");
+        $category = Kategori::findOrFail($id);
+        $category->delete();
 
         return redirect('kategori')->with('toast_success', 'Data Berhasil Dihapus');
     }

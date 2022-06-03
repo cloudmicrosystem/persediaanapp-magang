@@ -22,7 +22,7 @@
           <nav class="mt-2">
               <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                   data-accordion="false">
-                  <li class="nav-item menu-open">
+                  <li class="nav-item menu-open" >
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
                               <a href="/" class="nav-link">
@@ -39,10 +39,20 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/artikel" class="nav-link">
+                                    <a href="/article" class="nav-link">
                                         <i class="fas fa-ellipsis-h nav-icon"></i>
                                         <p>
-                                            Data Artikel
+                                            Artikel
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/article" class="nav-link">
+                                        <i class="fas fa-ellipsis-h nav-icon"></i>
+                                        <p>
+                                            Kategori Artikel
                                         </p>
                                     </a>
                                 </li>
@@ -60,7 +70,7 @@
                                       <a href="/barang" class="nav-link">
                                           <i class="fas fa-ellipsis-h nav-icon"></i>
                                           <p>
-                                              Data Stock
+                                              Product
                                           </p>
                                       </a>
                                   </li>
@@ -68,7 +78,7 @@
                                       <a href="/kategori" class="nav-link">
                                           <i class="fas fa-ellipsis-h nav-icon"></i>
                                           <p>
-                                              Data Kategori
+                                              Kategori Product
                                           </p>
                                       </a>
                                   </li>
@@ -76,7 +86,7 @@
                                     <a href="/gambar" class="nav-link">
                                         <i class="fas fa-ellipsis-h nav-icon"></i>
                                         <p>
-                                            Data Detail Product
+                                            Gambar Detail
                                         </p>
                                     </a>
                                 </li>
@@ -94,7 +104,7 @@
                                       <a href="/user" class="nav-link">
                                           <i class="fas fa-ellipsis-h nav-icon"></i>
                                           <p>
-                                              Data Customer
+                                              Customer
                                           </p>
                                       </a>
                                   </li>
@@ -112,7 +122,7 @@
                                     <a href="/transaksi" class="nav-link">
                                         <i class="fas fa-ellipsis-h nav-icon"></i>
                                         <p>
-                                            Data Transaksi
+                                            Transaksi Masuk
                                         </p>
                                     </a>
                                 </li>

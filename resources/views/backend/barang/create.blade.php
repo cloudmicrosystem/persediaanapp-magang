@@ -25,23 +25,14 @@
                                     </div>
                                     <select class="custom-select" name="id_category" id="inputGroupSelect01">
                                         <option selected disabled><b>Pilih Kategori</b></option>
-                                        @foreach ($barang as $key => $value)
-                                            <option value="{{ $value->id_category }}">{{ $value->nama_category }}</option>
+                                        @foreach ($category as $key => $value)
+                                            <option value="{{ $value->id }}">{{ $value->nama_category }}</option>
                                         @endforeach
-                                        </>
                                     </select>
                                 </div>
-                                {{-- <div class="form-group">
-                                    <label>Kategori </label> <br>
-                                    <input type="text" name="id_category" class="form-control">
-                                </div> --}}
                                 <div class="form-group">
                                     <label>Nama </label>
                                     <input type="text" name="nama_barang" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Slug </label>
-                                    <input type="text" name="slug" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>HPP </label>
@@ -53,7 +44,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi </label>
-                                    <input type="text" name="deskripsi" class="form-control" required>
+                                    <textarea name="deskripsi" class="form-control" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Ukuran </label>
@@ -73,10 +64,6 @@
                                         <label class="custom-file-label" for="inputGroupFile01">Pilih Gambar</label>
                                     </div>
                                 </div>
-                                {{-- <div class="form-group">
-                                    <label>Gambar </label>
-                                    <input type="file" name="gambar_disply" class="form-control">
-                                </div> --}}
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">

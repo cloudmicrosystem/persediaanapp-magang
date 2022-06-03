@@ -18,8 +18,8 @@ class CreateBarangTable extends Migration
             $table->integer('id_category');
             $table->string('nama_barang');
             $table->string('slug')->unique();
-            $table->decimal('hpp');
-            $table->decimal('price');
+            $table->integer('hpp');
+            $table->integer('price');
             $table->text('deskripsi');
             $table->string('size');
             $table->integer('qty');

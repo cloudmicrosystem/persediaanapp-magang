@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Kategori extends Model
 {
     use HasFactory;
+    protected $table = "category";
+    protected $fillable = [
+        'nama_category',
+        'slug'
+    ];
+
+    // public function barang()
+    // {
+    //     return $this->belongsTo(Barang::class)->withDefault();
+    // }
 }

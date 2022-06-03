@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-Kategori | Morfeen
+Artikel | Morfeen
 @endsection
 
 @section('content')
@@ -11,22 +11,27 @@ Kategori | Morfeen
                     <div class="card-body">
                         <table class="table table-bordered table-hover">
                             <thead>
-                                <a class="btn btn-info" href="{{ url ('kategori/create')}}"><i class='fas fa-plus'></i></a>
+                                <a class="btn btn-info" href="{{ url ('article/create')}}"><i class='fas fa-plus'></i></a>
                                 <br>
                                 <br>
                                 <tr>
-                                    <th>Nama</th>
+                                    <th>Judul</th>
                                     <th>Slug</th>
+                                    <th>Deskripsi</th>
+                                    <th>Gambar Artikel</th>
                                     <th colspan="2">Aksi</th>
                                 </tr>
-                                    @foreach ($category as $key=>$value)
+                                    @foreach ($article as $key=>$value)
                                         <tr>
-                                            <td>{{ $value->nama_category }}</td>
+                                            <td>{{ $value->judul }}</td>
                                             <td>{{ $value->slug }}</td>
-
-                                            <td><a class="btn btn-info" href="{{ url('kategori/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
+                                            <td>{{ $value->Deskripsi }}</td>
+                                            <td><img src="{{ asset('images/artikel/' . $value->gambar_artikel) }}"
+                                                alt="{{ ($value->judul) }}"
+                                                width=150px height=auto /></td>
+                                            <td><a class="btn btn-info" href="{{ url('article/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
                                             <td>
-                                                <form action="{{ url('kategori/'.$value->id) }}" method="POST">
+                                                <form action="{{ url('article/'.$value->id) }}" method="POST">
                                                     @csrf
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i></button>
@@ -37,7 +42,7 @@ Kategori | Morfeen
                             </thead>
                         </table>
                         <br>
-                        {{ $category->links() }}
+                        {{-- {{ $category->links() }} --}}
                     </div>
                 </div>
             </div>

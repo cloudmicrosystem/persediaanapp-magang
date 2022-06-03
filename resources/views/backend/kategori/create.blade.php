@@ -24,9 +24,6 @@ Kategori | Morfeen
                   <input type="text" name="nama_category" class="form-control" requaired>
                 </div>
                 <div class="form-group">
-                  <label>Slug</label>
-                  <input type="text" name="slug" class="form-control" requaired>
-                </div>
               <!-- /.card-body -->
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>

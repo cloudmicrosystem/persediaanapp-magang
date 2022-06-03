@@ -15,7 +15,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form id="quickForm" method="POST" action="{{ url('barang', [$barang[0]->id]) }}"
+                        <form id="quickForm" method="POST" action="{{ url('barang', [$barang->id]) }}"
                             enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
@@ -24,49 +24,42 @@
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="inputGroupSelect01">Kategori</label>
                                     </div>
-                                    <select class="custom-select" name="id_category" id="inputGroupSelect01">
-                                        <option selected disabled><b>Pilih Kategori</b></option>
-                                        @foreach ($barang as $key => $value)
-                                            <option value="{{ $value->id_category }}" disabled>{{ $value->nama_category }}</option>
-                                        @endforeach
-                                        </>
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                        <option><b>{{ $barang->category->nama_category }}</b></option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Nama </label>
-                                    <input type="text" name="nama_barang" value="{{ $barang[0]->nama_barang }}"
+                                    <input type="text" name="nama_barang" value="{{ $barang->nama_barang }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Slug </label>
-                                    <input type="text" name="slug" value="{{ $barang[0]->slug }}" class="form-control">
-                                </div>
-                                <div class="form-group">
                                     <label>HPP </label>
-                                    <input type="decimal" name="hpp" value="{{ $barang[0]->hpp }}" class="form-control">
+                                    <input type="decimal" name="hpp" value="{{ $barang->hpp }}" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Harga Jual </label>
-                                    <input type="decimal" name="price" value="{{ $barang[0]->price }}"
+                                    <input type="decimal" name="price" value="{{ $barang->price }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi </label>
-                                    <input type="text" name="deskripsi" value="{{ $barang[0]->deskripsi }}"
+                                    <input type="text" name="deskripsi" value="{{ $barang->deskripsi }}"
                                         class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Ukuran </label>
-                                    <input type="text" name="size" value="{{ $barang[0]->size }}" class="form-control">
+                                    <input type="text" name="size" value="{{ $barang->size }}" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Qty </label>
-                                    <input type="number" name="qty" value="{{ $barang[0]->qty }}" class="form-control">
+                                    <input type="number" name="qty" value="{{ $barang->qty }}" class="form-control">
                                 </div>
+                                @if ($barang->gambar_disply)
+                                    <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=150px height=auto>
+                                @endif
                                 <div class="form-group">
-                                    <label>Gambar</label>
-                                    <input type="file" name="gambar_disply" accept="image/*"
-                                        value="{{ $barang[id]->gambar_disply }}" class="form-control">
+                                    <input type="file" name="gambar_displu" class="form-control">
                                 </div>
                             </div>
                             <!-- /.card-body -->
@@ -76,11 +69,6 @@
                         </form>
                     </div>
                     <!-- /.card -->
-                </div>
-                <!--/.col (left) -->
-                <!-- right column -->
-                <div class="col-md-6">
-
                 </div>
                 <!--/.col (right) -->
             </div>

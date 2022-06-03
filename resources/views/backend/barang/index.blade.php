@@ -28,7 +28,7 @@
                                 </tr>
                                 @foreach ($barang as $key => $value)
                                     <tr>
-                                        <td>{{ $value->nama_category }}</td>
+                                        <td>{{ $value->category->nama_category }}</td>
                                         <td>{{ $value->nama_barang }}</td>
                                         <td>{{ $value->slug }} </td>
                                         <td>Rp {{ $value->hpp }} </td>
@@ -36,10 +36,6 @@
                                         <td>{{ $value->deskripsi }} </td>
                                         <td>{{ $value->size }}</td>
                                         <td>{{ $value->qty }} pcs</td>
-                                            {{-- @foreach ($value['gambar'] as $item)
-                                            //     <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
-                                            //         alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
-                                            // @endforeach --}}
                                         <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}"
                                             alt="{{ ($value->nama_barang) }}"
                                             width=150px height=auto /></td>
@@ -60,7 +56,7 @@
                             </thead>
                         </table>
                         <br>
-                        {{-- {{ $barang->links() }} --}}
+                        {{ $barang->links() }}
                     </div>
                 </div>
             </div>
