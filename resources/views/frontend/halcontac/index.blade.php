@@ -95,14 +95,14 @@
     </section> --}}
 
     <section class="content ">
-        <div class="card border border-dark">
-            <div class="card-body  d-flex align-items-center justify-content-center" style="background: black" >
-                <div class="col-6 text-center ">
+        <div class="row">
+            <div class="card-body  d-flex align-items-center justify-content-center pl-5" style="background: black" >
+                <div class="col-md-6 text-center ">
                         <h2 style="color: white"><strong>MORFEEN THERTEEN</strong></h2>
                         <p class="lead mb-5" style="color: white">MALANG</p>
                 </div>
 
-                <div class="col-6 pt-50">
+                <div class="col-md-6 pt-50 pl-5">
                     <!-- - -->
                     <h4 class="txt13 m-b-20 ">
                         SOSIAL MEDIA

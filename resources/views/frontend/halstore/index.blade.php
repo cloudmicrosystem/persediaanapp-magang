@@ -35,7 +35,7 @@
     <!--===============================================================================================-->
 </head>
 
-<body class="animsition" style="background: black ; boder-color: white>
+<body class="animsition" style="background: black">
 
     <!-- Header -->
     @include('frontend.halcust.header')
@@ -58,7 +58,8 @@
     <div class="container">
         <div class="row">
             <div class="d-flex justify-content-center">
-            <div class="col-md-6 mb-8 m-2  p-t-50 p-b-50">
+
+            <div class="col-md-6 mb-5 m-2  pt-5 pb-5">
                 <div class="card" style="background-color: black">
                     <ul class="list-inline social-media">
                         <li class="list-inline item">
@@ -78,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 mb-5 m-2  p-t-50 p-b-10">
+            <div class="col-md-6 mb-5 m-2  pt-5 pb-5">
                 <div class="card" style="background-color: black">
                     <ul class="list-inline social-media">
                         <li class="list-inline item" >
@@ -113,22 +114,6 @@
 
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
-
-    <!-- Modal Video 01-->
-    <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <div class="modal-dialog" role="document" data-dismiss="modal">
-            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
-
-            <div class="wrap-video-mo-01">
-                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-                <div class="video-mo-01">
-                    <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 

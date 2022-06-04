@@ -120,13 +120,13 @@
         </div>
     </section>
 
-    <section class="content" >
+    <section class="content">
         <div class="d-flex justify-content-center">
             <div class="card card-solid">
                 <div class="card-body">
                     <div class="row">
 
-                        <div class="col-4 pt-3 pl-3 pb-3">
+                        <div class="col-12 col-sm-4 pt-3 pl-3 pb-3">
                             <h3 class="my-2">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
                             <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
                                 stumptown
@@ -142,43 +142,52 @@
                             </div>
 
                             <h5 class="mt-2">Size</h5>
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            {{-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-dark text-center">
                                     <input type="radio" name="color_option" id="color_option_b1" autocomplete="off">
                                     <span class="text">S</span>
-                                    {{-- <br>
-                                        Small --}}
+
                                 </label>
                                 <label class="btn btn-dark text-center">
                                     <input type="radio" name="color_option" id="color_option_b2" autocomplete="off">
                                     <span class="text">M</span>
-                                    {{-- <br>
-                                        Medium --}}
+
                                 </label>
                                 <label class="btn btn-dark text-center">
                                     <input type="radio" name="color_option" id="color_option_b3" autocomplete="off">
                                     <span class="text">L</span>
-                                    {{-- <br>
-                                        Large --}}
+
                                 </label>
                                 <label class="btn btn-dark text-center">
                                     <input type="radio" name="color_option" id="color_option_b4" autocomplete="off">
                                     <span class="text">XL</span>
-                                    {{-- <br>
-                                        Xtra-Large --}}
+
                                 </label>
+                            </div> --}}
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <select class="form-control ">
+                                        <option>Size</option>
+                                        <option>S</option>
+                                        <option>M</option>
+                                        <option>L</option>
+                                        <option>XL</option>
+                                        <option>XXL</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <h5>Quantity</h5>
                             <div class="mt-2 ">
                                 <div class="col-12">
-                                    <input type="number" style="color: black"  class="form-control" value="" />
-                                    <div class=" btn btn-dark btn-lg btn-flat px-0 py-1">
+                                    <input type="number"  class="form-control px-0 py-0"
+                                        placeholder="Qty" value="" />
+                                    <div class=" btn btn-dark btn-lg btn-flat px-0 py-2">
                                         <i class="fas fa-shopping-cart "></i>
                                         Add to Cart
                                     </div>
-                                    <div class="btn btn-dark btn-lg btn-flat px-0 py-1 pl-0">
-                                        <i class="fas fa-heart fa-lg"></i>
+                                    <div class="btn btn-dark btn-lg btn-flat px-0 py-2 pl-0">
+                                        <i class="fas fa-heart fa-lg "></i>
                                         Add to Wishlist
                                     </div>
                                 </div>
@@ -240,14 +249,14 @@
 
                         </div>
 
-                        <div class="col-6 p-t-30 ">
+                        <div class="col-12 col-sm-6 p-t-30 pl-4">
                             <div class="xzoom-container">
                                 <img class="xzoom" style="height: 300px; width: 500px" id="xzoom-default"
                                     src="images/d2.jpeg" xoriginal="images/images/d2.jpeg" />
                             </div>
                         </div>
 
-                        <div class="col-2 p-t-30  ">
+                        <div class="col-12 col-sm-2 p-t-30 pl-4  ">
                             <div class="xzoom-thumbs">
                                 <a href="images/d1.jpeg"> <img class="xzoom-gallery" width="100" src="images/d1.jpeg"
                                         xpreview="images/d1.jpeg"></a>
@@ -260,9 +269,64 @@
                             </div>
                         </div>
 
+                        <div class="row mt-2 pl-4">
+                            <nav class="w-100">
+                                <div class="nav nav-tabs" id="product-tab" role="tablist">
+                                    <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
+                                        href="#product-desc" role="tab" aria-controls="product-desc"
+                                        aria-selected="true">Description</a>
+                                    <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab"
+                                        href="#product-comments" role="tab" aria-controls="product-comments"
+                                        aria-selected="false">Comments</a>
+                                    <a class="nav-item nav-link" id="product-rating-tab" data-toggle="tab"
+                                        href="#product-rating" role="tab" aria-controls="product-rating"
+                                        aria-selected="false">Rating</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content p-3" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="product-desc" role="tabpanel"
+                                    aria-labelledby="product-desc-tab"> Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Morbi vitae condimentum erat. Vestibulum ante ipsum primis in
+                                    faucibus orci luctus et ultrices posuere cubilia Curae; Sed posuere, purus at
+                                    efficitur hendrerit, augue elit lacinia arcu, a eleifend sem elit et nunc. Sed
+                                    rutrum vestibulum est, sit amet cursus dolor fermentum vel. Suspendisse mi nibh,
+                                    congue et ante et, commodo mattis lacus. Duis varius finibus purus sed venenatis.
+                                    Vivamus varius metus quam, id dapibus velit mattis eu. Praesent et semper risus.
+                                    Vestibulum erat erat, condimentum at elit at, bibendum placerat orci. Nullam gravida
+                                    velit mauris, in pellentesque urna pellentesque viverra. Nullam non pellentesque
+                                    justo, et ultricies neque. Praesent vel metus rutrum, tempus erat a, rutrum ante.
+                                    Quisque interdum efficitur nunc vitae consectetur. Suspendisse venenatis, tortor non
+                                    convallis interdum, urna mi molestie eros, vel tempor justo lacus ac justo. Fusce id
+                                    enim a erat fringilla sollicitudin ultrices vel metus. </div>
+                                <div class="tab-pane fade" id="product-comments" role="tabpanel"
+                                    aria-labelledby="product-comments-tab"> Vivamus rhoncus nisl sed venenatis luctus.
+                                    Sed condimentum risus ut tortor feugiat laoreet. Suspendisse potenti. Donec et
+                                    finibus sem, ut commodo lectus. Cras eget neque dignissim, placerat orci interdum,
+                                    venenatis odio. Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna.
+                                    Duis gravida ex pulvinar mauris ornare, eget porttitor enim vulputate. Mauris
+                                    hendrerit, massa nec aliquam cursus, ex elit euismod lorem, vehicula rhoncus nisl
+                                    dui sit amet eros. Nulla turpis lorem, dignissim a sapien eget, ultrices venenatis
+                                    dolor. Curabitur vel turpis at magna elementum hendrerit vel id dui. Curabitur a ex
+                                    ullamcorper, ornare velit vel, tincidunt ipsum. </div>
+                                <div class="tab-pane fade" id="product-rating" role="tabpanel"
+                                    aria-labelledby="product-rating-tab"> Cras ut ipsum ornare, aliquam ipsum non,
+                                    posuere elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id
+                                    fermentum risus efficitur vel. Nulla iaculis malesuada scelerisque. Praesent vel
+                                    ipsum felis. Ut molestie, purus aliquam placerat sollicitudin, mi ligula euismod
+                                    neque, non bibendum nibh neque et erat. Etiam dignissim aliquam ligula, aliquet
+                                    feugiat nibh rhoncus ut. Aliquam efficitur lacinia lacinia. Morbi ac molestie
+                                    lectus, vitae hendrerit nisl. Nullam metus odio, malesuada in vehicula at,
+                                    consectetur nec justo. Quisque suscipit odio velit, at accumsan urna vestibulum a.
+                                    Proin dictum, urna ut varius consectetur, sapien justo porta lectus, at mollis nisi
+                                    orci et nulla. Donec pellentesque tortor vel nisl commodo ullamcorper. Donec varius
+                                    massa at semper posuere. Integer finibus orci vitae vehicula placerat. </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
