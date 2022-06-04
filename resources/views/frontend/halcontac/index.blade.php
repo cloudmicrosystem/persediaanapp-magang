@@ -96,15 +96,13 @@
 
     <section class="content ">
         <div class="card border border-dark">
-            <div class="card-body row d-flex align-items-center justify-content-center" style="background: black" >
+            <div class="card-body  d-flex align-items-center justify-content-center" style="background: black" >
                 <div class="col-6 text-center ">
-                    <div class="">
                         <h2 style="color: white"><strong>MORFEEN THERTEEN</strong></h2>
                         <p class="lead mb-5" style="color: white">MALANG</p>
-                    </div>
                 </div>
 
-                <div class="col-6 col-md-4 p-t-50">
+                <div class="col-6 pt-50">
                     <!-- - -->
                     <h4 class="txt13 m-b-20 ">
                         SOSIAL MEDIA

@@ -71,7 +71,7 @@
                             <dd class="text-white" >- Kemana harus membayar pesanan? <br>
                                 Sementara ini kami hanya menyediakan 1 metode pembayaran yaitu via transfer bank (BCA).</dd>
                             <dd class="text-white" >- Berapa lama batas waktu pembayaran pesanan? <br>
-                            Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda akan otomatis batal</dd>
+                                Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda akan otomatis batal</dd>
                             <dd class="text-white" >- Bagaimana cara mengkonfirmasi pembayaran?<br>
                                 Silahkan klik disini untuk mengkonfirmasi pembayaran</dd>
                             <dd class="text-white" >- Apa jasa kurir yang digunakan?<br>
@@ -97,21 +97,6 @@
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
 
-    <!-- Modal Video 01-->
-    <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <div class="modal-dialog" role="document" data-dismiss="modal">
-            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
-
-            <div class="wrap-video-mo-01">
-                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-                <div class="video-mo-01">
-                    <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <!--===============================================================================================-->

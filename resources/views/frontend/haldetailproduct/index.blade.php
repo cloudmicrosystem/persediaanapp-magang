@@ -13,17 +13,18 @@
     <!-- xzoom plugin here -->
     <script type="text/javascript" src="{{ asset('assetcus/js/xzoom.min.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/xzoom.css') }}" media="all" />
-    <!-- hammer plugin here -->
-    <script type="text/javascript" src="assetcus/hammer.js/1.0.5/jquery.hammer.min.js"></script>
-    <link type="text/css" rel="stylesheet" media="all"
-        href="{{ asset('assetcus/fancybox/source/jquery.fancybox.css') }}" />
-    <link type="text/css" rel="stylesheet" media="all"
-        href="{{ asset('assetcus/magnific-popup/css/magnific-popup.css') }}" />
-    <script type="text/javascript" src="{{ asset('assetcus/fancybox/source/jquery.fancybox.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assetcus/magnific-popup/js/magnific-popup.js') }}"></script>
-
 
     <title>Detail | Morfeen </title>
+    {{-- CSS Class Content --}}
+    @stack('custom-css')
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
@@ -55,15 +56,7 @@
     <!--===============================================================================================-->
     <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
-    {{-- CSS Class Content --}}
-    @stack('custom-css')
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+
     {{-- css keranjang --}}
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" />
@@ -74,8 +67,46 @@
     <!-- Header -->
     @include('frontend.halcust.header')
 
+
     <!-- Sidebar -->
-    @include('frontend.halcust.sidebar')
+    <aside class="sidebar trans-0-4">
+        <!-- Button Hide sidebar -->
+        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+        <!-- - -->
+        <ul class="menu-sidebar p-t-100 p-b-20">
+            <li class="t-center m-b-13">
+                <h4 class="txt13 m-b-20" style="color: black">
+                    Menu
+                </h4>
+            </li>
+            <li class="t-center m-b-13">
+                <a href="/" class="txt19">Home</a>
+            </li>
+
+            <li class="t-center m-b-13">
+                <a href="/product" class="txt19">Product</a>
+            </li>
+
+            <li class="t-center m-b-13">
+                <a href="/store" class="txt19">Store</a>
+            </li>
+
+            <li class="t-center m-b-13">
+                <a href="/artikel" class="txt19">Artikel</a>
+            </li>
+
+            <li class="t-center m-b-13">
+                <a href="/about" class="txt19">About</a>
+            </li>
+
+            <li class="t-center m-b-33">
+                <a href="/contact" class="txt19">Contact</a>
+            </li>
+        </ul>
+
+    </aside>
+
 
     <!-- Slide1 -->
     <section class="section-slide">
@@ -89,127 +120,104 @@
         </div>
     </section>
 
-    <section class="content" class="pading-top0 ">
+    <section class="content" >
         <div class="d-flex justify-content-center">
             <div class="card card-solid">
                 <div class="card-body">
                     <div class="row">
 
-                            <div class="col-4 pt-30 pl-3">
-                                <h3 class="my-2">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
-                                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
-                                    stumptown
-                                    aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui
-                                    irure
-                                    terr.
-                                </p>
-                                <hr>
-                                <h5 class="mt-2">Size</h5>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-default text-center">
-                                        <input type="radio" name="color_option" id="color_option_b1" autocomplete="off">
-                                        <span class="text">S</span>
-                                        {{-- <br>
+                        <div class="col-4 pt-3 pl-3 pb-3">
+                            <h3 class="my-2">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
+                                stumptown
+                                aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui
+                                irure
+                                terr.
+                            </p>
+
+                            <div class="bg-black py--0 px-00 mt-2">
+                                <h3 class="mb-0 text-center">
+                                    Rp. 150,000,00
+                                </h3>
+                            </div>
+
+                            <h5 class="mt-2">Size</h5>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-dark text-center">
+                                    <input type="radio" name="color_option" id="color_option_b1" autocomplete="off">
+                                    <span class="text">S</span>
+                                    {{-- <br>
                                         Small --}}
-                                    </label>
-                                    <label class="btn btn-default text-center">
-                                        <input type="radio" name="color_option" id="color_option_b2" autocomplete="off">
-                                        <span class="text">M</span>
-                                        {{-- <br>
+                                </label>
+                                <label class="btn btn-dark text-center">
+                                    <input type="radio" name="color_option" id="color_option_b2" autocomplete="off">
+                                    <span class="text">M</span>
+                                    {{-- <br>
                                         Medium --}}
-                                    </label>
-                                    <label class="btn btn-default text-center">
-                                        <input type="radio" name="color_option" id="color_option_b3" autocomplete="off">
-                                        <span class="text">L</span>
-                                        {{-- <br>
+                                </label>
+                                <label class="btn btn-dark text-center">
+                                    <input type="radio" name="color_option" id="color_option_b3" autocomplete="off">
+                                    <span class="text">L</span>
+                                    {{-- <br>
                                         Large --}}
-                                    </label>
-                                    <label class="btn btn-default text-center">
-                                        <input type="radio" name="color_option" id="color_option_b4" autocomplete="off">
-                                        <span class="text">XL</span>
-                                        {{-- <br>
+                                </label>
+                                <label class="btn btn-dark text-center">
+                                    <input type="radio" name="color_option" id="color_option_b4" autocomplete="off">
+                                    <span class="text">XL</span>
+                                    {{-- <br>
                                         Xtra-Large --}}
-                                    </label>
-                                </div>
-                                <div class="bg-black py-0 px-0 mt-2">
-                                    <h3 class="mb-0 text-center">
-                                        Rp. 150,000,00
-                                    </h3>
-                                </div>
+                                </label>
+                            </div>
 
-                                <div class="mt-2">
-                                    {{-- <div class="product-select">
-                                    <form>
-
-                                        <div class="form-group">
-                                            <label>Color</label>
-                                            <select class="form-control">
-                                                <option>-- Color --</option>
-                                            </select>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <input type="number" class="form-control" value="1"/>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <button type="button" class="btn btn-primary btn-block">Add to Cart</button>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <a href="#" class="btn btn-secondary"><i class="fa fa-heart-o"></i></a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div> --}}
-                                    <div class="row">
-                                        <div class="col-12 ">
-                                            <input type="number" style="border: black" class="form-control" value="" />
-                                        </div>
-                                        <div class="btn btn-dark btn-lg btn-flat">
-                                            <i class="fas fa-cart-plus "></i>
-                                            Add to Cart
-                                        </div>
-                                        <div class="btn btn-default btn-lg btn-flat">
-                                            <i class="fas fa-heart fa-lg mr-2"></i>
-                                            Add to Wishlist
-                                        </div>
+                            <h5>Quantity</h5>
+                            <div class="mt-2 ">
+                                <div class="col-12">
+                                    <input type="number" style="color: black"  class="form-control" value="" />
+                                    <div class=" btn btn-dark btn-lg btn-flat px-0 py-1">
+                                        <i class="fas fa-shopping-cart "></i>
+                                        Add to Cart
+                                    </div>
+                                    <div class="btn btn-dark btn-lg btn-flat px-0 py-1 pl-0">
+                                        <i class="fas fa-heart fa-lg"></i>
+                                        Add to Wishlist
                                     </div>
                                 </div>
+                            </div>
 
-                                {{-- Keranjang --}}
-                                <div class="mt-2">
-                                    <div class="span6">
+                            {{-- Keranjang --}}
+                            <div class="mt-2">
+                                <div class="span6">
 
-                                        <div class="product-Info">
-                                            <span class="keranjang_quantity"></span> items
-                                            <a href="#myModal" role="button" class="product-view"
-                                                data-toggle="modal"><i class="fa fa-shopping-cart m-l-21"
-                                                    aria-hidden="true"></i></a>
+                                    <div class="product-Info">
+                                        <span class="keranjang_quantity"></span> items
+                                        <a href="#myModal" role="button" class="product-view" data-toggle="modal"><i
+                                                class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+                                    </div>
+
+                                    <div id="myModal" class="modal hide fade">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-hidden="true">&times;</button>
+                                            <h3><span class="keranjang_quantity"></span> items</h3>
                                         </div>
-
-                                        <div id="myModal" class="modal hide fade">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-hidden="true">&times;</button>
-                                                <h3><span class="keranjang_quantity"></span> items</h3>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="keranjang_items"></div>
-                                                <!-- Yep it's that simple -->
-                                                <hr>
-                                                <div class="left"><strong>Items: </strong><span
-                                                        class="keranjang_quantity"></span></div>
-                                                <div class="right"><strong>Total: </strong><span
-                                                        class="keranjang_total"></span></div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a href="javascript:;" class="keranjang_empty">Empty</a>
-                                                <a href="javascript:;" class="keranjang_checkout">Checkout</a>
-                                            </div>
+                                        <div class="modal-body">
+                                            <div class="keranjang_items"></div>
+                                            <!-- Yep it's that simple -->
+                                            <hr>
+                                            <div class="left"><strong>Items: </strong><span
+                                                    class="keranjang_quantity"></span></div>
+                                            <div class="right"><strong>Total: </strong><span
+                                                    class="keranjang_total"></span></div>
                                         </div>
+                                        <div class="modal-footer">
+                                            <a href="javascript:;" class="keranjang_empty">Empty</a>
+                                            <a href="javascript:;" class="keranjang_checkout">Checkout</a>
+                                        </div>
+                                    </div>
 
 
 
-                                        {{-- <div class="product-total">
+                                    {{-- <div class="product-total">
 
                                         <p><b>Items:</b> <span class="keranjang_quantity"></span></p>
                                         <!--number of items in the cart-->
@@ -227,42 +235,30 @@
                                         <!--total of the cart after tax & shipping -->
 
                                     </div> --}}
-                                    </div><!-- /span6 -->
-                                </div>
-
-                                <div class="mt-3 product-share">
-                                    <a href="#" class="text-gray">
-                                        <i class="fab fa-facebook-square fa-2x"></i>
-                                    </a>
-                                    <a href="#" class="text-gray">
-                                        <i classx="fab fa-twitter-square fa-2x"></i>
-                                    </a>
-                                    <a href="#" class="text-gray">
-                                        <i class="fas fa-envelope-square fa-2x"></i>
-                                    </a>
-                                    <a href="#" class="text-gray">
-                                        <i class="fas fa-rss-square fa-2x"></i>
-                                    </a>
-                                </div>
+                                </div><!-- /span6 -->
                             </div>
 
-                            <div class="col-6 p-t-30 ">
-                                <div class="xzoom-container">
-                                    <img class="xzoom" style="height: 300px; width: 500px" id="xzoom-default"
-                                        src="images/d2.jpeg" xoriginal="images/images/d2.jpeg" />
-                                </div>
-                            </div>
+                        </div>
 
-                            <div class="col-2 p-t-30  ">
-                                <a href="images/d1.jpeg"><img class="xzoom-gallery" width="100"
+                        <div class="col-6 p-t-30 ">
+                            <div class="xzoom-container">
+                                <img class="xzoom" style="height: 300px; width: 500px" id="xzoom-default"
+                                    src="images/d2.jpeg" xoriginal="images/images/d2.jpeg" />
+                            </div>
+                        </div>
+
+                        <div class="col-2 p-t-30  ">
+                            <div class="xzoom-thumbs">
+                                <a href="images/d1.jpeg"> <img class="xzoom-gallery" width="100" src="images/d1.jpeg"
                                         xpreview="images/d1.jpeg"></a>
-                                <a href="images/d2.jpeg"><img class="xzoom-gallery" width="100"
+                                <a href="images/d2.jpeg"> <img class="xzoom-gallery" width="100"
                                         src="images/d2.jpeg"></a>
-                                <a href="images/d3.jpeg"><img class="xzoom-gallery" width="100"
+                                <a href="images/d3.jpeg"> <img class="xzoom-gallery" width="100"
                                         src="images/d3.jpeg"></a>
-                                <a href="images/d1.jpeg"><img class="xzoom-gallery" width="100"
+                                <a href="images/d1.jpeg"> <img class="xzoom-gallery" width="100"
                                         src="images/d1.jpeg"></a>
                             </div>
+                        </div>
 
                     </div>
                 </div>
@@ -291,12 +287,6 @@
     <script src="{{ asset('assetcus/js/foundation.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/setup.js') }}"></script>
     <!--===============================================================================================-->
-    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-    @stack('custom-js')
-    <!-- AdminLTE App -->
-    <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->
@@ -328,13 +318,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/js/bootstrap.min.js"></script>
     <script src="{{ asset('assetcus/js/cart.js') }}"></script>
-
-    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-    @stack('custom-js')
-    <!-- AdminLTE App -->
-    <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
 
     <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>

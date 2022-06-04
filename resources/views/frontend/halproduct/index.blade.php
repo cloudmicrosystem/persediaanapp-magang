@@ -57,7 +57,7 @@
     </section>
 
     <!-- Sidebar kategori -->
-    <section class="slider-section pt-4">
+    <section class="slider-section pt-4 pb-4">
         <div class="container">
             <div class="slider-inner">
                 <div class="row">
@@ -103,8 +103,9 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-md-center">
+
+                                            <div class="card-body ">
+                                                <div class="t-center">
                                                     <a href="detail">
                                                         <h1 class="card-title"
                                                             style="font-size: 20px; font-weight:bold">
