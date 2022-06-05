@@ -55,29 +55,31 @@
         </div>
     </section>
     <br>
-    {{-- Detail Artikel  --}}
-    <div id="page" class="container py-3 py-md-4">
+    {{-- HAl FAQ --}}
+    <div id="page" class="container py-3 py-md-4 pt-3 pb-3">
         <div class="row">
             <div class="col-12 page-content m-5 ">
-                <div class="tab-contents">
-                    <div class="tab-content">
-                        <dl>
-                            <dd class="text-white">- Bagaimana cara memiliki akun Morfeen Official di website? <br>
-                                Apabila anda memiliki member card, otomatis anda akan memiliki akun website Maternal Disaster</dd>
-                            <dd class="text-white" >- Bagaimana cara melakukan pemesanan? <br>
-                                Cara pemesanan silahkan klik disini. Harap isi data diri dengan benar agar tidak terjadi kesalahan saat pengiriman</dd>
-                            <dd class="text-white" >- Bagaimana cara melacak pesanan? <br>
-                                Apabila anda sudah mendapatkan nomor resi via email, silahkan lacak pesanan anda di www.cekresi.com dan masukan nomor resi yang kami berikan</dd>
-                            <dd class="text-white" >- Kemana harus membayar pesanan? <br>
-                                Sementara ini kami hanya menyediakan 1 metode pembayaran yaitu via transfer bank (BCA).</dd>
-                            <dd class="text-white" >- Berapa lama batas waktu pembayaran pesanan? <br>
-                                Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda akan otomatis batal</dd>
-                            <dd class="text-white" >- Bagaimana cara mengkonfirmasi pembayaran?<br>
-                                Silahkan klik disini untuk mengkonfirmasi pembayaran</dd>
-                            <dd class="text-white" >- Apa jasa kurir yang digunakan?<br>
-                                Kurir yang kami gunakan untuk pengiriman ke seluruh Indonesia yaitu JNE, sedangkan pengiriman ke luar Indonesia kami menggunakan EMS.</dd>
-                        </dl>
-                    </div>
+                <div class="tab-content">
+                    <p class="text-white" ><strong>FAQ</strong></p><br>
+                    <dl>
+                        <dd class="text-white">- Bagaimana cara memiliki akun Morfeen Official di website? <br>
+                            Diharapkan melakukan Regristasi terlebih dahulu</dd>
+                        <dd class="text-white">- Bagaimana cara melakukan pemesanan? <br>
+                            Cara pemesanan silahkan klik disini. Harap isi data diri dengan benar agar tidak terjadi
+                            kesalahan saat pengiriman</dd>
+                        <dd class="text-white">- Bagaimana cara melacak pesanan? <br>
+                            Apabila anda sudah mendapatkan nomor resi via email, silahkan lacak pesanan anda di
+                            Raja Ongkir dan masukan nomor resi yang kami berikan</dd>
+                        <dd class="text-white">- Kemana harus membayar pesanan? <br>
+                            Pihak dari Morfeen menggunakan payment gateway midtrans , di Midtrans sendiri ada banyak jenis pembayaran nya .</dd>
+                        <dd class="text-white">- Berapa lama batas waktu pembayaran pesanan? <br>
+                            Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda
+                            akan otomatis batal</dd>
+                        <dd class="text-white">- Bagaimana cara mengkonfirmasi pembayaran?<br>
+                            Silahkan klik disini untuk mengkonfirmasi pembayaran</dd>
+                        <dd class="text-white">- Apa jasa kurir yang digunakan?<br>
+                            Kurir yang kami gunakan untuk pengiriman ke seluruh Indonesia yaitu JNE.</dd>
+                    </dl>
                 </div>
             </div>
         </div>

@@ -56,32 +56,108 @@
     </section>
     <br>
     {{-- Detail Artikel --}}
-    <div id="page" class="container py-3 py-md-4">
+    <div id="page" class="container py-3 py-md-4 pt-3 pb-3">
         <div class="row">
             <div class="col-12 page-content m-5 ">
-                <div class="tab-contents">
-                    <div class="tab-content">
-                        <dl>
-                            <dd class="text-white">1. Pilih barang yang akan dibeli pada halaman SHOP, lalu klik barang tersebut dan anda akan otomatis masuk ke halaman PRODUCT PAGE.</dd>
-                            </dd>
-                            <dd class="text-white">2. Isi berapa jumlah order pada kolom QUANTITY produk kemudian
-                                KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan order yang tidak
-                                diinginkan atau mengubah jumlah order pada halaman SHOPPING CART.</dd>
-                            <dd class="text-white">3. Isi informasi diri pada halaman ORDER DETAIL. Apabila ingin
-                                memberikan instruksi khusus pada pemesanan yang anda lakukan, anda dapat memberikan
-                                catatan pada kolom CATATAN yang telah kami sediakan pada bagian terbawah halaman ORDER
-                                DETAIL.</dd>
-                            <dd class="text-white">4. Setelah informasi lengkap, anda akan mendapatkan Email berupa
-                                INVOICE dan KODE KONFIRMASI PEMBAYARAN.</dd>
-                            <dd class="text-white">5. Segera lakukan pembayaran. Sertakan KODE KONFIRMASI PEMBAYARAN
-                                pada saat anda melakukan pembayaran baik melalui ATM atau INTERNET BANKING.</dd>
-                            <dd class="text-white">6. Setelah melakukan pembayaran segera lakukan konfirmasi dengan
-                                cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan memvalidasi status pembayaran
-                                dan mengirimkan order sesuai pesanan.</dd>
-                        </dl>
-                    </div>
-                </div>
+                <div class="tab-content">
+                    <p class="text-white"><strong>CARA PEMESANAN</strong></p><br>
+                    {{-- <div class="row mt-2 pl-4">
+                        <nav class="w-100">
+                            <div class="nav nav-tabs" id="product-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
+                                    href="#product-desc" role="tab" aria-controls="product-desc"
+                                    aria-selected="true">INDONESIA</a>
+                                <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab"
+                                    href="#product-comments" role="tab" aria-controls="product-comments"
+                                    aria-selected="false">ENGLISH</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-3" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="product-desc" role="tabpanel"
+                                aria-labelledby="product-desc-tab">
+                                <dl>
+                                    <dd class="text-white">1. Pilih barang yang akan dibeli pada halaman PRODUCT,
+                                        lalu klik barang
+                                        tersebut dan anda akan otomatis masuk ke halaman DETAIL PRODUCT.</dd>
+                                    </dd>
+                                    <dd class="text-white">2. Isi berapa jumlah order pada kolom QUANTITY produk
+                                        kemudian
+                                        KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan order yang
+                                        tidak
+                                        diinginkan atau mengubah jumlah order pada halaman SHOPPING CART.</dd>
+                                    <dd class="text-white">3. Isi informasi diri pada halaman ORDER DETAIL. Apabila
+                                        ingin
+                                        memberikan instruksi khusus pada pemesanan yang anda lakukan, anda dapat
+                                        memberikan
+                                        catatan pada kolom CATATAN yang telah kami sediakan pada bagian terbawah halaman
+                                        ORDER
+                                        DETAIL.</dd>
+                                    <dd class="text-white">4. Setelah informasi lengkap, anda akan mendapatkan Email
+                                        berupa
+                                        INVOICE dan KODE KONFIRMASI PEMBAYARAN.</dd>
+                                    <dd class="text-white">5. Segera lakukan pembayaran. Sertakan KODE KONFIRMASI
+                                        PEMBAYARAN
+                                        pada saat anda melakukan pembayaran baik melalui ATM atau INTERNET BANKING.</dd>
+                                    <dd class="text-white">6. Setelah melakukan pembayaran segera lakukan konfirmasi
+                                        dengan
+                                        cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan memvalidasi status
+                                        pembayaran
+                                        dan mengirimkan order sesuai pesanan.</dd>
+                                </dl>
 
+                            </div>
+                            <div class="tab-pane fade" id="product-comments" role="tabpanel"
+                                aria-labelledby="product-comments-tab">
+                                <dl>
+                                    <dd class="text-white">1. Select the item to be purchased on the PRODUCT page, then click the item
+                                        and you will automatically go to the PRODUCT DETAILS page.</dd>
+                                    </dd>
+                                    <dd class="text-white">2. Fill in the number of orders in the product QUANTITY column
+                                        then
+                                        CLICK ADD TO CART. After the CART is filled, you can make changes to the existing order
+                                        no
+                                        desired or change the order quantity on the SHOPPING CART page.</dd>
+                                    <dd class="text-white">3. Fill in your personal information on the ORDER DETAIL page. If
+                                        want to
+                                        provide specific instructions on the order you place, you can
+                                        give
+                                        notes in the NOTES column that we have provided at the bottom of the page
+                                        ORDER
+                                        DETAILS.</dd>
+                                    <dd class="text-white">4. After complete information, you will get an Email
+                                        in the form of
+                                        INVOICE and PAYMENT CONFIRMATION CODE.</dd>
+                                    <dd class="text-white">5. Immediately make payment. Include CONFIRMATION CODE
+                                        PAYMENT
+                                        when you make a payment either via ATM or INTERNET BANKING.</dd>
+                                    <dd class="text-white">6. After making the payment, confirm immediately
+                                        with
+                                        how to include PAYMENT CONFIRMATION CODE. We will validate the status
+                                        payment
+                                        and send orders as ordered.</dd>
+                                </dl>
+                            </div>
+                    </div> --}}
+                    <dl>
+                        <dd class="text-white">1. Pilih barang yang akan dibeli pada halaman PRODUCT, lalu klik barang
+                            tersebut dan anda akan otomatis masuk ke halaman DETAIL PRODUCT.</dd>
+                        </dd>
+                        <dd class="text-white">2. Isi berapa jumlah order pada kolom QUANTITY produk kemudian
+                            KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan order yang tidak
+                            diinginkan atau mengubah jumlah order pada halaman SHOPPING CART.</dd>
+                        <dd class="text-white">3. Isi informasi diri pada halaman ORDER DETAIL. Apabila ingin
+                            memberikan instruksi khusus pada pemesanan yang anda lakukan, anda dapat memberikan
+                            catatan pada kolom CATATAN yang telah kami sediakan pada bagian terbawah halaman ORDER
+                            DETAIL.</dd>
+                        <dd class="text-white">4. Setelah informasi lengkap, anda akan mendapatkan Email berupa
+                            INVOICE dan KODE KONFIRMASI PEMBAYARAN.</dd>
+                        <dd class="text-white">5. Segera lakukan pembayaran. Sertakan KODE KONFIRMASI PEMBAYARAN
+                            pada saat anda melakukan pembayaran baik melalui ATM atau INTERNET BANKING.</dd>
+                        <dd class="text-white">6. Setelah melakukan pembayaran segera lakukan konfirmasi dengan
+                            cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan memvalidasi status pembayaran
+                            dan mengirimkan order sesuai pesanan.</dd>
+                    </dl>
+                </div>
             </div>
         </div>
     </div>

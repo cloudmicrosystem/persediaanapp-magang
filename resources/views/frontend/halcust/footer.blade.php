@@ -1,9 +1,9 @@
 <footer class="bg1">
-    <div class="container">
+    <div class="container ">
         <div class="col-12">
-            <div class="row">
+            <div class="row ">
 
-                <div class="col-4 col-md-4 p-t-50">
+                <div class="col-12 col-sm-4  p-t-50">
                     <!-- - -->
                     <h4 class="txt13 m-b-20">
                         Contact Us
@@ -31,7 +31,7 @@
                     </ul>
                 </div>
 
-                <div class="col-4 col-md-4 p-t-50">
+                <div class="col-12 col-sm-4 p-t-50">
                     <h4 class="txt13 m-b-20">
                         Opening Times
                     </h4>
@@ -61,7 +61,7 @@
                         </ul>
                 </div>
 
-                <div class="col-4 col-md-4 d-flex align-items-lg-baseline justify-content-end">
+                <div class="col-12 col-sm-4 d-flex align-items-lg-baseline justify-content-end">
                     <ul>
                         <br><br>
                         <h4 class="txt13 m-b-15">
