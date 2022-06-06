@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Users;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Article;
+use App\Models\Catarticle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class HalartikelController extends Controller
+
+class CatarticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +17,9 @@ class HalartikelController extends Controller
      */
     public function index()
     {
-        $article = Article::all();
-        return view('frontend.halartikel.index')->with(compact('article'));
+        $catarticle = Catarticle::paginate(5);
+
+        return view('backend.catarticle.index')->with(compact('catarticle'));
     }
 
     /**
@@ -27,7 +29,7 @@ class HalartikelController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.catarticle.create');
     }
 
     /**
@@ -38,7 +40,16 @@ class HalartikelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required|min:4',
+        ]);
+
+        $catarticle = Catarticle::create([
+            'nama' => $request->nama,
+            'slug' => Str::slug($request->nama)
+        ]);
+
+        return redirect('catarticle')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -49,7 +60,7 @@ class HalartikelController extends Controller
      */
     public function show($id)
     {
-        //
+        $catarticle = Catarticle::findOrFail($id);
     }
 
     /**
@@ -60,7 +71,9 @@ class HalartikelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $catarticle = Catarticle::findOrFail($id);
+
+        return view('backend.catarticle.edit')->with(compact('catarticle'));
     }
 
     /**
@@ -72,7 +85,12 @@ class HalartikelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $catarticle = Catarticle::find($id);
+        $catarticle->nama = $request->input('nama');
+        $catarticle['slug'] = Str::slug($request->nama);
+        $catarticle->update();
+
+        return redirect('catarticle')->with('toast_success', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -83,6 +101,9 @@ class HalartikelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $catarticle = Catarticle::findOrFail($id);
+        $catarticle->delete();
+
+        return redirect('catarticle')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

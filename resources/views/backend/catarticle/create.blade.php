@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-    Kategori | Morfeen
+    Artikel | Morfeen
 @endsection
 @section('content')
     <section class="content">
@@ -15,25 +15,24 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form id="quickForm" method="POST" action="{{ url('kategori') }}">
+                        <form id="quickForm" method="POST" action="{{ url('catarticle') }}">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Nama </label>
-                                    <input type="text" name="nama_category" class="form-control" required>
+                                    <label>Nama</label>
+                                    <input type="text" name="nama" class="form-control" required>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
+
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <a href="{{ url ('kategori')}}" class="btn btn-primary">Kembali</a>
+                                <a href="{{ url ('catarticle')}}" class="btn btn-primary">Kembali</a>
                             </div>
                         </form>
                     </div>
                     <!-- /.card -->
                 </div>
-                <!--/.col (left) -->
-                <!-- right column -->
+
                 <div class="col-md-6">
 
                 </div>

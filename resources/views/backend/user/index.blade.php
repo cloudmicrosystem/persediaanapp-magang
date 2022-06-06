@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-User | Morfeen  
+User | Morfeen
 @endsection
 
 @section('content')
@@ -14,7 +14,12 @@ User | Morfeen
                                 <a class="btn btn-info" href="{{ url ('user/create')}}"><i class='fas fa-plus'></i></a>
                                 <br>
                                 <br>
-                                <tr>
+
+                                <div class="card-header" style="background: rgb(163, 171, 173)">
+                                    <h3 class="card-title" style="font-weight: bold">Customer</h3>
+                                </div>
+
+                                <tr style="text-align: center">
                                     <th>Nama</th>
                                     <th>Alamat</th>
                                     <th>Email</th>
@@ -31,8 +36,10 @@ User | Morfeen
                                             <td>{{ $value->no_hp }}</td>
                                             <td>{{ $value->username }}</td>
                                             <td>{{ $value->password }}</td>
-                                            <td><a class="btn btn-info" href="{{ url('user/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
-                                            <td>
+
+                                            <td style="text-align: center">
+                                                <a class="btn btn-info" href="{{ url('user/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
+                                            <td style="text-align: center">
                                                 <form action="{{ url('user/'.$value->id) }}" method="POST">
                                                     @csrf
                                                     <input type="hidden" name="_method" value="DELETE">

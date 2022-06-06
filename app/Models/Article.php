@@ -10,10 +10,16 @@ class Article extends Model
     use HasFactory;
     protected $table = "article";
     protected $fillable = [
+        'cat_article',
         'judul',
         'slug',
         'deskripsi',
-        'gambar_artikel',
+        'gambar_article',
+        'sumber'
     ];
 
+    public function catarticle()
+    {
+        return $this->belongsTo(Catarticle::class, 'cat_article', 'id');
+    }
 }

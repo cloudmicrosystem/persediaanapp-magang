@@ -34,7 +34,6 @@ class PersediaanController extends Controller
     public function create()
     {
         $category = Kategori::all();
-
         return view('backend.barang.create')->with(compact('category'));
     }
 
@@ -97,7 +96,6 @@ class PersediaanController extends Controller
     public function edit($id)
     {
         $barang = Barang::findOrFail($id);
-
         return view('backend.barang.edit')->with(compact('barang'));
     }
 
@@ -112,9 +110,9 @@ class PersediaanController extends Controller
     {
         $barang = Barang::find($id);
 
-        $gambar_disply = null;
         $request->validate([
-            'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144 '
+            'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144',
+            'nama_barang' => 'required|min:4'
         ]);
 
         if($request->hasFile('gambar_disply'))
