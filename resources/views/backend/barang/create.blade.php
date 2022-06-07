@@ -11,7 +11,7 @@
                     <!-- jquery validation -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Form Stok Barang</h3>
+                            <h3 class="card-title">Form Product</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -36,11 +36,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label>HPP </label>
-                                    <input type="decimal" name="hpp" class="form-control" required>
+                                    <input type="number" name="hpp" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Harga Jual </label>
-                                    <input type="decimal" name="price" class="form-control" required>
+                                    <input type="number" name="price" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi </label>
@@ -68,6 +68,7 @@
                             <!-- /.card-body -->
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
+                                <a href="{{ url ('barang')}}" class="btn btn-primary">Kembali</a>
                             </div>
                         </form>
                     </div>

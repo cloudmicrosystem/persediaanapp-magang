@@ -11,7 +11,7 @@
                     <!-- jquery validation -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Form Stok Barang</h3>
+                            <h3 class="card-title">Form Product</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -59,12 +59,13 @@
                                     <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=150px height=auto>
                                 @endif
                                 <div class="form-group">
-                                    <input type="file" name="gambar_displu" class="form-control">
+                                    <input type="file" name="gambar_disply" class="form-control">
                                 </div>
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                <a href="{{ url ('barang')}}" class="btn btn-primary">Kembali</a>
                             </div>
                         </form>
                     </div>

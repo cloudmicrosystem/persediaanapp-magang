@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Admin\GambarController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\CatarticleController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\PayPalPaymentController;
@@ -43,6 +44,7 @@ require __DIR__ . '/auth.php';
     Route::resource('/kategori', CategoryController::class);
     Route::resource('/gambar', GambarController::class);
     Route::resource('/article', ArticleController::class);
+    Route::resource('/catarticle', CatarticleController::class);
 });
 
     // USER

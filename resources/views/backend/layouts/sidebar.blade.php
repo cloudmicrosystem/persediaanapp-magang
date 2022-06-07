@@ -49,7 +49,7 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/article" class="nav-link">
+                                    <a href="/catarticle" class="nav-link">
                                         <i class="fas fa-ellipsis-h nav-icon"></i>
                                         <p>
                                             Kategori Artikel

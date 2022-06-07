@@ -85,10 +85,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = $request->all();
+        $category = Kategori::find($id);
+        $category->nama_category = $request->input('nama_category');
         $category['slug'] = Str::slug($request->nama_category);
-
-        $category = Kategori::findOrFail($id);
         $category->update();
 
         return redirect('kategori')->with('toast_success', 'Data Berhasil Diupdate');

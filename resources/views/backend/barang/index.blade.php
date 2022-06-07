@@ -9,12 +9,17 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table-bordered table table-responsive">
+                        <table class="table table-bordered table-hover">
                             <thead>
                                 <a class="btn btn-info" href="{{ url('barang/create') }}"><i class='fas fa-plus'></i></a>
                                 <br>
                                 <br>
-                                <tr>
+
+                                <div class="card-header" style="background: rgb(163, 171, 173)">
+                                    <h3 class="card-title" style="font-weight: bold">Product</h3>
+                                </div>
+
+                                <tr style="text-align: center">
                                     <th>Kategori</th>
                                     <th>Nama</th>
                                     <th>Slug</th>
@@ -40,10 +45,11 @@
                                             alt="{{ ($value->nama_barang) }}"
                                             width=150px height=auto /></td>
 
-                                        <td><a class="btn btn-info"
+                                        <td style="text-align: center">
+                                            <a class="btn btn-info"
                                                 href="{{ url('barang/' . $value->id . '/edit') }}"><i
                                                     class='fas fa-edit'></a></td>
-                                        <td>
+                                        <td style="text-align: center">
                                             <form action="{{ url('barang/' . $value->id) }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="_method" value="DELETE">

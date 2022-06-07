@@ -59,192 +59,37 @@
     <section class="section-blog bg-white p-20 p-b-50">
         <div class="container">
             <div class="row">
-                <!-- ARTIKEL 1 -->
+                @foreach ($article as $items)
                 <div class="col-md-4 p-t-30">
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                21 Dec 2017
-                            </div>
-                        </div>
-
+                    <div class="blo1" style="border-bottom: 2px solid black">
+                        <ul>
+                            <li>
+                                <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                                    <a href="detailartikel">
+                                        <img src="{{ asset('images/artikel/' . $items->gambar_article) }}"
+                                        class="img-fluid"
+                                        alt="{{ $items->judul }}"/>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="detailartikel">
                                 <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Daddyteddy Band Pop Punk Asal Malang Awali 2021 dengan Luncurkan Video Clip Sirna
-                                </h4>
-                            </a>
-
-                            <p class="m-b-20">
-                                Band Pop Punk yang terbentuk pada tahun 2012 ini beranggotakan Ivan sebagai vokalis, Rangga dan Ryan sebagai gitaris, Dwiki sebagai bassist dan Taufan sebagai drummer.
-                            </p>
-                            <a href="/detailartikel" class="txt4">
-                                View more
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ARTIKEL 2 -->
-                <div class="col-md-4 p-t-30">
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                22 Dec 2019
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    "SELF REMINDER", SEBUAH RENUNGAN HIDUP HARI INI
+                                    {{ $items->judul }}
                                 </h4>
                             </a>
                             <p class="m-b-20">
-                                Fandi Akhmad (vocal), Romy Fatchurrozi (drum). Rizal Nandha (lead
-                                guitar) dan Trinanda/Landang (Rhythm Guitar) adalah TDALV atau Today
-                                Alive
+                                {{ Str::limit($items->deskripsi, '80', ' . . . . . . . ') }}
                             </p>
-                            <a href="/detailartikel" class="txt4">
+                            {{-- <a href="detailartikel" class="txt4" >
                                 View more
                                 <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>
-
-                <!-- ARTIKEL 3 -->
-                <div class="col-md-4 p-t-30">
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    LEPAS MUSIC VIDEO "SOUND OF WEAPON" EXCROWDED BERSIAP UNTUK FULL ALBUM TERBARU
-                                </h4>
-                            </a>
-
-                            <p class="m-b-20">
-                                Excrowded adalah band hardcore sal Malang yang memilik ciri khas
-                                gitar yang berat dengan ketukan drum ala Madball Trapped Under Ice,
-                                Expire
-                            </p>
-                            <a href="/detailartikel" class="txt4">
-                                View more
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ARTIKEL 4 -->
-                <div class="col-md-4 p-t-30">
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    UNGKAPKAN BERBAGAI KEGAGALAN
-                                    LEWAT SINGLE "UNSEEN"
-                                </h4>
-                            </a>
-
-                            <p class="m-b-20">
-                                Setelah merilis single bertajuk Unseen pada bulan Desember tahun 2018,
-                                Oddwain, band Alternative Rock Kepanjen, Malang ini akhirnya mengu-
-                                mumkan dirilisnya EP mereka pada tanggal 22 Januari 2019 dengan nama
-                                La Cosa Nostra
-                            </p>
-                            <a href="/detailartikel" class="txt4">
-                                View more
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ARTIKEL 5 -->
-                <div class="col-md-4 p-t-30">
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    MINI ALBUM TERBARU DARI
-                                    NOOSE BERJUDUL
-                                    "FLAWLESS DARKNESS"
-                                </h4>
-                            </a>
-                            <p class="m-b-20">
-                                Noose diinisiasi oleh tiga pemuda tanggung pengibar bendera heavy rock
-                                di Kota Malang Mereka adalah Fadly (vocal &gitar), Kevin (bass) dan Dendi
-                                (drum) yang mencoba meleburkan musk stoner
-                            </p>
-                            <a href="/detailartikel" class="txt4">
-                                View more
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ARTIKEL 6 -->
-                <div class="col-md-4 p-t-30">
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="detailartikel">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    BARU SAJA MEMPRODUKSI DEBUT ALBUM
-                                    BERNAMA "REFERENCES"
-                                </h4>
-                            </a>
-
-                            <p class="m-b-20">
-                                References adalah sebuah fragmen yang mengandung keangkuhan namun
-                                juga diksi solid yang berisi tumpukan perasaan kuat dan akan perlahan
-                                memba wa kita ke kegelapan pekat.
-                            </p>
-                            <a href="/detailartikel" class="txt4">
-                                View more
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

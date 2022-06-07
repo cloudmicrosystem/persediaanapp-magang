@@ -103,7 +103,6 @@
                                                     </div>
                                                 </li>
                                             </ul>
-
                                             <div class="card-body ">
                                                 <div class="t-center">
                                                     <a href="detail">
