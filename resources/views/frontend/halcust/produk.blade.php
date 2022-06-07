@@ -1,4 +1,4 @@
-<div class="col-md-12 mb-8" style="background-color: black">
+<div class="col-12 mb-8 t-center" style="background-color: black">
     <div class="row">
         @foreach ($barang as $items)
             <div class="col-md-3">

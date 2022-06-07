@@ -12,6 +12,7 @@ use App\Http\Controllers\Users\HalrefundController;
 use App\Http\Controllers\Users\HalorderController;
 use App\Http\Controllers\Users\HalfaqController;
 use App\Http\Controllers\Users\HalcheckoutController;
+use App\Http\Controllers\Users\Halwhislist;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
@@ -60,6 +61,8 @@ require __DIR__ . '/auth.php';
     Route::get('/faq', [HalfaqController::class, 'index']);
     Route::get('/checkout', [HalcheckoutController::class, 'index']);
     Route::get('/test', [TestController::class, 'index']);
+    Route::get('/whislist', [Halwhislist::class, 'index']);
+
 
     // Route::get('handle-payment', [PayPalPaymentController::class, 'handlePayment'])->name('make.payment');
     // Route::get('cancel-payment', [PayPalPaymentController::class, 'paymentCancel'])->name('cancel.payment');

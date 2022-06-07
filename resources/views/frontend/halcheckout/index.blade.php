@@ -1,23 +1,9 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    {{-- CSS Class Content --}}
-    @stack('custom-css')
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ asset('assetcus/css/normalize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assetcus/css/foundation.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assetcus/css/demo.css') }}" />
-    <script src="{{ asset('assetcus/js/vendor/modernizr.js') }}"></script>
-    <script src="{{ asset('assetcus/js/vendor/jquery.js') }}"></script>
     <title>Detail | Morfeen </title>
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
@@ -39,7 +25,7 @@
     <link rel="stylesheet" type="text/css"
         href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
     <!--===============================================================================================-->
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/lightbox2/css/lightbox.min.css') }}">
     <!--===============================================================================================-->
@@ -51,6 +37,21 @@
     <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('assetcus/css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assetcus/css/foundation.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assetcus/css/demo.css') }}" />
+    <script src="{{ asset('assetcus/js/vendor/modernizr.js') }}"></script>
+    <script src="{{ asset('assetcus/js/vendor/jquery.js') }}"></script>
+
+    {{-- CSS Class Content --}}
+    @stack('custom-css')
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
 
 </head>
 
@@ -110,59 +111,10 @@
 
                         <a href="#"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
 
-                        {{-- KERANJANG --}}
-                        {{-- <div class="span6">
-                            <div class="product-Info">
-                                <span class="keranjang_quantity"></span>
-                                <a href="#myModal" role="button" class="product-view" data-toggle="modal"><i
-                                        class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-                            </div>
-
-                            <div id="myModal" class="modal hide fade">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">&times;</button>
-                                    <h3><span class="keranjang_quantity"></span> items</h3>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="keranjang_items"></div>
-                                    <!-- Yep it's that simple -->
-                                    <hr>
-                                    <div class="left"><strong>Items: </strong><span
-                                            class="keranjang_quantity"></span></div>
-                                    <div class="right"><strong>Total: </strong><span
-                                            class="keranjang_total"></span></div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="javascript:;" class="keranjang_empty">Empty</a>
-                                    <a href="javascript:;" class="keranjang_checkout">Checkout</a>
-                                </div>
-                            </div>
-
-                            <div class="product-total">
-
-                                <p><b>Items:</b> <span class="keranjang_quantity"></span></p>
-                                <!--number of items in the cart-->
-
-                                <p><b>Total:</b> <span class="keranjang_total"></span></p>
-                                <!-- total cost of cart before tax & shipping-->
-
-                                <p><b>Tax rate:</b> <span class="keranjang_taxRate"></span></p>
-                                <!--will be display as a percentage ( ie 7% )-->
-
-                                <p><b>Tax:</b> <span class="keranjang_tax"></span></p>
-                                <!--taxRate X total displayed as currency-->
-
-                                <p><b>Final price:</b> <span class="keranjang_grandTotal"></span> </p>
-                                <!--total of the cart after tax & shipping -->
-
-                            </div>
-
-                        </div><!-- /span6 --> --}}
 
                         <a href="#"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
 
-                        {{-- <button class="btn-show-sidebar m-l-33 trans-0-4"></button> --}}
+                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
 
                 </div>
