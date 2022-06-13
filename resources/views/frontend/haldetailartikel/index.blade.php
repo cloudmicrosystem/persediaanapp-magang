@@ -57,10 +57,31 @@
 
     {{-- Detail Artikel  --}}
     <section>
+        <div class="bread-crumb bo5-b p-t-17 p-b-17">
+			<div class="container">
+				<a href="/" class="txt27">
+					Home
+				</a>
+
+				<span class="txt29 m-l-10 m-r-10">/</span>
+
+                <a href="artikel" class="txt27">
+					Artikel
+				</a>
+
+                <span class="txt29 m-l-10 m-r-10">/</span>
+
+
+				<span class="txt29">
+					Blog
+				</span>
+			</div>
+		</div>
+
 		<div class="container">
 			<div class="row ">
 				<div class="col-md-8 col-lg-9">
-					<div class="p-t-80 p-b-20 bo5-r p-r-50 h-full p-r-0-md bo-none-md">
+					<div class="p-t-30 p-b-20 bo5-r p-r-50 h-full p-r-0-md bo-none-md">
 						<!-- Block4 -->
 						<div class="blo4 p-b-63">
 							<!-- - -->
@@ -122,51 +143,13 @@
 				</div>
 
 				<div class="col-md-4 col-lg-3">
-					<div class="sidebar2 p-t-80 p-b-80 p-l-20 p-l-0-md p-t-0-md">
+					<div class="sidebar2 p-t-30 p-b-80 p-l-20 p-l-0-md p-t-0-md">
 						<!-- Search -->
 						<div class="search-sidebar2 size12 bo2 pos-relative">
 							<input class="input-search-sidebar2 txt10 p-l-20 p-r-55" type="text" name="search" placeholder="Search">
 							<button class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
 						</div>
 
-						<!-- Categories -->
-						{{-- <div class="categories">
-							<h4 class="txt33 bo5-b p-b-35 p-t-58">
-								Categories
-							</h4>
-
-							<ul>
-								<li class="bo5-b p-t-8 p-b-8">
-									<a href="#" class="txt27">
-										1
-									</a>
-								</li>
-
-								<li class="bo5-b p-t-8 p-b-8">
-									<a href="#" class="txt27">
-										2
-									</a>
-								</li>
-
-								<li class="bo5-b p-t-8 p-b-8">
-									<a href="#" class="txt27">
-										3
-									</a>
-								</li>
-
-								<li class="bo5-b p-t-8 p-b-8">
-									<a href="#" class="txt27">
-										4
-									</a>
-								</li>
-
-								<li class="bo5-b p-t-8 p-b-8">
-									<a href="#" class="txt27">
-				                        5
-									</a>
-								</li>
-							</ul>
-						</div> --}}
 
 						<!-- Most Popular -->
 						<div class="popular">

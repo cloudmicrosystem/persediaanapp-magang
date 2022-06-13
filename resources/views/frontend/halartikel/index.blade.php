@@ -56,7 +56,211 @@
     <br>
 
     <!-- ARTIKEL -->
-    <section class="section-blog bg-white p-20 p-b-50">
+    <section>
+        <div class="bread-crumb bo5-b p-t-17 p-b-17">
+            <div class="container">
+                <a href="/" class="txt27">
+                    Home
+                </a>
+
+                <span class="txt29 m-l-10 m-r-10">/</span>
+
+                <span class="txt29">
+                    Artikel
+                </span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-9">
+                    <div class="p-t-30 pb-5 bo5-r h-full p-r-50 p-r-0-md bo-none-md">
+
+                        <!-- Block4 -->
+                        <div class="blo4 p-b-63">
+                            <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
+                                <a href="detailartikel">
+                                    <img src="images/artikel/jenis kain.jpg" alt="IMG-BLOG">
+                                </a>
+                            </div>
+
+                            <div class="text-blo4 p-t-33">
+                                <h4 class="p-b-16">
+                                    <a href="detailartikel" class="tit9">Combed</a>
+                                </h4>
+
+                                <div class="txt32 flex-w p-b-24">
+                                    <span>
+                                        by Admin
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+                                    <span>
+                                        2 Juni, 2022
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+                                    <span>
+                                        Combed
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+
+                                </div>
+
+                                <p>
+                                    Kain cotton combed memang populer digunakan untuk bahan kaus oleh distro.
+                                </p>
+
+                                <a href="detailartikel" class="dis-block txt4 m-t-30">
+                                    Continue Reading
+                                    <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Block4 -->
+                        <div class="blo4 p-b-63">
+                            <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
+                                <a href="detailartikel">
+                                    <img src="images/artikel/jenis kain.jpg" alt="IMG-BLOG">
+                                </a>
+                            </div>
+
+                            <div class="text-blo4 p-t-33">
+                                <h4 class="p-b-16">
+                                    <a href="detailartikel" class="tit9">combed 30s</a>
+                                </h4>
+
+                                <div class="txt32 flex-w p-b-24">
+                                    <span>
+                                        by Admin
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+                                    <span>
+                                        2 Juni, 2022
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+                                    <span>
+                                        combed 30s
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+
+                                </div>
+
+                                <p>
+                                    Semakin tinggi angkanya, semakin tipis dan lemas kain yang dihasilkan ,sementara 30s
+                                    paling tipis dan lunak.
+                                </p>
+
+                                <a href="detailartikel" class="dis-block txt4 m-t-30">
+                                    Continue Reading
+                                    <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Block4 -->
+                        <div class="blo4 p-b-63">
+                            <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
+                                <a href="detailartikel">
+                                    <img src="images/artikel/Cotton.jpg" alt="IMG-BLOG">
+                                </a>
+                            </div>
+
+                            <div class="text-blo4 p-t-33">
+                                <h4 class="p-b-16">
+                                    <a href="detailartikel" class="tit9">Katun</a>
+                                </h4>
+
+                                <div class="txt32 flex-w p-b-24">
+                                    <span>
+                                        by Admin
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+                                    <span>
+                                        2 Juni, 2022
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+                                    <span>
+                                        Katun
+                                        <span class="m-r-6 m-l-4">|</span>
+                                    </span>
+
+                                </div>
+
+                                <p>
+                                    Katun merupakan salah satu bagian dari jenis kain yang berasal dari bahan-bahan
+                                    serat alami tumbuhan kapas atau yang nama latin yaitu “gossypium.”
+                                </p>
+
+                                <a href="detailartikel" class="dis-block txt4 m-t-30">
+                                    Continue Reading
+                                    <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Pagination -->
+                        <div class="pagination flex-l-m flex-w m-l--6 p-t-25">
+                            <a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
+                            <a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <div class="sidebar2 p-t-30 p-b-80 p-l-20 p-l-0-md p-t-0-md">
+                        <!-- Search -->
+                        <div class="search-sidebar2 size12 bo2 pos-relative">
+                            <input class="input-search-sidebar2 txt10 p-l-20 p-r-55" type="text" name="search"
+                                placeholder="Search">
+                            <button class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="categories">
+                            <h4 class="txt33 bo5-b p-b-35 p-t-30">
+                                Categori
+                            </h4>
+
+                            <ul>
+                                <li class="bo5-b p-t-4 p-b-4">
+                                    <a href="#" class="txt27">
+                                        Katun
+                                    </a>
+                                </li>
+
+                                <li class="bo5-b p-t-4 p-b-4">
+                                    <a href="#" class="txt27">
+                                        Combed
+                                    </a>
+                                </li>
+
+                                <li class="bo5-b p-t-4 p-b-4">
+                                    <a href="#" class="txt27">
+                                        combed 30s
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {{-- <section class="section-blog bg-white p-20 p-b-50">
         <div class="container">
             <div class="row">
                 @foreach ($article as $items)
@@ -82,17 +286,17 @@
                             <p class="m-b-20">
                                 {{ Str::limit($items->deskripsi, '80', ' . . . . . . . ') }}
                             </p>
-                            {{-- <a href="detailartikel" class="txt4" >
+                            <a href="detailartikel" class="txt4" >
                                 View more
                                 <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a> --}}
+                            </a>
                         </div>
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <!-- Footer -->

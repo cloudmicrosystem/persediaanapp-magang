@@ -125,6 +125,27 @@
     </section>
 
     <section class="content">
+        <div class="bread-crumb bo5-b p-t-17 p-b-17">
+			<div class="container">
+				<a href="/" class="txt27">
+					Home
+				</a>
+
+				<span class="txt29 m-l-10 m-r-10">/</span>
+
+                <a href="product" class="txt27">
+					Product
+				</a>
+
+                <span class="txt29 m-l-10 m-r-10">/</span>
+
+
+				<span class="txt29">
+					Detail Product
+				</span>
+			</div>
+		</div>
+
         <div class="d-flex justify-content-center">
             <div class="card card-solid">
                 <div class="card-body">
