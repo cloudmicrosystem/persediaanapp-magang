@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('admin.layout.master')
 @section('title')
 Artikel | Morfeen
 @endsection

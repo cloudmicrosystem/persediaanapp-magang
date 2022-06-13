@@ -1,149 +1,73 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
-    <title>Login</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{ asset('') }}assets/plugins/login/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
-</head>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Login') }}</div>
 
-<body>
-    <div class="cont">
+                <div class="card-body">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-        <div class="form sign-in">
-            <h2>Sign In</h2>
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
-                <label>
-                    <x-label for="email" :value="__('Email')" />
-                    <x-input id="email" class="" type="email" name="email" :value="old('email')" />
-                </label>
-                <label>
-                    <x-label for="password" :value="__('Password')" />
-
-                    <x-input id="password" class="" type="password" name="password" required
-                        autocomplete="current-password" />
-                </label>
-
-                <br>
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-
-                <p class="forgot-pass">
-                    @if (Route::has('password.request'))
-                        <a class="text-muted1" href="{{ route('password.request') }}"
-                            style="margin-right: 15px; margin-top: 15px;">
-                            {{ __('Forgot your password?') }}
-                        </a>
-                    @endif
-                </p>
-            </form>
-            <div class="social-media">
-                <ul>
-                    <li><img src="logo/facebook.png"></li>
-                    <li><img src="logo/twitter.png"></li>
-                    <li><img src="logo/linkedin.png"></li>
-                    <li><img src="logo/instagram.png"></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="sub-cont">
-            <div class="img">
-                <div class="img-text m-up">
-                    <h2>New here?</h2>
-                    <p>Sign up and discover great amount of new opportunities!</p>
-                </div>
-                <div class="img-text m-in">
-                    <h2>One of us?</h2>
-                    <p>If you already has an account, just sign in. We've missed you!</p>
-                </div>
-                <div class="img-btn ">
-                    <span class="m-up">Sign up</span>
-                    <span class="m-in">Sign In</span>
-                </div>
-            </div>
-
-            <div class="form sign-up">
-                <!-- Validation Errors -->
-                <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-                <form method="POST" action="{{ route('register') }}">
-                    @csrf
-
-                    <h2>Sign Up</h2>
-                    <div class="overflow-auto">
-                        <div class="menu">
-                            <div class="col">
-                                <label>
-                                    <x-label for="name" :value="__('Nama')" />
-
-                                    <x-input id="name" class="" type="text" name="nama" :value="old('name')"
-                                        required autofocus />
-                                </label>
-                                <label>
-                                    <div class="mt-4">
-                                        <x-label for="alamat" :value="__('Alamat')" />
-
-                                        <x-input id="alamat" class="" type="text" name="alamat"
-                                            :value="old('alamat')" required />
-                                    </div>
-                                </label>
-                                <label>
-                                    <div class="mt-4">
-                                        <x-label for="no_hp" :value="__('No Hp')" />
-
-                                        <x-input id="no_hp" class="" type="number" name="no_hp"
-                                            :value="old('no_hp')" required />
-                                    </div>
-                                </label>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
-
-                            <label>
-                                <div class="mt-4">
-                                    <x-label for="email" :value="__('Email')" />
-
-                                    <x-input id="email" class="" type="email" name="email"
-                                        :value="old('email')" required />
-                                </div>
-                            </label>
-                            <label>
-                                <div class="mt-4">
-                                    <x-label for="password" :value="__('Password')" />
-
-                                    <x-input id="password" class="" type="password" name="password"
-                                        required autocomplete="new-password" />
-                                </div>
-                            </label>
-                            <label>
-                                <div class="mt-4">
-                                    <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                                    <x-input id="password_confirmation" class="" type="password"
-                                        name="password_confirmation" required />
-                                </div>
-                            </label>
-                            <br>
-                            <x-button class="ml-4">
-                                {{ __('Register') }}
-                            </x-button>
-                            <br>
                         </div>
-                    </div>
-                </form>
+
+                        <div class="row mb-3">
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="{{ asset('') }}assets/plugins/login/script.js"></script>
-</body>
-
-</html>
+</div>
+@endsection

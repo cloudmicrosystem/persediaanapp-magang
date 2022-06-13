@@ -19,7 +19,7 @@ class CatarticleController extends Controller
     {
         $catarticle = Catarticle::paginate(5);
 
-        return view('backend.catarticle.index')->with(compact('catarticle'));
+        return view('admin.catarticle.index')->with(compact('catarticle'));
     }
 
     /**
@@ -29,7 +29,7 @@ class CatarticleController extends Controller
      */
     public function create()
     {
-        return view('backend.catarticle.create');
+        return view('admin.catarticle.create');
     }
 
     /**
@@ -73,7 +73,7 @@ class CatarticleController extends Controller
     {
         $catarticle = Catarticle::findOrFail($id);
 
-        return view('backend.catarticle.edit')->with(compact('catarticle'));
+        return view('admin.catarticle.edit')->with(compact('catarticle'));
     }
 
     /**

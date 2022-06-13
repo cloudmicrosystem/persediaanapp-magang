@@ -54,6 +54,14 @@
                                     <label>Qty </label>
                                     <input type="number" name="qty" class="form-control" required>
                                 </div>
+                                <div class="form-group">
+                                    <label>Status </label>
+                                    <input type="checkbox" name="status">
+                                </div>
+                                <div class="form-group">
+                                    <label>Trending </label>
+                                    <input type="checkbox" name="trending">
+                                </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Gambar</span>

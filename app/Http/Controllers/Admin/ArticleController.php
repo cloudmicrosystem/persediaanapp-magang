@@ -19,7 +19,7 @@ class ArticleController extends Controller
     public function index()
     {
         $article = Article::paginate(5);
-        return view('backend.article.index')->with(compact('article'));
+        return view('admin.article.index')->with(compact('article'));
     }
 
     /**
@@ -30,7 +30,7 @@ class ArticleController extends Controller
     public function create()
     {
         $catarticle = Catarticle::all();
-        return view('backend.article.create')->with(compact('catarticle'));
+        return view('admin.article.create')->with(compact('catarticle'));
     }
 
     /**
@@ -86,7 +86,7 @@ class ArticleController extends Controller
     public function edit($id)
     {
         $article = Article::findOrFail($id);
-        return view('backend.article.edit')->with(compact('article'));
+        return view('admin.article.edit')->with(compact('article'));
     }
 
     /**

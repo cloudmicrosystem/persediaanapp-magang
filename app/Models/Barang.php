@@ -19,6 +19,8 @@ class Barang extends Model
         'deskripsi',
         'size',
         'qty',
+        'status',
+        'trending',
         'gambar_disply',
     ];
 

@@ -1,7 +1,8 @@
-@extends('backend.layouts.master')
+@extends('admin.layout.master')
 @section('title')
 Artikel | Morfeen
 @endsection
+
 
 @section('content')
     <div class="container-fluid">
@@ -9,7 +10,7 @@ Artikel | Morfeen
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-responsive">
                             <thead>
                                 <a class="btn btn-info" href="{{ url ('article/create')}}"><i class='fas fa-plus'></i></a>
                                 <br>

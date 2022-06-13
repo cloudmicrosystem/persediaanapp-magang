@@ -71,6 +71,8 @@ class PersediaanController extends Controller
         $barang->deskripsi = $request->input('deskripsi');
         $barang->size = $request->input('size');
         $barang->qty = $request->input('qty');
+        $barang->status = $request->input('status') == TRUE ? '1':'0';
+        $barang->trending = $request->input('trending') == TRUE ? '1':'0';
         $barang->save();
 
         return redirect('barang')->with('toast_success', 'Data Berhasil Disimpan');
@@ -157,7 +159,15 @@ class PersediaanController extends Controller
             File::delete($path);
         }
         $barang->delete();
+
         return redirect('barang')->with('toast_success', 'Data Berhasil Dihapus');
+    }
+
+    public function search(){
+        $search_text = $_GET['query'];
+        $barang = Barang::where('nama_barang', 'LIKE', '%'.$search_text.'%')->with('category')->get();
+
+        return view('backend.barang.search')->with(compact('barang'));
     }
 }
 

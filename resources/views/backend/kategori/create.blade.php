@@ -15,12 +15,12 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form id="quickForm" method="POST" action="{{ url('kategori') }}">
+                        <form id="quickForm" method="POST" action="{{ url('kategori') }}" onsubmit="handleSubmit()">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Nama </label>
-                                    <input type="text" name="nama_category" class="form-control" required>
+                                    <input type="text" name="nama_category" class="form-control" required id="nama">
                                 </div>
                             </div>
                             <!-- /.card-body -->
@@ -41,4 +41,5 @@
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
-    @endsection
+    </section>
+@endsection
