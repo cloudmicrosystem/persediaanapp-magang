@@ -33,7 +33,7 @@
                             <div class="card-body">
                                 <table class="table table-bordered table-hover">
                                     <thead>
-                                       <tr>
+                                       <tr style="text-align: center">
                                             <th>Kategori</th>
                                             <th>Judul</th>
                                             <th>Slug</th>

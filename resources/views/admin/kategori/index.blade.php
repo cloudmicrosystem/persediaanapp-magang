@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Artikel</li>
+                            <li class="breadcrumb-item active">Product</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -23,8 +23,8 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Kategori Artikel</h3>
-                                <a class="btn btn-block btn-success" href="{{ url ('catarticle/create')}}"
+                                <h3 class="card-title">Kategori Product</h3>
+                                <a class="btn btn-block btn-success" href="{{ url ('kategori/create')}}"
                                 style="max-width: 150px; float:right; disply:inline-block">
                                 <i>Tambah Kategori</i>
                             </a>
@@ -40,13 +40,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($catarticle as $key=>$value)
+                                        @foreach ($category as $key=>$value)
                                             <tr>
-                                                <td>{{ $value->nama }}</td>
+                                                <td>{{ $value->nama_category }}</td>
                                                 <td>{{ $value->slug }}</td>
-                                                <td style="text-align: center"><a class="btn btn-info" href="{{ url('catarticle/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
+                                                <td style="text-align: center"><a class="btn btn-info" href="{{ url('kategori/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
                                                 <td style="text-align: center">
-                                                    <form action="{{ url('catarticle/'.$value->id) }}" method="POST">
+                                                    <form action="{{ url('kategori/'.$value->id) }}" method="POST">
                                                         @csrf
                                                         <input type="hidden" name="_method" value="DELETE">
                                                         <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i></button>
@@ -57,7 +57,7 @@
                                     </tbody>
                                 </table>
                                 <br>
-                                {{ $catarticle->links() }}
+                                {{ $category->links() }}
                             </div>
                             <!-- /.card-body -->
                         </div>

@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Artikel</li>
+                            <li class="breadcrumb-item active">Product</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -23,10 +23,10 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Kategori Artikel</h3>
-                                <a class="btn btn-block btn-success" href="{{ url ('catarticle/create')}}"
+                                <h3 class="card-title">Gambar Detail Product</h3>
+                                <a class="btn btn-block btn-success" href="{{ url ('detailpro/create')}}"
                                 style="max-width: 150px; float:right; disply:inline-block">
-                                <i>Tambah Kategori</i>
+                                <i>Tambah Gambar</i>
                             </a>
                             </div>
                             <!-- /.card-header -->
@@ -35,29 +35,38 @@
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>Nama</th>
-                                            <th>Slug</th>
+                                            <th>Gambar</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($catarticle as $key=>$value)
-                                            <tr>
-                                                <td>{{ $value->nama }}</td>
-                                                <td>{{ $value->slug }}</td>
-                                                <td style="text-align: center"><a class="btn btn-info" href="{{ url('catarticle/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
-                                                <td style="text-align: center">
-                                                    <form action="{{ url('catarticle/'.$value->id) }}" method="POST">
-                                                        @csrf
-                                                        <input type="hidden" name="_method" value="DELETE">
-                                                        <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i></button>
-                                                    </form>
-                                                </td>
-                                            </tr>
+                                        @foreach ($newBarang as $key=>$value)
+                                        <tr>
+                                            <td>{{ $value['nama_barang'] }}</td>
+                                            <td>
+                                                @foreach ($value['gambar'] as $item)
+                                                    <img src="{{ asset('images/katalog/' . $item['url_gambar']) }}"
+                                                        alt="{{ $value['nama_barang'] }}" width="100px" height="100px" />
+                                                @endforeach
+                                            </td>
+                                            <td><a class="btn btn-info" href="{{ url('detailpro/'. $value['id'] . '/edit') }}">
+                                                <i class="fas fa-edit"></i></a>
+                                            </td>
+                                            <td>
+                                                <form action="{{ url('barang/' . $value['id']) }}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="_method" id="DELETE">
+                                                    <button class="btn btn-danger" type="submit">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                                 <br>
-                                {{ $catarticle->links() }}
+                                {{-- {{ $category->links() }} --}}
                             </div>
                             <!-- /.card-body -->
                         </div>

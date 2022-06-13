@@ -23,7 +23,7 @@ class PersediaanController extends Controller
     public function index()
     {
         $barang = Barang::paginate(5);
-        return view('backend.barang.index')->with(compact('barang'));
+        return view('admin.product.index')->with(compact('barang'));
     }
 
     /**
@@ -34,7 +34,7 @@ class PersediaanController extends Controller
     public function create()
     {
         $category = Kategori::all();
-        return view('backend.barang.create')->with(compact('category'));
+        return view('admin.product.create')->with(compact('category'));
     }
 
     /**
@@ -98,7 +98,7 @@ class PersediaanController extends Controller
     public function edit($id)
     {
         $barang = Barang::findOrFail($id);
-        return view('backend.barang.edit')->with(compact('barang'));
+        return view('admin.product.edit')->with(compact('barang'));
     }
 
     /**

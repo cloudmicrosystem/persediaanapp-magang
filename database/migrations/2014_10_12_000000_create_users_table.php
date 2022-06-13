@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->integer('no_hp');
             $table->string('username') -> nullable();
             $table->string('password');
+            $table->integer('is_admin');
             $table->string('created_by')-> nullable();
             $table->string('updated_by') -> nullable();
             $table->rememberToken();

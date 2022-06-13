@@ -28,31 +28,20 @@ use App\Http\Controllers\Users\HalcheckoutController;
 use App\Http\Controllers\Users\HaldetailartikelController;
 use App\Http\Controllers\Users\HaldetailproductController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 require __DIR__ . '/auth.php';
     // ADMIN
     Route::middleware(['auth'])->group(function () {
-        Route::get('/dashboard', [AdminController::class, 'dashboard']);
-        Route::resource('/user', UserController::class);
-        Route::resource('/kategori', CategoryController::class);
-        Route::resource('/gambar', GambarController::class);
-        Route::resource('/article', ArticleController::class);
-        Route::resource('/catarticle', CatarticleController::class);
 
-        Route::resource('/barang', PersediaanController::class);
-        Route::get('/search', [PersediaanController::class, 'search']);
     });
 
+    Route::get('/dashboard', [AdminController::class, 'dashboard']);
+    Route::resource('/user', UserController::class);
+    Route::resource('/kategori', CategoryController::class);
+    Route::resource('/gambar', GambarController::class);
+    Route::resource('/article', ArticleController::class);
+    Route::resource('/catarticle', CatarticleController::class);
+    Route::resource('/barang', PersediaanController::class);
+    Route::get('/search', [PersediaanController::class, 'search']);
     // Route::get('/login', [LoginController::class, 'login']);
     // Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
 

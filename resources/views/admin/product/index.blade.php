@@ -24,32 +24,57 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Kategori Artikel</h3>
-                                <a class="btn btn-block btn-success" href="{{ url ('catarticle/create')}}"
+                                <a class="btn btn-block btn-success" href="{{ url('barang/create') }}"
                                 style="max-width: 150px; float:right; disply:inline-block">
-                                <i>Tambah Kategori</i>
+                                <i>Tambah Product</i>
                             </a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table class="table table-bordered table-hover">
+                                <table class="table table-bordered table-responsive">
                                     <thead>
                                         <tr style="text-align: center">
+                                            <th>Kategori</th>
                                             <th>Nama</th>
                                             <th>Slug</th>
+                                            <th>HPP</th>
+                                            <th>Harga</th>
+                                            <th>Deskripsi</th>
+                                            <th>Ukuran</th>
+                                            <th>Qty</th>
+                                            <th>Gambar</th>
+                                            <th>Status</th>
+                                            <th>Trending</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($catarticle as $key=>$value)
+                                        @foreach ($barang as $key=>$value)
                                             <tr>
-                                                <td>{{ $value->nama }}</td>
-                                                <td>{{ $value->slug }}</td>
-                                                <td style="text-align: center"><a class="btn btn-info" href="{{ url('catarticle/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
+                                                <td>{{ $value->category->nama_category }}</td>
+                                                <td>{{ $value->nama_barang }}</td>
+                                                <td>{{ $value->slug }} </td>
+                                                <td>{{ $value->hpp }} </td>
+                                                <td>{{ $value->price }} </td>
+                                                <td>{{ $value->deskripsi }} </td>
+                                                <td>{{ $value->size }}</td>
+                                                <td>{{ $value->qty }} pcs</td>
+                                                <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}"
+                                                    alt="{{ ($value->nama_barang) }}"
+                                                    width=150px height=auto />
+                                                </td>
+                                                <td>{{ $value->status }}</td>
+                                                <td>{{ $value->trending }}</td>
                                                 <td style="text-align: center">
-                                                    <form action="{{ url('catarticle/'.$value->id) }}" method="POST">
+                                                    <a class="btn btn-info"
+                                                        href="{{ url('barang/' . $value->id . '/edit') }}"><i
+                                                            class='fas fa-edit'></a></td>
+                                                <td style="text-align: center">
+                                                    <form action="{{ url('barang/' . $value->id) }}" method="POST">
                                                         @csrf
                                                         <input type="hidden" name="_method" value="DELETE">
-                                                        <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i></button>
+                                                        <button class="btn btn-danger" type="submit"><i
+                                                                class='fas fa-trash-alt'></i></button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -57,7 +82,7 @@
                                     </tbody>
                                 </table>
                                 <br>
-                                {{ $catarticle->links() }}
+                                {{ $barang->links() }}
                             </div>
                             <!-- /.card-body -->
                         </div>

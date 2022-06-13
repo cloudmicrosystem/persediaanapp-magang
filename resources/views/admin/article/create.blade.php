@@ -61,7 +61,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Sumber Artikel</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="sumber" placeholder="Sumber Artikel" requaired>
+                                        <textarea type="text" class="form-control" id="exampleInputBorder" name="sumber" placeholder="Sumber Artikel" requaired></textarea>
                                     </div>
                                 </div>
                                 <div class="card-footer">

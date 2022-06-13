@@ -19,7 +19,7 @@ class CategoryController extends Controller
     {
         $category = Kategori::paginate(5);
 
-        return view('backend.kategori.index')->with(compact('category'));
+        return view('admin.kategori.index')->with(compact('category'));
     }
 
     /**
@@ -29,7 +29,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('backend.kategori.create');
+        return view('admin.kategori.create');
     }
 
     /**
@@ -73,7 +73,7 @@ class CategoryController extends Controller
     {
         $category = Kategori::findOrFail($id);
 
-        return view('backend.kategori.edit')->with(compact('category'));
+        return view('admin.kategori.edit')->with(compact('category'));
     }
 
     /**

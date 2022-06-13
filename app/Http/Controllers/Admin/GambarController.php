@@ -32,7 +32,7 @@ class GambarController extends Controller
             array_push($newBarang, $data);
         }
 
-        return view('backend.detailpro.index')->with(compact('newBarang'));
+        return view('admin.detailpro.index')->with(compact('newBarang'));
     }
 
     /**
