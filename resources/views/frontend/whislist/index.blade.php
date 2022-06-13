@@ -62,7 +62,7 @@
             <div class="card " style="border: black">
                 <div class="card-body " style="background-color: black ; border: black">
                     <div class="row">
-                        <table class="table-bordered table table-responsive ">
+                        <table class=" table  ">
                             <thead class="border-color: black">
                                 <tr class="border-color: black">
                                     <th class="text-white">Produk</th>
@@ -78,13 +78,25 @@
                                         src="images/katalog/akse1-1.jpg" alt=""></td>
                                 <td class="text-white text-center" style="width: 300px">Sandal </td>
                                 <td class="text-white ">Rp. 100.000.00</td>
-                                <td class="text-white"> 1</td>
-                                <td><button type="submit" class="btn btn-sm btn-danger mb-2">
+                                <td>
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus button is-form"> <label
+                                            class="screen-reader-text" for="quantity"></label>
+                                        <input type="number" id="quantity" class="input-text qty text"
+                                            step="1" min="1" max="2" name="quantity" value="1" title="Qty" size="4"
+                                            placeholder="" inputmode="numeric" />
+                                        <input type="button" value="+" class="plus button is-form text-black">
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-sm btn-danger mb-2">
                                         Hapus
-                                    </button></td>
-                                <td><button type="submit" class="btn btn-sm btn-primary mb-2">
+                                    </button>
+
+                                    <button type="submit" class="btn btn-sm btn-primary mb-2">
                                         Add
-                                    </button></td>
+                                    </button>
+                                </td>
                             </tr>
 
                             <tr>
@@ -95,10 +107,11 @@
                                 <td class="text-white"> 1 </td>
                                 <td><button type="submit" class="btn btn-sm btn-danger mb-2">
                                         Hapus
-                                    </button></td>
-                                <td><button type="submit" class="btn btn-sm btn-primary mb-2">
+                                    </button>
+                                    <button type="submit" class="btn btn-sm btn-primary mb-2">
                                         Add
-                                    </button></td>
+                                    </button>
+                                </td>
                             </tr>
                         </table>
                     </div>

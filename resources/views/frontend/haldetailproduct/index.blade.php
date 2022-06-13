@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/xzoom.css') }}" media="all" />
 
     <title>Detail | Morfeen </title>
+
     {{-- CSS Class Content --}}
     @stack('custom-css')
     <!-- Google Font: Source Sans Pro -->
@@ -44,6 +45,8 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css"
         href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/rating.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
@@ -52,14 +55,15 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-free/css/all.min.css') }}">
-    <!--===============================================================================================-->
     <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
+    <link href="{{ asset('assetcus/css/rating.css') }}">
 
-    {{-- css keranjang --}}
+
+
+    <!-- css keranjang -->
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" />
+    {{-- <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" /> --}}
 </head>
 
 <body class="animsition">
@@ -179,22 +183,36 @@
 
                             <h5>Quantity</h5>
                             <div class="mt-2 ">
-                                <div class="col-12">
+                                <div class="col-md-12">
                                     <input type="number"  class="form-control px-0 py-0"
                                         placeholder="Qty" value="" />
-                                    <div class=" btn btn-dark btn-lg btn-flat px-0 py-2">
+
+                                    {{-- <div class="input-group text-center mb-4 " style="width: 130px;">
+                                        <button class="input-group-text decrement-btn">-</button>
+                                        <input type="text" name="quantity " class="form-control qty-input text-center"
+                                            value="1">
+                                        <button class="input-group-text increment-btn">+</button>
+                                    </div> --}}
+
+                                    <div class=" btn btn-dark btn-lg btn-flat px-0 py-2 mt-1">
                                         <i class="fas fa-shopping-cart "></i>
                                         Add to Cart
                                     </div>
-                                    <div class="btn btn-dark btn-lg btn-flat px-0 py-2 pl-0">
+                                    <div class="btn btn-dark btn-lg btn-flat px-0 py-2 pl-0 mt-1">
                                         <i class="fas fa-heart fa-lg "></i>
                                         Add to Wishlist
                                     </div>
+                                    {{-- <ul class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
+                                        <li>
+                                            <a href="/whislist"><i class="fas fa-heart fa-lg "></i>
+                                                Add to Wishlist</a>
+                                        </li>
+                                    </ul> --}}
                                 </div>
                             </div>
 
-                            {{-- Keranjang --}}
-                            <div class="mt-2">
+                            <!-- Keranjang -->
+                            {{-- <div class="mt-2">
                                 <div class="span6">
 
                                     <div class="product-Info">
@@ -226,7 +244,7 @@
 
 
 
-                                    {{-- <div class="product-total">
+                                    <div class="product-total">
 
                                         <p><b>Items:</b> <span class="keranjang_quantity"></span></p>
                                         <!--number of items in the cart-->
@@ -243,9 +261,9 @@
                                         <p><b>Final price:</b> <span class="keranjang_grandTotal"></span> </p>
                                         <!--total of the cart after tax & shipping -->
 
-                                    </div> --}}
-                                </div><!-- /span6 -->
-                            </div>
+                                    </div>
+                                </div> <!-- /span6 -->
+                            </div> --}}
 
                         </div>
 
@@ -308,18 +326,65 @@
                                     dui sit amet eros. Nulla turpis lorem, dignissim a sapien eget, ultrices venenatis
                                     dolor. Curabitur vel turpis at magna elementum hendrerit vel id dui. Curabitur a ex
                                     ullamcorper, ornare velit vel, tincidunt ipsum. </div>
+
                                 <div class="tab-pane fade" id="product-rating" role="tabpanel"
-                                    aria-labelledby="product-rating-tab"> Cras ut ipsum ornare, aliquam ipsum non,
-                                    posuere elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id
-                                    fermentum risus efficitur vel. Nulla iaculis malesuada scelerisque. Praesent vel
-                                    ipsum felis. Ut molestie, purus aliquam placerat sollicitudin, mi ligula euismod
-                                    neque, non bibendum nibh neque et erat. Etiam dignissim aliquam ligula, aliquet
-                                    feugiat nibh rhoncus ut. Aliquam efficitur lacinia lacinia. Morbi ac molestie
-                                    lectus, vitae hendrerit nisl. Nullam metus odio, malesuada in vehicula at,
-                                    consectetur nec justo. Quisque suscipit odio velit, at accumsan urna vestibulum a.
-                                    Proin dictum, urna ut varius consectetur, sapien justo porta lectus, at mollis nisi
-                                    orci et nulla. Donec pellentesque tortor vel nisl commodo ullamcorper. Donec varius
-                                    massa at semper posuere. Integer finibus orci vitae vehicula placerat. </div>
+                                    aria-labelledby="product-rating-tab">
+
+                                    <!-- Button to Open the Modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#myModal">
+                                        Rating
+                                    </button>
+
+                                    <!-- The Modal -->
+                                    <div class="modal" id="myModal">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content " style="background-color: transparant">
+
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Rating Product</h4>
+                                                    <button type="button" class="close"
+                                                        data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    <div class="rating-css">
+                                                        <div class="star-icon">
+                                                            <input type="radio" value="1" name="product_rating" checked
+                                                                id="rating1">
+                                                            <label for="rating1" class="fa fa-star"></label>
+                                                            <input type="radio" value="2" name="product_rating"
+                                                                id="rating2">
+                                                            <label for="rating2" class="fa fa-star"></label>
+                                                            <input type="radio" value="3" name="product_rating"
+                                                                id="rating3">
+                                                            <label for="rating3" class="fa fa-star"></label>
+                                                            <input type="radio" value="4" name="product_rating"
+                                                                id="rating4">
+                                                            <label for="rating4" class="fa fa-star"></label>
+                                                            <input type="radio" value="5" name="product_rating"
+                                                                id="rating5">
+                                                            <label for="rating5" class="fa fa-star"></label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary"
+                                                        data-dismiss="modal">Save</button>
+                                                    <button type="button" class="btn btn-danger"
+                                                        data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
 
@@ -378,13 +443,43 @@
     <script src="{{ asset('assetcus/js/main.js') }}"></script>
     <!--===============================================================================================-->
 
-    {{-- js keranjang --}}
+    <!--  js keranjang  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/js/bootstrap.min.js"></script>
     <script src="{{ asset('assetcus/js/cart.js') }}"></script>
 
     <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.increment-btn').click(function(e) {
+                e.preventDefault();
+
+                var inc_value = $('.qty-input').val();
+                var value = parseInt(inc_value, 10);
+                value = isNan(value) ? 0 : value;
+                if (value < 10) {
+                    value++;
+                    $('.qty-input').val(value);
+                }
+            });
+
+            $('.decrement-btn').click(function(e) {
+                e.preventDefault();
+
+                var dec_value = $('.qty-input').val();
+                var value = parseInt(dec_value, 10);
+                value = isNan(value) ? 0 : value;
+                if (value > 10) {
+                    value--;
+                    $('.qty-input').val(value);
+                }
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>
