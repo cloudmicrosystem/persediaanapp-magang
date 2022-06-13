@@ -73,6 +73,7 @@ require __DIR__ . '/auth.php';
     Route::get('/checkout', [HalcheckoutController::class, 'index']);
     Route::get('/test', [TestController::class, 'index']);
     Route::get('/whislist', [Halwhislist::class, 'index']);
+    Route::get('/penilaian', [Halpenilaian::class, 'index']);
 
 Auth::routes();
 
