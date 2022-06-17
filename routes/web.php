@@ -27,42 +27,42 @@ use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HalcheckoutController;
 use App\Http\Controllers\Users\HaldetailartikelController;
 use App\Http\Controllers\Users\HaldetailproductController;
+use App\Http\Controllers\Users\Halpenilaian;
 
 require __DIR__ . '/auth.php';
-    // ADMIN
-    Route::middleware(['auth'])->group(function () {
+// ADMIN
+Route::middleware(['auth'])->group(function () {
+});
 
-    });
+Route::get('/dashboard', [AdminController::class, 'dashboard']);
+Route::resource('/user', UserController::class);
+Route::resource('/kategori', CategoryController::class);
+Route::resource('/gambar', GambarController::class);
+Route::resource('/article', ArticleController::class);
+Route::resource('/catarticle', CatarticleController::class);
+Route::resource('/barang', PersediaanController::class);
+Route::get('/search', [PersediaanController::class, 'search']);
+// Route::get('/login', [LoginController::class, 'login']);
+// Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
 
-    Route::get('/dashboard', [AdminController::class, 'dashboard']);
-    Route::resource('/user', UserController::class);
-    Route::resource('/kategori', CategoryController::class);
-    Route::resource('/gambar', GambarController::class);
-    Route::resource('/article', ArticleController::class);
-    Route::resource('/catarticle', CatarticleController::class);
-    Route::resource('/barang', PersediaanController::class);
-    Route::get('/search', [PersediaanController::class, 'search']);
-    // Route::get('/login', [LoginController::class, 'login']);
-    // Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
-
-    // USER
-    Route::get('/', [HalcustController::class, 'index']);
-    Route::get('/product', [HalproductController::class, 'index']);
-    Route::get('/product/{category}', [HalproductController::class, 'category']);
-    Route::get('/detail', [HaldetailproductController::class, 'index']);
-    // Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
-    Route::get('/about', [HalaboutController::class, 'index']);
-    Route::get('/store', [HalstoreController::class, 'index']);
-    Route::get('/contact', [HalcontacController::class, 'index']);
-    Route::get('/artikel', [HalartikelController::class, 'index']);
-    Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
-    Route::get('/refund', [HalrefundController::class, 'index']);
-    Route::get('/order', [HalorderController::class, 'index']);
-    Route::get('/faq', [HalfaqController::class, 'index']);
-    Route::get('/checkout', [HalcheckoutController::class, 'index']);
-    Route::get('/test', [TestController::class, 'index']);
-    Route::get('/whislist', [Halwhislist::class, 'index']);
-    Route::get('/penilaian', [Halpenilaian::class, 'index']);
+// USER
+Route::get('/', [HalcustController::class, 'index']);
+Route::get('/product', [HalproductController::class, 'index']);
+Route::get('/product/{category}', [HalproductController::class, 'category']);
+Route::get('/detail', [HaldetailproductController::class, 'index']);
+// Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
+Route::get('/about', [HalaboutController::class, 'index']);
+Route::get('/store', [HalstoreController::class, 'index']);
+Route::get('/contact', [HalcontacController::class, 'index']);
+Route::get('/artikel', [HalartikelController::class, 'index']);
+Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
+Route::get('/refund', [HalrefundController::class, 'index']);
+Route::get('/order', [HalorderController::class, 'index']);
+Route::get('/faq', [HalfaqController::class, 'index']);
+Route::get('/checkout', [HalcheckoutController::class, 'index']);
+Route::get('/test', [TestController::class, 'index']);
+Route::get('/whislist', [Halwhislist::class, 'index']);
+Route::get('/penilaian', [Halpenilaian::class, 'index']);
 
 Auth::routes();
 

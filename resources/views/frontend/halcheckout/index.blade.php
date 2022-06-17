@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail | Morfeen </title>
+    <title>Chekout | Morfeen </title>
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->

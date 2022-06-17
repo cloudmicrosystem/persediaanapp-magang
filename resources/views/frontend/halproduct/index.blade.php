@@ -207,12 +207,4 @@
     @endsection
 </body>
 
-@push('script')
-
-<script>
-    let a = 0;
-    console.log(a);
-</script>
-    @endpush
-
 </html>
