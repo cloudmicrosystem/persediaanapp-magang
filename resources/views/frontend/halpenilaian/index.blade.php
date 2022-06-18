@@ -30,8 +30,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-free/css/all.min.css') }}">
+
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/rating.css') }}">
 </head>
