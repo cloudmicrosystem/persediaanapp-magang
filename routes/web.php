@@ -27,6 +27,7 @@ use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HalcheckoutController;
 use App\Http\Controllers\Users\HaldetailartikelController;
 use App\Http\Controllers\Users\HaldetailproductController;
+use App\Http\Controllers\Users\Halpenilaian;
 
     // USER
     Route::get('/', [HalcustController::class, 'index']);

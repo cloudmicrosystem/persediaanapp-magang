@@ -28,7 +28,7 @@ display:inline-block
 }
 .xzoom-gallery,.xzoom-gallery2,.xzoom-gallery3,.xzoom-gallery4,.xzoom-gallery5{
     border:1px solid #cecece;
-    margin-left:5px;
+    margin-left:10px;
     margin-bottom:10px
 }.xzoom-hidden,.xzoom-source{
     display:block;

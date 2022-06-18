@@ -57,7 +57,7 @@
     <!--===============================================================================================-->
     <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
-    <link href="{{ asset('assetcus/css/rating.css') }}">
+
 
 
 
@@ -126,25 +126,25 @@
 
     <section class="content">
         <div class="bread-crumb bo5-b p-t-17 p-b-17">
-			<div class="container">
-				<a href="/" class="txt27">
-					Home
-				</a>
+            <div class="container">
+                <a href="/" class="txt27">
+                    Home
+                </a>
 
-				<span class="txt29 m-l-10 m-r-10">/</span>
+                <span class="txt29 m-l-10 m-r-10">/</span>
 
                 <a href="product" class="txt27">
-					Product
-				</a>
+                    Product
+                </a>
 
                 <span class="txt29 m-l-10 m-r-10">/</span>
 
 
-				<span class="txt29">
-					Detail Product
-				</span>
-			</div>
-		</div>
+                <span class="txt29">
+                    Detail Product
+                </span>
+            </div>
+        </div>
 
         <div class="d-flex justify-content-center">
             <div class="card card-solid">
@@ -215,15 +215,15 @@
                                         <button class="input-group-text increment-btn">+</button>
                                     </div> --}}
 
-                                    <div class=" btn btn-dark btn-lg btn-flat px-0 py-2 mt-1">
-                                        <i class="fas fa-shopping-cart "></i>
-                                        Add to Cart
-                                    </div>
-                                    <div class="btn btn-dark btn-lg btn-flat px-0 py-2 pl-0 mt-1">
-                                        <i class="fas fa-heart fa-lg "></i>
-                                        Add to Wishlist
-                                    </div>
-                                    {{-- <ul class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
+                                        <div class=" btn btn-dark btn-lg btn-flat px-0 py-2 mt-1">
+                                            <i class="fas fa-shopping-cart "></i>
+                                            Add to Cart
+                                        </div>
+                                        <div class="btn btn-dark btn-lg btn-flat px-0 py-2 pl-0 mt-1">
+                                            <i class="fas fa-heart fa-lg "></i>
+                                            Add to Wishlist
+                                        </div>
+                                        {{-- <ul class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
                                         <li>
                                             <a href="/whislist"><i class="fas fa-heart fa-lg "></i>
                                                 Add to Wishlist</a>
@@ -297,8 +297,8 @@
 
                         <div class="col-12 col-sm-2 p-t-30 pl-4  ">
                             <div class="xzoom-thumbs">
-                                <a href="images/d1.jpeg"> <img class="xzoom-gallery" width="100" src="images/d1.jpeg"
-                                        xpreview="images/d1.jpeg"></a>
+                                <a href="images/d1.jpeg"> <img class="xzoom-gallery" width="100"
+                                        src="images/d1.jpeg" xpreview="images/d1.jpeg"></a>
                                 <a href="images/d2.jpeg"> <img class="xzoom-gallery" width="100"
                                         src="images/d2.jpeg"></a>
                                 <a href="images/d3.jpeg"> <img class="xzoom-gallery" width="100"
@@ -373,20 +373,20 @@
                                                 <div class="modal-body">
                                                     <div class="rating-css">
                                                         <div class="star-icon">
-                                                            <input type="radio" value="1" name="product_rating" checked
-                                                                id="rating1">
+                                                            <input type="radio" value="1"
+                                                                name="product_rating" checked id="rating1">
                                                             <label for="rating1" class="fa fa-star"></label>
-                                                            <input type="radio" value="2" name="product_rating"
-                                                                id="rating2">
+                                                            <input type="radio" value="2"
+                                                                name="product_rating" id="rating2">
                                                             <label for="rating2" class="fa fa-star"></label>
-                                                            <input type="radio" value="3" name="product_rating"
-                                                                id="rating3">
+                                                            <input type="radio" value="3"
+                                                                name="product_rating" id="rating3">
                                                             <label for="rating3" class="fa fa-star"></label>
-                                                            <input type="radio" value="4" name="product_rating"
-                                                                id="rating4">
+                                                            <input type="radio" value="4"
+                                                                name="product_rating" id="rating4">
                                                             <label for="rating4" class="fa fa-star"></label>
-                                                            <input type="radio" value="5" name="product_rating"
-                                                                id="rating5">
+                                                            <input type="radio" value="5"
+                                                                name="product_rating" id="rating5">
                                                             <label for="rating5" class="fa fa-star"></label>
                                                         </div>
                                                     </div>

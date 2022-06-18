@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail | Morfeen </title>
+    <title>Chekout | Morfeen </title>
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
@@ -22,8 +22,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/select2/select2.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
@@ -48,8 +47,6 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
 
@@ -122,17 +119,12 @@
         </div>
     </header>
 
-    <br><br>
-
-    <br><br>
-
-    <br><br>
 
     <section class="content m-10">
         <div class="d-flex justify-content-center col-12">
             <div class="row">
 
-                <div class="col-6 my-3">
+                <div class="col-6 my-3 p-t-200">
                     <p class="text-bold text-uppercase text-center text-white" style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Checkout </p>
                     <form>
                         <div class="card-body">
@@ -183,12 +175,12 @@
                     </form>
                 </div>
 
-                <div class="col-6 my-3 " style="border: black">
+                <div class="col-6 my-3 p-t-200" style="border: black">
                     <p class="text-bold text-uppercase text-center text-white" style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
                     <div class="card " style="border: black">
                         <div class="card-body " style="background-color: black ; border: black">
                             <div class="row">
-                                <table class="table-bordered table table-responsive ">
+                                <table class="table table-responsive ">
                                     <thead class="border-color: black">
                                         <tr class="border-color: black">
                                             <th class="text-white" style="width: 150px; height: auto">Produk</th>
