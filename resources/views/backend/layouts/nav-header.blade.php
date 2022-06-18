@@ -32,7 +32,7 @@
                   </form>
               </div>
           </li> --}}
-          <li class="nav-item d-none d-sm-inline-block">
+        <li class="nav-item d-none d-sm-inline-block">
             <a href="">
                 <form method='POST' action="{{ route('logout') }}">
                     @csrf
@@ -40,7 +40,6 @@
                         <link :href="route('logout')" onclick="event.preventDefault();
                               this.closest('form').submit();">
                         {{ __('Log Out') }}
-                        </link>
                     </button>
                 </form>
             </a>

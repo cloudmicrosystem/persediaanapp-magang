@@ -2,11 +2,14 @@
 
 namespace Database\Seeders;
 
+use App\Models\Atribut;
+use App\Models\BarangAtribut;
 use Illuminate\Database\Seeder;
 use Database\Seeders\BarangSeeder;
 use Database\Seeders\CategorySeeder;
 use Database\Seeders\GambarSeeder;
 use Database\Seeders\UsersSeeder;
+use Database\Seeders\AtributSeeder;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -21,7 +24,8 @@ class DatabaseSeeder extends Seeder
             BarangSeeder::class,
             CategorySeeder::class,
             GambarSeeder::class,
-            UsersSeeder::class
+            UsersSeeder::class,
+            AtributSeeder::class,
             // PermissionTableSeeder::class,
         ]);
     }

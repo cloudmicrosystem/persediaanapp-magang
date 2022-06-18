@@ -2,108 +2,81 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Kategori;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use PhpOffice\PhpSpreadsheet\Calculation\Category;
+use PhpParser\Node\Stmt\Catch_;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
+        Session::put('page','kategori');
         $category = Kategori::paginate(5);
-
         return view('admin.kategori.index')->with(compact('category'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function updateCategoryStatus(Request $request)
     {
-        return view('admin.kategori.create');
+        if($request->ajax()){
+            $data = $request->all();
+            if($data['status'] == "Active"){
+                $status = 0;
+            }else{
+                $status = 1;
+            }
+            Kategori::where('id', $data['id_category'])->update(['status'=>$status]);
+            return response()->json(['status'=>$status, 'id_category'=>$data['id_category']]);
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $this->validate($request, [
-            'nama_category' => 'required|min:4',
-        ]);
+    public function addEditCategory(Request $request, $id=null){
+        if($id == ""){
+            $title = "Tambah Kategori";
+            $category = new Kategori;
+            $message = "Kategori Berhasil Ditambahkan!";
+        }else{
+            $title = "Edit Kategori";
+            $category = Kategori::where('id',$id)->first();
+            $message = "Kategori Berhasil Diupdate!";
+        }
 
-        $category = Kategori::create([
-            'nama_category' => $request->nama_category,
-            'slug'=> Str::slug($request->nama_category)
-        ]);
+        if($request->isMethod('post')){
+            $data = $request->all();
 
-        return redirect('kategori')->with('toast_success', 'Data Berhasil Disimpan');
+            $rules = [
+                'nama_category' => 'required',
+                'slug' => 'required'
+            ];
+            $customMessages = [
+                'nama_category.required' => 'Harap isi nama kategori terlebih dahulu',
+                'slug.required' => 'Harap isi url kategori terlebih dahulu',
+            ];
+            $this->validate($request, $rules, $customMessages);
+
+            $category->nama_category = $data['nama_category'];
+            $category->slug = $data['slug'];
+            $category->status = 1;
+            $category->save();
+
+            session::flash('success_message', $message);
+            return redirect('kategori');
+        }
+
+        return view('admin.kategori.add_edit_category')->with(compact('title', 'category'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $category = Kategori::findOrFail($id);
-    }
+    public function deleteCategory($id){
+        Kategori::where('id',$id)->delete();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $category = Kategori::findOrFail($id);
-
-        return view('admin.kategori.edit')->with(compact('category'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $category = Kategori::find($id);
-        $category->nama_category = $request->input('nama_category');
-        $category['slug'] = Str::slug($request->nama_category);
-        $category->update();
-
-        return redirect('kategori')->with('toast_success', 'Data Berhasil Diupdate');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $category = Kategori::findOrFail($id);
-        $category->delete();
-
-        return redirect('kategori')->with('toast_success', 'Data Berhasil Dihapus');
+        $message = "Kategori Berhasil Dihapus";
+        session::flash('success_message', $message);
+        return redirect()->back();
     }
 }
+

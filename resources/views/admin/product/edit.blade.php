@@ -38,28 +38,16 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputBorder">Code Product</label>
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="code_barang" value="{{ $barang->code_barang }}">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputBorder">Nama Product</label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="nama_barang" value="{{ $barang->nama_barang }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">HPP Product</label>
-                                        <input type="number" class="form-control" id="exampleInputBorder" name="hpp" value="{{ $barang->hpp }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputBorder">Harga Product</label>
-                                        <input type="number" class="form-control" id="exampleInputBorder" name="price" value="{{ $barang->price }}">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="exampleInputBorder">Deskripsi Product</label>
                                         <textarea type="text" class="form-control" id="exampleInputBorder" name="deskripsi">{{ $barang->deskripsi }}</textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputBorder">Ukuran Product</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="size" value="{{ $barang->size }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputBorder">Jumlah Product</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="qty" value="{{ $barang->qty }}">
                                     </div>
                                     @if ($barang->gambar_disply)
                                         <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=150px height=auto>

@@ -15,7 +15,7 @@
                         <img src="{{ asset('') }}assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Welcome Admin</a>
+                        <a href="#" class="d-block">Welcome {{ Auth::user()->nama }}</a>
                     </div>
                 </div>
 
@@ -36,14 +36,66 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
+
+                        @if (Session::get('page') == "dashboard")
+                            <?php $active = "active"; ?>
+                        @else
+                            <?php $active = ""; ?>
+                        @endif
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link">
+                            <a href="/dashboard" class="nav-link {{ $active }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
                                 </p>
                             </a>
                         </li>
+
+                        @if (Session::get('page') == "barang" || Session::get('page') == "kategori")
+                            <?php $active = "active"; ?>
+                        @else
+                            <?php $active = ""; ?>
+                        @endif
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link {{ $active }}">
+                                <i class="nav-icon fas fa-tag"></i>
+                                <p>
+                                    Setting Product
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                @if (Session::get('page') == "barang")
+                                    <?php $active = "active"; ?>
+                                @else
+                                    <?php $active = ""; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="{{ url('/barang') }}" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Product</p>
+                                    </a>
+                                </li>
+                                @if (Session::get('page') == "kategori")
+                                    <?php $active = "active"; ?>
+                                @else
+                                    <?php $active = ""; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="{{ url('/kategori') }}" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Kategori Product</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/gambar" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Gambar Detail Product</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book-open"></i>
@@ -63,35 +115,6 @@
                                     <a href="/catarticle" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Kategori Artikel</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tag"></i>
-                                <p>
-                                    Setting Product
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="/barang" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Product</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/kategori" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Kategori Product</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/gambar" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Gambar Detail Product</p>
                                     </a>
                                 </li>
                             </ul>

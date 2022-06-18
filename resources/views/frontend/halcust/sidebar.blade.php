@@ -33,6 +33,18 @@
         <li class="t-center m-b-33">
             <a href="/contact" class="txt19">Contact</a>
         </li>
+        <li class="t-center m-b-33">
+            <a href="">
+                <form method='POST' action="{{ route('logout') }}">
+                    @csrf
+                    <button class="btn btn-outline-info">
+                        <link :href="route('logout')" onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </button>
+                </form>
+            </a>
+        </li>
     </ul>
 
 </aside>

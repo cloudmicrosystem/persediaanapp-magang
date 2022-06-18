@@ -14,7 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    You are logged in!
+                </div>
+                <div class="card-body">
+                    <div class="panel-body">
+                        Check admin view:
+                        <a href="{{ route('dashboard') }}">Admin View</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -107,7 +107,10 @@
     <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('') }}assets/dist/js/pages/dashboard.js"></script>
-
+    <!-- Admin Script JS  -->
+    <script src="{{ url('js/admin_script.js') }}"></script>
+    <!-- SweetAlert Script JS  -->
+    <script src="https://cdn.jsdelvivr.net/npm/sweetalert2@9"></script>
 </body>
 
 </html>

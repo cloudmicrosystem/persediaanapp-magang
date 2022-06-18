@@ -2,283 +2,272 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Image;
 use stdClass;
 use App\Models\Barang;
+use Complex\Functions;
+use App\Models\Atribut;
 use App\Models\Kategori;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Pagination\LengthAwarePaginator;
 use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class PersediaanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+    public function index(){
+        Session::put('page','barang');
         $barang = Barang::paginate(5);
         return view('admin.product.index')->with(compact('barang'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function updateProductStatus(Request $request)
     {
-        $category = Kategori::all();
-        return view('admin.product.create')->with(compact('category'));
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $barang = new Barang();
-
-        $gambar_disply = null;
-
-        $this->validate($request, [
-            'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144 ',
-            'nama_barang' => 'required|min:4'
-        ]);
-
-        if($request->hasFile('gambar_disply'))
-        {
-            $file = $request->file('gambar_disply');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time().'_'.$ext;
-            $file->move('images/disply/',$filename);
-            $barang->gambar_disply = $filename;
+        if($request->ajax()){
+            $data = $request->all();
+            if($data['status'] == "Active"){
+                $status = 0;
+            }else{
+                $status = 1;
+            }
+            Barang::where('id', $data['id_product'])->update(['status'=>$status]);
+            return response()->json(['status'=>$status, 'id_product'=>$data['id_product']]);
         }
-
-        $barang->id_category = $request->input('id_category');
-        $barang->nama_barang = $request->input('nama_barang');
-        $barang['slug'] = Str::slug($request->nama_barang);
-        $barang->hpp = $request->input('hpp');
-        $barang->price = $request->input('price');
-        $barang->deskripsi = $request->input('deskripsi');
-        $barang->size = $request->input('size');
-        $barang->qty = $request->input('qty');
-        $barang->status = $request->input('status') == TRUE ? '1':'0';
-        $barang->trending = $request->input('trending') == TRUE ? '1':'0';
-        $barang->save();
-
-        return redirect('barang')->with('toast_success', 'Data Berhasil Disimpan');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    public function addEditProduct(Request $request, $id=null){
+        if($id==""){
+            $title = "Tambah Product";
+            $barang = new Barang();
+            $message = "Product Berhasil Ditambahkan!";
+        }else{
+            $title = "Edit Product";
+            $barang = Barang::find($id);
+            $message = "Product Berhasil Diupdate!";
+        }
+        $category = Kategori::get();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $barang = Barang::findOrFail($id);
-        return view('admin.product.edit')->with(compact('barang'));
-    }
+        if($request->isMethod('post')){
+            $data = $request->all();
+            $rules = [
+                'id_category' => 'required',
+                'code_barang' => 'required',
+                'nama_barang' => 'required',
+                'slug' => 'required',
+                'price' => 'required',
+                'deskripsi' => 'required',
+            ];
+            $customMessages = [
+                'id_category.required' => 'Harap pilih kategori product terlebih dahulu',
+                'code_barang.required' => 'Harap isi code product terlebih dahulu',
+                'nama_barang.required' => 'Harap isi nama prodcut terlebih dahulu',
+                'slug.required' => 'Harap isi url product terlebih dahulu',
+                'price.required' => 'Harap isi harga product terlebih dahulu',
+                'deskripsi.required' => 'Harap isi deskripsi terlebih dahulu',
+            ];
+            $this->validate($request, $rules, $customMessages);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $barang = Barang::find($id);
-
-        $request->validate([
-            'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144',
-            'nama_barang' => 'required|min:4'
-        ]);
-
-        if($request->hasFile('gambar_disply'))
-        {
-            $path = 'images/disply/' . $barang->gambar_disply;
-            if(File::Exists($path))
-            {
-                File::delete($path);
+            if(empty($data['trending'])){
+                $trending = "No";
+            }else{
+                $trending = "Yes";
             }
 
-            $file = $request->file('gambar_disply');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time().'_'.$ext;
-            $file->move('images/disply/',$filename);
-            $barang->gambar_disply = $filename;
+            if($request->hasFile('gambar_disply'))
+            {
+                $path = 'images/disply/' . $barang->gambar_disply;
+                if(File::Exists($path))
+                {
+                    File::delete($path);
+                }
+                $file = $request->file('gambar_disply');
+                $ext = $file->getClientOriginalExtension();
+                $filename = time().'_'.$ext;
+                $file->move('images/disply/',$filename);
+                $barang->gambar_disply = $filename;
+            }
+
+            $barang->id_category = $data['id_category'];
+            $barang->code_barang = $data['code_barang'];
+            $barang->nama_barang = $data['nama_barang'];
+            $barang->slug = $data['slug'];
+            $barang->price = $data['price'];
+            $barang->deskripsi = $data['deskripsi'];
+            $barang->status = 1;
+            $barang->trending = $trending;
+            $barang->save();
+
+            session::flash('success_message', $message);
+            return redirect('barang');
         }
-        $barang->nama_barang = $request->input('nama_barang');
-        $barang['slug'] = Str::slug($request->nama_barang);
-        $barang->hpp = $request->input('hpp');
-        $barang->price = $request->input('price');
-        $barang->deskripsi = $request->input('deskripsi');
-        $barang->size = $request->input('size');
-        $barang->qty = $request->input('qty');
-        $barang->update();
 
-        return redirect('barang')->with('toast_success', 'Data Berhasil Diupdate');
+        return view('admin.product.add_edit_product')->with(compact('title','category','barang'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $barang = Barang::find($id);
+    public function deleteProduct($id){
+        Barang::where('id',$id)->delete();
 
-        $path = 'images/disply/' . $barang->gambar_disply;
-        if(File::Exists($path))
-        {
-            File::delete($path);
-        }
-        $barang->delete();
-
-        return redirect('barang')->with('toast_success', 'Data Berhasil Dihapus');
+        $message = "Product Berhasil Dihapus";
+        session::flash('success_message', $message);
+        return redirect('barang');
     }
 
-    public function search(){
-        $search_text = $_GET['query'];
-        $barang = Barang::where('nama_barang', 'LIKE', '%'.$search_text.'%')->with('category')->get();
-
-        return view('backend.barang.search')->with(compact('barang'));
-    }
 }
 
-// Function index
-        // $category = Kategori::all();
-        // $barang = Barang::whereBelongsTo($category)->get();
-        // $barang = Barang::all();
-        // echo "<pre>";
-        // print_r($barang);
-        // die;
-        // $barang = DB::select(
-        //     'SELECT barang.*,
-        //         (SELECT nama_category FROM category WHERE id = barang.id_category)
-        //             AS nama_category FROM barang ORDER BY id desc'
-        // );
-        // $newbarang = DB::table('barang');
-
-        // $gambar = DB::select('SELECT * FROM gambar WHERE id_barang =.$barang->id');
-
-        // $newBarang = array();
-        // foreach ($barang as $key => $value) {
-        //     $newValue = json_decode(json_encode($value), true);
-        //     $gambarBarang =  json_decode(json_encode(DB::select('SELECT * FROM gambar WHERE id_barang ='.$value->id)), true);
-
-        //     $data = array_merge($newValue, ['gambar' => $gambarBarang]);
-        //     // echo '<pre>'; print_r($data); die;
-        //     array_push($newBarang, $data);
-        // }
 
 
-// Function Store
-        // echo '<pre>'; print_r($request->code_barang); die;
-        // $gambar_disply = null;
+   // /**
+    //  * Display a listing of the resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function index()
+    // {
+    //     Session::put('page','barang');
+    //     $barang = Barang::paginate(5);
+    //     return view('admin.product.index')->with(compact('barang'));
+    // }
 
-        // // Validation
-        // $request->validate([
-        //     'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144 '
-        // ]);
+    // /**
+    //  * Show the form for creating a new resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function create()
+    // {
+    //     $category = Kategori::all();
+    //     return view('admin.product.create')->with(compact('category'));
+    // }
 
-        // if($request->file('gambar_disply')) {
-        //     $file = $request->file('gambar_disply');
-        //     $gambar_disply = time().'_'.$file->getClientOriginalName();
+    // /**
+    //  * Store a newly created resource in storage.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function store(Request $request)
+    // {
+    //     $barang = new Barang();
 
-        //     // File upload location
-        //     $location = 'images/disply';
+    //     $gambar_disply = null;
 
-        //     // Upload file
-        //     $file->move($location,$gambar_disply);
-        //     // die;
-        // }else{
-        //     $gambar_disply = null;
-        // }
+    //     $this->validate($request, [
+    //         'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144 ',
+    //         'nama_barang' => 'required|min:4'
+    //     ]);
 
-        // DB::select("INSERT INTO barang(
-        //     id_category,
-        //     nama_barang,
-        //     slug,
-        //     hpp,
-        //     price,
-        //     deskripsi,
-        //     size,
-        //     qty,
-        //     gambar_disply
-        //     )
-        // VALUE(
-        // '$request->id_category',
-        // '$request->nama_barang',
-        // '$request->slug',
-        // '$request->hpp',
-        // '$request->price',
-        // '$request->deskripsi',
-        // '$request->size',
-        // '$request->qty',
-        // '$gambar_disply'
-        // )");
+    //     if($request->hasFile('gambar_disply'))
+    //     {
+    //         $file = $request->file('gambar_disply');
+    //         $ext = $file->getClientOriginalExtension();
+    //         $filename = time().'_'.$ext;
+    //         $file->move('images/disply/',$filename);
+    //         $barang->gambar_disply = $filename;
+    //     }
 
+    //     $barang->id_category = $request->input('id_category');
+    //     $barang->code_barang = $request->input('code_barang');
+    //     $barang->nama_barang = $request->input('nama_barang');
+    //     $barang['slug'] = Str::slug($request->nama_barang);
+    //     $barang->price = $request->input('price');
+    //     $barang->deskripsi = $request->input('deskripsi');
+    //     $barang->status = $request->input('status') == TRUE ? '1':'0';
+    //     $barang->trending = $request->input('trending') == TRUE ? '1':'0';
+    //     $barang->save();
 
-//function
+    //     return redirect('barang')->with('toast_success', 'Data Berhasil Disimpan');
+    // }
 
-        // // $barang = DB::select('SELECT id as id_category, nama_category FROM category ORDER BY id');
+    // /**
+    //  * Display the specified resource.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function show($id)
+    // {
+    //     //
+    // }
 
-        // $barang = DB::select('SELECT * FROM barang WHERE id=?', [$id]);
+    // /**
+    //  * Show the form for editing the specified resource.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function edit($id)
+    // {
+    //     $barang = Barang::findOrFail($id);
+    //     return view('admin.product.edit')->with(compact('barang'));
+    // }
 
-        // // Validation
-        // $request->validate([
-        //     'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144 '
-        // ]);
+    // /**
+    //  * Update the specified resource in storage.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function update(Request $request, $id)
+    // {
+    //     $barang = Barang::find($id);
 
-        // if($request->file('gambar_disply')) {
-        //     $file = $request->file('gambar_disply');
-        //     $gambar_disply = time().'_'.$file->getClientOriginalName();
+    //     $request->validate([
+    //         'gambar_disply' => 'mimes:png,jpg,jpeg|max:6144',
+    //         'nama_barang' => 'required|min:4'
+    //     ]);
 
-        //     // File upload location
-        //     $location = 'images/disply';
+    //     if($request->hasFile('gambar_disply'))
+    //     {
+    //         $path = 'images/disply/' . $barang->gambar_disply;
+    //         if(File::Exists($path))
+    //         {
+    //             File::delete($path);
+    //         }
+    //         $file = $request->file('gambar_disply');
+    //         $ext = $file->getClientOriginalExtension();
+    //         $filename = time().'_'.$ext;
+    //         $file->move('images/disply/',$filename);
+    //         $barang->gambar_disply = $filename;
 
-        //     // Upload file
-        //     $file->move($location,$gambar_disply);
-        //     // die;
-        // }else{
-        //     $gambar_disply = $barang[0]->gambar_disply;
-        // }
+    //     }
+    //     $barang->code_barang = $request->input('code_barang');
+    //     $barang->nama_barang = $request->input('nama_barang');
+    //     $barang['slug'] = Str::slug($request->nama_barang);
+    //     $barang->price = $request->input('price');
+    //     $barang->deskripsi = $request->input('deskripsi');
+    //     $barang->update();
 
-        // DB::select("UPDATE barang SET
-        // id_category='$request->id_category',
-        // nama_barang='$request->nama_barang',
-        // slug='$request->slug',
-        // hpp='$request->hpp',
-        // price='$request->price',
-        // deskripsi='$request->deskripsi',
-        // size='$request->size',
-        // qty='$request->qty',
-        // '$gambar_disply'
-        // WHERE id=$id
-        // ");
+    //     return redirect('barang')->with('toast_success', 'Data Berhasil Diupdate');
+    // }
+
+    // /**
+    //  * Remove the specified resource from storage.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function destroy($id)
+    // {
+    //     $barang = Barang::find($id);
+
+    //     $path = 'images/disply/' . $barang->gambar_disply;
+    //     if(File::Exists($path))
+    //     {
+    //         File::delete($path);
+    //     }
+    //     $barang->delete();
+
+    //     return redirect('barang')->with('toast_success', 'Data Berhasil Dihapus');
+    // }
+
+    // public function search(){
+    //     $search_text = $_GET['query'];
+    //     $barang = Barang::where('nama_barang', 'LIKE', '%'.$search_text.'%')->with('category')->get();
+
+    //     return view('backend.barang.search')->with(compact('barang'));
+    // }

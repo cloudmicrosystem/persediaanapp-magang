@@ -15,13 +15,12 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "midtrans/midtrans-php": "^2.5",
-        "realrashid/sweet-alert": "^4.1"
+        "realrashid/sweet-alert": "^5.1"
     },
     "require-dev": {
         "bfinlay/laravel-excel-seeder": "^2.0",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
-        "khadegd/laravel-breeze-bootstrap": "dev-main",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",

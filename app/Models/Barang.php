@@ -12,13 +12,11 @@ class Barang extends Model
     protected $table = "barang";
     protected $fillable = [
         'id_category',
+        'code_barang',
         'nama_barang',
         'slug',
-        'hpp',
         'price',
         'deskripsi',
-        'size',
-        'qty',
         'status',
         'trending',
         'gambar_disply',

@@ -141,6 +141,18 @@
                         <i class="fas fa-th-large"></i>
                     </a>
                 </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="">
+                        <form method='POST' action="{{ route('logout') }}">
+                            @csrf
+                            <button class="btn btn-outline-info">
+                                <link :href="route('logout')" onclick="event.preventDefault();
+                                      this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </button>
+                        </form>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.navbar -->

@@ -51,7 +51,6 @@
 
                     <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                 </div>
-
             </div>
         </div>
     </div>

@@ -19,7 +19,4 @@ class HalcustController extends Controller
         return view('frontend.halcust.index')->with(compact('category','barang'));
     }
 
-    public function adminlte(){
-        return view('backend.layouts.master');
-    }
 }

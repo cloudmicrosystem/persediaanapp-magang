@@ -21,21 +21,30 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
+                        @if (Session::has('success_message'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 10px;">{{ Session::get('success_message') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endif
+
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Kategori Product</h3>
-                                <a class="btn btn-block btn-success" href="{{ url ('kategori/create')}}"
+                                <a class="btn btn-block btn-success" href="{{ url ('/add-edit-category')}}"
                                 style="max-width: 150px; float:right; disply:inline-block">
                                 <i>Tambah Kategori</i>
                             </a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table class="table table-bordered table-hover">
+                                <table id="category" class="table table-bordered table-hover">
                                     <thead>
                                         <tr style="text-align: center">
-                                            <th>Nama</th>
-                                            <th>Slug</th>
+                                            <th>Nama Kategori</th>
+                                            <th>URL Kategori</th>
+                                            <th>Status Kategori</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
@@ -44,13 +53,18 @@
                                             <tr>
                                                 <td>{{ $value->nama_category }}</td>
                                                 <td>{{ $value->slug }}</td>
-                                                <td style="text-align: center"><a class="btn btn-info" href="{{ url('kategori/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
-                                                <td style="text-align: center">
-                                                    <form action="{{ url('kategori/'.$value->id) }}" method="POST">
-                                                        @csrf
-                                                        <input type="hidden" name="_method" value="DELETE">
-                                                        <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i></button>
-                                                    </form>
+                                                <td>
+                                                    @if($value->status == 1)
+                                                        <a class="updateCategoryStatus" id="value-{{ $value->id }}"
+                                                        id_category="{{ $value->id }}" href="javascript:void(0)">Active</a>
+                                                    @else
+                                                        <a class="updateCategoryStatus" id="value-{{ $value->id }}"
+                                                        id_category="{{ $value->id }}" href="javascript:void(0)">Inactive</a>
+                                                    @endif
+                                                </td>
+
+                                                <td style="text-align: center"><a  href="{{ url('add-edit-category/'.$value->id) }}"><i class='fas fa-edit'></i></a></td></td>
+                                                <td style="text-align: center"> <a class="confirmDelete" name="kategori" href="{{ url('delete-category/'.$value->id) }}"><i class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>
                                         @endforeach

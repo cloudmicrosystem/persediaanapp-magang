@@ -32,40 +32,44 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
+                    @csrf
 					<span class="login100-form-title p-b-43">
-						Registrasi Admin
+						Registrasi
 					</span>
                     <div class="wrap-input100 validate-input" >
-						<input class="input100" type="text" name="nama">
+						<input class="input100" type="text" name="nama" required>
 						<span class="focus-input100"></span>
 						<span class="label-input100">Nama</span>
 					</div>
                     <div class="wrap-input100 validate-input" >
-						<input class="input100" type="text" name="alamat">
+						<input class="input100" type="text" name="alamat" required>
 						<span class="focus-input100"></span>
 						<span class="label-input100">Alamat</span>
 					</div>
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="number" name="no_hp">
+						<input class="input100" type="number" name="no_hp" required>
 						<span class="focus-input100"></span>
 						<span class="label-input100">No Handphone</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
+						<input class="input100" type="email" name="email" required>
 						<span class="focus-input100"></span>
 						<span class="label-input100">Email</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="password" required>
 						<span class="focus-input100"></span>
 						<span class="label-input100">Password</span>
 					</div>
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Registrasi
+						<button class="login100-form-btn" type="submit">
+							{{ __('Register') }}
 						</button>
 					</div>
+                    <div class="container-login100-form-btn">
+                        <a href="{{ url ('/login')}}" class="login100-form-btn" style="background: transparent; border:transparent; color:black">Back Login</a>
+                    </div>
 				</form>
 				<div class="login100-more" style="background-image: url('images/login.JPG');">
 				</div>

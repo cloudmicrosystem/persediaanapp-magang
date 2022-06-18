@@ -16,15 +16,13 @@ class CreateBarangTable extends Migration
         Schema::create('barang', function (Blueprint $table) {
             $table->id();
             $table->integer('id_category');
+            $table->string('code_barang');
             $table->string('nama_barang');
             $table->string('slug')->unique();
-            $table->integer('hpp');
             $table->integer('price');
             $table->text('deskripsi');
-            $table->string('size');
-            $table->integer('qty');
             $table->integer('status');
-            $table->integer('trending');
+            $table->enum('trending',['No','Yes']);
             $table->string('gambar_disply');
             $table->timestamps();
         });
