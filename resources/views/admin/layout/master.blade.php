@@ -111,6 +111,8 @@
     <script src="{{ url('js/admin_script.js') }}"></script>
     <!-- SweetAlert Script JS  -->
     <script src="https://cdn.jsdelvivr.net/npm/sweetalert2@9"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
 </html>

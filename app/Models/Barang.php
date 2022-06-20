@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 //Model digunakan untuk mengolah database kita
 class Barang extends Model
@@ -11,11 +11,11 @@ class Barang extends Model
     use HasFactory;
     protected $table = "barang";
     protected $fillable = [
-        'id_category',
-        'code_barang',
+        'id_kategori',
+        'kode_barang',
         'nama_barang',
         'slug',
-        'price',
+        'harga',
         'deskripsi',
         'status',
         'trending',
@@ -24,6 +24,16 @@ class Barang extends Model
 
     public function category()
     {
-        return $this->belongsTo(Kategori::class, 'id_category', 'id');
+        return $this->belongsTo(Kategori::class, 'id_kategori', 'id');
     }
+
+    public function atribut(){
+        return $this->hasMany(Atribut::class, 'id_barang', 'id');
+    }
+
+    public function image(){
+        return $this->hasMany(Gambar::class, 'id_barang', 'id');
+    }
+
+
 }

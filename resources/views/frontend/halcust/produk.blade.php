@@ -22,7 +22,7 @@
                                         style="font-size: 20px; font-weight:bold; color:black">
                                         {{ $items->nama_barang }}
                                     </h1>
-                                    <p class="">Rp {{ $items->price }}</p>
+                                    <p class="">{{ $items->harga }}</p>
                                 </a>
                             </div>
                         </div>

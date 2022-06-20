@@ -63,6 +63,17 @@ use App\Http\Controllers\Users\Halpenilaian;
     Route::match(array('get','post'),'/add-edit-product/{id?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
     Route::get('/delete-product/{id}', [PersediaanController::class, 'deleteProduct']);
 
+    // ATRIBUT PRODUK
+    Route::match(array('get','post'),'/add-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@addAtribut');
+    Route::post('/edit-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@editAtribut');
+    Route::get('/delete-atribut/{id}', [PersediaanController::class, 'deleteAtribut']);
+    Route::post('update-atribut-status', [PersediaanController::class, 'updateAtributStatus']);
+
+    // GAMBAR PRODUK
+    Route::match(array('get','post'),'/add-image/{id}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
+    Route::get('/delete-image/{id}', [PersediaanController::class, 'deleteImage']);
+
+
     Route::resource('/gambar', GambarController::class);
     Route::resource('/article', ArticleController::class);
     Route::resource('/catarticle', CatarticleController::class);

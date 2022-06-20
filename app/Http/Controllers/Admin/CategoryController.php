@@ -30,8 +30,8 @@ class CategoryController extends Controller
             }else{
                 $status = 1;
             }
-            Kategori::where('id', $data['id_category'])->update(['status'=>$status]);
-            return response()->json(['status'=>$status, 'id_category'=>$data['id_category']]);
+            Kategori::where('id', $data['id_kategori'])->update(['status'=>$status]);
+            return response()->json(['status'=>$status, 'id_kategori'=>$data['id_kategori']]);
         }
     }
 
@@ -50,17 +50,15 @@ class CategoryController extends Controller
             $data = $request->all();
 
             $rules = [
-                'nama_category' => 'required',
-                'slug' => 'required'
+                'nama_kategori' => 'required',
             ];
             $customMessages = [
-                'nama_category.required' => 'Harap isi nama kategori terlebih dahulu',
-                'slug.required' => 'Harap isi url kategori terlebih dahulu',
+                'nama_kategori.required' => 'Harap isi nama kategori terlebih dahulu',
             ];
             $this->validate($request, $rules, $customMessages);
 
-            $category->nama_category = $data['nama_category'];
-            $category->slug = $data['slug'];
+            $category->nama_kategori = $data['nama_kategori'];
+            $category->slug = Str::slug($request['nama_kategori']);
             $category->status = 1;
             $category->save();
 

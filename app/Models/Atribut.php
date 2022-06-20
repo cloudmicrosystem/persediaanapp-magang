@@ -10,14 +10,15 @@ class Atribut extends Model
     use HasFactory;
     protected $table = "atribut";
     protected $fillbale =[
-        'id_product',
-        'size',
+        'id_barang',
+        'ukuran',
         'stock',
+        'sku',
         'status',
     ];
 
     public function barang()
     {
-        return $this->belongsTo(Barang::class, 'id_product', 'id');
+        return $this->belongsTo(Barang::class, 'id_barang', 'id');
     }
 }

@@ -45,17 +45,9 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Nama Kategori</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="nama_category" placeholder="Nama Kategori"
-                                            @if (!empty($category['nama_category'])) value="{{ $category['nama_category'] }}"
-                                            @else value="{{ old('nama_category') }}"
-                                            @endif
-                                        >
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputBorder">URL Kategori</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="slug" placeholder="URL Kategori"
-                                            @if (!empty($category['slug'])) value="{{ $category['slug'] }}"
-                                            @else value="{{ old('slug') }}"
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="nama_kategori" placeholder="Nama Kategori"
+                                            @if (!empty($category['nama_kategori'])) value="{{ $category['nama_kategori'] }}"
+                                            @else value="{{ old('nama_kategori') }}"
                                             @endif
                                         >
                                     </div>

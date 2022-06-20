@@ -15,9 +15,10 @@ class CreateAtributTable extends Migration
     {
         Schema::create('atribut', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_product');
-            $table->string('size');
+            $table->integer('id_barang');
+            $table->string('ukuran');
             $table->integer('stock');
+            $table->string('sku');
             $table->integer('status');
             $table->timestamps();
         });

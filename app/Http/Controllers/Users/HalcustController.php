@@ -13,8 +13,8 @@ class HalcustController extends Controller
 
         $barang = DB::select(
             'SELECT barang.*,
-                (SELECT nama_category FROM category WHERE id = barang.id_category)
-                    AS nama_category FROM barang ORDER BY id LIMIT 8');
+                (SELECT nama_kategori FROM category WHERE id = barang.id_kategori)
+                    AS nama_kategori FROM barang ORDER BY id LIMIT 8');
 
         return view('frontend.halcust.index')->with(compact('category','barang'));
     }

@@ -45,25 +45,25 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>Pilih Kategori</label>
-                                        <select name="id_category" id="id_category" class="custom-select">
+                                        <select name="id_kategori" id="id_kategori" class="custom-select">
                                             <option selected disabled><b>Pilih Kategori</b></option>
                                             @foreach ($category as $key)
                                                 <option value="{{ $key->id }}"
-                                                    @if (!empty(@old('id_category')) && $key['id'] == old('id_category'))
+                                                    @if (!empty(@old('id_kategori')) && $key['id'] == old('id_kategori'))
                                                         selected=""
-                                                    @elseif (!empty($barang['id_category']) && $barang['id_category'] == $key['id'])
+                                                    @elseif (!empty($barang['id_kategori']) && $barang['id_kategori'] == $key['id'])
                                                         selected=""
                                                     @endif
-                                                    >{{ $key->nama_category }}
+                                                    >{{ $key->nama_kategori }}
                                                 </option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Code Product</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="code_barang" placeholder="Code Product"
-                                            @if (!empty($barang['code_barang'])) value="{{ $barang['code_barang'] }}"
-                                            @else value="{{ old('code_barang') }}"
+                                        <label for="exampleInputBorder">Kode Product</label>
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="kode_barang" placeholder="Kode Product"
+                                            @if (!empty($barang['kode_barang'])) value="{{ $barang['kode_barang'] }}"
+                                            @else value="{{ old('kode_barang') }}"
                                             @endif
                                         >
                                     </div>
@@ -76,18 +76,10 @@
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">URL Product</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="slug" placeholder="URL Product"
-                                            @if (!empty($barang['slug'])) value="{{ $barang['slug'] }}"
-                                            @else value="{{ old('slug') }}"
-                                            @endif
-                                        >
-                                    </div>
-                                    <div class="form-group">
                                         <label for="exampleInputBorder">Harga Product</label>
-                                        <input type="number" class="form-control" id="exampleInputBorder" name="price" placeholder="Harga Product"
-                                            @if (!empty($barang['price'])) value="{{ $barang['price'] }}"
-                                            @else value="{{ old('price') }}"
+                                        <input type="text" class="form-control" id="rupiah" name="harga" placeholder="Harga Product"
+                                            @if (!empty($barang['harga'])) value="{{ $barang['harga'] }}"
+                                            @else value="{{ old('harga') }}"
                                             @endif
                                         >
                                     </div>
@@ -101,7 +93,7 @@
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="trending" id="exampleCheck1" value="Yes"
-                                            @if (!empty($barang['trending']) && $barang['trending'] == $barang)
+                                            @if (!empty($barang['trending']) && $barang['trending'] == "Yes")
                                                 checked = ""
                                             @endif
                                         >

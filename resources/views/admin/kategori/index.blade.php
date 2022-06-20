@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Product</li>
+                            <li class="breadcrumb-item active">Kategori Product</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -51,15 +51,15 @@
                                     <tbody>
                                         @foreach ($category as $key=>$value)
                                             <tr>
-                                                <td>{{ $value->nama_category }}</td>
+                                                <td>{{ $value->nama_kategori }}</td>
                                                 <td>{{ $value->slug }}</td>
                                                 <td>
                                                     @if($value->status == 1)
                                                         <a class="updateCategoryStatus" id="value-{{ $value->id }}"
-                                                        id_category="{{ $value->id }}" href="javascript:void(0)">Active</a>
+                                                        id_kategori="{{ $value->id }}" href="javascript:void(0)">Active</a>
                                                     @else
                                                         <a class="updateCategoryStatus" id="value-{{ $value->id }}"
-                                                        id_category="{{ $value->id }}" href="javascript:void(0)">Inactive</a>
+                                                        id_kategori="{{ $value->id }}" href="javascript:void(0)">Inactive</a>
                                                     @endif
                                                 </td>
 

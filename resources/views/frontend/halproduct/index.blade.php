@@ -77,7 +77,7 @@
                             <ul class="menu-category mt-3">
                                 <li>
                                     @foreach ($category as $key => $value)
-                                <li><a href="./product/{{ $value->slug }}"> {{ $value->nama_category }}</a></li>
+                                <li><a href="./product/{{ $value->slug }}"> {{ $value->nama_kategori }}</a></li>
                                 @endforeach
                                 </li>
                             </ul>
@@ -110,7 +110,7 @@
                                                             style="font-size: 20px; font-weight:bold">
                                                             {{ $items->nama_barang }}
                                                         </h1>
-                                                        <p class="">Rp {{ $items->price }}</p>
+                                                        <p class="">{{ $items->harga }}</p>
                                                     </a>
                                                 </div>
                                                 <p style="color: orange" class="m-1 t-center">

@@ -19,8 +19,8 @@ class HalproductController extends Controller
 
         $barang = DB::select(
             'SELECT barang.*,
-                (SELECT nama_category FROM category WHERE id = barang.id_category)
-                    AS nama_category FROM barang ORDER BY id '
+                (SELECT nama_kategori FROM category WHERE id = barang.id_kategori)
+                    AS nama_kategori FROM barang ORDER BY id '
         );
 
         // $gambar = DB::select('SELECT * FROM gambar WHERE id_barang =.$barang->id');
@@ -32,7 +32,7 @@ class HalproductController extends Controller
     {
         $category = DB::select('SELECT * FROM category');
 
-        $barang = DB::select("SELECT * FROM barang WHERE id_category = (SELECT id FROM category WHERE slug = '".$request."' LIMIT 0,1)");
+        $barang = DB::select("SELECT * FROM barang WHERE id_kategori = (SELECT id FROM category WHERE slug = '".$request."' LIMIT 0,1)");
         return view('frontend.halproduct.productByCategory', compact('category','barang'));
     }
 }
