@@ -215,12 +215,12 @@
                                         <button class="input-group-text increment-btn">+</button>
                                     </div> --}}
 
-                                        <div class=" btn btn-dark btn-lg btn-flat px-0 py-2 mt-1">
-                                            <i class="fas fa-shopping-cart "></i>
+                                        <div class=" btn btn-dark btn-lg btn-flat px-0 py-0 mt-1">
+                                            <a href="/checkout"><i class="fas fa-shopping-cart "></i></a>
                                             Add to Cart
                                         </div>
-                                        <div class="btn btn-dark btn-lg btn-flat px-0 py-2 pl-0 mt-1">
-                                            <i class="fas fa-heart fa-lg "></i>
+                                        <div class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
+                                            <a href="/whislist"><i class="fa fa-heart  "></i></a>
                                             Add to Wishlist
                                         </div>
                                         {{-- <ul class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">

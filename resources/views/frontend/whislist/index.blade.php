@@ -44,18 +44,87 @@
     @include('frontend.halcust.sidebar')
 
     <!-- Slide1 -->
-    <section class="section-slide">
+    {{-- <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
                 <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgstore.jpg);">
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <br>
 
-    <div class="container-fluid">
+    <section class="animation">
+        <div class=" p-t-100 ">
+            <p class="text-bold text-uppercase text-center text-white"
+                style="font-size: 20px ; font-family: 'Trebuchet MS'">whislist</p>
+            <div class="row">
+                <div class="col-md-3 pl-5 p-t-50 p-b-100 card-dark">
+                    <div class="row">
+                        <div class="card">
+                            <ul>
+                                <li>
+                                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                                        <a href="detail">
+                                            <img src="images/katalog/akse1-1.jpg" class="img-fluid img-thumbnail"
+                                                alt="" style="border: transparent" />
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-body ">
+                                <div class="t-center">
+                                    <h1 class="card-title" style="font-size: 20px; font-weight:bold">
+                                        Kacamata
+                                    </h1>
+                                    <p>Rp 100.000.00</p>
+                                    </a>
+                                </div>
+                                <p class="t-right m-0 " style="font-size: 10px;">Terjual 0 </p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 pl-5 p-t-50 p-b-100 card-dark">
+                    <div class="row">
+                        <div class="card">
+                            <ul>
+                                <li>
+                                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                                        <a href="detail">
+                                            <img src="images/katalog/akse1-1.jpg" class="img-fluid img-thumbnail"
+                                                alt="" style="border: transparent" />
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-body ">
+                                <div class="t-center">
+                                    <h1 class="card-title" style="font-size: 20px; font-weight:bold">
+                                        Kacamata
+                                    </h1>
+                                    <p>Rp 100.000.00</p>
+                                    </a>
+                                </div>
+                                <p class="t-right m-0 " style="font-size: 10px;">Terjual 0 </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    {{-- <div class="container-fluid">
         <div class="col-12s my-auto " style="border: black">
             <p class="text-bold text-uppercase text-center text-white"
                 style="font-size: 20px ; font-family: 'Trebuchet MS'">whislist</p>
@@ -118,7 +187,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+
     <!-- Footer -->
     @include('frontend.halcust.footer')
 

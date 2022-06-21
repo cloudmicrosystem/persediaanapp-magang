@@ -124,7 +124,7 @@
         <div class="d-flex justify-content-center col-12">
             <div class="row">
 
-                <div class="col-6 my-3 p-t-200">
+                <div class="col-6 my-3 p-t-100">
                     <p class="text-bold text-uppercase text-center text-white" style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Checkout </p>
                     <form>
                         <div class="card-body">
@@ -175,12 +175,12 @@
                     </form>
                 </div>
 
-                <div class="col-6 my-3 p-t-200" style="border: black">
+                <div class="col-6 my-3 p-t-100" style="border: black">
                     <p class="text-bold text-uppercase text-center text-white" style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
                     <div class="card " style="border: black">
                         <div class="card-body " style="background-color: black ; border: black">
                             <div class="row">
-                                <table class="table table-responsive ">
+                                <table class="table table-responsive pt-4">
                                     <thead class="border-color: black">
                                         <tr class="border-color: black">
                                             <th class="text-white" style="width: 150px; height: auto">Produk</th>
