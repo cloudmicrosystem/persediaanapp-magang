@@ -61,7 +61,7 @@
                                         <th class="text-white">Harga</th>
                                         <th class="text-white">Qty</th>
                                         <th class="text-white">Total</th>
-                                        <th class="text-white" colspan="2"></th>
+                                        <th class="text-white" colspan="3"></th>
                                     </tr>
                                 </thead>
 
@@ -84,6 +84,10 @@
                                     </td>
                                     <td class="text-white">100.000.00</td>
                                     <td>
+                                        <button type="submit" class="btn btn-sm btn-dark mb-2">
+                                            update
+                                        </button>
+
                                         <button type="submit" class="btn btn-sm btn-danger mb-2">
                                             Hapus
                                         </button>
@@ -91,6 +95,7 @@
                                         <a href="/checkout"> <button type="submit" class="btn btn-sm btn-primary mb-2">
                                              Chekout
                                         </button> </a>
+
                                     </td>
                                 </tr>
 
@@ -101,7 +106,11 @@
                                     <td class="text-white ">Rp. 100.000.00</td>
                                     <td class="text-white"> 1 </td>
                                     <td class="text-white">100.000.00</td>
-                                    <td><button type="submit" class="btn btn-sm btn-danger mb-2">
+                                    <td>
+                                        <button type="submit" class="btn btn-sm btn-dark mb-2">
+                                            update
+                                        </button>
+                                        <button type="submit" class="btn btn-sm btn-danger mb-2">
                                             Hapus
                                         </button>
                                         <a href="/checkout"> <button type="submit" class="btn btn-sm btn-primary mb-2">
