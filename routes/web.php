@@ -27,8 +27,9 @@ use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HalcheckoutController;
 use App\Http\Controllers\Users\HaldetailartikelController;
 use App\Http\Controllers\Users\HaldetailproductController;
+use App\Http\Controllers\Users\HalKeranjang;
 use App\Http\Controllers\Users\Halpenilaian;
-
+use App\Http\Controllers\Users\HalKeranjangang;
     // USER
     Route::get('/', [HalcustController::class, 'index']);
     Route::get('/product', [HalproductController::class, 'index']);
@@ -46,6 +47,7 @@ use App\Http\Controllers\Users\Halpenilaian;
     Route::get('/test', [TestController::class, 'index']);
     Route::get('/whislist', [Halwhislist::class, 'index']);
     Route::get('/penilaian', [Halpenilaian::class, 'index']);
+    Route::get('/keranjang', [HalKeranjang::class, 'index']);
     // Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
 
     // ADMIN

@@ -216,7 +216,7 @@
                                     </div> --}}
 
                                         <div class=" btn btn-dark btn-lg btn-flat px-0 py-0 mt-1">
-                                            <a href="/checkout"><i class="fas fa-shopping-cart "></i></a>
+                                            <a href="/keranjang"><i class="fas fa-shopping-cart "></i></a>
                                             Add to Cart
                                         </div>
                                         <div class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
