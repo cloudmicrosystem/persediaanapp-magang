@@ -38,26 +38,74 @@
 <body class="animsition">
 
     <!-- Header -->
-    @include('frontend.halcust.header')
+    <header>
+        <!-- Header desktop -->
+        <div class="wrap-menu-header background bgblack">
+            <div class="container h-full">
+                <div class="wrap_header trans-0-4">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="home">
+                            <img src="images/icons/logo2.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
+                        </a>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="wrap_menu p-l-45 p-l-0-xl">
+                        <nav class="menu">
+                            <ul class="main_menu">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+
+                                <li>
+                                    <a href="/product">Product</a>
+                                </li>
+
+                                <li>
+                                    <a href="/store">Store</a>
+                                </li>
+
+                                <li>
+                                    <a href="/artikel">Artikel</a>
+                                </li>
+
+                                <li>
+                                    <a href="/about">About</a>
+                                </li>
+
+                                <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="social flex-w flex-l-m p-r-20">
+
+                        <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
+
+                        <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+
+                        <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
+
+                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Sidebar -->
     @include('frontend.halcust.sidebar')
 
-    <!-- Slide1 -->
-    <section class="section-slide">
-        <div class="wrap-slick1">
-            <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgartikel.jpg);">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <br>
 
     <!-- ARTIKEL -->
     <section>
-        <div class="bread-crumb bo5-b p-t-17 p-b-17">
+        <h1 class="text-bold text-uppercase text-center  p-t-150 " style="font-size: 20px ; font-family: 'Trebuchet MS'">ARTIKEL</h1>
+        <div class="bread-crumb bo5-b p-t-50 p-b-17">
             <div class="container">
                 <a href="/" class="txt27">
                     Home
@@ -74,7 +122,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-lg-9">
-                    <div class="p-t-30 pb-5 bo5-r h-full p-r-50 p-r-0-md bo-none-md">
+                    <div class="p-t-20 pb-5 bo5-r h-full p-r-50 p-r-0-md bo-none-md">
 
                         <!-- Block4 -->
                         <div class="blo4 p-b-63">
@@ -217,7 +265,7 @@
                 </div>
 
                 <div class="col-md-4 col-lg-3">
-                    <div class="sidebar2 p-t-30 p-b-80 p-l-20 p-l-0-md p-t-0-md">
+                    <div class="sidebar2 p-t-20 p-b-80 p-l-20 p-l-0-md p-t-0-md">
                         <!-- Search -->
                         <div class="search-sidebar2 size12 bo2 pos-relative">
                             <input class="input-search-sidebar2 txt10 p-l-20 p-r-55" type="text" name="search"

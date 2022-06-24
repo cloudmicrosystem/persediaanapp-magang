@@ -44,21 +44,12 @@
     @include('frontend.halcust.sidebar')
 
     <!-- Slide1 -->
-    <section class="section-slide">
-        <div class="wrap-slick1">
-            <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgabout.jpg);">
-                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     {{-- Isi halamanAbout --}}
-    <section class="product-page pb-4 pt-4 ">
+    <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">ABOUT</p>
+    <div class="container">
+    <section class="product-page pb-4 p-t-50 ">
 
-        <div class="container">
             <div class="row product-detail-inner">
                 <div class="col-lg-6 col-md-6 col-12">
                         <!-- slides -->

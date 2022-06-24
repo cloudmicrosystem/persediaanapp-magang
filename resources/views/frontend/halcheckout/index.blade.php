@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chekout | Morfeen </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
@@ -31,24 +31,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-free/css/all.min.css') }}">
-    <!--===============================================================================================-->
+
     <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assetcus/css/normalize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assetcus/css/foundation.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assetcus/css/demo.css') }}" />
-    <script src="{{ asset('assetcus/js/vendor/modernizr.js') }}"></script>
-    <script src="{{ asset('assetcus/js/vendor/jquery.js') }}"></script>
 
-    {{-- CSS Class Content --}}
-    @stack('custom-css')
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
 
 </head>
 
@@ -57,9 +44,9 @@
     <!-- Header -->
     <header>
         <!-- Header desktop -->
-        <div class="wrap-menu-header ">
+        <div class="wrap-menu-header background bgblack">
             <div class="container h-full">
-                <div class="wrap_header trans-10 ">
+                <div class="wrap_header trans-0-4">
                     <!-- Logo -->
                     <div class="logo">
                         <a href="home">
@@ -72,7 +59,7 @@
                         <nav class="menu">
                             <ul class="main_menu">
                                 <li>
-                                    <a href="/home">Home</a>
+                                    <a href="/">Home</a>
                                 </li>
 
                                 <li>
@@ -94,11 +81,6 @@
                                 <li>
                                     <a href="/contact">Contact</a>
                                 </li>
-
-                                <li>
-                                    <a href="/contact.html">|</a>
-                                </li>
-
                             </ul>
                         </nav>
                     </div>
@@ -106,26 +88,28 @@
                     <!-- Social -->
                     <div class="social flex-w flex-l-m p-r-20">
 
-                        <a href="#"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
+                        <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
 
+                        <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
 
-                        <a href="#"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+                        <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
 
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
-
                 </div>
             </div>
         </div>
     </header>
 
 
+
     <section class="content m-10">
-        <div class="d-flex justify-content-center col-12">
+        <div class="d-flex justify-content-center col-12 ">
             <div class="row">
 
-                <div class="col-6 my-3 p-t-100">
-                    <p class="text-bold text-uppercase text-center text-white" style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Checkout </p>
+                <div class="col-md-6 my-3 p-t-100">
+                    <p class="text-bold text-uppercase text-center text-white"
+                        style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Checkout </p>
                     <form>
                         <div class="card-body">
                             <div class="form-group ">
@@ -148,7 +132,8 @@
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputEmail1">Kota :</label>
                                 <input style="background-color: black" type="text"
-                                    class="form-control border border-white" id="exampleInputEmail1" placeholder="Kota">
+                                    class="form-control border border-white" id="exampleInputEmail1"
+                                    placeholder="Kota">
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">Alamat :</label>
@@ -175,37 +160,44 @@
                     </form>
                 </div>
 
-                <div class="col-6 my-3 p-t-100" style="border: black">
-                    <p class="text-bold text-uppercase text-center text-white" style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
+                <div class="col-md-6 my-3 p-t-100" style="border: black">
+                    <p class="text-bold text-uppercase text-center text-white"
+                        style="font-size: 20px ; font-family: 'Trebuchet MS'">Your Order</p>
                     <div class="card " style="border: black">
                         <div class="card-body " style="background-color: black ; border: black">
                             <div class="row">
                                 <table class="table table-responsive pt-4">
                                     <thead class="border-color: black">
                                         <tr class="border-color: black">
-                                            <th class="text-white" style="width: 150px; height: auto">Produk</th>
-                                            <th class="text-white" style="width: 250px">Nama Produk
+                                            <th class="text-white">Produk</th>
+                                            <th class="text-white">Nama Produk
                                             </th>
                                             <th class="text-white ">Harga</th>
                                         </tr>
                                     </thead>
 
                                     <tr>
-                                        <td class="text-white text-left" style="width: 100px; height: auto"><img
-                                                src="images/katalog/akse1-1.jpg" alt=""></td>
-                                        <td class="text-white text-center" style="width: 300px">Sandal <br> 1x2</td>
+                                        <td class="text-white text-left">
+                                            <img src="images/katalog/akse1-1.jpg" style="width: 100px; height: auto"
+                                                alt="">
+                                        </td>
+                                        <td class="text-white text-center" style="width: 10px; height: auto">Sandal
+                                            <br> 1x2
+                                        </td>
                                         <td class="text-white ">Rp. 100.000.00</td>
                                     </tr>
 
                                     <tr>
-                                        <td class="text-white " style="width: 100px; height: auto"><img
-                                                src="images/katalog/akse2-1.jpg" alt=""></td>
+                                        <td>
+                                            <img
+                                                src="images/katalog/akse2-1.jpg "style="width: 100px; height: auto alt=">
+                                        </td>
                                         <td class="text-white text-center" style="width: 300px">Kacamata <br> 1x2</td>
                                         <td class="text-white ">Rp. 100.000.00</td>
                                     </tr>
 
                                     <tr>
-                                        <td class="text-white" style="width: 600px">Subtotal</td>
+                                        <td class="text-white">Subtotal</td>
                                         <td class="text-white text-center">=</td>
                                         <td class="text-white">Rp. 200.000.00</td>
                                     </tr>
@@ -234,16 +226,7 @@
     <div id="dropDownSelect1"></div>
 
 
-    <!--===============================================================================================-->
-    <script src="{{ asset('assetcus/js/foundation.min.js') }}"></script>
-    <script src="{{ asset('assetcus/js/setup.js') }}"></script>
-    <!--===============================================================================================-->
-    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-    @stack('custom-js')
-    <!-- AdminLTE App -->
-    <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
+
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->
@@ -278,8 +261,6 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
 
-    <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
 </body>
 
 </html>

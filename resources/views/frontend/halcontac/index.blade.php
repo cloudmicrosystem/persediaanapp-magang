@@ -54,49 +54,12 @@
     <!-- Sidebar -->
     @include('frontend.halcust.sidebar')
 
-    <!-- Slide1 -->
-    <section class="section-slide">
-        <div class="wrap-slick1">
-            <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgkontak.jpg);">
-                </div>
-            </div>
-        </div>
-    </section>
 
     {{-- ISI HALAMAN CONTAC --}}
-
-    {{-- <section>
-        <div class="d-flex justify-content-center">
-            <div class="row">
-                <div class="col-6">
-                        <div class="content">
-                            <a href="https://api.whatsapp.com/send/?phone=%2B6282229278641&text&app_absent=0"
-                                ><i class="fa fa-whatsapp" aria-hidden="true" style="width: 21px"></i></a>
-                                <br>
-                            <a href="https://www.instagram.com/morfeen.official/" class="fs-15 c-white"><i
-                                    class="fa fa-instagram m-l-18" aria-hidden="true"></i></a>
-                                <br>
-                            <a href="https://www.facebook.com/MorfeenStore/photos/?ref=page_internal"
-                                class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
-                                <br>
-                            <a href="https://www.youtube.com/channel/UCqGqu3HSKaThJK1VXRoXnVg"
-                                class="fs-15 c-white"><i class="fa fa-youtube m-l-18" aria-hidden="true"></i></a>
-                                <br>
-                            <a href="https://shopee.co.id/morfeen.official"
-                                class="fs-15 c-white"><i aria-hidden="true"><img class="pr-5" style="width: 4%" src="images/icons/shp.png" alt=""></i></a>
-                        </div>
-                </div>
-                <div class="col-6">
-                    <h3>TES</h3>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
     <section class="content ">
+        <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">CONTAC</p>
         <div class="row">
-            <div class="card-body  d-flex align-items-center justify-content-center pl-5" style="background: black" >
+            <div class="card-body  d-flex align-items-center justify-content-center pl-5 p-t-50" style="background: black" >
                 <div class="col-md-6 text-center ">
                         <h2 style="color: white"><strong>MORFEEN THERTEEN</strong></h2>
                         <p class="lead mb-5" style="color: white">MALANG</p>
