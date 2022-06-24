@@ -43,20 +43,8 @@
     <!-- Sidebar -->
     @include('frontend.halcust.sidebar')
 
-    <!-- Slide1 -->
-    <section class="section-slide">
-        <div class="wrap-slick1">
-            <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgrefund.jpg);">
-                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <br>
-
     {{-- Halaman Refund --}}
+    <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">REFUND</p>
     <div id="page" class="container pt-3 pb-3 py-3 py-md-4">
         <div class="row">
             <div class="col-12 page-content   ">

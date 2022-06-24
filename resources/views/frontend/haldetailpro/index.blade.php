@@ -2,37 +2,17 @@
 <html lang="en">
 
 <head>
-    <title>Detail | Morfeen </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{ asset('assetcus/css/normalize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assetcus/css/foundation.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assetcus/css/demo.css') }}" />
-    <script src="{{ asset('assetcus/js/vendor/modernizr.js') }}"></script>
-    <script src="{{ asset('assetcus/js/vendor/jquery.js') }}"></script>
-
-    <!-- xzoom plugin here -->
-    <script type="text/javascript" src="{{ asset('assetcus/js/xzoom.min.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/xzoom.css') }}" media="all" />
-
-   <!-- hammer plugin here -->
-  <script type="text/javascript" src="{{ asset('assetcus/css/hammer.js/1.0.5/jquery.hammer.min.js') }}"></script>
-  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <link type="text/css" rel="stylesheet" media="all" href="{{ asset('public/assetcus/fancybox/source/jquery.fancybox.css') }}" />
-  <link type="text/css" rel="stylesheet" media="all" href="{{ asset('magnific-popup/css/magnific-popup.css') }}'" />
-  <script type="text/javascript" src="{{ asset('assetcus/css/fancybox/source/jquery.fancybox.js')}}"></script>
-  <script type="text/javascript" src="{{ asset('assetcus/css/magnific-popup/js/magnific-popup.js')}}"></script>
-
-    {{-- CSS Class Content --}}
-    @stack('custom-css')
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
-
+    <title>Detail | Morfeen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- xzoom plugin here -->
+      <script type="text/javascript" src="{{ asset('assetcus/js/xzoom.min.js') }}"></script>
+      <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/xzoom.css') }}" media="all" />
+      <link rel="stylesheet" href="{{ asset('assetcus/css/normalize.css') }}" />
+      <link rel="stylesheet" href="{{ asset('assetcus/css/foundation.css') }}" />
+      <link rel="stylesheet" href="{{ asset('assetcus/css/demo.css') }}" />
+      <script src="{{ asset('assetcus/js/vendor/modernizr.js') }}"></script>
+      <script src="{{ asset('assetcus/js/vendor/jquery.js') }}"></script>
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
@@ -50,10 +30,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/select2/select2.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
-
-    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/rating.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
@@ -62,15 +39,20 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
     <!--===============================================================================================-->
-    <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
-    <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
+
+    <!--===============================================================================================-->
+
+      {{-- CSS Class Content --}}
+      @stack('custom-css')
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
 
 
-
-
-    <!-- css keranjang -->
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
-    {{-- <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" /> --}}
 </head>
 
 <body class="animsition">
@@ -135,50 +117,14 @@
         </div>
     </header>
 
-
     <!-- Sidebar -->
-    <aside class="sidebar trans-0-4">
-        <!-- Button Hide sidebar -->
-        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
-
-        <!-- - -->
-        <ul class="menu-sidebar p-t-100 p-b-20">
-            <li class="t-center m-b-13">
-                <h4 class="txt13 m-b-20" style="color: black">
-                    Menu
-                </h4>
-            </li>
-            <li class="t-center m-b-13">
-                <a href="/" class="txt19">Home</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="/product" class="txt19">Product</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="/store" class="txt19">Store</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="/artikel" class="txt19">Artikel</a>
-            </li>
-
-            <li class="t-center m-b-13">
-                <a href="/about" class="txt19">About</a>
-            </li>
-
-            <li class="t-center m-b-33">
-                <a href="/contact" class="txt19">Contact</a>
-            </li>
-        </ul>
-
-    </aside>
+    @include('frontend.halcust.sidebar')
 
 
 
     <section class="content">
-        <h1 class="text-bold text-uppercase text-center text-black p-t-100" style="font-size: 20px ; font-family: 'Trebuchet MS'">detail PRODUCT</h1>
+        <h1 class="text-bold text-uppercase text-center text-black p-t-100"
+            style="font-size: 20px ; font-family: 'Trebuchet MS'">detail PRODUCT</h1>
         <div class="bread-crumb bo5-b p-t-17 p-b-17">
             <div class="container">
                 <a href="/" class="txt27">
@@ -221,28 +167,7 @@
                             </div>
 
                             <h5 class="mt-2">Size</h5>
-                            {{-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-dark text-center">
-                                    <input type="radio" name="color_option" id="color_option_b1" autocomplete="off">
-                                    <span class="text">S</span>
 
-                                </label>
-                                <label class="btn btn-dark text-center">
-                                    <input type="radio" name="color_option" id="color_option_b2" autocomplete="off">
-                                    <span class="text">M</span>
-
-                                </label>
-                                <label class="btn btn-dark text-center">
-                                    <input type="radio" name="color_option" id="color_option_b3" autocomplete="off">
-                                    <span class="text">L</span>
-
-                                </label>
-                                <label class="btn btn-dark text-center">
-                                    <input type="radio" name="color_option" id="color_option_b4" autocomplete="off">
-                                    <span class="text">XL</span>
-
-                                </label>
-                            </div> --}}
                             <div class="col-12">
                                 <div class="form-group">
                                     <select class="form-control ">
@@ -259,25 +184,25 @@
                             <h5>Quantity</h5>
                             <div class="mt-2 ">
                                 <div class="col-md-12">
-                                    <input type="number"  class="form-control px-0 py-0"
-                                        placeholder="Qty" value="" />
+                                    {{-- <input type="number" class="form-control px-0 py-0" placeholder="Qty"
+                                        value="" /> --}}
 
-                                    {{-- <div class="input-group text-center mb-4 " style="width: 130px;">
+                                    <div class="input-group text-center mb-4 " style="width: 130px;">
                                         <button class="input-group-text decrement-btn">-</button>
                                         <input type="text" name="quantity " class="form-control qty-input text-center"
                                             value="1">
                                         <button class="input-group-text increment-btn">+</button>
-                                    </div> --}}
+                                    </div>
 
-                                        <div class=" btn btn-dark btn-lg btn-flat px-0 py-0 mt-1">
-                                            <a href="/keranjang"><i class="fas fa-shopping-cart "></i></a>
-                                            Add to Cart
-                                        </div>
-                                        <div class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
-                                            <a href="/whislist"><i class="fa fa-heart  "></i></a>
-                                            Add to Wishlist
-                                        </div>
-                                        {{-- <ul class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
+                                    <div class=" btn btn-dark btn-lg btn-flat px-0 py-0 mt-1">
+                                        <a href="/keranjang"><i class="fas fa-shopping-cart "></i></a>
+                                        Add to Cart
+                                    </div>
+                                    <div class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
+                                        <a href="/whislist"><i class="fa fa-heart  "></i></a>
+                                        Add to Wishlist
+                                    </div>
+                                    {{-- <ul class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
                                         <li>
                                             <a href="/whislist"><i class="fas fa-heart fa-lg "></i>
                                                 Add to Wishlist</a>
@@ -471,6 +396,8 @@
     </section>
 
 
+
+
     <!-- Footer -->
     @include('frontend.halcust.footer')
 
@@ -485,12 +412,8 @@
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
 
-
-
-    <!--===============================================================================================-->
     <script src="{{ asset('assetcus/js/foundation.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/setup.js') }}"></script>
-    <!--===============================================================================================-->
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->
@@ -517,43 +440,12 @@
     <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/main.js') }}"></script>
     <!--===============================================================================================-->
-
-    <!--  js keranjang  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/js/bootstrap.min.js"></script>
-    <script src="{{ asset('assetcus/js/cart.js') }}"></script>
-
-    <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('.increment-btn').click(function(e) {
-                e.preventDefault();
-
-                var inc_value = $('.qty-input').val();
-                var value = parseInt(inc_value, 10);
-                value = isNan(value) ? 0 : value;
-                if (value < 10) {
-                    value++;
-                    $('.qty-input').val(value);
-                }
-            });
-
-            $('.decrement-btn').click(function(e) {
-                e.preventDefault();
-
-                var dec_value = $('.qty-input').val();
-                var value = parseInt(dec_value, 10);
-                value = isNan(value) ? 0 : value;
-                if (value > 10) {
-                    value--;
-                    $('.qty-input').val(value);
-                }
-            });
-
-        });
-    </script>
+    <script src="{{ asset('') }}assets/plugins/jquery/jquery.min.js"></script>
+    @stack('custom-js')
+    <!-- AdminLTE App -->
+    <script src="{{ asset('') }}assets/dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
 
 </body>
 
