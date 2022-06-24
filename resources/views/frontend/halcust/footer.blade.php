@@ -53,7 +53,7 @@
                                 <a style="color: gray" href="/refund"> Refund</a>
                             </li>
                             <li class="txt14">
-                                <a style="color: gray" href="/order"> How To Order</a>
+                                <a style="color: gray" href="/how-to-order"> How To Order</a>
                             </li>
                             <li class="txt14">
                                 <a style="color: gray" href="/faq"> FAQ</a>

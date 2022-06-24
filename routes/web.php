@@ -33,22 +33,22 @@ use App\Http\Controllers\Users\Haldetailpro;
 
     // USER
     Route::get('/', [HalcustController::class, 'index']);
+    Route::get('/artikel', [HalcustController::class, 'showArticle']);
+    Route::get('/store', [HalcustController::class, 'showStore']);
+    Route::get('/about', [HalcustController::class, 'showAbout']);
+    Route::get('/contact', [HalcustController::class, 'showContact']);
+    Route::get('/keranjang', [HalcustController::class, 'showCart']);
+    Route::get('/penilaian', [HalcustController::class, 'showRating']);
+    Route::get('/wishlist', [HalcustController::class, 'showWhish']);
+    Route::get('/checkout', [HalcustController::class, 'showCo']);
+    Route::get('/refund', [HalcustController::class, 'showRefund']);
+    Route::get('/how-to-order', [HalcustController::class, 'showHow']);
+    Route::get('/faq', [HalcustController::class, 'showFaq']);
+
     Route::get('/product', [HalproductController::class, 'index']);
     Route::get('/product/{category}', [HalproductController::class, 'category']);
     Route::get('/detail', [HaldetailproductController::class, 'index']);
-    Route::get('/about', [HalaboutController::class, 'index']);
-    Route::get('/store', [HalstoreController::class, 'index']);
-    Route::get('/contact', [HalcontacController::class, 'index']);
-    Route::get('/artikel', [HalartikelController::class, 'index']);
     Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
-    Route::get('/refund', [HalrefundController::class, 'index']);
-    Route::get('/order', [HalorderController::class, 'index']);
-    Route::get('/faq', [HalfaqController::class, 'index']);
-    Route::get('/checkout', [HalcheckoutController::class, 'index']);
-    Route::get('/test', [TestController::class, 'index']);
-    Route::get('/whislist', [Halwhislist::class, 'index']);
-    Route::get('/penilaian', [Halpenilaian::class, 'index']);
-    Route::get('/keranjang', [HalKeranjang::class, 'index']);
     Route::get('/detailpro', [Haldetailpro::class, 'index']);
     // Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
 

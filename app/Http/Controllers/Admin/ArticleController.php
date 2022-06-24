@@ -52,14 +52,12 @@ class ArticleController extends Controller
                 'id_catarticle' => 'required',
                 'judul_artikel' => 'required',
                 'deskripsi_artikel' => 'required',
-                'gambar_artikel' => 'required',
                 'sumber_artikel' => 'required'
             ];
             $customMessages = [
                 'id_catarticle.required' => 'Harap pilih kategori artikel terlebih dahulu',
                 'judul_artikel.required' => 'Harap isi judul artikel terlebih dahulu',
                 'deskripsi_artikel.required' => 'Harap isi deskripsi artikel terlebih dahulu',
-                'gambar_artikel.required' => 'Harap isi gambar artikel terlebih dahulu',
                 'sumber_artikel.required' => 'Harap isi sumber artikel terlebih dahulu'
             ];
             $this->validate($request, $rules, $customMessages);
@@ -84,6 +82,11 @@ class ArticleController extends Controller
             $article->deskripsi_artikel = $data['deskripsi_artikel'];
             $article->sumber_artikel = $data['sumber_artikel'];
             $article->status = 1;
+            if(!empty($data['featured'])){
+                $article->featured = $data['featured'];
+            }else{
+                $article->featured = "No";
+            }
             $article->save();
 
             session::flash('success_message', $message);

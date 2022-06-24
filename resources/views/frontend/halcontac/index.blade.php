@@ -57,16 +57,16 @@
 
     {{-- ISI HALAMAN CONTAC --}}
     <section class="content ">
-        <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">CONTAC</p>
+        <p class="text-bold text-uppercase text-center text-white p-t-120"
+            style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
         <div class="row">
-            <div class="card-body  d-flex align-items-center justify-content-center pl-5 p-t-50" style="background: black" >
+            <div class="card-body  d-flex align-items-center justify-content-center pl-5 p-t-50"
+                style="background: black">
                 <div class="col-md-6 text-center ">
-                        <h2 style="color: white"><strong>MORFEEN THERTEEN</strong></h2>
-                        <p class="lead mb-5" style="color: white">MALANG</p>
+                    <h2 style="color: white"><strong>MORFEEN OFFICIAL</strong></h2>
+                    <small style="color: white">MALANG | SLOROK</small>
                 </div>
-
-                <div class="col-md-6 pt-50 pl-5">
-                    <!-- - -->
+                <div class="col-md-5 pt-50 pl-5">
                     <h4 class="txt13 m-b-20 ">
                         SOSIAL MEDIA
                     </h4>
@@ -92,26 +92,6 @@
                         </li>
                     </ul>
                 </div>
-                    {{-- <div class="form-group">
-                        <label style="color: white" for="inputName">Name</label>
-                        <input style="background-color: black "  type="text" class="form-control border border-white" placeholder="Name"/>
-                    </div>
-                    <div class="form-group ">
-                        <label style="color: white" for="inputEmail">E-Mail</label>
-                        <input style="background-color: black" style="border: white" type="email" class="form-control border border-white" placeholder="E-mail"/>
-                    </div>
-                    <div class="form-group">
-                        <label style="color: white" for="inputSubject">Subject</label>
-                        <input style="background-color: black" type="text" class="form-control border border-white" placeholder="Subject"/>
-                    </div>
-                    <div class="form-group">
-                        <label style="color: white" for="inputMessage">Message</label>
-                        <textarea style="background-color: black" id="inputMessage" class="form-control border border-white" rows="4" placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-group m-3" >
-                        <input type="submit" class="btn btn-dark" value="Send message">
-                    </div> --}}
-
             </div>
         </div>
     </section>

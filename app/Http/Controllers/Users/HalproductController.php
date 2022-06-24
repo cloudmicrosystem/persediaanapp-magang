@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Barang;
 use Illuminate\Support\Facades\DB;
 
 class HalproductController extends Controller
@@ -23,9 +24,11 @@ class HalproductController extends Controller
                     AS nama_kategori FROM barang ORDER BY id '
         );
 
+        $trendingItems = Barang::where('trending','Yes')->take(4)->get();
+
         // $gambar = DB::select('SELECT * FROM gambar WHERE id_barang =.$barang->id');
 
-        return view('frontend.halproduct.index')->with(compact('category','barang'));
+        return view('frontend.halproduct.index')->with(compact('category','barang','trendingItems'));
     }
 
     public function category($request)

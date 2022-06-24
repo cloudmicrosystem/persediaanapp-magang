@@ -44,12 +44,13 @@
     @include('frontend.halcust.sidebar')
 
     {{-- HAl FAQ --}}
-    <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">FAQ</p>
+    <p class="text-bold text-uppercase text-center text-white p-t-100"
+        style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
     <div id="page" class="container py-3 py-md-4 pt-3 pb-3">
         <div class="row">
             <div class="col-12 page-content m-5 ">
                 <div class="tab-content">
-                    <p class="text-white" ><strong>FAQ</strong></p><br>
+                    <p class="text-white"><strong>FAQ</strong></p><br>
                     <dl>
                         <dd class="text-white">- Bagaimana cara memiliki akun Morfeen Official di website? <br>
                             Diharapkan melakukan Regristasi terlebih dahulu</dd>
@@ -60,7 +61,8 @@
                             Apabila anda sudah mendapatkan nomor resi via email, silahkan lacak pesanan anda di
                             Raja Ongkir dan masukan nomor resi yang kami berikan</dd>
                         <dd class="text-white">- Kemana harus membayar pesanan? <br>
-                            Pihak dari Morfeen menggunakan payment gateway midtrans , di Midtrans sendiri ada banyak jenis pembayaran nya .</dd>
+                            Pihak dari Morfeen menggunakan payment gateway midtrans , di Midtrans sendiri ada banyak
+                            jenis pembayaran nya .</dd>
                         <dd class="text-white">- Berapa lama batas waktu pembayaran pesanan? <br>
                             Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda
                             akan otomatis batal</dd>

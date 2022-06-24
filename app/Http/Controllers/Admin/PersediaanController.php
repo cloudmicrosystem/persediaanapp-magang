@@ -51,7 +51,7 @@ class PersediaanController extends Controller
             $barang = Barang::find($id);
             $message = "Product Berhasil Diupdate!";
         }
-        
+
         $category = Kategori::get();
 
         if($request->isMethod('post')){
@@ -95,7 +95,10 @@ class PersediaanController extends Controller
             $barang->status = 1;
             if(!empty($data['trending'])){
                 $barang->trending = $data['trending'];
+            }else{
+                $barang->trending = "No";
             }
+
             $barang->save();
 
             session::flash('success_message', $message);

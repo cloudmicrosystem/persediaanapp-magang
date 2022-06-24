@@ -30,6 +30,10 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
     <!--===============================================================================================-->
 
     {{-- css keranjang --}}
@@ -120,6 +124,28 @@
         <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
 
         <script src="{{ asset('assetcus/js/main.js') }}"></script>
+
+        <script src="{{ asset('assetcus/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
+        <script>
+            $('.trending-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            });
+        </script>
 
 </body>
 

@@ -44,55 +44,57 @@
     @include('frontend.halcust.sidebar')
 
 
-  <section>
-    <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">Store</p>
-    <div class="container">
-        <div class="row">
-            <div class="d-flex justify-content-center">
+    <section>
+        <p class="text-bold text-uppercase text-center text-white p-t-120"
+            style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-5 m-2  p-t-50 pb-5">
+                        <div class="card" style="background-color: black">
+                            <ul class="list-inline social-media">
+                                <li class="list-inline item">
+                                    <a
+                                        href="https://www.google.com/maps/place/Jl.+Suwari+Sel.,+Sukun,+Kec.+Sukun,+Kota+Malang,+Jawa+Timur+65147/@-7.9917017,112.6175466,20z/data=!4m5!3m4!1s0x2e7882a7c6f811d9:0x2ef67369582b980e!8m2!3d-7.9917704!4d112.6178376">
+                                        <img src="images/slide-1.jpeg" class="card-img-top" alt="...">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="m-3">
+                                <h4 class="text-center text-uppercase text-white" style="font-weight: bold"> Morfeen
+                                    Store Sukun</h4>
+                                <p class="m-1 text-center text-white"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota
+                                    Malang<br />
+                                    Mon-Sun 12.00-21:00<br />
+                                    (+62) 887-4116-4285</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-md-6 mb-5 m-2  p-t-50 pb-5">
-                <div class="card" style="background-color: black">
-                    <ul class="list-inline social-media">
-                        <li class="list-inline item">
-                            <a
-                                href="https://www.google.com/maps/place/Jl.+Suwari+Sel.,+Sukun,+Kec.+Sukun,+Kota+Malang,+Jawa+Timur+65147/@-7.9917017,112.6175466,20z/data=!4m5!3m4!1s0x2e7882a7c6f811d9:0x2ef67369582b980e!8m2!3d-7.9917704!4d112.6178376">
-                                <img src="images/slide-1.jpeg" class="card-img-top" alt="...">
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="m-3">
-                        <h4 class="text-center text-uppercase text-white" style="font-weight: bold"> Morfeen Store Sukun</h4>
-                        <p class="m-1 text-center text-white"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang<br />
-                            Mon-Sun 12.00-21:00<br />
-                            (+62) 887-4116-4285</p>
-
+                    <div class="col-md-6 mb-5 m-2  p-t-50 pb-5">
+                        <div class="card" style="background-color: black">
+                            <ul class="list-inline social-media">
+                                <li class="list-inline item">
+                                    <a
+                                        href="https://www.google.com/maps/place/Morfeen+2nd+Store,+Slorok/@-8.1425777,112.5211889,17z/data=!3m1!4b1!4m5!3m4!1s0x2e789f32d601ed31:0x27f74ee587bd47b2!8m2!3d-8.1425919!4d112.523373?shorturl=1">
+                                        <img src="images/slorok.jpeg" class="card-img-top" alt="...">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="m-3">
+                                <h4 class="text-center text-uppercase text-white" style="font-weight: bold">Morfeen
+                                    Store Slorok </h4>
+                                <p class="m-1 text-center text-white "> Jl. Kalibiru No.6, Slorok, Kec. Kromengan,
+                                    Kabupaten Malang<br />
+                                    Mon-Sun 12.00-21:00<br />
+                                    (+62) 887-4116-4285</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 mb-5 m-2  p-t-50 pb-5">
-                <div class="card" style="background-color: black">
-                    <ul class="list-inline social-media">
-                        <li class="list-inline item" >
-                            <a
-                                href="https://www.google.com/maps/place/Morfeen+2nd+Store,+Slorok/@-8.1425777,112.5211889,17z/data=!3m1!4b1!4m5!3m4!1s0x2e789f32d601ed31:0x27f74ee587bd47b2!8m2!3d-8.1425919!4d112.523373?shorturl=1">
-                                <img  src="images/slorok.jpeg" class="card-img-top" alt="...">
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="m-3">
-                        <h4 class="text-center text-uppercase text-white" style="font-weight: bold">Morfeen Store Slorok </h4>
-                        <p class="m-1 text-center text-white "> Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang<br />
-                            Mon-Sun 12.00-21:00<br />
-                            (+62) 887-4116-4285</p>
-                    </div>
-                </div>
-            </div>
-
             </div>
         </div>
-    </div>
-  </section>
+    </section>
     <!-- Footer -->
     @include('frontend.halcust.footer')
 

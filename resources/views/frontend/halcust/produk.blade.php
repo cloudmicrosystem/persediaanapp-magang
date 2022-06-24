@@ -1,6 +1,9 @@
-<div class="col-12 mb-8 t-center" style="background-color: black">
+<div class="col-12 mb-8 t-center" style="background-color: white">
+    <div class="col-md-3" style="background: white"><br>
+        <h3 class="tit7 t-center m-b-10">Popular Product </h3>
+    </div>
     <div class="row">
-        @foreach ($barang as $items)
+        @foreach ($trendingItems as $items)
             <div class="col-md-3">
                 <div class="row">
                     <div class="card" style="border: transparent">
@@ -23,6 +26,14 @@
                                         {{ $items->nama_barang }}
                                     </h1>
                                     <p class="">{{ $items->harga }}</p>
+                                    <p style="color: orange" class="m-1 t-center">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </p>
+                                    <p class="t-center m-0">Terjual 10 </p>
                                 </a>
                             </div>
                         </div>
@@ -31,4 +42,5 @@
             </div>
         @endforeach
     </div>
+    <br>
 </div>

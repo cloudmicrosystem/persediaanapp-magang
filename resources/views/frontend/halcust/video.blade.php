@@ -1,5 +1,5 @@
 <section class="section-video parallax100" style="background-image: url(images/bg.jpg);">
-    <div class="content-video t-center p-t-225 p-b-250">
+    <div class="content-video t-center p-t-150 p-b-150">
         <h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
             Our Video
         </h3>
@@ -13,104 +13,43 @@
 </section>
 
 <!-- Blog -->
-<section class="section-blog bg-white p-t-50 p-b-50">
+<section class="section-blog bg-white p-t-30 p-b-50">
     <div class="container">
-        <div class="title-section-ourmenu t-center m-b-22">
-            <h1 class="tit5 t-center m-t-2">
-                Artikel Morfeen
+        <div class="title-section-ourmenu m-b-22">
+            <h1 class="tit7 t-center m-b-10">
+                Seputar Artikel
             </h1>
         </div>
 
         <div class="row">
-            <div class="col-md-4 p-t-30">
-                <!-- Block1 -->
-                <div class="blo1">
-                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                        <a href="detailartikel"><img src="images/d3.jpeg" alt="IMG-INTRO"></a>
+            @foreach ($trendingArticle as $item)
+                <div class="col-md-4 p-t-30">
+                    <!-- Block1 -->
+                    <div class="blo1">
+                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                            <a href="detailartikel"><img src="{{ asset('images/artikel/' . $item->gambar_artikel) }}"
+                                class="img-fluid img-thumbnail" alt="{{ $item->judul_artikel }}"></a>
+                        </div>
 
-                        <div class="time-blog">
-                            21 Dec 2017
+                        <div class="wrap-text-blo1 p-t-35">
+                            <a href="detailartikel">
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    {{ $item->judul_artikel }}
+                                </h4>
+                            </a>
+
+                            <p class="m-b-20">
+                                {{ Str::limit($item->deskripsi_artikel, '80', ' . . . . . . . ') }}
+                            </p>
+
+                            <a href="artikel" class="txt4">
+                                Lanjutkan Membaca
+                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="wrap-text-blo1 p-t-35">
-                        <a href="detailartikel">
-                            <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                Best Places for Wine
-                            </h4>
-                        </a>
-
-                        <p class="m-b-20">
-                            Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-                        </p>
-
-                        <a href="artikel" class="txt4">
-                            Continue Reading
-                            <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                        </a>
-                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-4 p-t-30">
-                <!-- Block1 -->
-                <div class="blo1">
-                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                        <a href="detailartikel"><img src="images/d2.jpeg" alt="IMG-INTRO"></a>
-
-                        <div class="time-blog">
-                            15 Dec 2017
-                        </div>
-                    </div>
-
-                    <div class="wrap-text-blo1 p-t-35">
-                        <a href="detailartikel">
-                            <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                Eggs and Cheese
-                            </h4>
-                        </a>
-
-                        <p class="m-b-20">
-                            Duis elementum, risus sit amet lobortis nunc justo condimentum ligula, vitae feugiat
-                        </p>
-
-                        <a href="artikel" class="txt4">
-                            Continue Reading
-                            <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 p-t-30">
-                <!-- Block1 -->
-                <div class="blo1">
-                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                        <a href="detailartikel"><img src="images/ar1.jpg" alt="IMG-INTRO"></a>
-
-                        <div class="time-blog">
-                            12 Dec 2017
-                        </div>
-                    </div>
-
-                    <div class="wrap-text-blo1 p-t-35">
-                        <a href="detailartikel">
-                            <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                Style the Wedding Party
-                            </h4>
-                        </a>
-
-                        <p class="m-b-20">
-                            Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
-                        </p>
-
-                        <a href="artikel" class="txt4">
-                            Continue Reading
-                            <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

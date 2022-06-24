@@ -46,41 +46,49 @@
     <!-- Slide1 -->
 
     {{-- Isi halamanAbout --}}
-    <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">ABOUT</p>
+    <p class="text-bold text-uppercase text-center text-white p-t-100"
+        style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
     <div class="container">
-    <section class="product-page pb-4 p-t-50 ">
+        <section class="product-page pb-4 p-t-50 ">
 
             <div class="row product-detail-inner">
                 <div class="col-lg-6 col-md-6 col-12">
-                        <!-- slides -->
-                        <div class="wrap-pic-welcome size-21 bo-rad-10 hov-img-zoom m-l-r-auto">
-                            <div class=""> <img src="images/welcome2.jpg" alt="Product 1"> </div>
+                    <!-- slides -->
+                    <div class="wrap-pic-welcome size-21 bo-rad-10 hov-img-zoom m-l-r-auto">
+                        <div class=""> <img src="images/welcome2.jpg" alt="Product 1"> </div>
 
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="product-detail">
                         <div class="product-short-desc">
-                            <p class="text-white">Morfeen adalah sebuah bisnis industri kreatif berbasis clothing & distribution store
-                                yang didirikan pada tahun 2013, diawali dari sebuah pertemanan dekat  Fandi Akh & Yovie kala itu,
-                                beranjak dari sebuah keisengan dan kesenangan atau bisa kita sebut hobi bermain musik. Sadar jika
-                                bermain musik tidak menghasilkan komersil dan tujuan utama bermusik adalah bersenang- senang, Fandi
-                                memiliki sebuah ide untuk membuat sebuah brand, yang pastinya untuk bisa keberlangsungan dan
+                            <p class="text-white">Morfeen adalah sebuah bisnis industri kreatif berbasis clothing &
+                                distribution store
+                                yang didirikan pada tahun 2013, diawali dari sebuah pertemanan dekat Fandi Akh & Yovie
+                                kala itu,
+                                beranjak dari sebuah keisengan dan kesenangan atau bisa kita sebut hobi bermain musik.
+                                Sadar jika
+                                bermain musik tidak menghasilkan komersil dan tujuan utama bermusik adalah bersenang-
+                                senang, Fandi
+                                memiliki sebuah ide untuk membuat sebuah brand, yang pastinya untuk bisa keberlangsungan
+                                dan
                                 perkembangan band nya.
                             </p>
                             <br>
-                            <p class="text-white">Tidak lama kemudian, bersama Yovi, Morfeen mulai beranjak dari fase pembentukan
-                                sesuai dengan rencana program kerja, maka pada tahun 2015 store pertama didirikan di  Jl. Suwari
-                                Selatan 7, Sukun Malang. 2 tahun adalah waktu yang tepat untuk sebuah pengembangan bisnis industri
-                                 kreatif.
+                            <p class="text-white">Tidak lama kemudian, bersama Yovi, Morfeen mulai beranjak dari fase
+                                pembentukan
+                                sesuai dengan rencana program kerja, maka pada tahun 2015 store pertama didirikan di Jl.
+                                Suwari
+                                Selatan 7, Sukun Malang. 2 tahun adalah waktu yang tepat untuk sebuah pengembangan
+                                bisnis industri
+                                kreatif.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
-
-    <br>
+        </section>
+    </div><br>
 
     <!-- Footer -->
     @include('frontend.halcust.footer')

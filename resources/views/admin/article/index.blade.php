@@ -39,7 +39,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="product" class="table table-bordered table-hover">
+                                <table id="product" class="table table-bordered table-responsive">
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>Kategori Artikel</th>

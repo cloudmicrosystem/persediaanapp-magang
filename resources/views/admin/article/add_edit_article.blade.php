@@ -75,9 +75,9 @@
                                             @endif
                                         </textarea>
                                     </div>
-                                    {{-- @if ($article->gambar_artikel)
+                                    @if ($article->gambar_artikel)
                                         <img src="{{ asset('images/artikel/'. $article->gambar_artikel) }}" alt="" width=150px height=auto>
-                                    @endif --}}
+                                    @endif <br><br>
                                     <div class="form-group">
                                         <label for="exampleInputFile">Gambar Artikel</label>
                                         <div class="input-group">
@@ -101,6 +101,14 @@
                                             @else value="{{ old('sumber_artikel') }}"
                                             @endif
                                         >
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="featured" id="exampleCheck1" value="Yes"
+                                            @if (!empty($article['featured']) && $article['featured'] == "Yes")
+                                                checked = ""
+                                            @endif
+                                        >
+                                        <label class="form-check-label" >Trending Product</label>
                                     </div>
                                 </div>
                                 <div class="card-footer">

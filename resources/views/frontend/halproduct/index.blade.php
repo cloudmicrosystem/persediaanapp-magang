@@ -106,7 +106,9 @@
 
     <!-- Sidebar kategori -->
     <section class="slider-section  pb-4">
-        <h1 class="text-bold text-uppercase text-center text-black p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">PRODUCT</h1>
+        <h1 class="text-bold text-uppercase text-center text-black p-t-120"
+            style="font-size: 20px ; font-family: 'Trebuchet MS'"></h1>
+
         <div class="container">
             <div class="slider-inner">
                 <div class="row">

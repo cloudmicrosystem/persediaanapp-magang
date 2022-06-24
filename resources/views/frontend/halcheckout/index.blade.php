@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Chekout | Morfeen </title>
+    <title>Checkout | Morfeen </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
@@ -35,12 +35,9 @@
     <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
 
-
-
 </head>
 
 <body class="animation " style="background: black">
-
     <!-- Header -->
     <header>
         <!-- Header desktop -->
@@ -84,16 +81,11 @@
                             </ul>
                         </nav>
                     </div>
-
                     <!-- Social -->
                     <div class="social flex-w flex-l-m p-r-20">
-
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
-
                         <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-
                         <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
-
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
                 </div>
@@ -101,15 +93,13 @@
         </div>
     </header>
 
-
-
-    <section class="content m-10">
-        <div class="d-flex justify-content-center col-12 ">
+    <section class="content">
+        <div class="d-flex justify-content-center">
             <div class="row">
 
                 <div class="col-md-6 my-3 p-t-100">
                     <p class="text-bold text-uppercase text-center text-white"
-                        style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Checkout </p>
+                        style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Form Checkout </p>
                     <form>
                         <div class="card-body">
                             <div class="form-group ">
@@ -155,7 +145,6 @@
                             <div class="form-group">
                                 <input type="submit" class="btn btn-dark" value="Send message">
                             </div>
-
                         </div>
                     </form>
                 </div>

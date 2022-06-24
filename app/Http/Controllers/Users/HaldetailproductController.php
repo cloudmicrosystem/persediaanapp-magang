@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Barang;
 class HaldetailproductController extends Controller
 {
     /**
@@ -14,6 +15,8 @@ class HaldetailproductController extends Controller
      */
     public function index()
     {
+        $trendingItems = Barang::where('trending','Yes')->take(4)->get();
+
         return view('frontend.haldetailproduct.index');
     }
 

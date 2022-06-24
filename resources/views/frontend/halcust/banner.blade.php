@@ -10,9 +10,7 @@
 
             <div class="item-slick1 item3-slick1" style="background-image: url(images/banner/home3.jpg);">
             </div>
-
         </div>
-
         <div class="wrap-slick1-dots"></div>
     </div>
 </section>
@@ -23,13 +21,11 @@
         <div class="row">
             <div class="col-md-6 p-t-45 p-b-30">
                 <div class="wrap-text-welcome t-center">
-
                     <h3 class="tit3 t-center m-b-35 m-t-5">
                         MORFEEN THIRTEEN
                     </h3>
-
                     <a href="/about" class="txt4">
-                        Our Story
+                        selanjutnya
                         <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -42,16 +38,5 @@
         </div>
     </div>
 </section>
-
-<!-- Intro -->
-{{-- <section class="section-intro">
-        <div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(images/bg2.jpg)">
-
-            <h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
-                MORFEEN THIRTEEN
-            </h3>
-        </div>
-
-    </section> --}}
 <br>
 <br>

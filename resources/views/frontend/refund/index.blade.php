@@ -44,11 +44,12 @@
     @include('frontend.halcust.sidebar')
 
     {{-- Halaman Refund --}}
-    <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">REFUND</p>
+    <p class="text-bold text-uppercase text-center text-white p-t-120"
+        style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
     <div id="page" class="container pt-3 pb-3 py-3 py-md-4">
         <div class="row">
             <div class="col-12 page-content   ">
-                <p class="text-white" ><strong>KEBIJAKAN PENGEMBALIAN DANA</strong></p><br>
+                <p class="text-white"><strong>KEBIJAKAN PENGEMBALIAN DANA</strong></p><br>
                 <dl>
                     <dd class="text-white">- Barang harus dikembalikan dalam waktu 5 hari setelah barang
                         diterima.</dd>
@@ -70,7 +71,8 @@
                         konfirmasikan kepada pihak kami melalui email morfeen.selfporject@gmail.com beserta nomor
                         KONFIRMASI PEMBAYARAN anda.</dd>
                     <dd class="text-white">- Kemas kembali barang pengembalian anda dengan aman.</dd>
-                    <dd class="text-white">- Kirim barang pengembalian anda ke alamat : Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang, Jawa Timur 65147</dd>
+                    <dd class="text-white">- Kirim barang pengembalian anda ke alamat : Jl. Suwari Sel., Sukun, Kec.
+                        Sukun, Kota Malang, Jawa Timur 65147</dd>
                     <dd class="text-white">- Barang baru akan di kirim setelah kami menerima barang
                         penukaran anda dan mengkonfirmasi pengembalian atau penukaran anda.</dd>
                     <dd class="text-white">- Kami tidak bertanggungjawab atas kehilangan barang pengembalian
@@ -78,7 +80,7 @@
                     <dd class="text-white">- Biaya pengiriman awal tidak dapat dikembalikan.</dd>
                 </dl>
 
-                <p class="text-white mt-3" ><strong>KEBIJAKAN PENUKARAN BARANG</strong></p><br>
+                <p class="text-white mt-3"><strong>KEBIJAKAN PENUKARAN BARANG</strong></p><br>
                 <dl>
                     <dd class="text-white">1. Kami hanya dapat menukar barang untuk barang yang terapat
                         kerusakan atau cacat, tidak
@@ -94,8 +96,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- Footer -->
     @include('frontend.halcust.footer')
