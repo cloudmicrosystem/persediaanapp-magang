@@ -41,27 +41,76 @@
 <body class="animsition">
 
     <!-- Header -->
-    @include('frontend.halcust.header')
+    <header>
+        <!-- Header desktop -->
+        <div class="wrap-menu-header background bgblack">
+            <div class="container h-full">
+                <div class="wrap_header trans-0-4">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="home">
+                            <img src="images/icons/logo2.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
+                        </a>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="wrap_menu p-l-45 p-l-0-xl">
+                        <nav class="menu">
+                            <ul class="main_menu">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+
+                                <li>
+                                    <a href="/product">Product</a>
+                                </li>
+
+                                <li>
+                                    <a href="/store">Store</a>
+                                </li>
+
+                                <li>
+                                    <a href="/artikel">Artikel</a>
+                                </li>
+
+                                <li>
+                                    <a href="/about">About</a>
+                                </li>
+
+                                <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="social flex-w flex-l-m p-r-20">
+
+                        <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
+
+                        <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+
+                        <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
+
+                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Sidebar -->
     @include('frontend.halcust.sidebar')
 
-    <!-- Slide1 -->
-    <section class="section-slide">
-        <div class="wrap-slick1">
-            <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgproduct.jpg);">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Sidebar kategori -->
-    <section class="slider-section pt-4 pb-4">
+    <section class="slider-section  pb-4">
+        <h1 class="text-bold text-uppercase text-center text-black p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">PRODUCT</h1>
         <div class="container">
             <div class="slider-inner">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 pt-5">
                         <nav class="nav-category" style="border-right: 1px solid #bbb; height: 100%">
                             <h3><b><i>Category</i></b></h3><br>
                             <form action="#">
@@ -85,7 +134,7 @@
                     </div>
 
                     {{-- Product Card --}}
-                    <div class="col-md-9 mb-8">
+                    <div class="col-md-9 mb-8 pt-5">
                         <div class="row">
                             @foreach ($barang as $items)
                                 <div class="col-md-3">

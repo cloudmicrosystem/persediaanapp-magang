@@ -38,25 +38,71 @@
 <body class="animsition">
 
     <!-- Header -->
-    @include('frontend.halcust.header')
+    <header>
+        <!-- Header desktop -->
+        <div class="wrap-menu-header background bgblack">
+            <div class="container h-full">
+                <div class="wrap_header trans-0-4">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="home">
+                            <img src="images/icons/logo2.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
+                        </a>
+                    </div>
 
-    <!-- Sidebar -->
-    @include('frontend.halcust.sidebar')
+                    <!-- Menu -->
+                    <div class="wrap_menu p-l-45 p-l-0-xl">
+                        <nav class="menu">
+                            <ul class="main_menu">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
 
-    <!-- Slide1 -->
-    <section class="section-slide">
-        <div class="wrap-slick1">
-            <div class="slick1">
-                <div class="item-slick1 item1-slick1" style="background-image: url(images/banner/bgartikel.jpg);">
-                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-100">
+                                <li>
+                                    <a href="/product">Product</a>
+                                </li>
+
+                                <li>
+                                    <a href="/store">Store</a>
+                                </li>
+
+                                <li>
+                                    <a href="/artikel">Artikel</a>
+                                </li>
+
+                                <li>
+                                    <a href="/about">About</a>
+                                </li>
+
+                                <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="social flex-w flex-l-m p-r-20">
+
+                        <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
+
+                        <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+
+                        <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
+
+                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
+
+    <!-- Sidebar -->
+    @include('frontend.halcust.sidebar')
 
     {{-- Detail Artikel  --}}
     <section>
+        <h1 class="text-bold text-uppercase text-center  p-t-150 " style="font-size: 20px ; font-family: 'Trebuchet MS'">detail ARTIKEL</h1>
         <div class="bread-crumb bo5-b p-t-17 p-b-17">
 			<div class="container">
 				<a href="/" class="txt27">

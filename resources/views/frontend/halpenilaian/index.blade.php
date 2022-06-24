@@ -67,6 +67,7 @@
                                     <tr class="border-color: black">
                                         <th class="text-white">Produk</th>
                                         <th class="text-white">Harga</th>
+                                        <th class="text-white">Total Harga </th>
                                         <th class="text-white">Penilaian</th>
                                     </tr>
                                 </thead>
@@ -93,6 +94,7 @@
                                         </div>
                                     </td>
 
+                                    <td class="text-white ">Rp. 100.000.00</td>
                                     <td class="text-white ">Rp. 100.000.00</td>
                                     <td>
                                         <button type="button" class="btn btn-primary" data-toggle="modal"

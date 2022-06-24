@@ -2,19 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Contact | Morfeen </title>
+    <title>Keranjang | Morfeen </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{-- CSS Class Content --}}
-    @stack('custom-css')
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
-
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
@@ -32,8 +22,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/select2/select2.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
@@ -41,9 +30,9 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/main.css') }}">
+
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('fontawesome-free/css/all.min.css') }}">
-    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/rating.css') }}">
 </head>
 
 <body class="animsition" style="background: black">
@@ -55,63 +44,84 @@
     @include('frontend.halcust.sidebar')
 
 
-    {{-- ISI HALAMAN CONTAC --}}
-    <section class="content ">
-        <p class="text-bold text-uppercase text-center text-white p-t-150" style="font-size: 20px ; font-family: 'Trebuchet MS'">CONTAC</p>
-        <div class="row">
-            <div class="card-body  d-flex align-items-center justify-content-center pl-5 p-t-50" style="background: black" >
-                <div class="col-md-6 text-center ">
-                        <h2 style="color: white"><strong>MORFEEN THERTEEN</strong></h2>
-                        <p class="lead mb-5" style="color: white">MALANG</p>
+
+    <section class="section-penilaian">
+        <div class="container-fluid">
+            <div class="col-12 p-t-150 my-auto " style="border: black">
+                <p class="text-bold text-uppercase text-center text-white"
+                    style="font-size: 20px ; font-family: 'Trebuchet MS'">keranjang</p>
+                <div class="card " style="border: black">
+                    <div class="card-body " style="background-color: black ; border: black">
+                        <div class="row">
+                            <table class=" table  ">
+                                <thead class="border-color: black">
+                                    <tr class="border-color: black">
+                                        <th class="text-white">Produk</th>
+                                        <th class="text-white">Nama Produk </th>
+                                        <th class="text-white">Harga</th>
+                                        <th class="text-white">Qty</th>
+                                        <th class="text-white">Total</th>
+                                        <th class="text-white" colspan="3"></th>
+                                    </tr>
+                                </thead>
+
+                                <tr>
+                                    <td class="text-white text-left"><img style="width: 75px; height: auto"
+                                            src="images/katalog/akse1-1.jpg" alt=""></td>
+                                    <td class="text-white ">Sandal </td>
+                                    <td class="text-white ">Rp. 100.000.00</td>
+                                    <td>
+                                        <div class="quantity buttons_added">
+                                            <input type="button" value="-" class="minus button is-form"> <label
+                                                class="screen-reader-text" for="quantity"></label>
+                                            <input type="number" id="quantity" class="input-text qty text"
+                                                step="1" min="1" max="2" name="quantity"
+                                                value="1" title="Qty" size="4" placeholder=""
+                                                inputmode="numeric" />
+                                            <input type="button" value="+"
+                                                class="plus button is-form text-black">
+                                        </div>
+                                    </td>
+                                    <td class="text-white">100.000.00</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-sm btn-dark mb-2">
+                                            update
+                                        </button>
+
+                                        <button type="submit" class="btn btn-sm btn-danger mb-2">
+                                            Hapus
+                                        </button>
+
+                                        <a href="/checkout"> <button type="submit" class="btn btn-sm btn-primary mb-2">
+                                             Chekout
+                                        </button> </a>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-white "><img style="width: 75px; height: auto"
+                                            src="images/katalog/akse2-1.jpg" alt=""></td>
+                                    <td class="text-white " style="width: 300px">Kacamata</td>
+                                    <td class="text-white ">Rp. 100.000.00</td>
+                                    <td class="text-white"> 1 </td>
+                                    <td class="text-white">100.000.00</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-sm btn-dark mb-2">
+                                            update
+                                        </button>
+                                        <button type="submit" class="btn btn-sm btn-danger mb-2">
+                                            Hapus
+                                        </button>
+                                        <a href="/checkout"> <button type="submit" class="btn btn-sm btn-primary mb-2">
+                                            Chekout
+                                        </button></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-md-6 pt-50 pl-5">
-                    <!-- - -->
-                    <h4 class="txt13 m-b-20 ">
-                        SOSIAL MEDIA
-                    </h4>
-                    <ul class="m-b-70">
-                        <li class="txt14 m-b-14 " style="color: white">
-                            <i class="fa fa-whatsapp fs-16 dis-inline-block size19" aria-hidden="true"></i>
-                            (+62) 887-4116-4285
-                        </li>
-
-                        <li class="txt14 m-b-14" style="color: white">
-                            <i class="fa fa-instagram fs-16 dis-inline-block size19" aria-hidden="true"></i>
-                            morfeen_official
-                        </li>
-
-                        <li class="txt14 m-b-14" style="color: white">
-                            <i class="fa fa-facebook fs-16 dis-inline-block size19 " aria-hidden="true"></i>
-                            morfeen_official
-                        </li>
-
-                        <li class="txt14 m-b-14" style="color: white">
-                            <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
-                            morfeen.selfporject@gmail.com
-                        </li>
-                    </ul>
-                </div>
-                    {{-- <div class="form-group">
-                        <label style="color: white" for="inputName">Name</label>
-                        <input style="background-color: black "  type="text" class="form-control border border-white" placeholder="Name"/>
-                    </div>
-                    <div class="form-group ">
-                        <label style="color: white" for="inputEmail">E-Mail</label>
-                        <input style="background-color: black" style="border: white" type="email" class="form-control border border-white" placeholder="E-mail"/>
-                    </div>
-                    <div class="form-group">
-                        <label style="color: white" for="inputSubject">Subject</label>
-                        <input style="background-color: black" type="text" class="form-control border border-white" placeholder="Subject"/>
-                    </div>
-                    <div class="form-group">
-                        <label style="color: white" for="inputMessage">Message</label>
-                        <textarea style="background-color: black" id="inputMessage" class="form-control border border-white" rows="4" placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-group m-3" >
-                        <input type="submit" class="btn btn-dark" value="Send message">
-                    </div> --}}
-
             </div>
         </div>
     </section>
@@ -131,12 +141,6 @@
     <div id="dropDownSelect1"></div>
 
 
-    <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-    @stack('custom-js')
-    <!-- AdminLTE App -->
-    <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
 
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
@@ -163,6 +167,13 @@
     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assetcus/vendors/lightbox2/js/lightbox.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/main.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ asset('') }}assets/plugins/jquery/jquery.min.js"></script>
+    @stack('custom-js')
+    <!-- AdminLTE App -->
+    <script src="{{ asset('') }}assets/dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
 
 </body>
 
