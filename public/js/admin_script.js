@@ -8,6 +8,25 @@ $(document).ready(function(){
         return false;
     });
 
+    $(".updateBannerStatus").click(function(){
+        var status = $(this).text();
+        var id_ban = $(this).attr("id_ban");
+        $.ajax({
+            type: 'post',
+            url: '/update-banner-status',
+            data: {status:status, id_ban:id_ban},
+            success:function(resp){
+                if(resp['status'] == 0){
+                    $("#banner-"+id_ban).html("<a class='updateBannerStatus' href='javascript:void(0)'>Inactive</a>");
+                }else if(resp['status'] == 1){
+                    $("#banner-"+id_ban).html("<a class='updateBannerStatus' href='javascript:void(0)'>Active</a>");
+                }
+            },error:function(){
+                alert("Error");
+            }
+        });
+    });
+
     $(".updateCategoryStatus").click(function(){
         var status = $(this).text();
         var id_kategori = $(this).attr("id_kategori");

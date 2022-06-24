@@ -34,10 +34,10 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
 
-                        @if (Session::get('page') == "dashboard")
-                            <?php $active = "active"; ?>
+                        @if (Session::get('page') == 'dashboard')
+                            <?php $active = 'active'; ?>
                         @else
-                            <?php $active = ""; ?>
+                            <?php $active = ''; ?>
                         @endif
                         <li class="nav-item">
                             <a href="/dashboard" class="nav-link {{ $active }}">
@@ -48,10 +48,10 @@
                             </a>
                         </li>
 
-                        @if (Session::get('page') == "barang" || Session::get('page') == "kategori")
-                            <?php $active = "active"; ?>
+                        @if (Session::get('page') == 'barang' || Session::get('page') == 'kategori' || Session::get('page') == 'banner')
+                            <?php $active = 'active'; ?>
                         @else
-                            <?php $active = ""; ?>
+                            <?php $active = ''; ?>
                         @endif
                         <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link {{ $active }}">
@@ -62,10 +62,10 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                @if (Session::get('page') == "barang")
-                                    <?php $active = "active"; ?>
+                                @if (Session::get('page') == 'barang')
+                                    <?php $active = 'active'; ?>
                                 @else
-                                    <?php $active = ""; ?>
+                                    <?php $active = ''; ?>
                                 @endif
                                 <li class="nav-item">
                                     <a href="{{ url('/barang') }}" class="nav-link {{ $active }}">
@@ -73,10 +73,10 @@
                                         <p>Data Product</p>
                                     </a>
                                 </li>
-                                @if (Session::get('page') == "kategori")
-                                    <?php $active = "active"; ?>
+                                @if (Session::get('page') == 'kategori')
+                                    <?php $active = 'active'; ?>
                                 @else
-                                    <?php $active = ""; ?>
+                                    <?php $active = ''; ?>
                                 @endif
                                 <li class="nav-item">
                                     <a href="{{ url('/kategori') }}" class="nav-link {{ $active }}">
@@ -84,16 +84,27 @@
                                         <p>Kategori Product</p>
                                     </a>
                                 </li>
+                                @if (Session::get('page') == 'banner')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="{{ url('/banner') }}" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Banner</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 
-                        @if (Session::get('page') == "article" || Session::get('page') == "catarticle")
-                            <?php $active = "active"; ?>
+                        @if (Session::get('page') == 'article' || Session::get('page') == 'catarticle')
+                            <?php $active = 'active'; ?>
                         @else
-                            <?php $active = ""; ?>
+                            <?php $active = ''; ?>
                         @endif
                         <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link {{$active}}">
+                            <a href="#" class="nav-link {{ $active }}">
                                 <i class="nav-icon fas fa-book-open"></i>
                                 <p>
                                     Setting Artikel
@@ -101,10 +112,10 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview ">
-                                @if (Session::get('page') == "article")
-                                    <?php $active = "active"; ?>
+                                @if (Session::get('page') == 'article')
+                                    <?php $active = 'active'; ?>
                                 @else
-                                    <?php $active = ""; ?>
+                                    <?php $active = ''; ?>
                                 @endif
                                 <li class="nav-item">
                                     <a href="/article" class="nav-link {{ $active }}">
@@ -112,10 +123,10 @@
                                         <p>Data Artikel</p>
                                     </a>
                                 </li>
-                                @if (Session::get('page') == "catarticle")
-                                    <?php $active = "active"; ?>
+                                @if (Session::get('page') == 'catarticle')
+                                    <?php $active = 'active'; ?>
                                 @else
-                                    <?php $active = ""; ?>
+                                    <?php $active = ''; ?>
                                 @endif
                                 <li class="nav-item">
                                     <a href="/catarticle" class="nav-link {{ $active }}">

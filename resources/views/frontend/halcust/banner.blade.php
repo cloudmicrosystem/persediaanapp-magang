@@ -10,6 +10,13 @@
 
             <div class="item-slick1 item3-slick1" style="background-image: url(images/banner/home3.jpg);">
             </div>
+
+            {{-- @foreach ($banner as $item)
+                <div class="item-slick1 item1-slick1">
+                    <img src="{{ asset('images/banner/' . $item->gambar_banner) }}"/>
+                </div>
+            @endforeach --}}
+            
         </div>
         <div class="wrap-slick1-dots"></div>
     </div>

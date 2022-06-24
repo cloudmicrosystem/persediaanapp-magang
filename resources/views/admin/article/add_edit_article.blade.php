@@ -77,7 +77,7 @@
                                     </div>
                                     @if ($article->gambar_artikel)
                                         <img src="{{ asset('images/artikel/'. $article->gambar_artikel) }}" alt="" width=150px height=auto>
-                                    @endif <br><br>
+                                    @endif
                                     <div class="form-group">
                                         <label for="exampleInputFile">Gambar Artikel</label>
                                         <div class="input-group">

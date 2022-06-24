@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             AtributSeeder::class,
             CatarticleSeeder::class,
             ArticleSeeder::class,
+            BannerSeeder::class,
         ]);
     }
 }

@@ -6,16 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Barang;
 use App\Models\Article;
+use App\Models\Banner;
 use App\Models\Catarticle;
 use Illuminate\Support\Facades\DB;
 
 class HalcustController extends Controller
 {
     public function index(){
+        $banner = Banner::all();
         $trendingItems = Barang::where('trending','Yes')->take(4)->get();
         $trendingArticle = Article::where('featured','Yes')->take(4)->get();
 
-        return view('frontend.halcust.index')->with(compact('trendingItems', 'trendingArticle'));
+        return view('frontend.halcust.index')->with(compact('trendingItems', 'trendingArticle', 'banner'));
     }
 
     public function showArticle(){
