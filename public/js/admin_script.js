@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    $(".confirmDelete").click(function(){
+        var name = $(this).attr("name");
+        if(confirm("Anda yakin akan hapus "+name+" ini ?")){
+            return true;
+        }
+        return false;
+    });
+
     $(".updateCategoryStatus").click(function(){
         var status = $(this).text();
         var id_kategori = $(this).attr("id_kategori");
@@ -17,14 +25,6 @@ $(document).ready(function(){
                 alert("Error");
             }
         });
-    });
-
-    $(".confirmDelete").click(function(){
-        var name = $(this).attr("name");
-        if(confirm("Anda yakin hapus "+name+" ini ?")){
-            return true;
-        }
-        return false;
     });
 
     $(".updateProductStatus").click(function(){
@@ -57,7 +57,45 @@ $(document).ready(function(){
                 if(resp['status'] == 0){
                     $("#atribut-"+id_atr).html("<a class='updateAtributStatus' href='javascript:void(0)'>Inactive</a>");
                 }else if(resp['status'] == 1){
-                    $("#atribut-"+id_atr).html("<a class='updateAtributStatus' href='javascript:void(0)'>Inactive</a>");
+                    $("#atribut-"+id_atr).html("<a class='updateAtributStatus' href='javascript:void(0)'>Active</a>");
+                }
+            },error:function(){
+                alert("Error");
+            }
+        });
+    });
+
+    $(".updateCatarticleStatus").click(function(){
+        var status = $(this).text();
+        var id_cat = $(this).attr("id_cat");
+        $.ajax({
+            type: 'post',
+            url: '/update-catarticle-status',
+            data: {status:status, id_cat:id_cat},
+            success:function(resp){
+                if(resp['status'] == 0){
+                    $("#catarticle-"+id_cat).html("<a class='updateCatarticleStatus' href='javascript:void(0)'>Inactive</a>");
+                }else if(resp['status'] == 1){
+                    $("#catarticle-"+id_cat).html("<a class='updateCatarticleStatus' href='javascript:void(0)'>Active</a>");
+                }
+            },error:function(){
+                alert("Error");
+            }
+        });
+    });
+
+    $(".updateArticleStatus").click(function(){
+        var status = $(this).text();
+        var id_art = $(this).attr("id_art");
+        $.ajax({
+            type: 'post',
+            url: '/update-article-status',
+            data: {status:status, id_art:id_art},
+            success:function(resp){
+                if(resp['status'] == 0){
+                    $("#article-"+id_art).html("<a class='updateProductStatus' href='javascript:void(0)'>Inactive</a>");
+                }else if(resp['status'] == 1){
+                    $("#article-"+id_art).html("<a class='updateProductStatus' href='javascript:void(0)'>Active</a>");
                 }
             },error:function(){
                 alert("Error");
@@ -88,7 +126,6 @@ $(document).ready(function(){
         rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
         return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
       }
-
 
 });
 

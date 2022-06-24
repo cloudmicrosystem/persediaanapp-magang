@@ -20,7 +20,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class PersediaanController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         Session::put('page','barang');
         $barang = Barang::paginate(5);
         return view('admin.product.index')->with(compact('barang'));
@@ -50,6 +51,7 @@ class PersediaanController extends Controller
             $barang = Barang::find($id);
             $message = "Product Berhasil Diupdate!";
         }
+        
         $category = Kategori::get();
 
         if($request->isMethod('post')){

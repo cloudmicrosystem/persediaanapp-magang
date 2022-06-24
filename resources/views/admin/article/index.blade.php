@@ -20,50 +20,70 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-12">
+                        @if (Session::has('success_message'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert"
+                                style="margin-top: 10px;">{{ Session::get('success_message') }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Database Artikel</h3>
-                                <a class="btn btn-block btn-success" href="{{ url ('article/create')}}"
+                                <h3 class="card-title">Artikel</h3>
+                                <a class="btn btn-block btn-success" href="{{ url('/add-edit-article') }}"
                                     style="max-width: 150px; float:right; disply:inline-block">
                                     <i>Tambah Artikel</i>
                                 </a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table class="table table-bordered table-hover">
+                                <table id="product" class="table table-bordered table-hover">
                                     <thead>
-                                       <tr style="text-align: center">
-                                            <th>Kategori</th>
-                                            <th>Judul</th>
-                                            <th>Slug</th>
-                                            <th>Deskripsi</th>
+                                        <tr style="text-align: center">
+                                            <th>Kategori Artikel</th>
+                                            <th>Judul Artikel</th>
+                                            <th>URL Artikel</th>
+                                            <th>Deskripsi Artikel</th>
                                             <th>Gambar Artikel</th>
-                                            <th>Sumber Pustaka</th>
+                                            <th>Sumber Artikel</th>
+                                            <th>Status</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($article as $key=>$value)
-                                        <tr>
-                                            <td>{{ $value->catarticle->nama }}</td>
-                                            <td>{{ $value->judul }}</td>
-                                            <td>{{ $value->slug }}</td>
-                                            <td>{{ $value->deskripsi }}</td>
-                                            <td><img src="{{ asset('images/artikel/' . $value->gambar_article) }}"
-                                                alt="{{ ($value->judul) }}"
-                                                width=150px height=auto /></td>
-                                            <td>{{ $value->sumber }}</td>
-                                            <td><a class="btn btn-info" href="{{ url('article/'.$value->id.'/edit') }}"><i class='fas fa-edit'></i></a></td></td>
-                                            <td>
-                                                <form action="{{ url('article/'.$value->id) }}" method="POST">
-                                                    @csrf
-                                                    <input type="hidden" name="_method" value="DELETE">
-                                                    <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i></button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                        @foreach ($article as $key => $value)
+                                            <tr>
+                                                <td>{{ $value->catarticle->nama_cat }}</td>
+                                                <td>{{ $value->judul_artikel }}</td>
+                                                <td>{{ $value->slug }}</td>
+                                                <td>{{ $value->deskripsi_artikel }}</td>
+                                                <td><img src="{{ asset('images/artikel/' . $value->gambar_artikel) }}"
+                                                        alt="{{ $value->judul_artikel }}" width=150px height=auto />
+                                                </td>
+                                                <td>{{ $value->sumber_artikel }}</td>
+                                                <td>
+                                                    @if($value->status == 1)
+                                                        <a class="updateArticleStatus" id="value-{{ $value->id }}"
+                                                            id_art="{{ $value->id }}" href="javascript:void(0)">Active</a>
+                                                    @else
+                                                        <a class="updateArticleStatus" id="value-{{ $value->id }}"
+                                                            id_art="{{ $value->id }}" href="javascript:void(0)">Inactive</a>
+                                                    @endif
+                                                </td>
+
+                                                <td style="text-align: center"><a title="Edit Artikel"
+                                                        href="{{ url('add-edit-article/' . $value->id) }}"><i
+                                                            class='fas fa-edit'></i></a></td>
+                                                </td>
+                                                </td>
+                                                <td style="text-align: center"> <a class="confirmDelete" name="artikel"
+                                                        href="{{ url('delete-article/' . $value->id) }}"><i
+                                                            class='fas fa-trash-alt'></i></a></td>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <br>

@@ -15,12 +15,13 @@ class CreateArticleTable extends Migration
     {
         Schema::create('article', function (Blueprint $table) {
             $table->id();
-            $table->integer('cat_article');
-            $table->string('judul');
-            $table->string('slug')->unique();
-            $table->text('deskripsi');
-            $table->string('gambar_article');
-            $table->string('sumber');
+            $table->integer('id_catarticle');
+            $table->string('judul_artikel');
+            $table->string('slug');
+            $table->text('deskripsi_artikel');
+            $table->string('gambar_artikel');
+            $table->string('sumber_artikel');
+            $table->integer('status');
             $table->timestamps();
         });
     }

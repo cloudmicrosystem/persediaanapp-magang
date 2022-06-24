@@ -12,7 +12,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v1</li>
+                            <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -31,7 +31,7 @@
                             <div class="inner">
                                 <h3>150</h3>
 
-                                <p>New Orders</p>
+                                <p>Stock Product</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-bag"></i>
@@ -47,7 +47,7 @@
                             <div class="inner">
                                 <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-                                <p>Bounce Rate</p>
+                                <p>Artikel Morfeen</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
@@ -63,7 +63,7 @@
                             <div class="inner">
                                 <h3>44</h3>
 
-                                <p>User Registrations</p>
+                                <p>Penjualan</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-person-add"></i>
@@ -79,7 +79,7 @@
                             <div class="inner">
                                 <h3>65</h3>
 
-                                <p>Unique Visitors</p>
+                                <p>Rating</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-pie-graph"></i>
@@ -92,7 +92,7 @@
                 </div>
                 <!-- /.row -->
                 <!-- Main row -->
-                <div class="row">
+                {{-- <div class="row">
                     <!-- Left col -->
                     <section class="col-lg-7 connectedSortable">
                         <!-- Custom tabs (Charts with tabs)-->
@@ -640,7 +640,7 @@
                         <!-- /.card -->
                     </section>
                     <!-- right col -->
-                </div>
+                </div> --}}
                 <!-- /.row (main row) -->
             </div><!-- /.container-fluid -->
         </section>

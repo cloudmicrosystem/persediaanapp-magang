@@ -15,8 +15,9 @@ class CreateCatarticleTable extends Migration
     {
         Schema::create('catarticle', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('slug')->unique;
+            $table->string('nama_cat');
+            $table->string('slug');
+            $table->integer('status');
             $table->timestamps();
         });
     }

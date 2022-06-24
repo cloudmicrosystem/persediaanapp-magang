@@ -7,145 +7,96 @@ use App\Models\Catarticle;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\File;
 
 class ArticleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
+        Session::put('page','article');
         $article = Article::paginate(5);
         return view('admin.article.index')->with(compact('article'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function updateArticleStatus(Request $request)
     {
-        $catarticle = Catarticle::all();
-        return view('admin.article.create')->with(compact('catarticle'));
+        if($request->ajax()){
+            $data = $request->all();
+            if($data['status'] == "Active"){
+                $status = 0;
+            }else{
+                $status = 1;
+            }
+            Article::where('id', $data['id_art'])->update(['status'=>$status]);
+            return response()->json(['status'=>$status, 'id_art'=>$data['id_art']]);
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $article = new Article();
-
-        $this->validate($request, [
-            'gambar_article' => 'mimes:png,jpg,jpeg|max:6144',
-            'judul' => 'required|min:4'
-        ]);
-
-        if ($request->hasFile('gambar_article')) {
-            $file = $request->file('gambar_article');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time().'_'.$ext;
-            $file->move('images/artikel/',$filename);
-            $article->gambar_article = $filename;
+    public function addEditArticle(Request $request, $id=null){
+        if($id == ""){
+            $title = "Tambah Artikel";
+            $article = new Article();
+            $message = "Artikel Berhasil Ditambahkan!";
+        }else{
+            $title = "Edit Artikel";
+            $article = Article::find($id);
+            $message = "Artikel Berhasil Diupdate!";
         }
 
-        $article->cat_article = $request->input('cat_article');
-        $article->judul = $request->input('judul');
-        $article['slug'] = Str::slug($request->judul);
-        $article->deskripsi = $request->input('deskripsi');
-        $article->sumber = $request->input('sumber');
-        $article->save();
+        $catarticle = Catarticle::get();
 
-        return redirect('article')->with('toast_success', 'Data Berhasil Disimpan');
-    }
+        if($request->isMethod('post')){
+            $data = $request->all();
+            $rules = [
+                'id_catarticle' => 'required',
+                'judul_artikel' => 'required',
+                'deskripsi_artikel' => 'required',
+                'gambar_artikel' => 'required',
+                'sumber_artikel' => 'required'
+            ];
+            $customMessages = [
+                'id_catarticle.required' => 'Harap pilih kategori artikel terlebih dahulu',
+                'judul_artikel.required' => 'Harap isi judul artikel terlebih dahulu',
+                'deskripsi_artikel.required' => 'Harap isi deskripsi artikel terlebih dahulu',
+                'gambar_artikel.required' => 'Harap isi gambar artikel terlebih dahulu',
+                'sumber_artikel.required' => 'Harap isi sumber artikel terlebih dahulu'
+            ];
+            $this->validate($request, $rules, $customMessages);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $article = Article::findOrFail($id);
-        return view('admin.article.edit')->with(compact('article'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $article = Article::find($id);
-
-        $this->validate($request, [
-            'gambar_article' => 'mimes:png,jpg,jpeg|max:6144',
-            'judul' => 'required|min:4'
-        ]);
-
-        if ($request->hasFile('gambar_article'))
-        {
-            $path = 'images/artikel/' . $article->gambar_article;
-            if(File::exists($path))
+            if($request->hasFile('gambar_artikel'))
             {
-                File::delete($path);
+                $path = 'images/artikel/' . $article->gambar_artikel;
+                if(File::Exists($path))
+                {
+                    File::delete($path);
+                }
+                $file = $request->file('gambar_artikel');
+                $ext = $file->getClientOriginalExtension();
+                $filename = time().'_'.$ext;
+                $file->move('images/artikel/',$filename);
+                $article->gambar_artikel = $filename;
             }
 
-            $file = $request->file('gambar_article');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time().'_'.$ext;
-            $file->move('images/artikel/',$filename);
-            $article->gambar_article = $filename;
+            $article->id_catarticle = $data['id_catarticle'];
+            $article->judul_artikel = $data['judul_artikel'];
+            $article->slug = Str::slug($request['judul_artikel']);
+            $article->deskripsi_artikel = $data['deskripsi_artikel'];
+            $article->sumber_artikel = $data['sumber_artikel'];
+            $article->status = 1;
+            $article->save();
+
+            session::flash('success_message', $message);
+            return redirect('article');
         }
-
-        $article->judul = $request->input('judul');
-        $article['slug'] = Str::slug($request->judul);
-        $article->deskripsi = $request->input('deskripsi');
-        $article->sumber = $request->input('sumber');
-        $article->update();
-
-        return redirect('article')->with('toast_success', 'Data Berhasil Diupdate');
+        return view('admin.article.add_edit_article')->with(compact('title','catarticle','article'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $article = Article::find($id);
+    public function deleteArticle($id){
+        Article::where('id',$id)->delete();
 
-        $path = 'images/artikel/' . $article->gambar_article;
-        if(File::exists($path))
-        {
-            File::delete($path);
-        }
-        $article->delete();
-
-        return redirect('article')->with('toast_success', 'Data Berhasil Dihapus');
+        $message = "Artikel Berhasil Dihapus";
+        session::flash('success_message', $message);
+        return redirect()->back();
     }
 }

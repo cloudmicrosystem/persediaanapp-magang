@@ -51,32 +51,38 @@ use App\Http\Controllers\Users\Halpenilaian;
     // ADMIN
     Route::resource('/user', UserController::class);
 
-    // KATEGORI PRODUCT
-    Route::get('/kategori', [CategoryController::class, 'index']);
+    // PRODUCT, KATEGORI, GAMBAR, ATRIBUT
+    Route::get('kategori', [CategoryController::class, 'index']);
     Route::post('update-category-status', [CategoryController::class, 'updateCategoryStatus']);
     Route::match(array('get','post'),'/add-edit-category/{id?}', 'App\Http\Controllers\Admin\CategoryController@addEditCategory');
     Route::get('/delete-category/{id}', [CategoryController::class, 'deleteCategory']);
 
-    // PRODUCT
     Route::get('barang',[PersediaanController::class, 'index']);
     Route::post('update-product-status', [PersediaanController::class, 'updateProductStatus']);
     Route::match(array('get','post'),'/add-edit-product/{id?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
     Route::get('/delete-product/{id}', [PersediaanController::class, 'deleteProduct']);
 
-    // ATRIBUT PRODUK
-    Route::match(array('get','post'),'/add-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@addAtribut');
-    Route::post('/edit-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@editAtribut');
-    Route::get('/delete-atribut/{id}', [PersediaanController::class, 'deleteAtribut']);
-    Route::post('update-atribut-status', [PersediaanController::class, 'updateAtributStatus']);
-
-    // GAMBAR PRODUK
     Route::match(array('get','post'),'/add-image/{id}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
     Route::get('/delete-image/{id}', [PersediaanController::class, 'deleteImage']);
 
+    Route::post('update-atribut-status', [PersediaanController::class, 'updateAtributStatus']);
+    Route::post('/edit-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@editAtribut');
+    Route::match(array('get','post'),'/add-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@addAtribut');
+    Route::get('/delete-atribut/{id}', [PersediaanController::class, 'deleteAtribut']);
 
-    Route::resource('/gambar', GambarController::class);
+    // ARTIKEL, KATEGORI
+    Route::get('article',[ArticleController::class, 'index']);
+    Route::post('update-article-status', [ArticleController::class, 'updateArticleStatus']);
+    Route::match(array('get','post'),'/add-edit-article/{id?}', 'App\Http\Controllers\Admin\ArticleController@addEditArticle');
+    Route::get('/delete-article/{id}', [ArticleController::class, 'deleteArticle']);
+
+    Route::get('catarticle',[CatarticleController::class, 'index']);
+    Route::post('update-catarticle-status', [CatarticleController::class, 'updateCatarticleStatus']);
+    Route::match(array('get','post'),'/add-edit-catarticle/{id?}', 'App\Http\Controllers\Admin\CatarticleController@addEditCatarticle');
+    Route::get('/delete-catarticle/{id}', [CatarticleController::class, 'deleteCatarticle']);
+
+
     Route::resource('/article', ArticleController::class);
-    Route::resource('/catarticle', CatarticleController::class);
 
     Auth::routes();
 
