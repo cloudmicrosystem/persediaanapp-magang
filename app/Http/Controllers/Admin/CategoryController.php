@@ -21,20 +21,6 @@ class CategoryController extends Controller
         return view('admin.kategori.index')->with(compact('category'));
     }
 
-    public function updateCategoryStatus(Request $request)
-    {
-        if($request->ajax()){
-            $data = $request->all();
-            if($data['status'] == "Active"){
-                $status = 0;
-            }else{
-                $status = 1;
-            }
-            Kategori::where('id', $data['id_kategori'])->update(['status'=>$status]);
-            return response()->json(['status'=>$status, 'id_kategori'=>$data['id_kategori']]);
-        }
-    }
-
     public function addEditCategory(Request $request, $id=null){
         if($id == ""){
             $title = "Tambah Kategori";
@@ -59,7 +45,13 @@ class CategoryController extends Controller
 
             $category->nama_kategori = $data['nama_kategori'];
             $category->slug = Str::slug($request['nama_kategori']);
-            $category->status = 1;
+
+            if(!empty($data['status'])){
+                $category->status = $data['status'];
+            }else{
+                $category->status = 0;
+            }
+            
             $category->save();
 
             session::flash('success_message', $message);

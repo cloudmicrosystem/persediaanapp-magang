@@ -98,9 +98,17 @@
                                             @endif
                                         >
                                         <label class="form-check-label" >Trending Product</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
+                                            @if (!empty($barang['status']) && $barang['status'] == "1")
+                                                checked = ""
+                                            @endif
+                                        >
+                                        <label class="form-check-label" >Status Kategori</label>
                                     </div><br>
                                     @if ($barang->gambar_disply)
-                                    <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=150px height=auto>
+                                        <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}"  width=300px height=auto>
                                     @endif
                                     <div class="form-group">
                                         <label for="exampleInputFile">Gambar Product</label>

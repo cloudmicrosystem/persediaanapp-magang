@@ -49,6 +49,7 @@
                                             <th>Harga Product</th>
                                             <th>Deskripsi Product</th>
                                             <th>Status Product</th>
+                                            <th>Apakah Trending</th>
                                             <th>Gambar Prouduct</th>
                                             <th colspan="4">Aksi</th>
                                         </tr>
@@ -63,14 +64,17 @@
                                                 <td>{{ $value->harga }}</td>
                                                 <td>{{ $value->deskripsi }}</td>
                                                 <td>
-                                                    @if ($value->status == 1)
-                                                        <a class="updateProductStatus" id="value-{{ $value->id }}"
-                                                            id_barang="{{ $value->id }}"
-                                                            href="javascript:void(0)">Active</a>
+                                                    @if($value->status == 1)
+                                                        Aktif
                                                     @else
-                                                        <a class="updateProductStatus" id="value-{{ $value->id }}"
-                                                            id_barang="{{ $value->id }}"
-                                                            href="javascript:void(0)">Inactive</a>
+                                                        Nonaktif
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    @if($value->trending == "Yes")
+                                                        Iya
+                                                    @else
+                                                        Tidak
                                                     @endif
                                                 </td>
                                                 <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}"

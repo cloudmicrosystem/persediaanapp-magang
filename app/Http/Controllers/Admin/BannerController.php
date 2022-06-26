@@ -17,20 +17,6 @@ class BannerController extends Controller
         return view('admin.banner.index')->with(compact('banner'));
     }
 
-    public function updateBannerStatus(Request $request)
-    {
-        if($request->ajax()){
-            $data = $request->all();
-            if($data['status'] == "Active"){
-                $status = 0;
-            }else{
-                $status = 1;
-            }
-            Banner::where('id', $data['id_ban'])->update(['status'=>$status]);
-            return response()->json(['status'=>$status, 'id_ban'=>$data['id_ban']]);
-        }
-    }
-
     public function addEditBanner(Request $request, $id=null){
         if($id == ""){
             $title = "Tambah Gambar";
@@ -65,8 +51,12 @@ class BannerController extends Controller
                 $file->move('images/banner/',$filename);
                 $banner->gambar_banner = $filename;
             }
-
-            $banner->status = 1;
+            
+            if(!empty($data['status'])){
+                $banner->status = $data['status'];
+            }else{
+                $banner->status = 0;
+            }
             $banner->save();
 
             session::flash('success_message', $message);

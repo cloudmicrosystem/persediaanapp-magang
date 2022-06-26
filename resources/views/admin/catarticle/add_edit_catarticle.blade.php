@@ -51,6 +51,14 @@
                                             @endif
                                         >
                                     </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
+                                            @if (!empty($catarticle['status']) && $catarticle['status'] == "1")
+                                                checked = ""
+                                            @endif
+                                        >
+                                        <label class="form-check-label" >Status Kategori</label>
+                                    </div>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Submit</button>

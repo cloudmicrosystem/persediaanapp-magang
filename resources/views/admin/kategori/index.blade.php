@@ -55,14 +55,11 @@
                                                 <td>{{ $value->slug }}</td>
                                                 <td>
                                                     @if($value->status == 1)
-                                                        <a class="updateCategoryStatus" id="value-{{ $value->id }}"
-                                                        id_kategori="{{ $value->id }}" href="javascript:void(0)">Active</a>
+                                                        Aktif
                                                     @else
-                                                        <a class="updateCategoryStatus" id="value-{{ $value->id }}"
-                                                        id_kategori="{{ $value->id }}" href="javascript:void(0)">Inactive</a>
+                                                        Nonaktif
                                                     @endif
                                                 </td>
-
                                                 <td style="text-align: center"><a  href="{{ url('add-edit-category/'.$value->id) }}"><i class='fas fa-edit'></i></a></td></td>
                                                 <td style="text-align: center"> <a class="confirmDelete" name="kategori" href="{{ url('delete-category/'.$value->id) }}"><i class='fas fa-trash-alt'></i></a></td>
                                                 </td>

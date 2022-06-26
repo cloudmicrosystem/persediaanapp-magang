@@ -70,7 +70,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputBorder">Gambar Product</label>
                                                     @if ($barang->gambar_disply)
-                                                    <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=200px height=auto>
+                                                    <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=300px height=auto>
                                                     @endif
                                                 </div>
                                                 <div class="col-md-6">

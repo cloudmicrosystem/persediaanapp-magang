@@ -46,8 +46,11 @@ use App\Http\Controllers\Users\Haldetailpro;
     Route::get('/how-to-order', [HalcustController::class, 'showHow']);
     Route::get('/faq', [HalcustController::class, 'showFaq']);
 
+    // HALAMAN PRODUCT
     Route::get('/product', [HalproductController::class, 'index']);
-    Route::get('/product/{category}', [HalproductController::class, 'category']);
+    Route::get('/product/{slug}', [HalproductController::class, 'category']);
+
+
     Route::get('/detail', [HaldetailproductController::class, 'index']);
     Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
     Route::get('/detailpro', [Haldetailpro::class, 'index']);
@@ -58,13 +61,11 @@ use App\Http\Controllers\Users\Haldetailpro;
 
     // KATEGORI PRODUCT
     Route::get('kategori', [CategoryController::class, 'index']);
-    Route::post('update-category-status', [CategoryController::class, 'updateCategoryStatus']);
     Route::match(array('get','post'),'/add-edit-category/{id?}', 'App\Http\Controllers\Admin\CategoryController@addEditCategory');
     Route::get('/delete-category/{id}', [CategoryController::class, 'deleteCategory']);
 
     // PRODUCT
     Route::get('barang',[PersediaanController::class, 'index']);
-    Route::post('update-product-status', [PersediaanController::class, 'updateProductStatus']);
     Route::match(array('get','post'),'/add-edit-product/{id?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
     Route::get('/delete-product/{id}', [PersediaanController::class, 'deleteProduct']);
 
@@ -80,13 +81,11 @@ use App\Http\Controllers\Users\Haldetailpro;
 
     // ARTIKEL
     Route::get('article',[ArticleController::class, 'index']);
-    Route::post('update-article-status', [ArticleController::class, 'updateArticleStatus']);
     Route::match(array('get','post'),'/add-edit-article/{id?}', 'App\Http\Controllers\Admin\ArticleController@addEditArticle');
     Route::get('/delete-article/{id}', [ArticleController::class, 'deleteArticle']);
 
     // KATEGORI ARTIKEL
     Route::get('catarticle',[CatarticleController::class, 'index']);
-    Route::post('update-catarticle-status', [CatarticleController::class, 'updateCatarticleStatus']);
     Route::match(array('get','post'),'/add-edit-catarticle/{id?}', 'App\Http\Controllers\Admin\CatarticleController@addEditCatarticle');
     Route::get('/delete-catarticle/{id}', [CatarticleController::class, 'deleteCatarticle']);
 

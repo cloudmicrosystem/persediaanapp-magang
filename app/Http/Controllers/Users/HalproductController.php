@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Users;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Barang;
+use App\Models\Kategori;
 use Illuminate\Support\Facades\DB;
+use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class HalproductController extends Controller
 {
@@ -16,26 +18,18 @@ class HalproductController extends Controller
      */
     public function index()
     {
-        $category = DB::select('SELECT * FROM category');
+        $category = Kategori::where('status','1')->get();
+        $barang = Barang::where('status','1')->get();
 
-        $barang = DB::select(
-            'SELECT barang.*,
-                (SELECT nama_kategori FROM category WHERE id = barang.id_kategori)
-                    AS nama_kategori FROM barang ORDER BY id '
-        );
-
-        $trendingItems = Barang::where('trending','Yes')->take(4)->get();
-
-        // $gambar = DB::select('SELECT * FROM gambar WHERE id_barang =.$barang->id');
-
-        return view('frontend.halproduct.index')->with(compact('category','barang','trendingItems'));
+        return view('frontend.halproduct.index')->with(compact('category','barang'));
     }
 
-    public function category($request)
+    public function category($slug)
     {
-        $category = DB::select('SELECT * FROM category');
+        // $category = DB::select('SELECT * FROM category');
+        // $barang = DB::select("SELECT * FROM barang WHERE id_kategori = (SELECT id FROM category WHERE slug = '".$request."' LIMIT 0,1)");
 
-        $barang = DB::select("SELECT * FROM barang WHERE id_kategori = (SELECT id FROM category WHERE slug = '".$request."' LIMIT 0,1)");
-        return view('frontend.halproduct.productByCategory', compact('category','barang'));
+
+        return view('frontend.halproduct.productByCategory');
     }
 }

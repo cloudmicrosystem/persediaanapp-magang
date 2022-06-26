@@ -103,12 +103,20 @@
                                         >
                                     </div>
                                     <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
+                                            @if (!empty($article['status']) && $article['status'] == "1")
+                                                checked = ""
+                                            @endif
+                                        >
+                                        <label class="form-check-label" >Status Kategori</label>
+                                    </div>
+                                    <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="featured" id="exampleCheck1" value="Yes"
                                             @if (!empty($article['featured']) && $article['featured'] == "Yes")
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Trending Product</label>
+                                        <label class="form-check-label" >Trending Artikel</label>
                                     </div>
                                 </div>
                                 <div class="card-footer">

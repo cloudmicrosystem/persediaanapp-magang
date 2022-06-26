@@ -81,7 +81,13 @@ class ArticleController extends Controller
             $article->slug = Str::slug($request['judul_artikel']);
             $article->deskripsi_artikel = $data['deskripsi_artikel'];
             $article->sumber_artikel = $data['sumber_artikel'];
-            $article->status = 1;
+
+            if(!empty($data['status'])){
+                $article->status = $data['status'];
+            }else{
+                $article->status = 0;
+            }
+            
             if(!empty($data['featured'])){
                 $article->featured = $data['featured'];
             }else{

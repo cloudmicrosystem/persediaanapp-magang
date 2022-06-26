@@ -80,7 +80,6 @@
                                                             <input type="text" name="ukuran[]" id="ukuran" value="" name="ukuran[]" style="width: 120px" placeholder="Ukuran" required="">
                                                             <input type="number" name="stock[]" id="stock" value="" name="stock[]" style="width: 120px" placeholder="Stock" required="">
                                                             <input type="text" name="sku[]" id="sku" value="" name="sku[]" style="width: 120px" placeholder="SKU" required="">
-                                                            {{-- <a href="javascript:void(0);" class="add_button" title="Tambah Kolom">Tambah</a><br> --}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -123,15 +122,12 @@
                                             </td>
                                             <td>{{ $key['sku'] }}</td>
                                             <td>
-                                                @if ($key['status']== 1)
-                                                    <a class="updateAtributStatus" id="key-{{ $key['id'] }}"
-                                                        id_atr="{{ $key['id'] }}"
-                                                        href="javascript:void(0)">Active</a>
+                                                @if($key->status == 1)
+                                                    Aktif
                                                 @else
-                                                    <a class="updateAtributStatus" id="key-{{ $key['id'] }}"
-                                                        id_atr="{{ $key['id'] }}"
-                                                        href="javascript:void(0)">Inactive</a>
+                                                    Nonaktif
                                                 @endif
+                                                    
                                             </td>
                                             <td style="text-align: center">
                                                 <a class="confirmDelete" name="atribut"

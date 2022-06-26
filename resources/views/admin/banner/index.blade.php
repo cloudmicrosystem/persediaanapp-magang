@@ -43,7 +43,7 @@
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>Gambar Banner</th>
-                                            <th>Status</th>
+                                            <th>Status Banner</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
@@ -55,14 +55,11 @@
                                                 </td>
                                                 <td>
                                                     @if($value->status == 1)
-                                                        <a class="updateBannerStatus" id="value-{{ $value->id }}"
-                                                            id_ban="{{ $value->id }}" href="javascript:void(0)">Active</a>
+                                                        Aktif
                                                     @else
-                                                        <a class="updateBannerStatus" id="value-{{ $value->id }}"
-                                                            id_ban="{{ $value->id }}" href="javascript:void(0)">Inactive</a>
+                                                        Nonaktif
                                                     @endif
                                                 </td>
-
                                                 <td style="text-align: center"><a title="Edit Artikel"
                                                         href="{{ url('add-edit-banner/' . $value->id) }}"><i
                                                             class='fas fa-edit'></i></a></td>

@@ -48,7 +48,8 @@
                                             <th>Deskripsi Artikel</th>
                                             <th>Gambar Artikel</th>
                                             <th>Sumber Artikel</th>
-                                            <th>Status</th>
+                                            <th>Status Artikel</th>
+                                            <th>Apakah Trending</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
@@ -65,14 +66,19 @@
                                                 <td>{{ $value->sumber_artikel }}</td>
                                                 <td>
                                                     @if($value->status == 1)
-                                                        <a class="updateArticleStatus" id="value-{{ $value->id }}"
-                                                            id_art="{{ $value->id }}" href="javascript:void(0)">Active</a>
+                                                        Aktif
                                                     @else
-                                                        <a class="updateArticleStatus" id="value-{{ $value->id }}"
-                                                            id_art="{{ $value->id }}" href="javascript:void(0)">Inactive</a>
+                                                        Nonaktif
                                                     @endif
                                                 </td>
-
+                                                <td>
+                                                    @if($value->featured == "Yes")
+                                                        Iya
+                                                    @else
+                                                        Tidak
+                                                    @endif
+                                                </td>
+                                                
                                                 <td style="text-align: center"><a title="Edit Artikel"
                                                         href="{{ url('add-edit-article/' . $value->id) }}"><i
                                                             class='fas fa-edit'></i></a></td>

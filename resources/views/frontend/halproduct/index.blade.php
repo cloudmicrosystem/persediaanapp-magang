@@ -86,13 +86,9 @@
 
                     <!-- Social -->
                     <div class="social flex-w flex-l-m p-r-20">
-
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
-
                         <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-
                         <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
-
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
                 </div>
@@ -113,18 +109,17 @@
             <div class="slider-inner">
                 <div class="row">
                     <div class="col-md-3 pt-5">
-                        <nav class="nav-category" style="border-right: 1px solid #bbb; height: 100%">
+                        <nav class="nav-category">
                             <h3><b><i>Category</i></b></h3><br>
-                            <form action="#">
-                                <div class="input-group">
-                                    <input type="search" class="form-control form-control-lg" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-lg btn-default">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                            <div class="form-group" id="sortProducts" name="sortProducts">
+                                <label for="exampleFormControlSelect2">Cari berdasarkan</label>
+                                <select multiple class="form-control" id="sort" name="sort">
+                                    <option value="">Nama product dari A - Z</option>
+                                    <option value="">Nama product dari Z - A</option>
+                                    <option value="">Harga terendah</option>
+                                    <option value="">Harga tertinggi</option>
+                                </select>
+                            </div>
                             <ul class="menu-category mt-3">
                                 <li>
                                     @foreach ($category as $key => $value)
@@ -134,7 +129,7 @@
                             </ul>
                         </nav>
                     </div>
-
+                    
                     {{-- Product Card --}}
                     <div class="col-md-9 mb-8 pt-5">
                         <div class="row">

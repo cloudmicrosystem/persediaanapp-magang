@@ -27,20 +27,6 @@ class PersediaanController extends Controller
         return view('admin.product.index')->with(compact('barang'));
     }
 
-    public function updateProductStatus(Request $request)
-    {
-        if($request->ajax()){
-            $data = $request->all();
-            if($data['status'] == "Active"){
-                $status = 0;
-            }else{
-                $status = 1;
-            }
-            Barang::where('id', $data['id_barang'])->update(['status'=>$status]);
-            return response()->json(['status'=>$status, 'id_barang'=>$data['id_barang']]);
-        }
-    }
-
     public function addEditProduct(Request $request, $id=null){
         if($id==""){
             $title = "Tambah Product";
@@ -92,7 +78,13 @@ class PersediaanController extends Controller
             $barang->slug = Str::slug($request['nama_barang']);
             $barang->harga = $data['harga'];
             $barang->deskripsi = $data['deskripsi'];
-            $barang->status = 1;
+
+            if(!empty($data['status'])){
+                $barang->status = $data['status'];
+            }else{
+                $barang->status = 0;
+            }
+
             if(!empty($data['trending'])){
                 $barang->trending = $data['trending'];
             }else{
@@ -135,7 +127,13 @@ class PersediaanController extends Controller
                     $atribut->ukuran = $data['ukuran'][$key];
                     $atribut->stock = $data['stock'][$key];
                     $atribut->sku = $val;
-                    $atribut->status = 1;
+                    
+                    if(!empty($data['status'])){
+                        $atribut->status = $data['status'];
+                    }else{
+                        $atribut->status = 0;
+                    }
+
                     $atribut->save();
                 }
                 $success_message = 'Size & Stock Berhasil Ditambahkan!';
@@ -163,20 +161,6 @@ class PersediaanController extends Controller
             $message = 'Stock Berhasil Diupdate!';
             session::flash('success_message', $message);
             return redirect()->back();
-        }
-    }
-
-    public function updateAtributStatus(Request $request)
-    {
-        if($request->ajax()){
-            $data = $request->all();
-            if($data['status'] == "Active"){
-                $status = 0;
-            }else{
-                $status = 1;
-            }
-            Atribut::where('id', $data['id_atr'])->update(['status'=>$status]);
-            return response()->json(['status'=>$status, 'id_atr'=>$data['id_atr']]);
         }
     }
 

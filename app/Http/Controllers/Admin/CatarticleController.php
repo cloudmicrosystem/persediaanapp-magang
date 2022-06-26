@@ -24,20 +24,6 @@ class CatarticleController extends Controller
         return view('admin.catarticle.index')->with(compact('catarticle'));
     }
 
-    public function updateCatarticleStatus(Request $request)
-    {
-        if($request->ajax()){
-            $data = $request->all();
-            if($data['status'] == "Active"){
-                $status = 0;
-            }else{
-                $status = 1;
-            }
-            Catarticle::where('id', $data['id_cat'])->update(['status'=>$status]);
-            return response()->json(['status'=>$status, 'id_cat'=>$data['id_cat']]);
-        }
-    }
-
     public function addEditCatarticle(Request $request, $id=null){
         if($id == ""){
             $title = "Tambah Kategori";
@@ -62,7 +48,13 @@ class CatarticleController extends Controller
 
             $catarticle->nama_cat = $data['nama_cat'];
             $catarticle->slug = Str::slug($request['nama_cat']);
-            $catarticle->status = 1;
+
+            if(!empty($data['status'])){
+                $catarticle->status = $data['status'];
+            }else{
+                $catarticle->status = 0;
+            }
+            
             $catarticle->save();
 
             session::flash('success_message', $message);

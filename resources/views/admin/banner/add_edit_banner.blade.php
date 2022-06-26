@@ -45,7 +45,7 @@
                                 <div class="card-body">
 
                                     @if ($banner->gambar_banner)
-                                        <img src="{{ asset('images/banner/'. $banner->gambar_banner) }}" alt="" width=150px height=auto>
+                                        <img src="{{ asset('images/banner/'. $banner->gambar_banner) }}" alt="" width=300px height=auto>
                                     @endif
                                     <div class="form-group">
                                         <label for="exampleInputFile">Gambar Banner</label>
@@ -62,6 +62,14 @@
                                                 <span class="input-group-text">Upload</span>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
+                                            @if (!empty($banner['status']) && $banner['status'] == "1")
+                                                checked = ""
+                                            @endif
+                                        >
+                                        <label class="form-check-label" >Status Kategori</label>
                                     </div>
                                 </div>
                                 <div class="card-footer">
