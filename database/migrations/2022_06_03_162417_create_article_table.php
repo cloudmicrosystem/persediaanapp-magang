@@ -17,7 +17,7 @@ class CreateArticleTable extends Migration
             $table->id();
             $table->integer('id_catarticle');
             $table->string('judul_artikel');
-            $table->string('slug');
+            $table->string('slug')->unique;
             $table->text('deskripsi_artikel');
             $table->string('gambar_artikel');
             $table->string('sumber_artikel');

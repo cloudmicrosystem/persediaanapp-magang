@@ -21,14 +21,14 @@ class CategoryController extends Controller
         return view('admin.kategori.index')->with(compact('category'));
     }
 
-    public function addEditCategory(Request $request, $id=null){
-        if($id == ""){
+    public function addEditCategory(Request $request, $slug=null){
+        if($slug == ""){
             $title = "Tambah Kategori";
             $category = new Kategori;
             $message = "Kategori Berhasil Ditambahkan!";
         }else{
             $title = "Edit Kategori";
-            $category = Kategori::where('id',$id)->first();
+            $category = Kategori::where('slug',$slug)->first();
             $message = "Kategori Berhasil Diupdate!";
         }
 
@@ -51,7 +51,7 @@ class CategoryController extends Controller
             }else{
                 $category->status = 0;
             }
-            
+
             $category->save();
 
             session::flash('success_message', $message);
@@ -61,8 +61,8 @@ class CategoryController extends Controller
         return view('admin.kategori.add_edit_category')->with(compact('title', 'category'));
     }
 
-    public function deleteCategory($id){
-        Kategori::where('id',$id)->delete();
+    public function deleteCategory($slug){
+        Kategori::where('slug',$slug)->delete();
 
         $message = "Kategori Berhasil Dihapus";
         session::flash('success_message', $message);

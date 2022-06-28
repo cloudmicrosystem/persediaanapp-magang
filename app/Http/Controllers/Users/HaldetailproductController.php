@@ -15,7 +15,6 @@ class HaldetailproductController extends Controller
      */
     public function index()
     {
-        $trendingItems = Barang::where('trending','Yes')->take(4)->get();
 
         return view('frontend.haldetailproduct.index');
     }

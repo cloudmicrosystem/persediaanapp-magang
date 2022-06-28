@@ -19,28 +19,14 @@ class ArticleController extends Controller
         return view('admin.article.index')->with(compact('article'));
     }
 
-    public function updateArticleStatus(Request $request)
-    {
-        if($request->ajax()){
-            $data = $request->all();
-            if($data['status'] == "Active"){
-                $status = 0;
-            }else{
-                $status = 1;
-            }
-            Article::where('id', $data['id_art'])->update(['status'=>$status]);
-            return response()->json(['status'=>$status, 'id_art'=>$data['id_art']]);
-        }
-    }
-
-    public function addEditArticle(Request $request, $id=null){
-        if($id == ""){
+    public function addEditArticle(Request $request, $slug=null){
+        if($slug == ""){
             $title = "Tambah Artikel";
             $article = new Article();
             $message = "Artikel Berhasil Ditambahkan!";
         }else{
             $title = "Edit Artikel";
-            $article = Article::find($id);
+            $article = article::where('slug', $slug)->first();
             $message = "Artikel Berhasil Diupdate!";
         }
 
@@ -87,7 +73,7 @@ class ArticleController extends Controller
             }else{
                 $article->status = 0;
             }
-            
+
             if(!empty($data['featured'])){
                 $article->featured = $data['featured'];
             }else{
@@ -101,8 +87,8 @@ class ArticleController extends Controller
         return view('admin.article.add_edit_article')->with(compact('title','catarticle','article'));
     }
 
-    public function deleteArticle($id){
-        Article::where('id',$id)->delete();
+    public function deleteArticle($slug){
+        Article::where('slug',$slug)->delete();
 
         $message = "Artikel Berhasil Dihapus";
         session::flash('success_message', $message);

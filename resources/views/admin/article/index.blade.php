@@ -78,14 +78,14 @@
                                                         Tidak
                                                     @endif
                                                 </td>
-                                                
+
                                                 <td style="text-align: center"><a title="Edit Artikel"
-                                                        href="{{ url('add-edit-article/' . $value->id) }}"><i
+                                                        href="{{ url('add-edit-article/' . $value->slug) }}"><i
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
                                                 </td>
                                                 <td style="text-align: center"> <a class="confirmDelete" name="artikel"
-                                                        href="{{ url('delete-article/' . $value->id) }}"><i
+                                                        href="{{ url('delete-article/' . $value->slug) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>

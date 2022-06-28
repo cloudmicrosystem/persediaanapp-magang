@@ -47,11 +47,11 @@ use App\Http\Controllers\Users\Haldetailpro;
     Route::get('/faq', [HalcustController::class, 'showFaq']);
 
     // HALAMAN PRODUCT
-    Route::get('/product', [HalproductController::class, 'index']);
-    Route::get('/product/{slug}', [HalproductController::class, 'category']);
+    Route::get('product', [HalproductController::class, 'index']);
+    Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
+    Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detail']);
 
-
-    Route::get('/detail', [HaldetailproductController::class, 'index']);
+    // Route::get('/detail', [HaldetailproductController::class, 'index']);
     Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
     Route::get('/detailpro', [Haldetailpro::class, 'index']);
     // Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
@@ -61,17 +61,17 @@ use App\Http\Controllers\Users\Haldetailpro;
 
     // KATEGORI PRODUCT
     Route::get('kategori', [CategoryController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-category/{id?}', 'App\Http\Controllers\Admin\CategoryController@addEditCategory');
-    Route::get('/delete-category/{id}', [CategoryController::class, 'deleteCategory']);
+    Route::match(array('get','post'),'/add-edit-category/{slug?}', 'App\Http\Controllers\Admin\CategoryController@addEditCategory');
+    Route::get('/delete-category/{slug}', [CategoryController::class, 'deleteCategory']);
 
     // PRODUCT
     Route::get('barang',[PersediaanController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-product/{id?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
-    Route::get('/delete-product/{id}', [PersediaanController::class, 'deleteProduct']);
+    Route::match(array('get','post'),'/add-edit-product/{slug?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
+    Route::get('/delete-product/{slug}', [PersediaanController::class, 'deleteProduct']);
 
     // GAMBAR DETAIL PRODUCT
-    Route::match(array('get','post'),'/add-image/{id}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
-    Route::get('/delete-image/{id}', [PersediaanController::class, 'deleteImage']);
+    Route::match(array('get','post'),'/add-image/{slug}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
+    Route::get('/delete-image/{slug}', [PersediaanController::class, 'deleteImage']);
 
     // ATRIBUT (SIZE, STOCK, SKU)
     Route::post('update-atribut-status', [PersediaanController::class, 'updateAtributStatus']);
@@ -81,13 +81,13 @@ use App\Http\Controllers\Users\Haldetailpro;
 
     // ARTIKEL
     Route::get('article',[ArticleController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-article/{id?}', 'App\Http\Controllers\Admin\ArticleController@addEditArticle');
-    Route::get('/delete-article/{id}', [ArticleController::class, 'deleteArticle']);
+    Route::match(array('get','post'),'/add-edit-article/{slug?}', 'App\Http\Controllers\Admin\ArticleController@addEditArticle');
+    Route::get('/delete-article/{slug}', [ArticleController::class, 'deleteArticle']);
 
     // KATEGORI ARTIKEL
     Route::get('catarticle',[CatarticleController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-catarticle/{id?}', 'App\Http\Controllers\Admin\CatarticleController@addEditCatarticle');
-    Route::get('/delete-catarticle/{id}', [CatarticleController::class, 'deleteCatarticle']);
+    Route::match(array('get','post'),'/add-edit-catarticle/{slug?}', 'App\Http\Controllers\Admin\CatarticleController@addEditCatarticle');
+    Route::get('/delete-catarticle/{slug}', [CatarticleController::class, 'deleteCatarticle']);
 
     // BANNER
     Route::get('banner',[BannerController::class, 'index']);

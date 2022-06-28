@@ -38,7 +38,7 @@
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
 </head>
 
-<body class="animsition" style="color: black">
+<body class="animsition">
 
     <!-- Header -->
     <header>
@@ -49,7 +49,7 @@
                     <!-- Logo -->
                     <div class="logo">
                         <a href="home">
-                            <img src="images/icons/logo2.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
+                            <img src="{{ asset('images/icons/logo2.png') }}" alt="IMG-LOGO" data-logofixed="{{ asset('images/icons/logoa.png') }}">
                         </a>
                     </div>
 
@@ -86,13 +86,9 @@
 
                     <!-- Social -->
                     <div class="social flex-w flex-l-m p-r-20">
-
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
-
                         <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-
                         <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
-
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
                 </div>
@@ -103,30 +99,38 @@
     <!-- Sidebar -->
     @include('frontend.halcust.sidebar')
 
-    <!-- Slide1 -->
-    <section class="section-slide pb-4">
-        <h1 class="text-bold text-uppercase text-center text-black p-t-120" style="font-size: 20px ; font-family: 'Trebuchet MS'"></h1>
+
+    <!-- Sidebar kategori -->
+    <section class="slider-section  pb-4">
+        <h1 class="text-bold text-uppercase text-center text-black p-t-120"
+            style="font-size: 20px ; font-family: 'Trebuchet MS'"></h1>
+
         <div class="container">
             <div class="slider-inner">
                 <div class="row">
                     <div class="col-md-3 pt-5">
-                        <nav class="nav-category" style="border-right: 1px solid #bbb; height: 100%">
+                        <nav class="nav-category">
                             <h3><b><i>Category</i></b></h3><br>
-                            <form action="#">
-                                <div class="input-group">
-                                    <input type="search" class="form-control form-control-lg" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-lg btn-default">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </div>
+                            <form action="" name="sortProducts" id="sortProducts" class="form-horizontal span6">
+                                <div class="control-group">
+                                    <label for="exampleFormControlSelect2">Cari berdasarkan</label>
+                                    <select id="sort" name="sort">
+                                        <option value="">Pilih</option>
+                                        <option value="product_a_z" @if(isset($_GET['sort']) && $_GET['sort'] == "product_a_z") selected="" @endif>Nama product dari A - Z</option>
+                                        <option value="product_z_a" @if(isset($_GET['sort']) && $_GET['sort'] == "product_z_a") selected="" @endif>Nama product dari Z - A</option>
+                                        <option value="product_rendah" @if(isset($_GET['sort']) && $_GET['sort'] == "product_rendah") selected="" @endif>Harga terendah</option>
+                                        <option value="product_tinggi" @if(isset($_GET['sort']) && $_GET['sort'] == "product_tinggi") selected="" @endif>Harga tertinggi</option>
+                                    </select>
                                 </div>
                             </form>
-                            <ul class="menu-category mt-3 navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                                @foreach ($category as $key => $value)
-                                <li class="{{ request()->is('product/'.$value->slug) ? 'active' : ''}} nav-item">
-                                    <a style="font-weight: {{request()->is('product/'.$value->slug) ? '900' : ''}}" href="/product/{{$value->slug}}"> {{ $value->nama_kategori }}</a>
-                                </li>
+                            <ul class="menu-category mt-3 navigation navigation-main" id="main-menu-navigation"
+                                data-menu="menu-navigation">
+                                @foreach ($category2 as $key => $value)
+                                    <li class="{{ request()->is('product/' . $value->slug) ? 'active' : '' }} nav-item">
+                                        <a style="font-weight: {{ request()->is('product/' . $value->slug) ? '900' : '' }}"
+                                            href="{{ url('product/' . $value->slug) }}">
+                                            {{ $value->nama_kategori }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </nav>
@@ -137,34 +141,53 @@
                         <div class="row">
                             @foreach ($barang as $items)
                                 <div class="col-md-3">
-                                    <div class="card" style="border: transparent">
-                                        <ul class="">
-                                            <li>
-                                                <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                                    <a href="detail">
-                                                        <img src="{{ asset('images/disply/' . $items->gambar_disply) }}" class="img-fluid img-thumbnail" alt="{{$items->nama_barang}}" style="border: transparent"/>
+                                    <div class="row">
+                                        <div class="card">
+                                            <ul>
+                                                <li>
+                                                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                                                        <a href="{{ url('product/'.$category->slug.'/'.$items->slug) }}">
+                                                            <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
+                                                                class="img-fluid img-thumbnail"
+                                                                alt="{{ $items->nama_barang }}"
+                                                                style="border: transparent" />
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="card-body ">
+                                                <div class="t-center">
+                                                    <a href="{{ url('product/'.$category->slug.'/'.$items->slug) }}">
+                                                        <h1 class="card-title"
+                                                            style="font-size: 20px; font-weight:bold">
+                                                            {{ $items->nama_barang }}
+                                                        </h1>
+                                                        <p class="">{{ $items->harga }}</p>
                                                     </a>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                        <div class="card-body">
-                                            <div  class="d-flex justify-content-md-center">
-                                                <a href="detail">
-                                                    <h1 class="card-title" style="font-size: 20px; font-weight:bold">
-                                                        {{ $items->nama_barang }}
-                                                    </h1>
-                                                    <p class="">{{ $items->harga }}</p>
-                                                </a>
+                                                <p style="color: orange" class="m-1 t-center">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </p>
+                                                <p class="t-center m-0">Terjual 10 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
+                        <br>
+                        @if(isset($_GET['sort']) && !empty($_GET['sort']))
+                            {{ $barang->appends(['sort' => $_GET['sort']])->links()}}
+                        @else
+                            {{ $barang->links() }}
+                        @endif
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -217,6 +240,27 @@
 
     <script src="{{ asset('assetcus/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assetcus/js/jquery-3.6.0.min.js') }}"></script>
+
+    @section('script')
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+        </script>
+    @endsection
 </body>
 
 </html>

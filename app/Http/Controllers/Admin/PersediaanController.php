@@ -27,14 +27,14 @@ class PersediaanController extends Controller
         return view('admin.product.index')->with(compact('barang'));
     }
 
-    public function addEditProduct(Request $request, $id=null){
-        if($id==""){
+    public function addEditProduct(Request $request, $slug=null){
+        if($slug==""){
             $title = "Tambah Product";
             $barang = new Barang();
             $message = "Product Berhasil Ditambahkan!";
         }else{
             $title = "Edit Product";
-            $barang = Barang::find($id);
+            $barang = Barang::where('slug',$slug)->first();
             $message = "Product Berhasil Diupdate!";
         }
 
@@ -100,8 +100,8 @@ class PersediaanController extends Controller
         return view('admin.product.add_edit_product')->with(compact('title','category','barang'));
     }
 
-    public function deleteProduct($id){
-        Barang::where('id',$id)->delete();
+    public function deleteProduct($slug){
+        Barang::where('slug',$slug)->delete();
 
         $message = "Product Berhasil Dihapus";
         session::flash('success_message', $message);
@@ -127,11 +127,11 @@ class PersediaanController extends Controller
                     $atribut->ukuran = $data['ukuran'][$key];
                     $atribut->stock = $data['stock'][$key];
                     $atribut->sku = $val;
-                    
+
                     if(!empty($data['status'])){
                         $atribut->status = $data['status'];
                     }else{
-                        $atribut->status = 0;
+                        $atribut->status = 1;
                     }
 
                     $atribut->save();

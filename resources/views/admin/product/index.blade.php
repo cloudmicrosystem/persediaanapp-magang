@@ -81,7 +81,7 @@
                                                         alt="{{ $value->nama_barang }}" width=150px height=auto />
                                                 </td>
                                                 <td style="text-align: center"><a title="Edit Product"
-                                                        href="{{ url('add-edit-product/' . $value->id) }}"><i
+                                                        href="{{ url('add-edit-product/' . $value->slug) }}"><i
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
                                                 <td style="text-align: center"><a title="Tambah Atribut"
@@ -92,7 +92,7 @@
                                                         class='fas fa-plus-circle'></i></a></td>
                                             </td>
                                                 <td style="text-align: center"> <a class="confirmDelete" name="product"
-                                                        href="{{ url('delete-product/' . $value->id) }}"><i
+                                                        href="{{ url('delete-product/' . $value->slug) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>

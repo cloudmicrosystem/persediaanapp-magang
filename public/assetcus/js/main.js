@@ -23,7 +23,7 @@
         overlayParentElement : 'html',
         transition: function(url){ window.location.href = url; }
     });
-    
+
     /*[ Back to top ]
     ===========================================================*/
     var windowH = $(window).height()/2;
@@ -61,18 +61,18 @@
     var myCalendar = $('.my-calendar');
     var isClick = 0;
 
-    $(window).on('click',function(){ 
+    $(window).on('click',function(){
         isClick = 0;
     });
 
-    $(myCalendar).on('apply.daterangepicker',function(){ 
+    $(myCalendar).on('apply.daterangepicker',function(){
         isClick = 0;
     });
 
-    $('.btn-calendar').on('click',function(e){ 
+    $('.btn-calendar').on('click',function(e){
         e.stopPropagation();
 
-        if(isClick == 1) isClick = 0;   
+        if(isClick == 1) isClick = 0;
         else if(isClick == 0) isClick = 1;
 
         if (isClick == 1) {
@@ -80,12 +80,12 @@
         }
     });
 
-    $(myCalendar).on('click',function(e){ 
+    $(myCalendar).on('click',function(e){
         e.stopPropagation();
         isClick = 1;
     });
 
-    $('.daterangepicker').on('click',function(e){ 
+    $('.daterangepicker').on('click',function(e){
         e.stopPropagation();
     });
 
@@ -99,14 +99,14 @@
 
         setTimeout(function(){
             $('.video-mo-01').css('opacity','1');
-        },300);      
+        },300);
     });
 
     $('[data-dismiss="modal"]').on('click',function(){
         $('.video-mo-01').children('iframe')[0].src = srcOld;
         $('.video-mo-01').css('opacity','0');
     });
-    
+
 
     /*[ Fixed Header ]
     ===========================================================*/
@@ -125,7 +125,7 @@
             $(header).removeClass('header-fixed');
             $(logo).attr('src',linkLogo1);
         }
-        
+
     });
 
     /*[ Show/hide sidebar ]
@@ -163,7 +163,7 @@
             var filterValue = $(this).attr('data-filter');
             $topeContainer.isotope({filter: filterValue});
         });
-        
+
     });
 
     // init Isotope
@@ -192,6 +192,107 @@
         });
     });
 
+    $("#sort").on('change', function(){
+        this.form.submit();
+    });
+
+    // Dropdown on mouse hover
+    $(document).ready(function () {
+        function toggleNavbarMethod() {
+            if ($(window).width() > 992) {
+                $('.navbar .dropdown').on('mouseover', function () {
+                    $('.dropdown-toggle', this).trigger('click');
+                }).on('mouseout', function () {
+                    $('.dropdown-toggle', this).trigger('click').blur();
+                });
+            } else {
+                $('.navbar .dropdown').off('mouseover').off('mouseout');
+            }
+        }
+        toggleNavbarMethod();
+        $(window).resize(toggleNavbarMethod);
+    });
     
+    
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+
+
+    // Vendor carousel
+    $('.vendor-carousel').owlCarousel({
+        loop: true,
+        margin: 29,
+        nav: false,
+        autoplay: true,
+        smartSpeed: 1000,
+        responsive: {
+            0:{
+                items:2
+            },
+            576:{
+                items:3
+            },
+            768:{
+                items:4
+            },
+            992:{
+                items:5
+            },
+            1200:{
+                items:6
+            }
+        }
+    });
+
+
+    // Related carousel
+    $('.related-carousel').owlCarousel({
+        loop: true,
+        margin: 29,
+        nav: false,
+        autoplay: true,
+        smartSpeed: 1000,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
+            }
+        }
+    });
+
+
+    // Product Quantity
+    $('.quantity button').on('click', function () {
+        var button = $(this);
+        var oldValue = button.parent().parent().find('input').val();
+        if (button.hasClass('btn-plus')) {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            if (oldValue > 0) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 0;
+            }
+        }
+        button.parent().parent().find('input').val(newVal);
+    });
 
 })(jQuery);

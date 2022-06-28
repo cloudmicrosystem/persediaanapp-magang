@@ -82,7 +82,7 @@
                                     class="fs-15 c-white"><i aria-hidden="true"><img class="pr-5" style="width: 4%" src="images/icons/shp.png" alt=""></i></a>
                             </div>
                         </li><br>
-                        <img src="images/icons/logo2.png" style="width: 150px">
+                        <img src="{{ asset('images/icons/logo2.png') }}" style="width: 150px">
                     </ul>
                 </div>
             </div>

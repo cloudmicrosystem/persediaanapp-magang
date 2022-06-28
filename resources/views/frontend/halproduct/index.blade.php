@@ -111,25 +111,29 @@
                     <div class="col-md-3 pt-5">
                         <nav class="nav-category">
                             <h3><b><i>Category</i></b></h3><br>
-                            <div class="form-group" id="sortProducts" name="sortProducts">
-                                <label for="exampleFormControlSelect2">Cari berdasarkan</label>
-                                <select multiple class="form-control" id="sort" name="sort">
-                                    <option value="">Nama product dari A - Z</option>
-                                    <option value="">Nama product dari Z - A</option>
-                                    <option value="">Harga terendah</option>
-                                    <option value="">Harga tertinggi</option>
-                                </select>
-                            </div>
-                            <ul class="menu-category mt-3">
-                                <li>
-                                    @foreach ($category as $key => $value)
-                                <li><a href="./product/{{ $value->slug }}"> {{ $value->nama_kategori }}</a></li>
+                            <form action="" name="sortProducts" id="sortProducts" class="form-horizontal span6">
+                                <div class="control-group">
+                                    <label for="exampleFormControlSelect2">Cari berdasarkan</label>
+                                    <select id="sort" name="sort">
+                                        <option value="">Pilih</option>
+                                        <option value="product_a_z" @if(isset($_GET['sort']) && $_GET['sort'] == "product_a_z") selected="" @endif>Nama product dari A - Z</option>
+                                        <option value="product_z_a" @if(isset($_GET['sort']) && $_GET['sort'] == "product_z_a") selected="" @endif>Nama product dari Z - A</option>
+                                        <option value="product_rendah" @if(isset($_GET['sort']) && $_GET['sort'] == "product_rendah") selected="" @endif>Harga terendah</option>
+                                        <option value="product_tinggi" @if(isset($_GET['sort']) && $_GET['sort'] == "product_tinggi") selected="" @endif>Harga tertinggi</option>
+                                    </select>
+                                </div>
+                            </form>
+
+                            <ul  class="menu-category mt-3 navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                                @foreach ($category as $key => $value)
+                                    <li>
+                                        <a href="{{ url('product/'. $value->slug) }}"> {{ $value->nama_kategori }}</a>
+                                    </li>
                                 @endforeach
-                                </li>
                             </ul>
                         </nav>
                     </div>
-                    
+
                     {{-- Product Card --}}
                     <div class="col-md-9 mb-8 pt-5">
                         <div class="row">
@@ -140,7 +144,7 @@
                                             <ul>
                                                 <li>
                                                     <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                                        <a href="detail">
+                                                        <a href="#">
                                                             <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
                                                                 class="img-fluid img-thumbnail"
                                                                 alt="{{ $items->nama_barang }}"
@@ -151,7 +155,7 @@
                                             </ul>
                                             <div class="card-body ">
                                                 <div class="t-center">
-                                                    <a href="detail">
+                                                    <a href="">
                                                         <h1 class="card-title"
                                                             style="font-size: 20px; font-weight:bold">
                                                             {{ $items->nama_barang }}
@@ -174,10 +178,15 @@
                                 </div>
                             @endforeach
                         </div>
+                        <br>
+                        @if(isset($_GET['sort']) && !empty($_GET['sort']))
+                            {{ $barang->appends(['sort' => $_GET['sort']])->links()}}
+                        @else
+                            {{ $barang->links() }}
+                        @endif
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -194,7 +203,7 @@
 
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
-
+    <script type="text/javascript" src="{{ asset('assetcus/js/frontend.js') }}"></script>
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->

@@ -60,8 +60,8 @@
                                                         Nonaktif
                                                     @endif
                                                 </td>
-                                                <td style="text-align: center"><a  href="{{ url('add-edit-catarticle/'.$value->id) }}"><i class='fas fa-edit'></i></a></td></td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="kategori" href="{{ url('delete-catarticle/'.$value->id) }}"><i class='fas fa-trash-alt'></i></a></td>
+                                                <td style="text-align: center"><a  href="{{ url('add-edit-catarticle/'.$value->slug) }}"><i class='fas fa-edit'></i></a></td></td>
+                                                <td style="text-align: center"> <a class="confirmDelete" name="kategori" href="{{ url('delete-catarticle/'.$value->slug) }}"><i class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>
                                         @endforeach

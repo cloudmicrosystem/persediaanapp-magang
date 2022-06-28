@@ -127,7 +127,7 @@
                                                 @else
                                                     Nonaktif
                                                 @endif
-                                                    
+
                                             </td>
                                             <td style="text-align: center">
                                                 <a class="confirmDelete" name="atribut"

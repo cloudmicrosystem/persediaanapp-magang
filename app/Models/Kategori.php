@@ -14,4 +14,7 @@ class Kategori extends Model
         'slug'
     ];
 
+    // public function barang(){
+    //     return $this->hasMany(Barang::class, 'id_kategori', 'id');
+    // }
 }

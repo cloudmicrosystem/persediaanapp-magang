@@ -24,14 +24,14 @@ class CatarticleController extends Controller
         return view('admin.catarticle.index')->with(compact('catarticle'));
     }
 
-    public function addEditCatarticle(Request $request, $id=null){
-        if($id == ""){
+    public function addEditCatarticle(Request $request, $slug=null){
+        if($slug == ""){
             $title = "Tambah Kategori";
             $catarticle = new Catarticle;
             $message = "Kategori Berhasil Ditambahkan!";
         }else{
             $title = "Edit Kategori";
-            $catarticle = Catarticle::where('id', $id)->first();
+            $catarticle = Catarticle::where('slug', $slug)->first();
             $message = "Kategori Berhasil Diupdate!";
         }
 
@@ -54,7 +54,7 @@ class CatarticleController extends Controller
             }else{
                 $catarticle->status = 0;
             }
-            
+
             $catarticle->save();
 
             session::flash('success_message', $message);
@@ -64,8 +64,8 @@ class CatarticleController extends Controller
         return view('admin.catarticle.add_edit_catarticle')->with(compact('title', 'catarticle'));
     }
 
-    public function deleteCatarticle($id){
-        Catarticle::where('id',$id)->delete();
+    public function deleteCatarticle($slug){
+        Catarticle::where('slug',$slug)->delete();
 
         $message = "Kategori Berhasil Dihapus";
         session::flash('success_message', $message);

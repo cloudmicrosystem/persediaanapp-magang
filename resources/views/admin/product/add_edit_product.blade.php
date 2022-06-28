@@ -38,8 +38,8 @@
                                 <h3 class="card-title">{{ $title }}</h3>
                             </div>
                             <form id="quickForm"
-                                @if(empty($barang['id'])) action="{{ url('add-edit-product') }}"
-                                @else action="{{ url('add-edit-product/' . $barang['id']) }}"
+                                @if(empty($barang['slug'])) action="{{ url('add-edit-product') }}"
+                                @else action="{{ url('add-edit-product/' . $barang['slug']) }}"
                                 @endif
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
