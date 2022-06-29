@@ -56,7 +56,8 @@
                     <!-- Logo -->
                     <div class="logo">
                         <a href="home">
-                            <img src="images/icons/logo2.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
+                            <img src="{{ asset('images/icons/logo2.png') }}" alt="IMG-LOGO"
+                                data-logofixed="{{ asset('images/icons/logoa.png') }}">
                         </a>
                     </div>
 
@@ -125,9 +126,9 @@
                                 terr.
                             </p>
 
-                <a href="product" class="txt27">
-                    Product
-                </a>
+                            <a href="product" class="txt27">
+                                Product
+                            </a>
 
                             <h5 class="mt-2">Size</h5>
                             <div class="form-group">
@@ -180,13 +181,43 @@
                             </div>
 
                         </div>
+
+                        {{-- GAMBAR --}}
                         <div class="col-6 pt-30 pl-5">
-                            <div class="xzoom-container">
+                            {{-- <div class="xzoom-container">
                                 <img class="xzoom center" style="width: 90%;" id="xzoom-default"
                                     src="{{ asset('images/katalog/ts1-1.jpg') }}"
                                     xoriginal="{{ asset('images/katalog/ts1-1.jpg') }}" />
+                            </div> --}}
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                                    </li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="{{ asset('images/katalog/ts1-1.jpg') }}" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="{{ asset('images/katalog/ts1-2.jpg') }}" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="{{ asset('images/katalog/ts1-3.jpg') }}" alt="Third slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev carousel-dark" href="#carouselExampleIndicators" role="button "
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next carousel-dark" href="#carouselExampleIndicators" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-
                         </div>
                     </div>
                     <div class="mt-2">
