@@ -7,7 +7,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a href="home">
-                        <img src="images/icons/logo2.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
+                        <img src="{{ asset('images/icons/logo2.png') }}" alt="IMG-LOGO" data-logofixed="{{ asset('images/icons/logoa.png') }}">
                     </a>
                 </div>
 
