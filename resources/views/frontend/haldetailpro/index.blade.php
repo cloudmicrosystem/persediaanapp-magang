@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- xzoom plugin here -->
-    <script type="text/javascript" src="{{ asset('assetcus/js/xzoom.min.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('assetcus/js/xzoom.min.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/xzoom.css') }}" media="all" />
     <link rel="stylesheet" href="{{ asset('assetcus/css/normalize.css') }}" />
     <link rel="stylesheet" href="{{ asset('assetcus/css/foundation.css') }}" />
     <link rel="stylesheet" href="{{ asset('assetcus/css/demo.css') }}" />
     <script src="{{ asset('assetcus/js/vendor/modernizr.js') }}"></script>
-    <script src="{{ asset('assetcus/js/vendor/jquery.js') }}"></script>
+    <script src="{{ asset('assetcus/js/vendor/jquery.js') }}"></script> --}}
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="{{ asset('images/icons/logoa.png') }}" />
     <!--===============================================================================================-->
@@ -30,8 +30,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/select2/select2.min.css') }}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/daterangepicker/daterangepicker.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/vendors/slick/slick.css') }}">
     <!--===============================================================================================-->
@@ -293,9 +292,9 @@
 
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
-
+{{--
     <script src="{{ asset('assetcus/js/foundation.min.js') }}"></script>
-    <script src="{{ asset('assetcus/js/setup.js') }}"></script>
+    <script src="{{ asset('assetcus/js/setup.js') }}"></script> --}}
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->
