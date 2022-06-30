@@ -1,9 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Article;
+use App\Models\Kategori;
+use App\Models\Barang;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
@@ -24,19 +31,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $category = DB::select('SELECT * FROM category');
+        // $barang = DB::select(
+        //     'SELECT barang.*,
+        //         (SELECT nama_kategori FROM category WHERE id = barang.id_category)
+        //             AS nama_kategori FROM barang ORDER BY id LIMIT 8');
 
-        $barang = DB::select(
-            'SELECT barang.*,
-                (SELECT nama_category FROM category WHERE id = barang.id_category)
-                    AS nama_category FROM barang ORDER BY id LIMIT 8');
+        if (Auth::user()->is_admin) {
+            Session::put('page','dashboard');
+            return view('admin.dashboard.dashboard');
+        }else{
+            return redirect('/');
+        }
 
-        return view('frontend.halcust.index')->with(compact('category','barang'));
-    }
-
-    public function adminHome()
-    {
-        Session::put('page','dashboard');
-        return view('admin.dashboard.dashboard');
     }
 }

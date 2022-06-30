@@ -144,7 +144,7 @@
                                             <ul>
                                                 <li>
                                                     <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                                        <a href="#">
+                                                        <a href="{{ url('product/detail-product/'.$items->id) }}">
                                                             <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
                                                                 class="img-fluid img-thumbnail"
                                                                 alt="{{ $items->nama_barang }}"
@@ -155,7 +155,7 @@
                                             </ul>
                                             <div class="card-body ">
                                                 <div class="t-center">
-                                                    <a href="">
+                                                    <a href="{{ url('product/detail-product/'.$items->id) }}">
                                                         <h1 class="card-title"
                                                             style="font-size: 20px; font-weight:bold">
                                                             {{ $items->nama_barang }}

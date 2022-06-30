@@ -295,4 +295,9 @@
         button.parent().parent().find('input').val(newVal);
     });
 
+    $("#getSize").change(function(){
+        var ukuran = $(this).val();
+        alert(ukuran);
+    });
+
 })(jQuery);

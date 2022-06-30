@@ -7,7 +7,6 @@
                     <img src="{{ asset('images/banner/' . $item->gambar_banner) }}"/>
                 </div>
             @endforeach
-
         </div>
         <div class="wrap-slick1-dots"></div>
     </div>

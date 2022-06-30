@@ -78,8 +78,7 @@
                                                 step="1" min="1" max="2" name="quantity"
                                                 value="1" title="Qty" size="4" placeholder=""
                                                 inputmode="numeric" />
-                                            <input type="button" value="+"
-                                                class="plus button is-form text-black">
+                                            <input type="button" value="+" class="plus button is-form text-black">
                                         </div>
                                     </td>
                                     <td class="text-white">100.000.00</td>
@@ -92,9 +91,10 @@
                                             Hapus
                                         </button>
 
-                                        <a href="/checkout"> <button type="submit" class="btn btn-sm btn-primary mb-2">
-                                             Chekout
-                                        </button> </a>
+                                        <a href="/checkout"> <button type="submit"
+                                                class="btn btn-sm btn-primary mb-2">
+                                                Chekout
+                                            </button> </a>
 
                                     </td>
                                 </tr>
@@ -113,9 +113,10 @@
                                         <button type="submit" class="btn btn-sm btn-danger mb-2">
                                             Hapus
                                         </button>
-                                        <a href="/checkout"> <button type="submit" class="btn btn-sm btn-primary mb-2">
-                                            Chekout
-                                        </button></a>
+                                        <a href="/checkout"> <button type="submit"
+                                                class="btn btn-sm btn-primary mb-2">
+                                                Chekout
+                                            </button></a>
                                     </td>
                                 </tr>
                             </table>

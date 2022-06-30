@@ -15,6 +15,10 @@ class CreateCartTable extends Migration
     {
         Schema::create('cart', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('barang_id');
+            $table->string('ukuran');
+            $table->integer('qty');
             $table->timestamps();
         });
     }

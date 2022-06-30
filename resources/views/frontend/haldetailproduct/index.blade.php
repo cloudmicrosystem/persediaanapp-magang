@@ -37,9 +37,6 @@
     <link href="{{ asset('assetcus/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
 
-
-
-
     <!-- css keranjang -->
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
     {{-- <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" /> --}}
@@ -118,94 +115,63 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-6 pt-3 pl-5 pb-3">
-                            <h3 class="my-2">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
-                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu
-                                stumptown
-                                aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui
-                                irure
-                                terr.
-                            </p>
+                            <h3 class="my-2"> {{ $barang['category']['nama_kategori'] }} {{ $barang['nama_barang'] }}</h3>
+                            <p>{{ $barang['deskripsi'] }}</p>
+                            <h3 class="my-2">{{ $barang['harga'] }}</h3>
 
-                            <a href="product" class="txt27">
-                                Product
-                            </a>
-
-                            <h5 class="mt-2">Size</h5>
-                            <div class="form-group">
-                                <select class="form-control ">
-                                    <option>Pilih Opsi</option>
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                    <option>XXL</option>
-                                </select>
-                            </div>
-
-                            <p class="t-right" style="font-size: 10px;">Stock</p>
-                            <h5>Quantity</h5>
-                            <div class="mt-2 ">
-                                <div class="">
-                                    <input type="number" class="form-control px-0 py-0" placeholder="Qty"
-                                        value="" />
-
-                                    <div class="input-group text-center mb-4 " style="width: 130px;">
-                                        <button class="input-group-text decrement-btn">-</button>
-                                        <input type="text" name="quantity "
-                                            class="form-control qty-input text-center" value="1">
-                                        <button class="input-group-text increment-btn">+</button>
-                                    </div>
-
-                                    {{-- <div class="input-group text-center mb-4 " style="width: 130px;">
-                                        <button class="input-group-text decrement-btn">-</button>
-                                        <input type="text" name="quantity " class="form-control qty-input text-center"
-                                            value="1">
-                                        <button class="input-group-text increment-btn">+</button>
-                                    </div> --}}
-
-                                    <div class=" btn btn-dark btn-lg btn-flat px-0 py-0 mt-1">
-                                        <a href="/keranjang"><i class="fas fa-shopping-cart "></i></a>
-                                        Add to Cart
-                                    </div>
-                                    <div class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
-                                        <a href="/whislist"><i class="fa fa-heart  "></i></a>
-                                        Add to Wishlist
-                                    </div>
-                                    {{-- <ul class="btn btn-dark btn-lg btn-flat px-0 py-0 pl-0 mt-1">
-                                        <li>
-                                            <a href="/whislist"><i class="fas fa-heart fa-lg "></i>
-                                                Add to Wishlist</a>
-                                        </li>
-                                    </ul> --}}
+                            <form action="{{ url('/add-to-cart') }}" method="post" class="form-horizontal qtyFrom">
+                                @csrf
+                                <input type="hidden" name="barang_id" value="{{ $barang['id'] }}">
+                                <h5 class="mt-2">Ukuran</h5>
+                                <div class="form-group">
+                                    <select class="span2 pull-left"  name="ukuran" required>
+                                        <option value="">Pilih Opsi</option>
+                                            @foreach ($barang['atribut'] as $item)
+                                                <option value="{{ $item['ukuran'] }}">{{ $item['ukuran'] }}</option>
+                                            @endforeach
+                                    </select>
                                 </div>
-                            </div>
-
+                                <h5>Jumlah</h5>
+                                <div class="mt-2 ">
+                                    <div class="">
+                                        <div class="input-group text-center mb-4 " style="width: 130px;">
+                                            <input type="text" name="qty" class="form-control qty-input text-center" value="0" required>
+                                        </div><br>
+                                        <button type="submit" class="btn btn-light">
+                                            <a><i class="fa fa-shopping-cart"></i></a>
+                                            Add to Cart
+                                        </button>
+                                        <button type="button" class="btn btn-light">
+                                            <a href="/whislist"><i class="fa fa-heart  "></i></a>
+                                            Add to Wishlist
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
 
                         {{-- GAMBAR --}}
                         <div class="col-6 pt-30 pl-5">
-                            {{-- <div class="xzoom-container">
-                                <img class="xzoom center" style="width: 90%;" id="xzoom-default"
-                                    src="{{ asset('images/katalog/ts1-1.jpg') }}"
-                                    xoriginal="{{ asset('images/katalog/ts1-1.jpg') }}" />
-                            </div> --}}
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
                                     </li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="4" class="active"></li>
                                 </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img class="d-block w-100" src="{{ asset('images/katalog/ts1-1.jpg') }}" alt="First slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="{{ asset('images/katalog/ts1-2.jpg') }}" alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="{{ asset('images/katalog/ts1-3.jpg') }}" alt="Third slide">
-                                    </div>
+                                <div class="carousel-inner active">
+                                    {{-- @foreach ($barang['image'] as $item) --}}
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="{{ asset('images/katalog/ts1-1.jpg') }}" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="{{ asset('images/katalog/ts1-2.jpg') }}" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="{{ asset('images/katalog/ts1-3.jpg') }}" alt="First slide">
+                                        </div>
+                                    {{-- @endforeach --}}
                                 </div>
                                 <a class="carousel-control-prev carousel-dark" href="#carouselExampleIndicators" role="button "
                                     data-slide="prev">
@@ -225,71 +191,54 @@
                             <div class="nav nav-tabs" id="product-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
                                     href="#product-desc" role="tab" aria-controls="product-desc"
-                                    aria-selected="true">Description</a>
-                                <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab"
-                                    href="#product-comments" role="tab" aria-controls="product-comments"
-                                    aria-selected="false">Comments</a>
-                                <a class="nav-item nav-link" id="product-rating-tab" data-toggle="tab"
-                                    href="#product-rating" role="tab" aria-controls="product-rating"
-                                    aria-selected="false">Rating</a>
+                                    aria-selected="true">Popular Product</a>
                             </div>
                         </nav>
                         <div class="tab-content p-3" id="nav-tabContent">
-                            <div class="tab-pane fade" id="product-rating" role="tabpanel"
-                                aria-labelledby="product-rating-tab">
-
-                                <!-- Button to Open the Modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#myModal">
-                                    Rating
-                                </button>
-
-                                <!-- The Modal -->
-                                <div class="modal" id="myModal">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content " style="background-color: transparant">
-
-                                            <!-- Modal Header -->
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Rating Product</h4>
-                                                <button type="button" class="close"
-                                                    data-dismiss="modal">&times;</button>
-                                            </div>
-
-                                            <!-- Modal body -->
-                                            <div class="modal-body">
-                                                <div class="rating-css">
-                                                    <div class="star-icon">
-                                                        <input type="radio" value="1" name="product_rating"
-                                                            checked id="rating1">
-                                                        <label for="rating1" class="fa fa-star"></label>
-                                                        <input type="radio" value="2" name="product_rating"
-                                                            id="rating2">
-                                                        <label for="rating2" class="fa fa-star"></label>
-                                                        <input type="radio" value="3" name="product_rating"
-                                                            id="rating3">
-                                                        <label for="rating3" class="fa fa-star"></label>
-                                                        <input type="radio" value="4" name="product_rating"
-                                                            id="rating4">
-                                                        <label for="rating4" class="fa fa-star"></label>
-                                                        <input type="radio" value="5" name="product_rating"
-                                                            id="rating5">
-                                                        <label for="rating5" class="fa fa-star"></label>
+                            <div class="col-12 mb-8 t-center" style="background-color: white">
+                                <div class="row">
+                                    @foreach ($trendingItems as $items)
+                                        <div class="col-md-3">
+                                            <div class="row">
+                                                <div class="card" style="border: transparent">
+                                                    <ul class="">
+                                                        <li>
+                                                            <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                                                                <a href="detail">
+                                                                    <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
+                                                                        class="img-fluid img-thumbnail" alt="{{ $items->nama_barang }}"
+                                                                        style="border: transparent" />
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-md-center">
+                                                            <a href="detail">
+                                                                <h1 class="card-title"
+                                                                    style="font-size: 20px; font-weight:bold; color:black">
+                                                                    {{ $items->nama_barang }}
+                                                                </h1>
+                                                                <p class="">{{ $items->harga }}</p>
+                                                                <p style="color: orange" class="m-1 t-center">
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                    <i class="fa fa-star"></i>
+                                                                </p>
+                                                                <p class="t-center m-0">Terjual 10 </p>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <!-- Modal footer -->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary"
-                                                    data-dismiss="modal">Save</button>
-                                                <button type="button" class="btn btn-danger"
-                                                    data-dismiss="modal">Close</button>
-                                            </div>
                                         </div>
-                                    </div>
+                                    @endforeach
                                 </div>
+                                <br>
                             </div>
+
                         </div>
                     </div>
                 </div>

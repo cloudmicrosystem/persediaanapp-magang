@@ -14,23 +14,19 @@ use App\Http\Controllers\Admin\CatarticleController;
 use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\BannerController;
-
-use App\Http\Controllers\Users\Halwhislist;
-use App\Http\Controllers\Users\HalfaqController;
+use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Users\HalcustController;
-use App\Http\Controllers\Users\HalaboutController;
-use App\Http\Controllers\Users\HalorderController;
-use App\Http\Controllers\Users\HalstoreController;
-use App\Http\Controllers\Users\HalcontacController;
-use App\Http\Controllers\Users\HalrefundController;
-use App\Http\Controllers\Users\HalartikelController;
 use App\Http\Controllers\Users\HalproductController;
-use App\Http\Controllers\Users\HalcheckoutController;
 use App\Http\Controllers\Users\HaldetailartikelController;
-use App\Http\Controllers\Users\HaldetailproductController;
-use App\Http\Controllers\Users\HalKeranjang;
-use App\Http\Controllers\Users\Halpenilaian;
 use App\Http\Controllers\Users\Haldetailpro;
+
+Route::group(
+    ['middleware' => ['auth']],
+    function () {
+        Route::post('/add-to-cart', [CartController::class, 'addtoCart']);
+        Route::get('/penilaian', [HalcustController::class, 'showRating']);
+        Route::get('/wishlist', [HalcustController::class, 'showWhish']);
+    });
 
     // USER
     Route::get('/', [HalcustController::class, 'index']);
@@ -38,9 +34,7 @@ use App\Http\Controllers\Users\Haldetailpro;
     Route::get('/store', [HalcustController::class, 'showStore']);
     Route::get('/about', [HalcustController::class, 'showAbout']);
     Route::get('/contact', [HalcustController::class, 'showContact']);
-    Route::get('/keranjang', [HalcustController::class, 'showCart']);
-    Route::get('/penilaian', [HalcustController::class, 'showRating']);
-    Route::get('/wishlist', [HalcustController::class, 'showWhish']);
+
     Route::get('/checkout', [HalcustController::class, 'showCo']);
     Route::get('/refund', [HalcustController::class, 'showRefund']);
     Route::get('/how-to-order', [HalcustController::class, 'showHow']);
@@ -48,13 +42,12 @@ use App\Http\Controllers\Users\Haldetailpro;
 
     // HALAMAN PRODUCT
     Route::get('product', [HalproductController::class, 'index']);
+    Route::get('product/detail-product/{id}', [HalproductController::class, 'detailByProduct']);
     Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
-    Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detail']);
+    Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detailByCategory']);
 
-    // Route::get('/detail', [HaldetailproductController::class, 'index']);
     Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
     Route::get('/detailpro', [Haldetailpro::class, 'index']);
-    // Route::get('/product/{slug}/detail', [HaldetailproductController::class, 'barang']);
 
     // ADMIN
     Route::resource('/user', UserController::class);
@@ -66,15 +59,14 @@ use App\Http\Controllers\Users\Haldetailpro;
 
     // PRODUCT
     Route::get('barang',[PersediaanController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-product/{slug?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
-    Route::get('/delete-product/{slug}', [PersediaanController::class, 'deleteProduct']);
+    Route::match(array('get','post'),'/add-edit-product/{id?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
+    Route::get('/delete-product/{id}', [PersediaanController::class, 'deleteProduct']);
 
     // GAMBAR DETAIL PRODUCT
     Route::match(array('get','post'),'/add-image/{slug}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
     Route::get('/delete-image/{slug}', [PersediaanController::class, 'deleteImage']);
 
     // ATRIBUT (SIZE, STOCK, SKU)
-    Route::post('update-atribut-status', [PersediaanController::class, 'updateAtributStatus']);
     Route::post('/edit-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@editAtribut');
     Route::match(array('get','post'),'/add-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@addAtribut');
     Route::get('/delete-atribut/{id}', [PersediaanController::class, 'deleteAtribut']);
@@ -100,7 +92,7 @@ use App\Http\Controllers\Users\Haldetailpro;
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::get('/register', [LoginController::class, 'showRegistrationForm'])->name('register');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/dashboard',[App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.dashboard')->middleware('is_admin');
+    Route::get('/dashboard',[App\Http\Controllers\HomeController::class, 'index'])->name('admin.dashboard')->middleware('is_admin');
 
 
     // Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');

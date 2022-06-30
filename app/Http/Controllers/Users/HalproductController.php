@@ -70,12 +70,19 @@ class HalproductController extends Controller
         }
     }
 
-    public function detail($cat_slug, $pro_slug){
+    public function detailByCategory($cat_slug, $pro_slug){
         if(Kategori::where('slug', $cat_slug)->exists()){
             if(Barang::where('slug', $pro_slug)->exists()){
                 $barang = Barang::where('slug',$pro_slug)->first();
                 return view('frontend.haldetailproduct.index')->with(compact('barang'));
             }
         }
+    }
+
+    public function detailByProduct($id){
+        $barang = Barang::with('category','atribut','image')->find($id)->toArray();
+        $trendingItems = Barang::where('trending','Yes')->take(4)->get();
+        // dd($barang); die;
+        return view('frontend.haldetailproduct.index')->with(compact('barang','trendingItems'));
     }
 }

@@ -39,10 +39,6 @@ class HalcustController extends Controller
         return view('frontend.halcontac.index');
     }
 
-    public function showCart(){
-        return view('frontend.halkeranjang.index');
-    }
-
     public function showRating(){
         return view('frontend.halpenilaian.index');
     }
