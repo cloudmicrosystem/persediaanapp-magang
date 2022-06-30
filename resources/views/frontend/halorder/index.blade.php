@@ -58,19 +58,19 @@
                             tersebut dan anda akan otomatis masuk ke halaman DETAIL PRODUCT.</dd>
                         </dd>
                         <dd class="text-white">2. Isi berapa jumlah order pada kolom QUANTITY produk kemudian
-                            KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan order yang tidak
-                            diinginkan atau mengubah jumlah order pada halaman SHOPPING CART.</dd>
+                            KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan <p class="pl-2 text-white"> order yang tidak
+                            diinginkan atau mengubah jumlah order pada halaman SHOPPING CART.</p></dd>
                         <dd class="text-white">3. Isi informasi diri pada halaman ORDER DETAIL. Apabila ingin
-                            memberikan instruksi khusus pada pemesanan yang anda lakukan, anda dapat memberikan
+                            <p class="pl-2 text-white"> memberikan instruksi khusus pada pemesanan yang anda lakukan, anda dapat memberikan
                             catatan pada kolom CATATAN yang telah kami sediakan pada bagian terbawah halaman ORDER
-                            DETAIL.</dd>
+                            DETAIL.</p></dd>
                         <dd class="text-white">4. Setelah informasi lengkap, anda akan mendapatkan Email berupa
                             INVOICE dan KODE KONFIRMASI PEMBAYARAN.</dd>
                         <dd class="text-white">5. Segera lakukan pembayaran. Sertakan KODE KONFIRMASI PEMBAYARAN
-                            pada saat anda melakukan pembayaran baik melalui ATM atau INTERNET BANKING.</dd>
+                            pada saat anda melakukan pembayaran baik melalui ATM atau <p class="pl-2 text-white"> INTERNET BANKING.</p></dd>
                         <dd class="text-white">6. Setelah melakukan pembayaran segera lakukan konfirmasi dengan
-                            cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan memvalidasi status pembayaran
-                            dan mengirimkan order sesuai pesanan.</dd>
+                            cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan <p class="pl-2 text-white"> memvalidasi status pembayaran
+                            dan mengirimkan order sesuai pesanan.</p></dd>
                     </dl>
                 </div>
             </div>
