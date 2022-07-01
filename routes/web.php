@@ -47,6 +47,7 @@ Route::group(
     Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
     Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detailByCategory']);
 
+    Route::get('artikel/detail-artikel/{id}', [HaldetailartikelController::class, 'detailByArtikel']);
     Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
     Route::get('/detailpro', [Haldetailpro::class, 'index']);
 
@@ -76,6 +77,7 @@ Route::group(
     Route::get('article',[ArticleController::class, 'index']);
     Route::match(array('get','post'),'/add-edit-article/{slug?}', 'App\Http\Controllers\Admin\ArticleController@addEditArticle');
     Route::get('/delete-article/{slug}', [ArticleController::class, 'deleteArticle']);
+
 
     // KATEGORI ARTIKEL
     Route::get('catarticle',[CatarticleController::class, 'index']);
