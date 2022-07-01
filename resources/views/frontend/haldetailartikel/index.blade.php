@@ -46,7 +46,7 @@
                     <!-- Logo -->
                     <div class="logo">
                         <a href="home">
-                            <img src="images/icons/logo2.png" alt="IMG-LOGO" data-logofixed="images/icons/logoa.png">
+                            <img src="{{ asset('images/icons/logo2.png') }}" alt="IMG-LOGO" data-logofixed="{{ asset('images/icons/logoa.png') }}">
                         </a>
                     </div>
 
@@ -132,55 +132,26 @@
 						<div class="blo4 p-b-63">
 							<!-- - -->
 							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-									<img src="images/ar1.jpg" alt="IMG-BLOG">
-								</a>
-
-								<div class="date-blo4 flex-col-c-m">
-									<span class="txt30 m-b-4">
-										21
-									</span>
-
-									<span class="txt31">
-										Jan, 2021
-									</span>
-								</div>
+                                @foreach ($article as $item)
+                                <img src="images/artikel/{{ $item->gambar_artikel }}">
+                                @endforeach
 							</div>
 
 							<!-- - -->
-							<div class="text-blo4 p-t-33">
-								<h4 class="p-b-16">
-									<a href="blog-detail.html" class="tit9">Daddyteddy Band Pop Punk Asal Malang Awali 2021 dengan Luncurkan Video Clip Sirna</a>
+							<div class=" p-t-33">
+								<h4 class="p-b-16 tit9">
+                                    {{ $article['judul_artikel']}}
 								</h4>
 
 								<div class="txt32 flex-w p-b-24">
 									<span>
-										by Admin
+                                        {{ $article['sumber_artikel']}}
 										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										27 Januari, 2021
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										Cooking, Food
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										8 Comments
 									</span>
 								</div>
 
 								<p>
-                                    Band Pop Punk yang terbentuk pada tahun 2012 ini beranggotakan Ivan sebagai vokalis, Rangga dan Ryan sebagai gitaris, Dwiki sebagai bassist dan Taufan sebagai drummer. Awal tahun ini, mereka meluncurkan karya terbarunya dalam format Music Video (MV) yang berjudul Sirna.
-                                    <br>
-                                    <br>
-                                    "Dalam peluncurkan MV terbaru ini, kita bekerja sama dengan brand lokal Malang, yakni Morfeen Thirteen. Kenapa begitu, karena selain kita ingin menunjukan eksistensi, kita juga ingin bahwa Malang ini punya segudang hal yang bisa dibanggakan oleh masyarakatnya, khususnya anak muda," ujar Taufan, Rabu (27/01/2021).
-                                    <br>
-                                    <br>
-                                    Taufan menjelaskan, lagu Sirna sendiri merupakan salah satu single yang masuk dalam album terbaru mereka yang saat ini masih dalam proses penggarapan. Pastinya juga Daddyteddy bakal menyuguhkan warna berbeda dari lagu-lagu sebelumnya.
+                                    {{ $article['deskripsi_artikel']}}
 								</p>
 							</div>
 						</div>
