@@ -32,7 +32,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
+				<form class="login100-form validate-form" method="POST" action="{{ __('Register') }}">
                     @csrf
 					<span class="login100-form-title p-b-43">
 						Registrasi

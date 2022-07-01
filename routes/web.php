@@ -23,7 +23,8 @@ use App\Http\Controllers\Users\Haldetailpro;
 Route::group(
     ['middleware' => ['auth']],
     function () {
-        Route::post('/add-to-cart', [CartController::class, 'addtoCart']);
+        Route::post('/add-to-cart', [CartController::class, 'store']);
+        Route::get('/cart', [CartController::class, 'cart']);
         Route::get('/penilaian', [HalcustController::class, 'showRating']);
         Route::get('/wishlist', [HalcustController::class, 'showWhish']);
     });

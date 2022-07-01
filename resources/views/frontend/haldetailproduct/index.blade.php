@@ -135,9 +135,9 @@
                                 <div class="mt-2 ">
                                     <div class="">
                                         <div class="input-group text-center mb-4 " style="width: 130px;">
-                                            <input type="text" name="qty" class="form-control qty-input text-center" value="0" required>
+                                            <input type="text" name="qty" class="form-control qty-input text-center" value="1" required>
                                         </div><br>
-                                        <button type="submit" class="btn btn-light">
+                                        <button type="submit" class="btn btn-outline-success">
                                             <a><i class="fa fa-shopping-cart"></i></a>
                                             Add to Cart
                                         </button>
@@ -238,7 +238,6 @@
                                 </div>
                                 <br>
                             </div>
-
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@ class CatarticleController extends Controller
     public function index()
     {
         Session::put('page','catarticle');
-        $catarticle = Catarticle::paginate(5);
+        $catarticle = Catarticle::orderBy('id', 'desc')->paginate(5);
 
         return view('admin.catarticle.index')->with(compact('catarticle'));
     }

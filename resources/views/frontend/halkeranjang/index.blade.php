@@ -49,7 +49,7 @@
         <div class="container-fluid">
             <div class="col-12 p-t-150 my-auto " style="border: black">
                 <p class="text-bold text-uppercase text-center text-white"
-                    style="font-size: 20px ; font-family: 'Trebuchet MS'">keranjang</p>
+                    style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
                 <div class="card " style="border: black">
                     <div class="card-body " style="background-color: black ; border: black">
                         <div class="row">
@@ -59,13 +59,28 @@
                                         <th class="text-white">Produk</th>
                                         <th class="text-white">Nama Produk </th>
                                         <th class="text-white">Harga</th>
-                                        <th class="text-white">Qty</th>
+                                        <th class="text-white">Ukuran</th>
                                         <th class="text-white">Total</th>
                                         <th class="text-white" colspan="3"></th>
                                     </tr>
                                 </thead>
-
-                                <tr>
+                                <tbody>
+                                    @foreach ($cart as $item)
+                                        <tr style="color: white">
+                                            <td>
+                                                <img src="{{ asset('images/disply/'.$item->barang->gambar_disply) }}" width="100">
+                                            </td>
+                                            <td>{{ $item->barang->nama_barang }}</td>
+                                            <td>{{ $item->barang->harga }}</td>
+                                            <td>{{ $item->ukuran }}</td>
+                                            <td>{{ $item->qty }}</td>
+                                            <td style="text-align: center"><a  href=""><i class='fas fa-edit'></i></a></td></td>
+                                            <td style="text-align: center"><a  href=""><i class='fas fa-edit'></i></a></td></td>
+                                            <td style="text-align: center"><a  href=""><i class='fas fa-edit'></i></a></td></td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                                {{-- <tr>
                                     <td class="text-white text-left"><img style="width: 75px; height: auto"
                                             src="images/katalog/akse1-1.jpg" alt=""></td>
                                     <td class="text-white ">Sandal </td>
@@ -95,30 +110,8 @@
                                                 class="btn btn-sm btn-primary mb-2">
                                                 Chekout
                                             </button> </a>
-
                                     </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="text-white "><img style="width: 75px; height: auto"
-                                            src="images/katalog/akse2-1.jpg" alt=""></td>
-                                    <td class="text-white " style="width: 300px">Kacamata</td>
-                                    <td class="text-white ">Rp. 100.000.00</td>
-                                    <td class="text-white"> 1 </td>
-                                    <td class="text-white">100.000.00</td>
-                                    <td>
-                                        <button type="submit" class="btn btn-sm btn-dark mb-2">
-                                            update
-                                        </button>
-                                        <button type="submit" class="btn btn-sm btn-danger mb-2">
-                                            Hapus
-                                        </button>
-                                        <a href="/checkout"> <button type="submit"
-                                                class="btn btn-sm btn-primary mb-2">
-                                                Chekout
-                                            </button></a>
-                                    </td>
-                                </tr>
+                                </tr> --}}
                             </table>
                         </div>
                     </div>

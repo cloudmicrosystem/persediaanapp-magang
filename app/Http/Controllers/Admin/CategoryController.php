@@ -14,10 +14,12 @@ use PhpParser\Node\Stmt\Catch_;
 class CategoryController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         Session::put('page','kategori');
-        $category = Kategori::paginate(5);
+        $pagination = 5;
+        $category = Kategori::orderBy('id', 'desc')->paginate($pagination);
+
         return view('admin.kategori.index')->with(compact('category'));
     }
 

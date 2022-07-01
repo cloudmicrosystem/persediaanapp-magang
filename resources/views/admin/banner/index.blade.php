@@ -42,6 +42,7 @@
                                 <table id="product" class="table table-bordered table-hover">
                                     <thead>
                                         <tr style="text-align: center">
+                                            <th>No.</th>
                                             <th>Gambar Banner</th>
                                             <th>Status Banner</th>
                                             <th colspan="2">Aksi</th>
@@ -50,14 +51,15 @@
                                     <tbody>
                                         @foreach ($banner as $key => $value)
                                             <tr>
+                                                <td style="text-align: center">{{ $banner->firstItem() + $key }}</td>
                                                 <td><img src="{{ asset('images/banner/' . $value->gambar_banner) }}"
                                                         width=150px height=auto />
                                                 </td>
                                                 <td>
                                                     @if($value->status == 1)
-                                                        Aktif
+                                                        <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>
                                                     @else
-                                                        Nonaktif
+                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
                                                 <td style="text-align: center"><a title="Edit Artikel"
@@ -73,8 +75,17 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <br>
-                                {{ $banner->links() }}
+                                <div class="fa-pull-left pt-2">
+                                    Tampilkan data no
+                                    {{ $banner->firstItem() }}
+                                    sampai no
+                                    {{ $banner->lastItem() }}
+                                    dari
+                                    {{ $banner->total() }} data
+                                </div>
+                                <div class="fa-pull-right pt-2">
+                                    {{ $banner->links() }}
+                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>

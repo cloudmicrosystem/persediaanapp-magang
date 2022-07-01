@@ -123,11 +123,10 @@
                                             <td>{{ $key['sku'] }}</td>
                                             <td>
                                                 @if($key->status == 1)
-                                                    Aktif
+                                                    <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>
                                                 @else
-                                                    Nonaktif
+                                                    <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                 @endif
-
                                             </td>
                                             <td style="text-align: center">
                                                 <a class="confirmDelete" name="atribut"
