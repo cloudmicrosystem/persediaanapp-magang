@@ -33,6 +33,69 @@
 
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assetcus/css/rating.css') }}">
+
+    <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 0px;
+        }
+
+        .value-button {
+            display: inline-block;
+            border: 1px solid #ddd;
+            color: #000;
+            margin: 0px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            padding: 7px 0;
+            background: #eee;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .value-button:hover {
+            cursor: pointer;
+        }
+
+        form #decrease {
+            margin-right: -4px;
+            border-radius: 8px 0 0 8px;
+        }
+
+        form #increase {
+            margin-left: -4px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        form #input-wrap {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        input.qty {
+            text-align: center;
+            border: none;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            margin: 0px;
+            width: 40px;
+            height: 40px;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body class="animsition" style="background: black">
@@ -43,8 +106,6 @@
     <!-- Sidebar -->
     @include('frontend.halcust.sidebar')
 
-
-
     <section class="section-penilaian">
         <div class="container-fluid">
             <div class="col-12 p-t-150 my-auto " style="border: black">
@@ -52,67 +113,58 @@
                     style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
                 <div class="card " style="border: black">
                     <div class="card-body " style="background-color: black ; border: black">
+                        <h2 style="font-weight: bold; color: white" class="p-b-20">Keranjang</h2>
                         <div class="row">
-                            <table class=" table  ">
+                            <table class="table">
                                 <thead class="border-color: black">
                                     <tr class="border-color: black">
-                                        <th class="text-white">Produk</th>
-                                        <th class="text-white">Nama Produk </th>
-                                        <th class="text-white">Harga</th>
-                                        <th class="text-white">Ukuran</th>
-                                        <th class="text-white">Total</th>
-                                        <th class="text-white" colspan="3"></th>
+                                        <th class="text-white" style="text-align: center">Gambar Produk</th>
+                                        <th class="text-white" style="text-align: center">Nama Produk</th>
+                                        <th class="text-white" style="text-align: center">Harga</th>
+                                        <th class="text-white" style="text-align: center">Ukuran</th>
+                                        <th class="text-white" style="text-align: center">Qty</th>
+                                        <th class="text-white" style="text-align: center">Total</th>
+                                        <th class="text-white" colspan="1" style="text-align: center"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($cart as $item)
-                                        <tr style="color: white">
+                                    <input type="hidden" class="barang_id" value="{{ $item->barang_id }}">
+                                        <tr style="color: white; text-align:center">
                                             <td>
-                                                <img src="{{ asset('images/disply/'.$item->barang->gambar_disply) }}" width="100">
+                                                <img src="{{ asset('images/disply/' . $item->barang->gambar_disply) }}"
+                                                    height="200px">
                                             </td>
                                             <td>{{ $item->barang->nama_barang }}</td>
-                                            <td>{{ $item->barang->harga }}</td>
+                                            <td> <?= "Rp " . number_format($item->barang->harga,0,',','.')?> </td>
                                             <td>{{ $item->ukuran }}</td>
-                                            <td>{{ $item->qty }}</td>
-                                            <td style="text-align: center"><a  href=""><i class='fas fa-edit'></i></a></td></td>
-                                            <td style="text-align: center"><a  href=""><i class='fas fa-edit'></i></a></td></td>
-                                            <td style="text-align: center"><a  href=""><i class='fas fa-edit'></i></a></td></td>
+                                            <td>
+                                                <form>
+                                                    <div class="value-button" id="decrease" onclick="decreaseValue({{ $item->id }})" value="Decrease Value">-</div>
+                                                    <input type="number" class="qty" id="qty-{{ $item->id }}" value="{{ $item->qty }}" readonly />
+                                                    <div class="value-button" id="increase" onclick="increaseValue({{ $item->id }})" value="Increase Value">+</div>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <?="Rp ". number_format(($item->barang->harga)*($item->qty),0,',','.')?>
+                                            </td>
+                                            <td>
+                                                <button type="submit" class="btn btn-sm btn-dark mb-2">
+                                                    Update
+                                                </button>
+                                                <button type="submit" class="btn btn-sm btn-danger mb-2 delete-cart-item">
+                                                    Hapus
+                                                </button>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
-                                {{-- <tr>
-                                    <td class="text-white text-left"><img style="width: 75px; height: auto"
-                                            src="images/katalog/akse1-1.jpg" alt=""></td>
-                                    <td class="text-white ">Sandal </td>
-                                    <td class="text-white ">Rp. 100.000.00</td>
-                                    <td>
-                                        <div class="quantity buttons_added">
-                                            <input type="button" value="-" class="minus button is-form"> <label
-                                                class="screen-reader-text" for="quantity"></label>
-                                            <input type="number" id="quantity" class="input-text qty text"
-                                                step="1" min="1" max="2" name="quantity"
-                                                value="1" title="Qty" size="4" placeholder=""
-                                                inputmode="numeric" />
-                                            <input type="button" value="+" class="plus button is-form text-black">
-                                        </div>
-                                    </td>
-                                    <td class="text-white">100.000.00</td>
-                                    <td>
-                                        <button type="submit" class="btn btn-sm btn-dark mb-2">
-                                            update
-                                        </button>
-
-                                        <button type="submit" class="btn btn-sm btn-danger mb-2">
-                                            Hapus
-                                        </button>
-
-                                        <a href="/checkout"> <button type="submit"
-                                                class="btn btn-sm btn-primary mb-2">
-                                                Chekout
-                                            </button> </a>
-                                    </td>
-                                </tr> --}}
                             </table>
+                            <div class="card-footer">
+                                <div class="col-lg-12">
+                                    <h6 style="color: white">Total : <?="Rp ". number_format($grand_total,0,',','.')?></h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,9 +185,6 @@
 
     <!-- Container Selection1 -->
     <div id="dropDownSelect1"></div>
-
-
-
     <!--===============================================================================================-->
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
     <!--===============================================================================================-->
@@ -169,6 +218,44 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('') }}assets/dist/js/demo.js"></script>
 
+    <script type="text/javascript">
+        function increaseValue(itemId) {
+            let data = document.querySelector('#qty-'+itemId);
+            let val = parseInt(data.value);
+            val = isNaN(val) ? 0 : val;
+            val++;
+            document.querySelector('#qty-'+itemId).value = val;
+            updateCartQty(val,itemId);
+        }
+
+        function decreaseValue(itemId) {
+            let data = document.querySelector('#qty-'+itemId);
+            let val = parseInt(data.value);
+            val = isNaN(val) ? 0 : val;
+            val < 1 ? val = 1 : '';
+            val--;
+            document.querySelector('#qty-'+itemId).value = val;
+            updateCartQty(val, itemId);
+        }
+
+        function updateCartQty(qty, id){
+            $.ajax({
+                type: 'post',
+                url: '/update-to-cart',
+                data: {
+                    _token:"{{ csrf_token() }}",
+                    id: id,
+                    quantity: qty
+                },
+                success: function(res){
+                    console.log("Success:"+res.response)
+                },
+                error: function (err) {
+                    console.log("Error:"+err.response)
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -29,120 +29,138 @@
                     </div>
                 @endif
                 @if (Session::has('success_message'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert"
-                                style="margin-top: 10px;">{{ Session::get('success_message') }}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        @endif
+                    <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                        {{ Session::get('success_message') }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
                 @if (Session::has('error_message'))
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert"
-                                style="margin-top: 10px;">{{ Session::get('error_message') }}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        @endif
-                <form id="quickForm" method="POST" action="{{ url('add-atribut/'. $barang['id']) }}">
-                    @csrf
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-primary">
-                                <div class="card-header">
-                                    <h3 class="card-title">{{ $title }}</h3>
-                                </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="exampleInputBorder">Kode Product</label>
-                                                    <input type="text" value="{{ $barang['kode_barang'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputBorder">Nama Product </label>
-                                                    <input type="text" value="{{ $barang['nama_barang'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputBorder">Harga Product</label>
-                                                    <input type="text" value="{{ $barang['harga'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputBorder">Gambar Product</label>
-                                                    @if ($barang->gambar_disply)
-                                                    <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=300px height=auto>
-                                                    @endif
-                                                </div>
-                                                <div class="col-md-6">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                        {{ Session::get('error_message') }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form id="quickForm" method="POST" action="{{ url('add-atribut/' . $barang['id']) }}">
+                                    @csrf
+                                    <div class="card card-primary">
+                                        <div class="card-header">
+                                            <h3 class="card-title">{{ $title }}</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Ukuran & Stock Product</label>
-                                                        <div class="field_wrapper">
-                                                            <input type="text" name="ukuran[]" id="ukuran" value="" name="ukuran[]" style="width: 120px" placeholder="Ukuran" required="">
-                                                            <input type="number" name="stock[]" id="stock" value="" name="stock[]" style="width: 120px" placeholder="Stock" required="">
-                                                            <input type="text" name="sku[]" id="sku" value="" name="sku[]" style="width: 120px" placeholder="SKU" required="">
+                                                        <label for="exampleInputBorder">Kode Product</label>
+                                                        <input type="text" value="{{ $barang['kode_barang'] }}"
+                                                            type="text" class="form-control" id="exampleInputBorder"
+                                                            disabled>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputBorder">Nama Product </label>
+                                                        <input type="text" value="{{ $barang['nama_barang'] }}"
+                                                            type="text" class="form-control" id="exampleInputBorder"
+                                                            disabled>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputBorder">Gambar Product</label>
+                                                        @if ($barang->gambar_disply)
+                                                            <img src="{{ asset('images/disply/' . $barang->gambar_disply) }}"
+                                                                alt="" width=300px height=auto>
+                                                        @endif
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputBorder">Ukuran, Stock & SKU Product</label>
+                                                            <div class="field_wrapper">
+                                                                <input type="text" name="ukuran[]" id="ukuran"
+                                                                    value="" name="ukuran[]" style="width: 60px"
+                                                                    placeholder="Ukuran" required="">
+                                                                <input type="number" name="stock[]" id="stock"
+                                                                    value="" name="stock[]" style="width: 60px"
+                                                                    placeholder="Stock" required="">
+                                                                <input type="text" name="sku[]" id="sku"
+                                                                    value="" name="sku[]" style="width: 60px"
+                                                                    placeholder="SKU" required="">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="card-footer">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <a href="{{ url('barang') }}" class="btn btn-primary">Kembali</a>
+                                        </div>
                                     </div>
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <a href="{{ url ('barang')}}" class="btn btn-primary">Kembali</a>
-                                </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <form id="editAtribut" method="POST"action="{{ url('edit-atribut/' . $barang['id']) }}">
+                                    @csrf
+                                    <div class="card card-primary">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Ukuran, Stock & SKU Product {{ $barang->nama_barang }}</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <table id="product" class="table table-bordered table-responsive">
+                                                <thead>
+                                                    <tr style="text-align: center">
+                                                        <th>Ukuran Product</th>
+                                                        <th>Stock Product</th>
+                                                        <th>SKU</th>
+                                                        <th>Status</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach ($barang['atribut'] as $key)
+                                                        <input type="text" style="display: none" name="id_atr[]"
+                                                            value="{{ $key['id'] }}">
+                                                        <tr style="text-align: center">
+                                                            <td>{{ $key['ukuran'] }}</td>
+                                                            <td>
+                                                                <input type="number" name="stock[]"
+                                                                    value="{{ $key['stock'] }}" required=""
+                                                                    style="text-align: center;">
+                                                            </td>
+                                                            <td>{{ $key['sku'] }}</td>
+                                                            <td>
+                                                                @if ($key->status == 1)
+                                                                    <div class="p-1 mb-1 bg-success text-white"
+                                                                        style="text-align: center">Aktif</div>
+                                                                @else
+                                                                    <div class="p-1 mb-1 bg-danger text-white"
+                                                                        style="text-align: center">Non Aktif</div>
+                                                                @endif
+                                                            </td>
+                                                            <td style="text-align: center">
+                                                                <a class="confirmDelete" name="atribut"
+                                                                    href="{{ url('delete-atribut/' . $key->id) }}"><i
+                                                                        class='fas fa-trash-alt'></i>
+                                                                </a>
+                                                            </td>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="submit" class="btn btn-primary">Edit Stock</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
 
-                <form id="editAtribut" method="POST" action="{{ url('edit-atribut/'. $barang['id']) }}">
-                    @csrf
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Ukuran & Stock {{ $barang->nama_barang }}</h3>
-                        </div>
-                        <div class="card-body">
-                            <table id="product" class="table table-bordered table-hover">
-                                <thead>
-                                    <tr style="text-align: center">
-                                        <th>Ukuran Product</th>
-                                        <th>Stock Product</th>
-                                        <th>SKU</th>
-                                        <th>Status</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($barang['atribut'] as $key)
-                                        <input type="text" style="display: none" name="id_atr[]" value="{{ $key['id'] }}">
-                                        <tr style="text-align: center">
-                                            <td>{{ $key['ukuran'] }}</td>
-                                            <td>
-                                                <input type="number" name="stock[]" value="{{ $key['stock'] }}" required="" style="text-align: center;">
-                                            </td>
-                                            <td>{{ $key['sku'] }}</td>
-                                            <td>
-                                                @if($key->status == 1)
-                                                    <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>
-                                                @else
-                                                    <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
-                                                @endif
-                                            </td>
-                                            <td style="text-align: center">
-                                                <a class="confirmDelete" name="atribut"
-                                                    href="{{ url('delete-atribut/' . $key->id) }}"><i
-                                                    class='fas fa-trash-alt'></i>
-                                                </a>
-                                            </td>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Edit Stock</button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </section>
     </div>

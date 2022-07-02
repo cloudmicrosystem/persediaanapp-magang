@@ -86,7 +86,7 @@
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
                                                 </td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="artikel"
+                                                <td style="text-align: center"> <a class="confirmDelete" name="artikel" title="Hapus Artikel"
                                                         href="{{ url('delete-article/' . $value->slug) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>

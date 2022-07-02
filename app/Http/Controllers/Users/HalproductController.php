@@ -33,10 +33,10 @@ class HalproductController extends Controller
                 $barang->orderBy('harga','desc');
             }
         }else{
-            $barang->orderBy('id', 'desc');
+            $barang->orderBy('trending', 'desc');
         }
 
-        $barang = $barang->paginate(4);
+        $barang = $barang->paginate(10);
 
         return view('frontend.halproduct.index')->with(compact('category','barang'));
     }

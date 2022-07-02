@@ -62,12 +62,12 @@
                                                         <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
-                                                <td style="text-align: center"><a title="Edit Artikel"
+                                                <td style="text-align: center"><a title="Edit Gambar"
                                                         href="{{ url('add-edit-banner/' . $value->id) }}"><i
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
                                                 </td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="gambar"
+                                                <td style="text-align: center"> <a class="confirmDelete" name="gambar" title="Hapus Gambar"
                                                         href="{{ url('delete-banner/' . $value->id) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>

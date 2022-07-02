@@ -63,7 +63,7 @@
                                                 <td>{{ $value->kode_barang }}</td>
                                                 <td>{{ $value->nama_barang }}</td>
                                                 <td>{{ $value->slug }}</td>
-                                                <td>{{ $value->harga }}</td>
+                                                <td><?= "Rp " . number_format($value->harga,0,',','.')?></td>
                                                 <td>{{ $value->deskripsi }}</td>
                                                 <td>
                                                     @if($value->status == 1)
@@ -86,14 +86,14 @@
                                                         href="{{ url('add-edit-product/' . $value->id) }}"><i
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
-                                                <td style="text-align: center"><a title="Tambah Atribut"
+                                                <td style="text-align: center"><a title="Tambah Size"
                                                     href="{{ url('add-atribut/' . $value->id) }}"><i
                                                         class='fas fa-plus'></i></a></td>
                                                 <td style="text-align: center"><a title="Tambah Gambar"
                                                     href="{{ url('add-image/' . $value->id) }}"><i
                                                         class='fas fa-plus-circle'></i></a></td>
                                             </td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="product"
+                                                <td style="text-align: center"> <a class="confirmDelete" name="product" title="Hapus Product"
                                                         href="{{ url('delete-product/' . $value->id) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>

@@ -62,8 +62,8 @@
                                                         <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
-                                                <td style="text-align: center"><a  href="{{ url('add-edit-catarticle/'.$value->slug) }}"><i class='fas fa-edit'></i></a></td></td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="kategori" href="{{ url('delete-catarticle/'.$value->slug) }}"><i class='fas fa-trash-alt'></i></a></td>
+                                                <td style="text-align: center"><a  href="{{ url('add-edit-catarticle/'.$value->slug) }}" title="Edit Kategori"><i class='fas fa-edit'></i></a></td></td>
+                                                <td style="text-align: center"> <a class="confirmDelete" name="kategori" href="{{ url('delete-catarticle/'.$value->slug) }}" title="Hapus Kategori"><i class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>
                                         @endforeach

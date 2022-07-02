@@ -24,6 +24,8 @@ Route::group(
     ['middleware' => ['auth']],
     function () {
         Route::post('/add-to-cart', [CartController::class, 'store']);
+        Route::post('/update-to-cart', [CartController::class, 'updateCartQty']);
+        Route::post('delete-cart', [CartController::class, 'deleteCart']);
         Route::get('/cart', [CartController::class, 'cart']);
         Route::get('/penilaian', [HalcustController::class, 'showRating']);
         Route::get('/wishlist', [HalcustController::class, 'showWhish']);
@@ -41,15 +43,13 @@ Route::group(
     Route::get('/how-to-order', [HalcustController::class, 'showHow']);
     Route::get('/faq', [HalcustController::class, 'showFaq']);
 
-    // HALAMAN PRODUCT
     Route::get('product', [HalproductController::class, 'index']);
     Route::get('product/detail-product/{id}', [HalproductController::class, 'detailByProduct']);
     Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
     Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detailByCategory']);
 
+    Route::get('artikel/{slug}', [HalcustController::class, 'showByCatarticle']);
     Route::get('artikel/detail-artikel/{id}', [HaldetailartikelController::class, 'detailByArtikel']);
-    Route::get('/detailartikel', [HaldetailartikelController::class, 'index']);
-    Route::get('/detailpro', [Haldetailpro::class, 'index']);
 
     // ADMIN
     Route::resource('/user', UserController::class);

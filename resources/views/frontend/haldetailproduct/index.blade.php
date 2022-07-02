@@ -115,9 +115,16 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-6 pt-3 pl-5 pb-3">
-                            <h3 class="my-2"> {{ $barang['category']['nama_kategori'] }} {{ $barang['nama_barang'] }}</h3>
+                            @if ($barang['trending'] == "Yes")
+                                <label class="float-end badge btn-danger trending_tag" style="font-size: 12px">Popular</label>
+                                {{-- <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Popular Product</div> --}}
+                            @else
+                                <label class="float-end badge btn-dark trending_tag" style="font-size: 12px">{{ $barang['category']['nama_kategori'] }}</label>
+                                {{-- <div class="p-1 mb-1 bg-success text-white" style="text-align: center">{{ $barang['category']['nama_kategori'] }}</div> --}}
+                            @endif
+                            <h3 class="my-2">{{ $barang['nama_barang'] }}</h3>
                             <p>{{ $barang['deskripsi'] }}</p>
-                            <h3 class="my-2">{{ $barang['harga'] }}</h3>
+                            <h3 class="my-2"><?= "Rp " . number_format($barang['harga'],0,',','.')?></h3>
 
                             <form action="{{ url('/add-to-cart') }}" method="post" class="form-horizontal qtyFrom">
                                 @csrf
@@ -127,7 +134,7 @@
                                     <select class="span2 pull-left"  name="ukuran" required>
                                         <option value="">Pilih Opsi</option>
                                             @foreach ($barang['atribut'] as $item)
-                                                <option value="{{ $item['ukuran'] }}">{{ $item['ukuran'] }}</option>
+                                                <option value="{{ $item['ukuran'] }}">{{ $item['ukuran'] }} </option>
                                             @endforeach
                                     </select>
                                 </div>
@@ -191,7 +198,7 @@
                             <div class="nav nav-tabs" id="product-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
                                     href="#product-desc" role="tab" aria-controls="product-desc"
-                                    aria-selected="true">Popular Product</a>
+                                    aria-selected="true" style="font-weight: bold">Popular Product</a>
                             </div>
                         </nav>
                         <div class="tab-content p-3" id="nav-tabContent">
@@ -204,7 +211,7 @@
                                                     <ul class="">
                                                         <li>
                                                             <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                                                <a href="detail">
+                                                                <a href="{{ url('product/detail-product/'.$items->id) }}">
                                                                     <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
                                                                         class="img-fluid img-thumbnail" alt="{{ $items->nama_barang }}"
                                                                         style="border: transparent" />
@@ -214,12 +221,12 @@
                                                     </ul>
                                                     <div class="card-body">
                                                         <div class="d-flex justify-content-md-center">
-                                                            <a href="detail">
+                                                            <a href="{{ url('product/detail-product/'.$items->id) }}">
                                                                 <h1 class="card-title"
                                                                     style="font-size: 20px; font-weight:bold; color:black">
                                                                     {{ $items->nama_barang }}
                                                                 </h1>
-                                                                <p class="">{{ $items->harga }}</p>
+                                                                <p class=""><?= "Rp " . number_format($items->harga,0,',','.')?></p>
                                                                 <p style="color: orange" class="m-1 t-center">
                                                                     <i class="fa fa-star"></i>
                                                                     <i class="fa fa-star"></i>

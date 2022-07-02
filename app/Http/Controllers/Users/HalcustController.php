@@ -21,10 +21,24 @@ class HalcustController extends Controller
     }
 
     public function showArticle(){
-        $article = Article::paginate(6);
-        $catarticle = Catarticle::all();
+        $article = Article::paginate(3);
+        $catarticle = Catarticle::get();
 
         return view('frontend.halartikel.index')->with(compact('article','catarticle'));
+    }
+
+    public function showByCatarticle($slug){
+        if(Catarticle::where('slug', $slug)->exists()){
+            $catarticle2 = Catarticle::get();
+            $catarticle = Catarticle::where('slug', $slug )->first();
+            $article = Article::where('id_catarticle', $catarticle->id)->where('status','1');
+
+            $article = $article->paginate(4);
+
+            return view('frontend.halartikel.articleByCategory')->with(compact('article','catarticle','catarticle2'));
+        }else{
+            return view('frontend.halartikel.index');
+        }
     }
 
     public function showStore(){

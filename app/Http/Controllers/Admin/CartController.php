@@ -9,32 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $cart = Cart::create([
@@ -42,58 +17,20 @@ class CartController extends Controller
             'barang_id' => $request->barang_id,
             'ukuran' => $request->ukuran,
             'qty'=>$request->qty,
+            'total'=>$request->qty * $request->harga,
         ]);
         return redirect('/cart');
-        // return view('frontend.halkeranjang.index')->with(compact('cart'));
     }
 
     public function cart(){
-        $cart = Cart::where('user_id','=',Auth::user()->id)->paginate(10);
-        return view('frontend.halkeranjang.index')->with(compact('cart'));
+        $this->data['cart'] = Cart::where('user_id','=',Auth::user()->id)->paginate(10);
+        $this->data['grand_total'] = Cart::sum('total');
+
+        return view('frontend.halkeranjang.index', $this->data);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function updateCartQty(Request $request){
+        echo "<pre>";
+        print_r($request->all());
     }
 }
