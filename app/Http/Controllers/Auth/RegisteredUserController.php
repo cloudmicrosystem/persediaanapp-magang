@@ -47,6 +47,7 @@ class RegisteredUserController extends Controller
             'no_hp' => $request->no_hp,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'isActive'  => 0,
         ]);
 
         event(new Registered($user));
