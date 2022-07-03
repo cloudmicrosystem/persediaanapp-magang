@@ -12,14 +12,16 @@ class CartController extends Controller
 
     public function store(Request $request)
     {
+        $total = $request->qty * $request->harga;
         $cart = Cart::create([
             'user_id' => Auth::user()->id,
             'barang_id' => $request->barang_id,
             'ukuran' => $request->ukuran,
             'qty'=>$request->qty,
-            'total'=>$request->qty * $request->harga,
+            'total'=>$total,
         ]);
         return redirect('/cart');
+        // return $this->data;
     }
 
     public function cart(){

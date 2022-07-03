@@ -128,7 +128,8 @@
 
                             <form action="{{ url('/add-to-cart') }}" method="post" class="form-horizontal qtyFrom">
                                 @csrf
-                                <input type="hidden" name="barang_id" value="{{ $barang['id'] }}">
+                                <input type="hidden" class="barang_id" name="barang_id" value="{{ $barang['id'] }}">
+                                <input type="hidden" name="harga" value="{{ $barang['harga'] }}">
                                 <h5 class="mt-2">Ukuran</h5>
                                 <div class="form-group">
                                     <select class="span2 pull-left"  name="ukuran" required>

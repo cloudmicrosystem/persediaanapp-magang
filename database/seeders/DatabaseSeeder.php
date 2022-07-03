@@ -10,6 +10,8 @@ use Database\Seeders\UsersSeeder;
 use Database\Seeders\AtributSeeder;
 use Database\Seeders\ArticleSeeder;
 use Database\Seeders\CatarticleSeeder;
+use Database\Seeders\OngkirSeeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -29,6 +31,7 @@ class DatabaseSeeder extends Seeder
             CatarticleSeeder::class,
             ArticleSeeder::class,
             BannerSeeder::class,
+            OngkirSeeder::class,
         ]);
     }
 }

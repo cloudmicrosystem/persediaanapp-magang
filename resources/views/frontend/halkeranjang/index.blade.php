@@ -118,8 +118,8 @@
                             <table class="table">
                                 <thead class="border-color: black">
                                     <tr class="border-color: black">
-                                        <th class="text-white" style="text-align: center">Gambar Produk</th>
-                                        <th class="text-white" style="text-align: center">Nama Produk</th>
+                                        <th class="text-white" style="text-align: center">Gambar </th>
+                                        <th class="text-white" style="text-align: center">Nama </th>
                                         <th class="text-white" style="text-align: center">Harga</th>
                                         <th class="text-white" style="text-align: center">Ukuran</th>
                                         <th class="text-white" style="text-align: center">Qty</th>
@@ -129,7 +129,8 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($cart as $item)
-                                    <input type="hidden" class="barang_id" value="{{ $item->barang_id }}">
+                                    <input type="hidden" class="barang_id" name="barang_id" value="{{ $item->barang_id }}">
+                                    <input type="hidden" name="harga" value="{{ $item->barang->harga }}">
                                         <tr style="color: white; text-align:center">
                                             <td>
                                                 <img src="{{ asset('images/disply/' . $item->barang->gambar_disply) }}"
@@ -160,10 +161,14 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <div class="card-footer">
+                            <div class="card-footer"></div>
                                 <div class="col-lg-12">
                                     <h6 style="color: white">Total : <?="Rp ". number_format($grand_total,0,',','.')?></h6>
-                                </div>
+                                </div><br>
+                                <a class="btn btn-block btn-success" href="{{ url('/checkout') }}"
+                                    style="max-width: 150px; float:right; disply:inline-block">
+                                    <i>Checkout</i>
+                                </a>
                             </div>
                         </div>
                     </div>

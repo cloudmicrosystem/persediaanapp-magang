@@ -61,10 +61,6 @@ class HalcustController extends Controller
         return view('frontend.whislist.index');
     }
 
-    public function showCo(){
-        return view('frontend.halcheckout.index');
-    }
-
     public function showRefund(){
         return view('frontend.refund.index');
     }

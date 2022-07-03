@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Checkout | Morfeen </title>
+    <title>Payment | Morfeen </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
@@ -100,96 +100,34 @@
     </header>
 
     <section class="content">
-        <div class="container mt-5">
+        <div class="d-flex justify-content-center ">
             <div class="row">
-                <div class="col-md-5 my-3 p-t-100">
+                <div class="col-md-12 my-3 p-t-100">
                     <p class="text-bold text-uppercase text-center text-white"
                         style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Form Checkout </p>
-                    <form id="quickForm" action="{{ url('save-checkout') }}" method="POST">
+                    <form id="quickForm" action="{{ url('payment') }}" method="POST">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputEmail1">Provinsi :</label><br>
-                                <select class="span2 pull-left" name="provinsi" >
-                                    <option value="">Pilih Opsi</option>
-                                        @foreach ($ongkir as $item)
-                                            <option value="{{ $item->id }}">{{ $item->provinsi }} | Ongkir <?= "Rp " . number_format($item->harga,0,',','.')?></option>
-                                        @endforeach
-                                </select>
-                            </div><br>
-                            <div class="form-group">
-                                <label style="color: white" for="exampleInputEmail1">Kota :</label>
-                                <input style="background-color: black; color:white" type="text" name="kota"
+                                <label style="color: white" for="exampleInputEmail1">Total</label>
+                                <input style="background-color: black; color:white" type="text" name="total"
                                     class="form-control border border-white" id="exampleInputEmail1"
-                                    placeholder="Kota">
+                                    placeholder="Total">
                             </div>
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputPassword1">Alamat :</label>
-                                <input style="background-color: black; color:white" type="text" name="alamat"
+                                <label style="color: white" for="exampleInputPassword1">Ongkir</label>
+                                <input style="background-color: black; color:white" type="text" name="ongkir"
                                     class="form-control border border-white" id="exampleInputPassword1"
-                                    placeholder="Alamat">
-                            </div>
-                            <div class="form-group">
-                                <label style="color: white" for="inputMessage">Keterangan :</label>
-                                <textarea style="background-color: black; color:white" id="inputMessage" name="keterangan"
-                                class="form-control border border-white" rows="4"
-                                    placeholder="Keterangan"></textarea>
+                                    placeholder="Ongkir">
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary float-end">
-                                    <a href="save-checkout" id="pay-button"></a>
+                                    <a href="payment" id="pay-button"></a>
                                             Checkout
                                 </button>
                             </div>
                         </div>
                     </form>
-                </div>
-
-                <div class="col-md-7 my-3 p-t-100" style="border: black">
-                    <p class="text-bold text-uppercase text-center text-white"
-                        style="font-size: 20px ; font-family: 'Trebuchet MS'">Detail Pesanan</p>
-                    <div class="card " style="border: black">
-                        <div class="card-body " style="background-color: black ; border: black">
-                            <div class="row">
-                                <table class="table table-responsive pt-4">
-                                    <thead class="border-color: black">
-                                        <tr class="border-color: black">
-                                            <th class="text-white">Gambar</th>
-                                            <th class="text-white">Nama</th>
-                                            <th class="text-white ">Harga</th>
-                                            <th class="text-white ">Ukuran</th>
-                                            <th class="text-white ">Qty</th>
-                                            <th class="text-white ">Total</th>
-                                        </tr>
-                                    </thead>
-
-                                    @foreach ($cart as $item)
-                                        <tr style="color: white; text-align:center; font-size: 13px">
-                                            <td>
-                                                <img src="{{ asset('images/disply/' . $item->barang->gambar_disply) }}"
-                                                    height="90px">
-                                            </td>
-                                            <td>{{ $item->barang->nama_barang }}</td>
-                                            <td> <?= 'Rp ' . number_format($item->barang->harga, 0, ',', '.') ?> </td>
-                                            <td>{{ $item->ukuran }}</td>
-                                            <td>{{ $item->qty }}</td>
-                                            <td>
-                                                <?= 'Rp ' . number_format($item->barang->harga * $item->qty, 0, ',', '.') ?>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-
-                                    <td class="text-white text-center" style="width: 10px; height: auto">Sub Total
-                                    </td>
-                                    <td class="text-white ">
-                                        <h5 style="color: white">
-                                            <?= 'Rp ' . number_format($grand_total, 0, ',', '.') ?></h5>
-                                    </td>
-                                    <div class=""></div>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

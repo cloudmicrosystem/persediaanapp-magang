@@ -9,14 +9,14 @@ class Orders extends Model
 {
     use HasFactory;
     protected $table = "orders";
-    protected $fillbale =[
+    protected $fillable =[
         'user_id',
+        'provinsi_id',
         'no_order',
-        'total',
+        'kota',
         'alamat',
-        'provinsi',
-        'ongkir',
-        'phone_number',
+        'keterangan',
+        'total',
         'token',
         'payment_type',
         'transaction_status',
@@ -25,5 +25,9 @@ class Orders extends Model
 
     public function orderDetail(){
         return $this->hasMany('App\Models\OrderDetail');
+    }
+
+    public function ongkir(){
+        return $this->belongsTo(Ongkir::class, 'provinsi_id');
     }
 }
