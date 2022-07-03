@@ -15,10 +15,13 @@ use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CartController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Users\HalcustController;
 use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HaldetailartikelController;
 use App\Http\Controllers\Users\Haldetailpro;
+
+
 
 Route::group(
     ['middleware' => ['auth']],
@@ -94,6 +97,7 @@ Route::group(
 
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::get('/register', [LoginController::class, 'showRegistrationForm'])->name('register');
+    Route::post('/register', [RegisteredUserController::class, 'store']);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/dashboard',[App\Http\Controllers\HomeController::class, 'index'])->name('admin.dashboard')->middleware('is_admin');
 

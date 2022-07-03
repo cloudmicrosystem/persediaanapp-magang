@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Registrasi | Admin</title>
+    <title>Registrasi </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -31,23 +31,19 @@
 
 <body style="background-color: #666666;">
 
-<<<<<<< HEAD
+
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
                 <form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
-=======
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="POST" action="{{ __('Register') }}">
->>>>>>> 1214a137bd077aa5c78e0dc00a96895068b7fdf5
+
                     @csrf
                     <span class="login100-form-title p-b-43">
                         Registrasi
                     </span>
                     {{-- NAMA --}}
                     <div class="wrap-input100 validate-input">
+                        <label > Nama </label>
                         <input id="nama" placeholder="Nama" type="text"
                             class="input100 @error('nama') is-invalid @enderror" name="nama"
                             value="{{ old('nama') }}" required autocomplete="nama" autofocus>
@@ -61,6 +57,7 @@
 
                     {{-- ALAMAT --}}
                     <div class="wrap-input100 validate-input">
+                        <label > Alamat </label>
                         <input id="alamat" placeholder="Alamat" type="text"
                             class="input100 @error('alamat') is-invalid @enderror" name="alamat"
                             value="{{ old('alamat') }}" required autocomplete="alamat" autofocus>
@@ -74,6 +71,7 @@
 
                     {{-- NOHP --}}
                     <div class="wrap-input100 validate-input">
+                        <label > No Hp </label>
                         <input id="no_hp" placeholder="Nohp" type="number"
                             class="input100 @error('no_hp') is-invalid @enderror" name="no_hp"
                             value="{{ old('no_hp') }}" required autocomplete="no_hp" autofocus>
@@ -87,6 +85,7 @@
 
                     {{-- email --}}
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <label > Email </label>
                         <input id="email" placeholder="Email" type="email"
                             class="input100 @error('email') is-invalid @enderror" name="email"
                             value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -100,6 +99,7 @@
 
                     {{-- password --}}
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <label > Password </label>
                         <input id="password" placeholder="Password" type="password" class="input100 @error('password') is-invalid @enderror"
                             name="password" required autocomplete="new-password">
 
@@ -116,6 +116,7 @@
                             Regristasi
                         </button>
                     </div>
+
                     <div class="container-login100-form-btn">
                         <a href="{{ url('/login') }}" class="login100-form-btn"
                             style="background: transparent; border:transparent; color:black">Back Login</a>
