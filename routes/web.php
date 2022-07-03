@@ -15,6 +15,8 @@ use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CartController;
+use App\Http\Controllers\Admin\CheckoutController;
+use App\Http\Controllers\Admin\OngkirController;
 use App\Http\Controllers\Users\HalcustController;
 use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HaldetailartikelController;
@@ -23,12 +25,19 @@ use App\Http\Controllers\Users\Haldetailpro;
 Route::group(
     ['middleware' => ['auth']],
     function () {
+        Route::get('product/detail-product/{id}', [HalproductController::class, 'detailByProduct']);
         Route::post('/add-to-cart', [CartController::class, 'store']);
         Route::post('/update-to-cart', [CartController::class, 'updateCartQty']);
         Route::post('delete-cart', [CartController::class, 'deleteCart']);
         Route::get('/cart', [CartController::class, 'cart']);
+        Route::get('/checkout', [CheckoutController::class, 'showCo']);
+        Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout']);
         Route::get('/penilaian', [HalcustController::class, 'showRating']);
         Route::get('/wishlist', [HalcustController::class, 'showWhish']);
+    });
+
+    Route::middleware(['cors'])->group(function () {
+        Route::get('/payment', [CheckoutController::class, 'reqPayment']);
     });
 
     // USER
@@ -38,13 +47,11 @@ Route::group(
     Route::get('/about', [HalcustController::class, 'showAbout']);
     Route::get('/contact', [HalcustController::class, 'showContact']);
 
-    Route::get('/checkout', [HalcustController::class, 'showCo']);
     Route::get('/refund', [HalcustController::class, 'showRefund']);
     Route::get('/how-to-order', [HalcustController::class, 'showHow']);
     Route::get('/faq', [HalcustController::class, 'showFaq']);
 
     Route::get('product', [HalproductController::class, 'index']);
-    Route::get('product/detail-product/{id}', [HalproductController::class, 'detailByProduct']);
     Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
     Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detailByCategory']);
 
@@ -89,6 +96,14 @@ Route::group(
     Route::post('update-banner-status', [BannerController::class, 'updateBannerStatus']);
     Route::match(array('get','post'),'/add-edit-banner/{id?}', 'App\Http\Controllers\Admin\BannerController@addEditBanner');
     Route::get('/delete-banner/{id}', [BannerController::class, 'deleteBanner']);
+
+    // ONGKIR
+    Route::get('ongkir',[OngkirController::class, 'index']);
+
+
+
+
+
 
     Auth::routes();
 

@@ -48,7 +48,7 @@
                             </a>
                         </li>
 
-                        @if (Session::get('page') == 'barang' || Session::get('page') == 'kategori' || Session::get('page') == 'banner')
+                        @if (Session::get('page') == 'barang' || Session::get('page') == 'kategori' || Session::get('page') == 'banner' || Session::get('page') == 'ongkir')
                             <?php $active = 'active'; ?>
                         @else
                             <?php $active = ''; ?>
@@ -93,6 +93,17 @@
                                     <a href="{{ url('/banner') }}" class="nav-link {{ $active }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Banner</p>
+                                    </a>
+                                </li>
+                                @if (Session::get('page') == 'ongkir')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="{{ url('/ongkir') }}" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Ongkir</p>
                                     </a>
                                 </li>
                             </ul>

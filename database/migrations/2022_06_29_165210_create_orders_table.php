@@ -16,12 +16,12 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('provinsi_id');
             $table->string('no_order');
+            $table->string('kota')->nullable();
+            $table->string('alamat')->nullable();
+            $table->text('keterangan')->nullable();
             $table->integer('total');
-            $table->string('alamat');
-            $table->string('provinsi');
-            $table->integer('ongkir');
-            $table->String('phone_number')->nullable();
             $table->String('token')->nullable();
             $table->String('payment_type')->nullable();
             $table->String('transaction_status')->nullable();

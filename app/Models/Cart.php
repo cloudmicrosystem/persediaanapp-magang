@@ -15,6 +15,7 @@ class Cart extends Model
         'barang_id',
         'ukuran',
         'qty',
+        'total',
     ];
 
     public function barang(){
