@@ -102,24 +102,16 @@
 
     {{-- Detail Artikel  --}}
     <section>
-        <h1 class="text-bold text-uppercase text-center  p-t-150 " style="font-size: 20px ; font-family: 'Trebuchet MS'">detail ARTIKEL</h1>
+        <h1 class="text-bold text-uppercase text-center  p-t-120 " style="font-size: 20px ; font-family: 'Trebuchet MS'"></h1>
         <div class="bread-crumb bo5-b p-t-17 p-b-17">
 			<div class="container">
-				<a href="/" class="txt27">
-					Home
-				</a>
-
-				<span class="txt29 m-l-10 m-r-10">/</span>
-
-                <a href="artikel" class="txt27">
+				<span class="txt29 m-l-10 m-r-10"></span>
+                <a href="/artikel" class="txt27">
 					Artikel
 				</a>
-
                 <span class="txt29 m-l-10 m-r-10">/</span>
-
-
 				<span class="txt29">
-					Blog
+					Detail Artikel {{ $article['catarticle']['nama_cat'] }} {{ $article['judul_artikel'] }}
 				</span>
 			</div>
 		</div>
@@ -130,26 +122,18 @@
 					<div class="p-t-30 p-b-20 bo5-r p-r-50 h-full p-r-0-md bo-none-md">
 						<!-- Block4 -->
 						<div class="blo4 p-b-63">
-							<!-- - -->
 							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-                                @foreach ($article as $item)
-                                <img src="images/artikel/{{ $item->gambar_artikel }}">
-                                @endforeach
+                                    <img src="{{ asset('images/artikel/'. $article['gambar_artikel']) }}">
 							</div>
-
-							<!-- - -->
 							<div class=" p-t-33">
 								<h4 class="p-b-16 tit9">
-                                    {{ $article['judul_artikel']}}
+                                    {{ $article['judul_artikel'] }}
 								</h4>
-
 								<div class="txt32 flex-w p-b-24">
 									<span>
-                                        {{ $article['sumber_artikel']}}
-										<span class="m-r-6 m-l-4">|</span>
+                                        Sumber Artikel | {{ $article['sumber_artikel']}}
 									</span>
 								</div>
-
 								<p>
                                     {{ $article['deskripsi_artikel']}}
 								</p>
@@ -160,113 +144,29 @@
 				</div>
 
 				<div class="col-md-4 col-lg-3">
-					<div class="sidebar2 p-t-30 p-b-80 p-l-20 p-l-0-md p-t-0-md">
-						<!-- Search -->
-						<div class="search-sidebar2 size12 bo2 pos-relative">
-							<input class="input-search-sidebar2 txt10 p-l-20 p-r-55" type="text" name="search" placeholder="Search">
-							<button class="btn-search-sidebar2 flex-c-m ti-search trans-0-4"></button>
-						</div>
-
-
+					<div class="sidebar2 p-b-80 p-l-20 p-l-0-md p-t-0-md">
 						<!-- Most Popular -->
 						<div class="popular">
 							<h4 class="txt33 p-b-35 p-t-58">
-								Most popular
+								Seputar Artikel
 							</h4>
-
-							<ul>
-								<li class="flex-w m-b-25">
-									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-										<a href="#">
-											<img src="images/sukun.jpg" alt="IMG-BLOG">
-										</a>
-									</div>
-
-									<div class="size28">
-										<a href="#" class="dis-block txt28 m-b-8">
-											Best Places for Wine
-										</a>
-
-										<span class="txt14">
-											3 days ago
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-w m-b-25">
-									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-										<a href="#">
-											<img src="images/sukun.jpg" alt="IMG-BLOG">
-										</a>
-									</div>
-
-									<div class="size28">
-										<a href="#" class="dis-block txt28 m-b-8">
-											Eggs and Cheese
-										</a>
-
-										<span class="txt14">
-											July 2, 2017
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-w m-b-25">
-									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-										<a href="#">
-											<img src="images/sukun.jpg" alt="IMG-BLOG">
-										</a>
-									</div>
-
-									<div class="size28">
-										<a href="#" class="dis-block txt28 m-b-8">
-											Style the Wedding Party
-										</a>
-
-										<span class="txt14">
-											May 28, 2017
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-w m-b-25">
-									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-										<a href="#">
-											<img src="images/sukun.jpg" alt="IMG-BLOG">
-										</a>
-									</div>
-
-									<div class="size28">
-										<a href="#" class="dis-block txt28 m-b-8">
-											Cooking recipe Delicious
-										</a>
-
-										<span class="txt14">
-											May 25, 2017
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-w m-b-25">
-									<div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-										<a href="#">
-											<img src="images/sukun.jpg" alt="IMG-BLOG">
-										</a>
-									</div>
-
-									<div class="size28">
-										<a href="#" class="dis-block txt28 m-b-8">
-											Pizza is prepared fresh
-										</a>
-
-										<span class="txt14">
-											May 2, 2017
-										</span>
-									</div>
-								</li>
-							</ul>
+                            @foreach ($article2 as $item)
+                                <ul>
+                                    <li class="flex-w m-b-25">
+                                        <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
+                                            <a href="#">
+                                                <img src="{{ asset('images/artikel/'. $item['gambar_artikel']) }}" alt="IMG-BLOG">
+                                            </a>
+                                        </div>
+                                        <div class="size28">
+                                            <a href="{{ url('artikel/detail-artikel/'.$item->id) }} " class="dis-block txt28 m-b-8">
+                                                {{ $item['judul_artikel'] }}
+                                            </a>
+                                    </li>
+                                </ul>
+                            @endforeach
 						</div>
-
+                        {{ $article2->links() }}
 					</div>
 				</div>
 			</div>

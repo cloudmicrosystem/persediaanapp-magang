@@ -42,7 +42,7 @@
                                 {{ Str::limit($item->deskripsi_artikel, '80', ' . . . . . . . ') }}
                             </p>
 
-                            <a href="artikel" class="txt4">
+                            <a href="{{ url('artikel/detail-artikel/'.$item->id) }}" class="txt4">
                                 Lanjutkan Membaca
                                 <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                             </a>

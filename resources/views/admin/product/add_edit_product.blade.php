@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Harga Product</label>
-                                        <input type="text" class="form-control" id="rupiah" name="harga" placeholder="Harga Product"
+                                        <input type="number" class="form-control" id="rupiah" name="harga" placeholder="Harga Product"
                                             @if (!empty($barang['harga'])) value="{{ $barang['harga'] }}"
                                             @else value="{{ old('harga') }}"
                                             @endif

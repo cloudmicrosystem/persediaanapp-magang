@@ -47,7 +47,7 @@
 
                     <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
 
-                    <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+                    <a href="/cart"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
 
                     <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
 

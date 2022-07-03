@@ -19,7 +19,7 @@ class CreateBarangTable extends Migration
             $table->string('kode_barang');
             $table->string('nama_barang');
             $table->string('slug')->unique;
-            $table->string('harga');
+            $table->integer('harga');
             $table->text('deskripsi');
             $table->integer('status');
             $table->enum('trending',['No','Yes']);

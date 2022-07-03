@@ -42,6 +42,7 @@
                                 <table id="category" class="table table-bordered table-hover">
                                     <thead>
                                         <tr style="text-align: center">
+                                            <th>No.</th>
                                             <th>Nama Kategori</th>
                                             <th>URL Kategori</th>
                                             <th>Status Kategori</th>
@@ -51,24 +52,34 @@
                                     <tbody>
                                         @foreach ($catarticle as $key=>$value)
                                             <tr>
+                                                <td style="text-align: center">{{ $catarticle->firstItem() + $key }}</td>
                                                 <td>{{ $value->nama_cat }}</td>
                                                 <td>{{ $value->slug }}</td>
                                                 <td>
                                                     @if($value->status == 1)
-                                                        Aktif
+                                                        <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>
                                                     @else
-                                                        Nonaktif
+                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
-                                                <td style="text-align: center"><a  href="{{ url('add-edit-catarticle/'.$value->slug) }}"><i class='fas fa-edit'></i></a></td></td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="kategori" href="{{ url('delete-catarticle/'.$value->slug) }}"><i class='fas fa-trash-alt'></i></a></td>
+                                                <td style="text-align: center"><a  href="{{ url('add-edit-catarticle/'.$value->slug) }}" title="Edit Kategori"><i class='fas fa-edit'></i></a></td></td>
+                                                <td style="text-align: center"> <a class="confirmDelete" name="kategori" href="{{ url('delete-catarticle/'.$value->slug) }}" title="Hapus Kategori"><i class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <br>
-                                {{ $catarticle->links() }}
+                                <div class="fa-pull-left pt-2">
+                                    Tampilkan data no
+                                    {{ $catarticle->firstItem() }}
+                                    sampai no
+                                    {{ $catarticle->lastItem() }}
+                                    dari
+                                    {{ $catarticle->total() }} data
+                                </div>
+                                <div class="fa-pull-right pt-2">
+                                    {{ $catarticle->links() }}
+                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>

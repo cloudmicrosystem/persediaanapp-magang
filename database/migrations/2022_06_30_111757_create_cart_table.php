@@ -19,6 +19,7 @@ class CreateCartTable extends Migration
             $table->unsignedBigInteger('barang_id');
             $table->string('ukuran');
             $table->integer('qty');
+            $table->integer('total');
             $table->timestamps();
         });
     }

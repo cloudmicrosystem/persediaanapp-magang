@@ -38,7 +38,10 @@ class HomeController extends Controller
 
         if (Auth::user()->is_admin) {
             Session::put('page','dashboard');
-            return view('admin.dashboard.dashboard');
+            $barang = Barang::paginate();
+            $article = Article::paginate();
+
+            return view('admin.dashboard.dashboard')->with(compact('barang','article'));
         }else{
             return redirect('/');
         }

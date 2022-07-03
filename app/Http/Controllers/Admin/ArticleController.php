@@ -15,7 +15,7 @@ class ArticleController extends Controller
     public function index()
     {
         Session::put('page','article');
-        $article = Article::paginate(5);
+        $article = Article::orderBy('id', 'desc')->paginate(5);
         return view('admin.article.index')->with(compact('article'));
     }
 

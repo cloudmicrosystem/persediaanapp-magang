@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class HaldetailartikelController extends Controller
 {
         public function detailByArtikel($id){
+            $article2 = Article::simplePaginate(4);
             $article = Article::with('catarticle')->find($id)->toArray();
-            return view('frontend.haldetailartikel.index')->with(compact('article'));
+
+            return view('frontend.haldetailartikel.index')->with(compact('article','article2'));
         }
 }

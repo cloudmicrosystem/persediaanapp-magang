@@ -42,6 +42,7 @@
                                 <table id="product" class="table table-bordered table-responsive">
                                     <thead>
                                         <tr style="text-align: center">
+                                            <th>No.</th>
                                             <th>Kategori Artikel</th>
                                             <th>Judul Artikel</th>
                                             <th>URL Artikel</th>
@@ -56,6 +57,7 @@
                                     <tbody>
                                         @foreach ($article as $key => $value)
                                             <tr>
+                                                <td style="text-align: center">{{ $article->firstItem() + $key }}</td>
                                                 <td>{{ $value->catarticle->nama_cat }}</td>
                                                 <td>{{ $value->judul_artikel }}</td>
                                                 <td>{{ $value->slug }}</td>
@@ -66,16 +68,16 @@
                                                 <td>{{ $value->sumber_artikel }}</td>
                                                 <td>
                                                     @if($value->status == 1)
-                                                        Aktif
+                                                        <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>
                                                     @else
-                                                        Nonaktif
+                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
                                                 <td>
                                                     @if($value->featured == "Yes")
-                                                        Iya
+                                                        <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Iya</div>
                                                     @else
-                                                        Tidak
+                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Tidak</div>
                                                     @endif
                                                 </td>
 
@@ -84,7 +86,7 @@
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
                                                 </td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="artikel"
+                                                <td style="text-align: center"> <a class="confirmDelete" name="artikel" title="Hapus Artikel"
                                                         href="{{ url('delete-article/' . $value->slug) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>
@@ -92,8 +94,17 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <br>
-                                {{ $article->links() }}
+                                <div class="fa-pull-left pt-2">
+                                    Tampilkan data no
+                                    {{ $article->firstItem() }}
+                                    sampai no
+                                    {{ $article->lastItem() }}
+                                    dari
+                                    {{ $article->total() }} data
+                                </div>
+                                <div class="fa-pull-right pt-2">
+                                    {{ $article->links() }}
+                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>

@@ -104,7 +104,8 @@
 
     <!-- ARTIKEL -->
     <section>
-        <h1 class="text-bold text-uppercase text-center  p-t-100 " style="font-size: 20px ; font-family: 'Trebuchet MS'"></h1>
+        <h1 class="text-bold text-uppercase text-center  p-t-100 "
+            style="font-size: 20px ; font-family: 'Trebuchet MS'"></h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-12">
@@ -113,14 +114,14 @@
                             <h4 class="txt33 bo5-b p-b-35 p-t-30">
                                 Kategori Artikel
                             </h4>
-                            @foreach ($catarticle as $item)
-                            <ul>
-                                <li class="bo5-b p-t-4 p-b-4">
-                                    <a href="#" class="txt27">
-                                        {{ $item->nama_cat }}
-                                    </a>
-                                </li>
-                            </ul>
+                            @foreach ($catarticle as $item => $value)
+                                <ul>
+                                    <li class="bo5-b p-t-4 p-b-4">
+                                        <a href="{{ url('artikel/' . $value->slug) }}" class="txt27">
+                                            {{ $value->nama_cat }}
+                                        </a>
+                                    </li>
+                                </ul>
                             @endforeach
                         </div>
                     </div>
@@ -132,20 +133,19 @@
                             <ul>
                                 <li>
                                     <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                            <img src="{{ asset('images/artikel/' . $items->gambar_artikel) }}"
-                                            class="img-fluid"
-                                            alt="{{ $items->judul }}"/>
+                                        <img src="{{ asset('images/artikel/' . $items->gambar_artikel) }}"
+                                            class="img-fluid" alt="{{ $items->judul }}" />
                                     </div>
                                 </li>
                             </ul>
                             <div class="wrap-text-blo1 p-t-35">
-                                    <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                        {{ $items->judul_artikel }}
-                                    </h4>
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    {{ $items->judul_artikel }}
+                                </h4>
                                 <p class="m-b-20">
                                     {{ Str::limit($items->deskripsi_artikel, '80', ' . . . . . . . ') }}
                                 </p>
-                                <a href="{{ url('artikel/detail-artikel/'.$items->id) }}" class="txt4" >
+                                <a href="{{ url('artikel/detail-artikel/' . $items->id) }}" class="txt4">
                                     Lanjutkan Membaca
                                     <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                                 </a>
@@ -154,6 +154,10 @@
                     </div>
                 @endforeach
             </div>
+            <div class="fa-pull-right p-t-10">
+                {{ $article->links() }}
+            </div>
+            <br>
         </div>
     </section>
 

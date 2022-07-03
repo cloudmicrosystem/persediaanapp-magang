@@ -13,7 +13,7 @@ class BannerController extends Controller
     public function index()
     {
         Session::put('page','banner');
-        $banner = Banner::paginate(5);
+        $banner = Banner::orderBy('id', 'desc')->paginate(5);
         return view('admin.banner.index')->with(compact('banner'));
     }
 
@@ -51,7 +51,7 @@ class BannerController extends Controller
                 $file->move('images/banner/',$filename);
                 $banner->gambar_banner = $filename;
             }
-            
+
             if(!empty($data['status'])){
                 $banner->status = $data['status'];
             }else{

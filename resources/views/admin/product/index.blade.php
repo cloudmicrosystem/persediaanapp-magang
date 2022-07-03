@@ -42,6 +42,7 @@
                                 <table id="product" class="table table-bordered table-responsive">
                                     <thead>
                                         <tr style="text-align: center">
+                                            <th>No.</th>
                                             <th>Kategori Product</th>
                                             <th>Code Product</th>
                                             <th>Nama Product</th>
@@ -57,24 +58,25 @@
                                     <tbody>
                                         @foreach ($barang as $key => $value)
                                             <tr>
+                                                <td style="text-align: center">{{ $barang->firstItem() + $key }}</td>
                                                 <td>{{ $value->category->nama_kategori }}</td>
                                                 <td>{{ $value->kode_barang }}</td>
                                                 <td>{{ $value->nama_barang }}</td>
                                                 <td>{{ $value->slug }}</td>
-                                                <td>{{ $value->harga }}</td>
+                                                <td><?= "Rp " . number_format($value->harga,0,',','.')?></td>
                                                 <td>{{ $value->deskripsi }}</td>
                                                 <td>
                                                     @if($value->status == 1)
-                                                        Aktif
+                                                        <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>
                                                     @else
-                                                        Nonaktif
+                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
                                                 <td>
                                                     @if($value->trending == "Yes")
-                                                        Iya
+                                                        <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Iya</div>
                                                     @else
-                                                        Tidak
+                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Tidak</div>
                                                     @endif
                                                 </td>
                                                 <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}"
@@ -84,14 +86,14 @@
                                                         href="{{ url('add-edit-product/' . $value->id) }}"><i
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
-                                                <td style="text-align: center"><a title="Tambah Atribut"
+                                                <td style="text-align: center"><a title="Tambah Size"
                                                     href="{{ url('add-atribut/' . $value->id) }}"><i
                                                         class='fas fa-plus'></i></a></td>
                                                 <td style="text-align: center"><a title="Tambah Gambar"
                                                     href="{{ url('add-image/' . $value->id) }}"><i
                                                         class='fas fa-plus-circle'></i></a></td>
                                             </td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="product"
+                                                <td style="text-align: center"> <a class="confirmDelete" name="product" title="Hapus Product"
                                                         href="{{ url('delete-product/' . $value->id) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>
@@ -99,8 +101,17 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <br>
-                                {{ $barang->links() }}
+                                <div class="fa-pull-left pt-2">
+                                    Tampilkan data no
+                                    {{ $barang->firstItem() }}
+                                    sampai no
+                                    {{ $barang->lastItem() }}
+                                    dari
+                                    {{ $barang->total() }} data
+                                </div>
+                                <div class="fa-pull-right pt-2">
+                                    {{ $barang->links() }}
+                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>

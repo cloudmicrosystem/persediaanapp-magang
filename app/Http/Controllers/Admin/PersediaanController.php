@@ -23,7 +23,8 @@ class PersediaanController extends Controller
     public function index()
     {
         Session::put('page','barang');
-        $barang = Barang::paginate(5);
+
+        $barang = Barang::orderBy('id', 'desc')->paginate(5);
         return view('admin.product.index')->with(compact('barang'));
     }
 

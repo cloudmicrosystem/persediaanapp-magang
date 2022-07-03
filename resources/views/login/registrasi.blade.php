@@ -31,10 +31,17 @@
 
 <body style="background-color: #666666;">
 
+<<<<<<< HEAD
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
                 <form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
+=======
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="POST" action="{{ __('Register') }}">
+>>>>>>> 1214a137bd077aa5c78e0dc00a96895068b7fdf5
                     @csrf
                     <span class="login100-form-title p-b-43">
                         Registrasi

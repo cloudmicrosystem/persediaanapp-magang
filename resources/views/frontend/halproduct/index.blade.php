@@ -138,11 +138,18 @@
                     <div class="col-md-9 mb-8 pt-5">
                         <div class="row">
                             @foreach ($barang as $items)
-                                <div class="col-md-3">
+                                <div class="col-md-3 pb-2 pr-4">
                                     <div class="row">
                                         <div class="card">
                                             <ul>
                                                 <li>
+                                                    @if ($items->trending == "Yes")
+                                                        {{-- <label class="float-end badge btn-danger trending_tag" style="font-size: 16px">Popular</label> --}}
+                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Popular Product</div>
+                                                    @else
+                                                        {{-- <label class="float-end badge btn-dark trending_tag" style="font-size: 16px">Product Morfeen</label> --}}
+                                                        <div class="p-1 mb-1 bg-success text-white" style="text-align: center">{{ $items->category->nama_kategori }}</div>
+                                                    @endif
                                                     <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
                                                         <a href="{{ url('product/detail-product/'.$items->id) }}">
                                                             <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
@@ -160,7 +167,7 @@
                                                             style="font-size: 20px; font-weight:bold">
                                                             {{ $items->nama_barang }}
                                                         </h1>
-                                                        <p class="">{{ $items->harga }}</p>
+                                                        <p class=""><?= "Rp " . number_format($items->harga,0,',','.')?></p>
                                                     </a>
                                                 </div>
                                                 <p style="color: orange" class="m-1 t-center">
@@ -170,7 +177,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </p>
-                                                <p class="t-center m-0">Terjual 10 </p>
+                                                <p class="t-center m-0"><small>Terjual 10 </small></p>
                                                 {{-- <a href="detail" class="btn btn-success">Beli</a> --}}
                                             </div>
                                         </div>

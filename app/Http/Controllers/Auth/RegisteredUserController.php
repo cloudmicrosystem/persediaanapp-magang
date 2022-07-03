@@ -20,7 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        return view('login.registrasi');
     }
 
     /**
@@ -47,7 +47,11 @@ class RegisteredUserController extends Controller
             'no_hp' => $request->no_hp,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+<<<<<<< HEAD
             'isActive'  => 0,
+=======
+            'is_admin' => 0,
+>>>>>>> 1214a137bd077aa5c78e0dc00a96895068b7fdf5
         ]);
 
         event(new Registered($user));
