@@ -109,25 +109,26 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputEmail1">Total</label>
-                                <input style="background-color: black; color:white" type="text" name="total"
+                                <label style="color: white" for="exampleInputEmail1">{{$order->total}}</label>
+                                {{-- <input style="background-color: black; color:white" type="text" name="total"
                                     class="form-control border border-white" id="exampleInputEmail1"
-                                    placeholder="Total">
+                                    placeholder="Total"> {{ $this->data['order']->total }} --}}
                             </div>
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputPassword1">Ongkir</label>
-                                <input style="background-color: black; color:white" type="text" name="ongkir"
+                                <label style="color: white" for="exampleInputPassword1">{{$ongkir}}</label>
+                                {{-- <input style="background-color: black; color:white" type="text" name="ongkir"
                                     class="form-control border border-white" id="exampleInputPassword1"
-                                    placeholder="Ongkir">
+                                    placeholder="Ongkir"> {{ $this->data['order']->total }} --}}
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary float-end">
-                                    <a href="payment" id="pay-button"></a>
-                                            Checkout
-                                </button>
+
                             </div>
                         </div>
                     </form>
+                    <button class="btn btn-primary float-end" id="pay-button">
+                        <a href="payment" id="pay-button"></a>
+                                Checkout
+                    </button>
                 </div>
             </div>
         </div>
@@ -178,7 +179,33 @@
     <script src="{{ asset('assets/dist/js/adminlte.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('assets/dist/js/demo.js') }}"></script>
-
+    <script type="text/javascript">
+        // For example trigger on button clicked, or any time you need
+        var payButton = document.getElementById('pay-button');
+        payButton.addEventListener('click', function () {
+          // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
+          // window.snap.pay("{{$token}}");
+          // customer will be redirected after completing payment pop-up
+          window.snap.pay("{{$token}}", {
+            onSuccess: function(result){
+              /* You may add your own implementation here */
+              alert("payment success!"); console.log(result);
+            },
+            onPending: function(result){
+              /* You may add your own implementation here */
+              alert("wating your payment!"); console.log(result);
+            },
+            onError: function(result){
+              /* You may add your own implementation here */
+              alert("payment failed!"); console.log(result);
+            },
+            onClose: function(){
+              /* You may add your own implementation here */
+              alert('you closed the popup without finishing the payment');
+            }
+          })
+        });
+      </script>
 
 </body>
 

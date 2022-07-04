@@ -40,29 +40,37 @@ class CheckoutController extends Controller
 
     public function saveCheckout(Request $request)
     {
-        $this->data['cart'] = Cart::where('user_id','=',Auth::user()->id)->get();
-        $this->data['ongkir'] = Ongkir::get();
-        $this->data['grand_total'] = Cart::sum('total');
+        // $this->data['cart'] = Cart::where('user_id','=',Auth::user()->id)->get();
+        // $this->data['ongkir'] = Ongkir::get();
+        // $this->data['grand_total'] = Cart::sum('total');
 
-        return view('frontend.halcheckout.showSnap', $this->data);
+        // return view('frontend.halcheckout.showSnap', $this->data);
 
-        // if (Cart::where('user_id','=',Auth::user()->id)->count()>0) {
-        //     $this->data['transaction'] = Cart::where('user_id','=',Auth::user()->id)->get();
-        //     $this->data['shipment'] = $request;
-        //     $transaction = Cart::where('user_id','=',Auth::user()->id)->get();
-        //     $order_id = $this->checkout($this->data);
-        //     foreach ($transaction as $key => $value) {
-        //         app('App\Http\Controllers\Admin\OrderDetailController')->store($value,$order_id->id);
-        //         Cart::where('id', $value->id)->delete();
-        //     }
-        //     // return $this->confirmation();
-        // }
-        // else {
-        //     // return redirect()->back();
-        // }
+        if (Cart::where('user_id','=',Auth::user()->id)->count()>0) {
+            $this->data['transaction'] = Cart::where('user_id','=',Auth::user()->id)->get();
+            $this->data['shipment'] = $request;
+            $transaction = Cart::where('user_id','=',Auth::user()->id)->get();
+            $this->data['order'] = $this->checkout($this->data);
+            $this->data['ongkir'] = Ongkir::find($request->provinsi)->harga;
+            foreach ($transaction as $key => $value) {
+                app('App\Http\Controllers\Admin\OrderDetailController')->store($value,$this->data['order']->id);
+                // Cart::where('id', $value->id)->delete();
+                // return $this->data;
+                $this->data['token'] = $this->reqPayment($this->data['order'],$this->data['ongkir']);
+                return view('frontend.halcheckout.showSnap', $this->data);
+            }
+        // return view('frontend.halcheckout.showSnap', $this->data);
+        }
+        else {
+            // return redirect()->back();
+        }
     }
 
-    public function reqPayment(){
+    public function confirmPayment(Request $request){
+        
+    }
+
+    public function reqPayment(Orders $order,$ongkir){
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = 'SB-Mid-server-ndDjR6SNFmFuUZGcmpk69EMb';
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
@@ -74,23 +82,9 @@ class CheckoutController extends Controller
 
         $params = array(
             'transaction_details' => array(
-                'order_id' => rand(),
-                'gross_amount' => 25000,
+                'order_id' => $order->no_order,
+                'gross_amount' => $order->total +$ongkir,
             ),
-            'item_details' => array(
-                [
-                    'id' => '1',
-                    'price' => '10000',
-                    'quantity' => 1,
-                    'name' => 'Tees Anchor'
-                ],
-                [
-                    'id' => '2',
-                    'price' => '10000',
-                    'quantity' => 1,
-                    'name' => 'Tees Basic'
-                ]
-                ),
             'customer_details' => array(
                 'first_name' => 'morfeen',
                 'last_name' => 'thirteen',
@@ -99,8 +93,9 @@ class CheckoutController extends Controller
             ),
         );
 
-        $snapToken = \Midtrans\Snap::getSnapToken($params);
+        return $this->data['token'] = \Midtrans\Snap::getSnapToken($params);
         // return $snapToken;
-        return view('frontend.halcheckout.snap', ['token' => $snapToken]);
+        // return view('frontend.halcheckout.showSnap', $this->data);
+        // return view('frontend.halcheckout.snap', ['token' => $snapToken]);
     }
 }
