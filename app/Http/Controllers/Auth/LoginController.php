@@ -61,11 +61,11 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('login.index');
+        return view('auth.index');
     }
 
     public function showRegistrationForm()
     {
-        return view('login.registrasi');
+        return view('auth.registrasi');
     }
 }

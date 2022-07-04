@@ -33,13 +33,15 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => ['required', 'string', 'max:255'],
-            'alamat' => ['required','string', 'max:255'],
-            'no_hp' => ['required'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+        // return $request;
+
+        // $request->validate([
+        //     'nama' => ['required', 'string', 'max:255'],
+        //     'alamat' => ['required','string', 'max:255'],
+        //     'no_hp' => ['required'],
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'password' => ['required', 'string' , 'confirmed', 'min:8'],
+        // ]);
 
         $user = User::create([
             'nama' => $request->nama,
@@ -47,13 +49,10 @@ class RegisteredUserController extends Controller
             'no_hp' => $request->no_hp,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-<<<<<<< HEAD
-            'isActive'  => 0,
-=======
             'is_admin' => 0,
->>>>>>> 1214a137bd077aa5c78e0dc00a96895068b7fdf5
         ]);
 
+        // return $request;
         event(new Registered($user));
 
         Auth::login($user);
