@@ -20,7 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('login.registrasi');
+        return view('auth.registrasi');
     }
 
     /**
@@ -33,30 +33,30 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request;
+        return $request;
 
-        // $request->validate([
-        //     'nama' => ['required', 'string', 'max:255'],
-        //     'alamat' => ['required','string', 'max:255'],
-        //     'no_hp' => ['required'],
-        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-        //     'password' => ['required', 'string' , 'confirmed', 'min:8'],
-        // ]);
-
-        $user = User::create([
-            'nama' => $request->nama,
-            'alamat' => $request->alamat,
-            'no_hp' => $request->no_hp,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'is_admin' => 0,
+        $request->validate([
+            'nama' => ['required', 'string', 'max:255'],
+            'alamat' => ['required','string', 'max:255'],
+            'no_hp' => ['required'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string' , 'confirmed', 'min:8'],
         ]);
 
-        // return $request;
-        event(new Registered($user));
+        // $user = User::create([
+        //     'nama' => $request->nama,
+        //     'alamat' => $request->alamat,
+        //     'no_hp' => $request->no_hp,
+        //     'email' => $request->email,
+        //     'password' => Hash::make($request->password),
+        //     'is_admin' => 0,
+        // ]);
 
-        Auth::login($user);
+        // // return $request;
+        // event(new Registered($user));
 
-        return redirect(RouteServiceProvider::HOME);
+        // Auth::login($user);
+
+        // return redirect(RouteServiceProvider::HOME);
     }
 }

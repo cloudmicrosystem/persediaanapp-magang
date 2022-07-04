@@ -44,7 +44,7 @@
                                         <tr style="text-align: center">
                                             <th>No.</th>
                                             <th>Nama Kategori</th>
-                                            <th>URL Kategori</th>
+                                            <th>Slug Kategori</th>
                                             <th>Status Kategori</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>

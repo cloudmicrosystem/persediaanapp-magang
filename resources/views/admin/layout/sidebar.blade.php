@@ -57,7 +57,7 @@
                             <a href="#" class="nav-link {{ $active }}">
                                 <i class="nav-icon fas fa-tag"></i>
                                 <p>
-                                    Setting Product
+                                    Setting Produk
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -70,7 +70,7 @@
                                 <li class="nav-item">
                                     <a href="{{ url('/barang') }}" class="nav-link {{ $active }}">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Product</p>
+                                        <p>Data Produk</p>
                                     </a>
                                 </li>
                                 @if (Session::get('page') == 'kategori')
@@ -81,7 +81,7 @@
                                 <li class="nav-item">
                                     <a href="{{ url('/kategori') }}" class="nav-link {{ $active }}">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Kategori Product</p>
+                                        <p>Kategori Produk</p>
                                     </a>
                                 </li>
                                 @if (Session::get('page') == 'banner')

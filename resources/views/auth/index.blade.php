@@ -34,8 +34,8 @@
             <div class="wrap-login100">
                 <form class="login100-form validate-form" action="{{ route('login') }}" method="POST">
                     @csrf
-                    <span class="login100-form-title p-b-43">
-                        Login
+                    <span class="login100-form-title p-b-43" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                        LOGIN
                     </span>
                     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                         <label for="email" > Email</label>
@@ -66,10 +66,10 @@
                         </button>
                     </div>
                     <div class="container-login100-form-btn">
-                        <a href="{{ url ('/')}}" class="login100-form-btn" style="background: transparent; border:transparent; color:black">Back Home</a>
+                        <a href="{{ url ('/')}}" class="login100-form-btn" style="background: transparent; border:transparent; color:black">Kembali Ke Halaman Utama</a>
                     </div>
-                    <small class="d-block text-center mt-3">Belum Register?
-                        <a href="/register">Register Sekarang!</a>
+                    <small class="d-block text-center mt-3">Belum Registrasi?
+                        <a href="/register">Registrasi Sekarang!</a>
                     </small>
                 </form>
                 <div class="login100-more" style="background-image: url('images/login.JPG');">

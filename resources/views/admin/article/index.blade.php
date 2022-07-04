@@ -45,7 +45,7 @@
                                             <th>No.</th>
                                             <th>Kategori Artikel</th>
                                             <th>Judul Artikel</th>
-                                            <th>URL Artikel</th>
+                                            <th>Slug Artikel</th>
                                             <th>Deskripsi Artikel</th>
                                             <th>Gambar Artikel</th>
                                             <th>Sumber Artikel</th>

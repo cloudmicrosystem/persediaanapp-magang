@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Kategori Produk</li>
+                            <li class="breadcrumb-item active">Ongkir</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -38,31 +38,39 @@
                                 <h3 class="card-title">{{ $title }}</h3>
                             </div>
                             <form id="quickForm"
-                                @if(empty($category['slug'])) action="{{ url('add-edit-category') }}"
-                                @else action="{{ url('add-edit-category/' . $category['slug']) }}"
+                                @if(empty($ongkir['slug'])) action="{{ url('add-edit-ongkir') }}"
+                                @else action="{{ url('add-edit-ongkir/' . $ongkir['slug']) }}"
                                 @endif
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Nama Kategori</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="nama_kategori" placeholder="Nama Kategori"
-                                            @if (!empty($category['nama_kategori'])) value="{{ $category['nama_kategori'] }}"
-                                            @else value="{{ old('nama_kategori') }}"
+                                        <label for="exampleInputBorder">Nama Provinsi</label>
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="provinsi" placeholder="Nama Provinsi"
+                                            @if (!empty($ongkir['provinsi'])) value="{{ $ongkir['provinsi'] }}"
+                                            @else value="{{ old('provinsi') }}"
+                                            @endif
+                                        >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder">Harga</label>
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="harga" placeholder="Harga"
+                                            @if (!empty($ongkir['harga'])) value="{{ $ongkir['harga'] }}"
+                                            @else value="{{ old('harga') }}"
                                             @endif
                                         >
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
-                                            @if (!empty($category['status']) && $category['status'] == "1")
+                                            @if (!empty($ongkir['status']) && $ongkir['status'] == "1")
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Status Kategori</label>
+                                        <label class="form-check-label" >Status Ongkir</label>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Submit</button>
-                                    <a href="{{ url ('kategori')}}" class="btn btn-primary">Kembali</a>
+                                    <a href="{{ url ('ongkir')}}" class="btn btn-primary">Kembali</a>
                                 </div>
                             </form>
                         </div>

@@ -15,12 +15,9 @@ use App\Http\Controllers\Admin\PersediaanController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CartController;
-<<<<<<< HEAD
-use App\Http\Controllers\Auth\RegisteredUserController;
-=======
 use App\Http\Controllers\Admin\CheckoutController;
 use App\Http\Controllers\Admin\OngkirController;
->>>>>>> f0042e454a802ae90429e40aef5fe06f7d1bbd7e
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Users\HalcustController;
 use App\Http\Controllers\Users\HalproductController;
 use App\Http\Controllers\Users\HaldetailartikelController;
@@ -105,7 +102,8 @@ Route::group(
 
     // ONGKIR
     Route::get('ongkir',[OngkirController::class, 'index']);
-
+    Route::match(array('get','post'),'/add-edit-ongkir/{slug?}', 'App\Http\Controllers\Admin\OngkirController@addEditongkir');
+    Route::get('/delete-ongkir/{slug}', [OngkirController::class, 'deleteongkir']);
 
 
 

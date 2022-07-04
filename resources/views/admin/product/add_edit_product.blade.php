@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Product</li>
+                            <li class="breadcrumb-item active">Produk</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -60,32 +60,32 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Kode Product</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="kode_barang" placeholder="Kode Product"
+                                        <label for="exampleInputBorder">Kode Produk</label>
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="kode_barang" placeholder="Kode Barang"
                                             @if (!empty($barang['kode_barang'])) value="{{ $barang['kode_barang'] }}"
                                             @else value="{{ old('kode_barang') }}"
                                             @endif
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Nama Product</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="nama_barang" placeholder="Nama Product"
+                                        <label for="exampleInputBorder">Nama Produk</label>
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="nama_barang" placeholder="Nama Barang"
                                             @if (!empty($barang['nama_barang'])) value="{{ $barang['nama_barang'] }}"
                                             @else value="{{ old('nama_barang') }}"
                                             @endif
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Harga Product</label>
-                                        <input type="number" class="form-control" id="rupiah" name="harga" placeholder="Harga Product"
+                                        <label for="exampleInputBorder">Harga Produk</label>
+                                        <input type="number" class="form-control" id="rupiah" name="harga" placeholder="Harga Barang"
                                             @if (!empty($barang['harga'])) value="{{ $barang['harga'] }}"
                                             @else value="{{ old('harga') }}"
                                             @endif
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Deskripsi Product</label>
-                                        <textarea type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder="Deskripsi Product">
+                                        <label for="exampleInputBorder">Deskripsi Produk</label>
+                                        <textarea type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder="Deskripsi Barang">
                                             @if (!empty($barang['deskripsi'])) {{ $barang['deskripsi'] }}
                                             @else {{ old('deskripsi') }}
                                             @endif
@@ -97,7 +97,7 @@
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Trending Product</label>
+                                        <label class="form-check-label" >Apakah Trending</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
@@ -111,7 +111,7 @@
                                         <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}"  width=300px height=auto>
                                     @endif
                                     <div class="form-group">
-                                        <label for="exampleInputFile">Gambar Product</label>
+                                        <label for="exampleInputFile">Gambar </label>
                                         <div class="input-group">
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input"  name="gambar_disply" id="gambar_disply"

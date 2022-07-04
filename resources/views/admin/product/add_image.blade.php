@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Product Gambar</li>
+                            <li class="breadcrumb-item active"> Gambar Detail</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -56,28 +56,28 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Code Product</label>
+                                                    <label for="exampleInputBorder">Code Produk</label>
                                                     <input type="text" value="{{ $barang['kode_barang'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Nama Product </label>
+                                                    <label for="exampleInputBorder">Nama Produk </label>
                                                     <input type="text" value="{{ $barang['nama_barang'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Harga Product</label>
+                                                    <label for="exampleInputBorder">Harga Produk</label>
                                                     <input type="text" value="{{ $barang['harga'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Gambar Product</label>
+                                                    <label for="exampleInputBorder">Gambar Produk</label>
                                                     @if ($barang->gambar_disply)
                                                     <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=300px height=auto>
                                                     @endif
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Gambar Detail Product</label>
+                                                        <label for="exampleInputBorder">Gambar Detail </label>
                                                         <div class="field_wrapper">
-                                                            <input multiple="" type="file" name="url_gambar[]" id="url_gambar" value="" name="url_gambar[]" placeholder="Gambar Detail Product" required="">
+                                                            <input multiple="" type="file" name="url_gambar[]" id="url_gambar" value="" name="url_gambar[]" placeholder="Gambar Detail Barang" required="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -97,13 +97,13 @@
                     @csrf
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Gambar Detail Product {{ $barang->nama_barang }}</h3>
+                            <h3 class="card-title">Gambar Detail Produk {{ $barang->nama_barang }}</h3>
                         </div>
                         <div class="card-body">
                             <table id="product" class="table table-bordered table-hover">
                                 <thead>
                                     <tr style="text-align: center">
-                                        <th>Gambar Product</th>
+                                        <th>Gambar Produk</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>

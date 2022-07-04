@@ -133,14 +133,18 @@
                             <ul>
                                 <li>
                                     <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                                        <a href="{{ url('artikel/detail-artikel/' . $items->id) }}">
                                         <img src="{{ asset('images/artikel/' . $items->gambar_artikel) }}"
                                             class="img-fluid" alt="{{ $items->judul }}" />
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
                             <div class="wrap-text-blo1 p-t-35">
-                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    {{ $items->judul_artikel }}
+                                <h4 class="txt5  trans-0-4 m-b-13">
+                                    <a href="{{ url('artikel/detail-artikel/' . $items->id) }}">
+                                        {{ $items->judul_artikel }}
+                                    </a>
                                 </h4>
                                 <p class="m-b-20">
                                     {{ Str::limit($items->deskripsi_artikel, '80', ' . . . . . . . ') }}

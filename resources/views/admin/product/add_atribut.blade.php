@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Product</li>
+                            <li class="breadcrumb-item active">Produk</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -58,19 +58,19 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Kode Product</label>
+                                                        <label for="exampleInputBorder">Kode Produk</label>
                                                         <input type="text" value="{{ $barang['kode_barang'] }}"
                                                             type="text" class="form-control" id="exampleInputBorder"
                                                             disabled>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Nama Product </label>
+                                                        <label for="exampleInputBorder">Nama Produk </label>
                                                         <input type="text" value="{{ $barang['nama_barang'] }}"
                                                             type="text" class="form-control" id="exampleInputBorder"
                                                             disabled>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Gambar Product</label>
+                                                        <label for="exampleInputBorder">Gambar Produk</label>
                                                         @if ($barang->gambar_disply)
                                                             <img src="{{ asset('images/disply/' . $barang->gambar_disply) }}"
                                                                 alt="" width=300px height=auto>
@@ -78,7 +78,7 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="exampleInputBorder">Ukuran, Stock & SKU Product</label>
+                                                            <label for="exampleInputBorder">Ukuran, Stock & SKU Produk</label>
                                                             <div class="field_wrapper">
                                                                 <input type="text" name="ukuran[]" id="ukuran"
                                                                     value="" name="ukuran[]" style="width: 60px"
@@ -107,14 +107,14 @@
                                     @csrf
                                     <div class="card card-primary">
                                         <div class="card-header">
-                                            <h3 class="card-title">Ukuran, Stock & SKU Product {{ $barang->nama_barang }}</h3>
+                                            <h3 class="card-title">Ukuran, Stock & SKU Produk {{ $barang->nama_barang }}</h3>
                                         </div>
                                         <div class="card-body">
                                             <table id="product" class="table table-bordered table-responsive">
                                                 <thead>
                                                     <tr style="text-align: center">
-                                                        <th>Ukuran Product</th>
-                                                        <th>Stock Product</th>
+                                                        <th>Ukuran Produk</th>
+                                                        <th>Stock Produk</th>
                                                         <th>SKU</th>
                                                         <th>Status</th>
                                                         <th>Aksi</th>

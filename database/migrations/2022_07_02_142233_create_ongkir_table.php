@@ -17,6 +17,7 @@ class CreateOngkirTable extends Migration
             $table->id();
             $table->string('provinsi');
             $table->integer('harga');
+            $table->string('slug')->unique;
             $table->integer('status');
             $table->timestamps();
         });

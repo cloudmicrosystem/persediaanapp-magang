@@ -9,11 +9,10 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Product</li>
+                            <li class="breadcrumb-item active">Produk</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
 
@@ -31,10 +30,10 @@
                         @endif
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Product</h3>
+                                <h3 class="card-title">Produk</h3>
                                 <a class="btn btn-block btn-success" href="{{ url('/add-edit-product') }}"
                                     style="max-width: 150px; float:right; disply:inline-block">
-                                    <i>Tambah Product</i>
+                                    <i>Tambah Produk</i>
                                 </a>
                             </div>
                             <!-- /.card-header -->
@@ -43,15 +42,15 @@
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>No.</th>
-                                            <th>Kategori Product</th>
-                                            <th>Code Product</th>
-                                            <th>Nama Product</th>
-                                            <th>URL Product</th>
-                                            <th>Harga Product</th>
-                                            <th>Deskripsi Product</th>
-                                            <th>Status Product</th>
+                                            <th>Kategori </th>
+                                            <th>Kode </th>
+                                            <th>Nama </th>
+                                            <th>Slug </th>
+                                            <th>Harga </th>
+                                            <th>Deskripsi </th>
+                                            <th>Status </th>
                                             <th>Apakah Trending</th>
-                                            <th>Gambar Prouduct</th>
+                                            <th>Gambar </th>
                                             <th colspan="4">Aksi</th>
                                         </tr>
                                     </thead>
@@ -82,18 +81,18 @@
                                                 <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}"
                                                         alt="{{ $value->nama_barang }}" width=150px height=auto />
                                                 </td>
-                                                <td style="text-align: center"><a title="Edit Product"
+                                                <td style="text-align: center"><a title="Edit Produk"
                                                         href="{{ url('add-edit-product/' . $value->id) }}"><i
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
-                                                <td style="text-align: center"><a title="Tambah Size"
+                                                <td style="text-align: center"><a title="Tambah Ukuran"
                                                     href="{{ url('add-atribut/' . $value->id) }}"><i
                                                         class='fas fa-plus'></i></a></td>
                                                 <td style="text-align: center"><a title="Tambah Gambar"
                                                     href="{{ url('add-image/' . $value->id) }}"><i
                                                         class='fas fa-plus-circle'></i></a></td>
                                             </td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="product" title="Hapus Product"
+                                                <td style="text-align: center"> <a class="confirmDelete" name="product" title="Hapus Produk"
                                                         href="{{ url('delete-product/' . $value->id) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>

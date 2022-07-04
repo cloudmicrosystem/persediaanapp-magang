@@ -90,6 +90,14 @@
                             <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
                             morfeen.selfporject@gmail.com
                         </li>
+                        <li class="txt14 m-b-14" style="color: white">
+                            <i class="fa fa-map-marker fs-13 dis-inline-block size19" aria-hidden="true"></i>
+                            Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang, Jawa Timur <p class="pl-3 text-white">65147</p>
+                        </li>
+                        <li class="txt14 m-b-14" style="color: white">
+                            <i class="fa fa-map-marker fs-13 dis-inline-block size19" aria-hidden="true"></i>
+                            Jl. Kalibiru No.6, Slorok, Kec. Kromengan, Kabupaten Malang, <p class="pl-3 text-white"> Jawa Timur 65165 </p>
+                        </li>
                     </ul>
                 </div>
             </div>

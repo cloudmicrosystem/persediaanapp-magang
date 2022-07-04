@@ -32,7 +32,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Ongkir</h3>
-                                <a class="btn btn-block btn-success" href="{{ url ('/add-edit-category')}}"
+                                <a class="btn btn-block btn-success" href="{{ url ('/add-edit-ongkir')}}"
                                 style="max-width: 150px; float:right; disply:inline-block">
                                 <i>Tambah Ongkir</i>
                             </a>
@@ -45,6 +45,7 @@
                                             <th>No.</th>
                                             <th>Provinsi</th>
                                             <th>Harga</th>
+                                            <th>Slug</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
@@ -54,6 +55,7 @@
                                                 <td style="text-align: center">{{ $ongkir->firstItem() + $key }}</td>
                                                 <td>{{ $value->provinsi }}</td>
                                                 <td>{{ $value->harga }}</td>
+                                                <td>{{ $value->slug }}</td>
                                                 <td>
                                                     @if($value->status == 1)
                                                         <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>
@@ -61,8 +63,8 @@
                                                         <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
-                                                <td style="text-align: center"><a  href="{{ url('add-edit-category/'.$value->slug) }}" title="Edit Kategori"><i class='fas fa-edit'></i></a></td></td>
-                                                <td style="text-align: center"><a class="confirmDelete" name="kategori" href="{{ url('delete-category/'.$value->slug) }}" title="Hapus Kategori"><i class='fas fa-trash-alt'></i></a></td>
+                                                <td style="text-align: center"><a  href="{{ url('add-edit-ongkir/'.$value->slug) }}" title="Edit ongkir"><i class='fas fa-edit'></i></a></td></td>
+                                                <td style="text-align: center"><a class="confirmDelete" name="ongkir" href="{{ url('delete-ongkir/'.$value->slug) }}" title="Hapus ongkir"><i class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>
                                         @endforeach

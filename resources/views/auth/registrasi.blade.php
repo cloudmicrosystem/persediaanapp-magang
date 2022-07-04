@@ -38,8 +38,8 @@
                 <form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
 
                     @csrf
-                    <span class="login100-form-title p-b-43">
-                        Registrasi
+                    <span class="login100-form-title p-b-43" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                        REGRISTASI
                     </span>
                     {{-- NAMA --}}
                     <div class="wrap-input100 validate-input">
@@ -110,8 +110,20 @@
                         @enderror
                     </div>
 
+                    <div class="wrap-input100 validate-input" data-validate="password-confirm">
+                        <label >Confirm Password</label>
+                        <input id="password-confirm"  placeholder="Password" type="password" name="password_confirmation" class="input100 @error('password') is-invalid @enderror"
+                        required autocomplete="new-password">
+
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
                     {{-- BUTTON --}}
-                    <div class="container-login100-form-btn">
+                    <div class="container-login100-form-btn mt-3">
                         <button class="login100-form-btn" type="submit">
                             Regristasi
                         </button>
@@ -119,7 +131,7 @@
 
                     <div class="container-login100-form-btn">
                         <a href="{{ url('/login') }}" class="login100-form-btn"
-                            style="background: transparent; border:transparent; color:black">Back Login</a>
+                            style="background: transparent; border:transparent; color:black">Kembali ke Login</a>
                     </div>
                 </form>
                 <div class="login100-more" style="background-image: url('images/login.JPG');">
