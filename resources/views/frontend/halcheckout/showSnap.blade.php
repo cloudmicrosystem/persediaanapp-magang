@@ -104,28 +104,28 @@
             <div class="row">
                 <div class="col-md-12 my-3 p-t-100">
                     <p class="text-bold text-uppercase text-center text-white"
-                        style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Form Checkout </p>
+                        style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Checkout </p>
                     <form id="quickForm" action="{{ url('payment') }}" method="POST">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputEmail1">{{$order->total}}</label>
-                                {{-- <input style="background-color: black; color:white" type="text" name="total"
+                                <label style="color: white" for="exampleInputEmail1">Sub Total</label>
+                                <input style="background-color: black; color:white" type="text"
                                     class="form-control border border-white" id="exampleInputEmail1"
-                                    placeholder="Total"> {{ $this->data['order']->total }} --}}
+                                    placeholder="Total" value="<?= 'Rp ' . number_format($order->total, 0, ',', '.') ?>">
                             </div>
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputPassword1">{{$ongkir}}</label>
-                                {{-- <input style="background-color: black; color:white" type="text" name="ongkir"
+                                <label style="color: white" for="exampleInputPassword1">Ongkir {{$provinsi}}</label>
+                                <input style="background-color: black; color:white" type="text" value="<?= 'Rp ' . number_format($ongkir, 0, ',', '.') ?>"
                                     class="form-control border border-white" id="exampleInputPassword1"
-                                    placeholder="Ongkir"> {{ $this->data['order']->total }} --}}
+                                    placeholder="Ongkir">
                             </div>
                             <div class="form-group">
 
                             </div>
                         </div>
                     </form>
-                    <button class="btn btn-primary float-end" id="pay-button">
+                    <button class="btn btn-primary" id="pay-button">
                         <a href="payment" id="pay-button"></a>
                                 Checkout
                     </button>
@@ -189,19 +189,19 @@
           window.snap.pay("{{$token}}", {
             onSuccess: function(result){
               /* You may add your own implementation here */
-              alert("payment success!"); console.log(result);
+              alert("Pembayaran Sukses!"); console.log(result);
             },
             onPending: function(result){
               /* You may add your own implementation here */
-              alert("wating your payment!"); console.log(result);
+              alert("Menunggu Pembayaran Anda!"); console.log(result);
             },
             onError: function(result){
               /* You may add your own implementation here */
-              alert("payment failed!"); console.log(result);
+              alert("Pembayaran Gagal!"); console.log(result);
             },
             onClose: function(){
               /* You may add your own implementation here */
-              alert('you closed the popup without finishing the payment');
+              alert('Anda menutup popup tanpa menyelesaikan sebelum membayar!');
             }
           })
         });

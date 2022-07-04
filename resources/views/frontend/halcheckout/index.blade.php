@@ -159,7 +159,7 @@
                                             <th class="text-white ">Harga</th>
                                             <th class="text-white ">Ukuran</th>
                                             <th class="text-white ">Qty</th>
-                                            <th class="text-white ">Total</th>
+                                            <th class="text-white ">Sub Total</th>
                                         </tr>
                                     </thead>
 

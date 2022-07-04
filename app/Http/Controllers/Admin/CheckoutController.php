@@ -21,8 +21,6 @@ class CheckoutController extends Controller
     }
 
     public function checkout($request){
-        // $ongkir = Ongkir::find($request['shipment']->provinsi_id);
-        // $total = Cart::where('user_id','=',Auth::user()->id)->get();
         $order = Orders::create([
             'user_id'=>Auth::user()->id,
             'provinsi_id'=>$request['shipment']->provinsi,
@@ -34,40 +32,33 @@ class CheckoutController extends Controller
             'keterangan'=>$request['shipment']->keterangan,
             'total'=>$request['transaction']->sum('total'),
         ]);
-        // $this->requestPayment($order);
         return $order;
     }
 
     public function saveCheckout(Request $request)
     {
-        // $this->data['cart'] = Cart::where('user_id','=',Auth::user()->id)->get();
-        // $this->data['ongkir'] = Ongkir::get();
-        // $this->data['grand_total'] = Cart::sum('total');
-
-        // return view('frontend.halcheckout.showSnap', $this->data);
-
         if (Cart::where('user_id','=',Auth::user()->id)->count()>0) {
             $this->data['transaction'] = Cart::where('user_id','=',Auth::user()->id)->get();
+            $this->data['totalongkir'] = Cart::where('user_id','=',Auth::user()->id)->sum('qty');
             $this->data['shipment'] = $request;
             $transaction = Cart::where('user_id','=',Auth::user()->id)->get();
             $this->data['order'] = $this->checkout($this->data);
-            $this->data['ongkir'] = Ongkir::find($request->provinsi)->harga;
+            $this->data['ongkir'] = Ongkir::find($request->provinsi)->harga * $this->data['totalongkir'];
+            $this->data['provinsi'] = Ongkir::find($request->provinsi)->provinsi;
+
             foreach ($transaction as $key => $value) {
                 app('App\Http\Controllers\Admin\OrderDetailController')->store($value,$this->data['order']->id);
-                // Cart::where('id', $value->id)->delete();
-                // return $this->data;
+                Cart::where('id', $value->id)->delete();
                 $this->data['token'] = $this->reqPayment($this->data['order'],$this->data['ongkir']);
                 return view('frontend.halcheckout.showSnap', $this->data);
             }
-        // return view('frontend.halcheckout.showSnap', $this->data);
         }
         else {
-            // return redirect()->back();
         }
     }
 
     public function confirmPayment(Request $request){
-        
+
     }
 
     public function reqPayment(Orders $order,$ongkir){
@@ -94,8 +85,6 @@ class CheckoutController extends Controller
         );
 
         return $this->data['token'] = \Midtrans\Snap::getSnapToken($params);
-        // return $snapToken;
-        // return view('frontend.halcheckout.showSnap', $this->data);
-        // return view('frontend.halcheckout.snap', ['token' => $snapToken]);
+
     }
 }
