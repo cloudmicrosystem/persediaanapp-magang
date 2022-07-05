@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Faq;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 
 class FaqController extends Controller
@@ -17,39 +17,36 @@ class FaqController extends Controller
      */
     public function index()
     {
-        Session::put('page', 'ongkir');
+        Session::put('page', 'faq');
         $faq = Faq::paginate(5);
         return view('admin.faq.index')->with(compact('faq'));
     }
 
-    public function addEditOngkir(Request $request, $slug = null)
+    public function addEditfaq(Request $request, $slug = null)
     {
         if ($slug == "") {
-            $title = "Tambah Ongkir";
+            $title = "Tambah faq";
             $faq = new Faq();
-            $message = "Ongkir Berhasil Ditambahkan!";
+            $message = "faq Berhasil Ditambahkan!";
         } else {
-            $title = "Edit Ongkir";
+            $title = "Edit faq";
             $faq = Faq::where('slug', $slug)->first();
-            $message = "Ongkir Berhasil Diupdate!";
+            $message = "faq Berhasil Diupdate!";
         }
 
         if ($request->isMethod('post')) {
             $data = $request->all();
 
             $rules = [
-                'user_id' => 'required',
                 'pertanyaan' => 'required',
                 'jawaban' => 'required',
             ];
             $customMessage = [
-                'user_id.required' => 'Harap isi user_id terlebih dahulu',
                 'pertanyaan.required' => 'Harap isi Jenis pertanyaan  terlebih dahulu',
                 'jawaban.required' => 'Harap isi Jawaban  terlebih dahulu',
             ];
             $this->validate($request, $rules, $customMessage);
 
-            $faq->user_id = $data['user_id'];
             $faq->pertanyaan = $data['pertanyaan'];
             $faq->jawaban = $data['jawaban'];
 
@@ -66,10 +63,11 @@ class FaqController extends Controller
             return redirect('faq');
         }
 
-        return view('admin.faq.add_edit_ongkir')->with(compact('title', 'faq'));
+        return view('admin.faq.add_edit_faq')->with(compact('title', 'faq'));
     }
-    public function deleteongkir($slug)
-    {
+    public function deletefaq($slug){
+        Faq::where('slug',$slug)->delete();
+
         $message = " Berhasil Dihapus";
         session::flash('success_message', $message);
         return redirect()->back();

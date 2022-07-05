@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Faq</li>
+                            <li class="breadcrumb-item active">Refund</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -38,39 +38,31 @@
                                 <h3 class="card-title">{{ $title }}</h3>
                             </div>
                             <form id="quickForm"
-                                @if(empty($faq['slug'])) action="{{ url('add-edit-faq') }}"
-                                @else action="{{ url('add-edit-faq/' . $faq['slug']) }}"
+                                @if(empty($refund['slug'])) action="{{ url('add-edit-refund') }}"
+                                @else action="{{ url('add-edit-refund/' . $refund['slug']) }}"
                                 @endif
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Pertanyaan</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="pertanyaan" placeholder="Isi Pertanyaan"
-                                            @if (!empty($faq['pertanyaan'])) value="{{ $faq['pertanyaan'] }}"
-                                            @else value="{{ old('pertanyaan') }}"
-                                            @endif
-                                        >
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputBorder">Jawaban</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="jawaban" placeholder="isi Jawaban"
-                                            @if (!empty($faq['jawaban'])) value="{{ $faq['jawaban'] }}"
-                                            @else value="{{ old('jawaban') }}"
+                                        <label for="exampleInputBorder">Deskripsi</label>
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder="Isi deskripsi"
+                                            @if (!empty($refund['deskripsi'])) value="{{ $refund['deskripsi'] }}"
+                                            @else value="{{ old('deskripsi') }}"
                                             @endif
                                         >
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
-                                            @if (!empty($faq['status']) && $faq['status'] == "1")
+                                            @if (!empty($refund['status']) && $refund['status'] == "1")
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Status FAQ</label>
+                                        <label class="form-check-label" >Status Refund</label>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Submit</button>
-                                    <a href="{{ url ('faq')}}" class="btn btn-primary">Kembali</a>
+                                    <a href="{{ url ('refund')}}" class="btn btn-primary">Kembali</a>
                                 </div>
                             </form>
                         </div>

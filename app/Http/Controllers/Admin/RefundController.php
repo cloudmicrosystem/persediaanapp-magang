@@ -37,17 +37,16 @@ class Refundcontroller extends Controller
                 $data = $request->all();
 
                 $rules = [
-                    'user_id' => 'required',
                     'deskripsi' => 'required',
 
                 ];
                 $customMessage = [
-                    'user_id.required' => 'Harap isi user_id terlebih dahulu',
+
                     'deskripsi.required' => 'Harap Deskripsi  terlebih dahulu',
                 ];
                 $this->validate($request, $rules, $customMessage);
 
-                $refund->user_id = $data['user_id'];
+
                 $refund->deskripsi = $data['deskripsi'];
 
                 if (!empty($data['status'])) {
