@@ -48,7 +48,7 @@
                             </a>
                         </li>
 
-                        @if (Session::get('page') == 'barang' || Session::get('page') == 'kategori' || Session::get('page') == 'banner' || Session::get('page') == 'ongkir')
+                        @if (Session::get('page') == 'barang' || Session::get('page') == 'kategori')
                             <?php $active = 'active'; ?>
                         @else
                             <?php $active = ''; ?>
@@ -84,28 +84,6 @@
                                         <p>Kategori Produk</p>
                                     </a>
                                 </li>
-                                @if (Session::get('page') == 'banner')
-                                    <?php $active = 'active'; ?>
-                                @else
-                                    <?php $active = ''; ?>
-                                @endif
-                                <li class="nav-item">
-                                    <a href="{{ url('/banner') }}" class="nav-link {{ $active }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Banner</p>
-                                    </a>
-                                </li>
-                                @if (Session::get('page') == 'ongkir')
-                                    <?php $active = 'active'; ?>
-                                @else
-                                    <?php $active = ''; ?>
-                                @endif
-                                <li class="nav-item">
-                                    <a href="{{ url('/ongkir') }}" class="nav-link {{ $active }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Ongkir</p>
-                                    </a>
-                                </li>
                             </ul>
                         </li>
 
@@ -114,6 +92,7 @@
                         @else
                             <?php $active = ''; ?>
                         @endif
+
                         <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link {{ $active }}">
                                 <i class="nav-icon fas fa-book-open"></i>
@@ -146,7 +125,74 @@
                                     </a>
                                 </li>
                             </ul>
+
+
                         </li>
+
+                        @if (Session::get('page') == 'faq' || Session::get('page') == 'refund' || Session::get('page') == 'banner' || Session::get('page') == 'ongkir')
+                            <?php $active = 'active'; ?>
+                        @else
+                            <?php $active = ''; ?>
+                        @endif
+
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link {{ $active }}">
+                                <i class="nav-icon fas fa-book-open"></i>
+                                <p>
+                                    Setting Tambahan
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview ">
+                                @if (Session::get('page') == 'faq')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="/faq" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Faq</p>
+                                    </a>
+                                </li>
+                                @if (Session::get('page') == 'refund')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="/refund" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Refund</p>
+                                    </a>
+                                </li>
+                                @if (Session::get('page') == 'banner')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="{{ url('/banner') }}" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Banner</p>
+                                    </a>
+                                </li>
+                                @if (Session::get('page') == 'ongkir')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="{{ url('/ongkir') }}" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Ongkir</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </li>
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

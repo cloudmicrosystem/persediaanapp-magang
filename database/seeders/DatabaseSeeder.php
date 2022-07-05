@@ -11,6 +11,8 @@ use Database\Seeders\AtributSeeder;
 use Database\Seeders\ArticleSeeder;
 use Database\Seeders\CatarticleSeeder;
 use Database\Seeders\OngkirSeeder;
+use Database\Seeders\RefundSeeder;
+use Database\Seeders\FaqSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -32,6 +34,8 @@ class DatabaseSeeder extends Seeder
             ArticleSeeder::class,
             BannerSeeder::class,
             OngkirSeeder::class,
+            RefundSeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }

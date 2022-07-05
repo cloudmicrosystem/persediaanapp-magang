@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\GambarController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\Refundcontroller;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\AtributController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CatarticleController;
@@ -37,85 +39,96 @@ Route::group(
         Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout']);
         Route::get('/penilaian', [HalcustController::class, 'showRating']);
         Route::get('/wishlist', [HalcustController::class, 'showWhish']);
-    });
+    }
+);
 
-    Route::middleware(['cors'])->group(function () {
-        Route::get('/payment', [CheckoutController::class, 'reqPayment']);
-    });
+Route::middleware(['cors'])->group(function () {
+    Route::get('/payment', [CheckoutController::class, 'reqPayment']);
+});
 
-    // USER
-    Route::get('/', [HalcustController::class, 'index']);
-    Route::get('/artikel', [HalcustController::class, 'showArticle']);
-    Route::get('/store', [HalcustController::class, 'showStore']);
-    Route::get('/about', [HalcustController::class, 'showAbout']);
-    Route::get('/contact', [HalcustController::class, 'showContact']);
+// USER
+Route::get('/', [HalcustController::class, 'index']);
+Route::get('/artikel', [HalcustController::class, 'showArticle']);
+Route::get('/store', [HalcustController::class, 'showStore']);
+Route::get('/about', [HalcustController::class, 'showAbout']);
+Route::get('/contact', [HalcustController::class, 'showContact']);
 
-    Route::get('/refund', [HalcustController::class, 'showRefund']);
-    Route::get('/how-to-order', [HalcustController::class, 'showHow']);
-    Route::get('/faq', [HalcustController::class, 'showFaq']);
+Route::get('/refund', [HalcustController::class, 'showRefund']);
+Route::get('/how-to-order', [HalcustController::class, 'showHow']);
+Route::get('/faq', [HalcustController::class, 'showFaq']);
 
-    Route::get('product', [HalproductController::class, 'index']);
-    Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
-    Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detailByCategory']);
+Route::get('product', [HalproductController::class, 'index']);
+Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
+Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detailByCategory']);
 
-    Route::get('artikel/{slug}', [HalcustController::class, 'showByCatarticle']);
-    Route::get('artikel/detail-artikel/{id}', [HaldetailartikelController::class, 'detailByArtikel']);
+Route::get('artikel/{slug}', [HalcustController::class, 'showByCatarticle']);
+Route::get('artikel/detail-artikel/{id}', [HaldetailartikelController::class, 'detailByArtikel']);
 
-    // ADMIN
-    Route::resource('/user', UserController::class);
+// ADMIN
+Route::resource('/user', UserController::class);
 
-    // KATEGORI PRODUCT
-    Route::get('kategori', [CategoryController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-category/{slug?}', 'App\Http\Controllers\Admin\CategoryController@addEditCategory');
-    Route::get('/delete-category/{slug}', [CategoryController::class, 'deleteCategory']);
+// KATEGORI PRODUCT
+Route::get('kategori', [CategoryController::class, 'index']);
+Route::match(array('get', 'post'), '/add-edit-category/{slug?}', 'App\Http\Controllers\Admin\CategoryController@addEditCategory');
+Route::get('/delete-category/{slug}', [CategoryController::class, 'deleteCategory']);
 
-    // PRODUCT
-    Route::get('barang',[PersediaanController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-product/{id?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
-    Route::get('/delete-product/{id}', [PersediaanController::class, 'deleteProduct']);
+// PRODUCT
+Route::get('barang', [PersediaanController::class, 'index']);
+Route::match(array('get', 'post'), '/add-edit-product/{id?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
+Route::get('/delete-product/{id}', [PersediaanController::class, 'deleteProduct']);
 
-    // GAMBAR DETAIL PRODUCT
-    Route::match(array('get','post'),'/add-image/{slug}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
-    Route::get('/delete-image/{slug}', [PersediaanController::class, 'deleteImage']);
+// GAMBAR DETAIL PRODUCT
+Route::match(array('get', 'post'), '/add-image/{slug}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
+Route::get('/delete-image/{slug}', [PersediaanController::class, 'deleteImage']);
 
-    // ATRIBUT (SIZE, STOCK, SKU)
-    Route::post('/edit-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@editAtribut');
-    Route::match(array('get','post'),'/add-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@addAtribut');
-    Route::get('/delete-atribut/{id}', [PersediaanController::class, 'deleteAtribut']);
+// ATRIBUT (SIZE, STOCK, SKU)
+Route::post('/edit-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@editAtribut');
+Route::match(array('get', 'post'), '/add-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@addAtribut');
+Route::get('/delete-atribut/{id}', [PersediaanController::class, 'deleteAtribut']);
 
-    // ARTIKEL
-    Route::get('article',[ArticleController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-article/{slug?}', 'App\Http\Controllers\Admin\ArticleController@addEditArticle');
-    Route::get('/delete-article/{slug}', [ArticleController::class, 'deleteArticle']);
-
-
-    // KATEGORI ARTIKEL
-    Route::get('catarticle',[CatarticleController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-catarticle/{slug?}', 'App\Http\Controllers\Admin\CatarticleController@addEditCatarticle');
-    Route::get('/delete-catarticle/{slug}', [CatarticleController::class, 'deleteCatarticle']);
-
-    // BANNER
-    Route::get('banner',[BannerController::class, 'index']);
-    Route::post('update-banner-status', [BannerController::class, 'updateBannerStatus']);
-    Route::match(array('get','post'),'/add-edit-banner/{id?}', 'App\Http\Controllers\Admin\BannerController@addEditBanner');
-    Route::get('/delete-banner/{id}', [BannerController::class, 'deleteBanner']);
-
-    // ONGKIR
-    Route::get('ongkir',[OngkirController::class, 'index']);
-    Route::match(array('get','post'),'/add-edit-ongkir/{slug?}', 'App\Http\Controllers\Admin\OngkirController@addEditongkir');
-    Route::get('/delete-ongkir/{slug}', [OngkirController::class, 'deleteongkir']);
+// ARTIKEL
+Route::get('article', [ArticleController::class, 'index']);
+Route::match(array('get', 'post'), '/add-edit-article/{slug?}', 'App\Http\Controllers\Admin\ArticleController@addEditArticle');
+Route::get('/delete-article/{slug}', [ArticleController::class, 'deleteArticle']);
 
 
+// KATEGORI ARTIKEL
+Route::get('catarticle', [CatarticleController::class, 'index']);
+Route::match(array('get', 'post'), '/add-edit-catarticle/{slug?}', 'App\Http\Controllers\Admin\CatarticleController@addEditCatarticle');
+Route::get('/delete-catarticle/{slug}', [CatarticleController::class, 'deleteCatarticle']);
+
+// BANNER
+Route::get('banner', [BannerController::class, 'index']);
+Route::post('update-banner-status', [BannerController::class, 'updateBannerStatus']);
+Route::match(array('get', 'post'), '/add-edit-banner/{id?}', 'App\Http\Controllers\Admin\BannerController@addEditBanner');
+Route::get('/delete-banner/{id}', [BannerController::class, 'deleteBanner']);
+
+// ONGKIR
+Route::get('ongkir', [OngkirController::class, 'index']);
+Route::match(array('get', 'post'), '/add-edit-ongkir/{slug?}', 'App\Http\Controllers\Admin\OngkirController@addEditongkir');
+Route::get('/delete-ongkir/{slug}', [OngkirController::class, 'deleteongkir']);
+
+// REFUND
+Route::get('refund', [RefundController::class, 'index']);
+Route::match(array('get', 'post'), '/add-edit-refund/{slug?}', 'App\Http\Controllers\Admin\RefundController@addEditrefund');
+Route::get('/delete-ongkir/{slug}', [RefundController::class, 'deleterefund']);
+
+// FAQ
+Route::get('faq', [FaqController::class, 'index']);
+Route::match(array('get', 'post'), '/add-edit-faq/{slug?}', 'App\Http\Controllers\Admin\FaqController@addEditfaq');
+Route::get('/delete-ongkir/{slug}', [FaqController::class, 'deletefaq']);
 
 
 
-    Auth::routes();
 
-    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-    Route::get('/register', [LoginController::class, 'showRegistrationForm'])->name('register');
-    Route::post('/register', [RegisteredUserController::class, 'store']);
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/dashboard',[App\Http\Controllers\HomeController::class, 'index'])->name('admin.dashboard')->middleware('is_admin');
+
+Auth::routes();
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::get('/register', [LoginController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisteredUserController::class, 'store']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.dashboard')->middleware('is_admin');
 
 
     // Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
