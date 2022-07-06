@@ -58,7 +58,7 @@
     {{-- ISI HALAMAN CONTAC --}}
     <section class="content ">
         <p class="text-bold text-uppercase text-center text-white p-t-120"
-            style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
+            style="font-size: 20px ; font-family: 'Trebuchet MS'">Contact</p>
         <div class="row">
             <div class="card-body  d-flex align-items-center justify-content-center pl-5 p-t-50"
                 style="background: black">

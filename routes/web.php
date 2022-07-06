@@ -53,9 +53,9 @@ Route::get('/store', [HalcustController::class, 'showStore']);
 Route::get('/about', [HalcustController::class, 'showAbout']);
 Route::get('/contact', [HalcustController::class, 'showContact']);
 
-Route::get('/refund', [HalcustController::class, 'showRefund']);
+Route::get('/how-to-refund', [HalcustController::class, 'showRefund']);
 Route::get('/how-to-order', [HalcustController::class, 'showHow']);
-Route::get('/faq', [HalcustController::class, 'showFaq']);
+Route::get('/faq-', [HalcustController::class, 'showFaq']);
 
 Route::get('product', [HalproductController::class, 'index']);
 Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
