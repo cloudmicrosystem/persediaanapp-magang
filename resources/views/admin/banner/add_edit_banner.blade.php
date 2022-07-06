@@ -48,7 +48,7 @@
                                         <img src="{{ asset('images/banner/'. $banner->gambar_banner) }}" alt="" width=300px height=auto>
                                     @endif
                                     <div class="form-group">
-                                        <label for="exampleInputFile">Gambar Banner</label>
+                                        <label for="exampleInputFile">Gambar Banner <abbr style="color: red">*</abbr></label>
                                         <div class="input-group">
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input"  name="gambar_banner" id="gambar_banner"

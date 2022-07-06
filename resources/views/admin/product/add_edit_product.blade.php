@@ -44,7 +44,7 @@
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label>Pilih Kategori</label>
+                                        <label>Pilih Kategori <abbr style="color: red">*</abbr></label>
                                         <select name="id_kategori" id="id_kategori" class="custom-select">
                                             <option selected disabled><b>Pilih Kategori</b></option>
                                             @foreach ($category as $key)
@@ -60,7 +60,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Kode Produk</label>
+                                        <label for="exampleInputBorder">Kode Produk <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="kode_barang" placeholder="Kode Barang"
                                             @if (!empty($barang['kode_barang'])) value="{{ $barang['kode_barang'] }}"
                                             @else value="{{ old('kode_barang') }}"
@@ -68,7 +68,7 @@
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Nama Produk</label>
+                                        <label for="exampleInputBorder">Nama Produk <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="nama_barang" placeholder="Nama Barang"
                                             @if (!empty($barang['nama_barang'])) value="{{ $barang['nama_barang'] }}"
                                             @else value="{{ old('nama_barang') }}"
@@ -76,7 +76,7 @@
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Harga Produk</label>
+                                        <label for="exampleInputBorder">Harga Produk <abbr style="color: red">*</abbr></label>
                                         <input type="number" class="form-control" id="rupiah" name="harga" placeholder="Harga Barang"
                                             @if (!empty($barang['harga'])) value="{{ $barang['harga'] }}"
                                             @else value="{{ old('harga') }}"
@@ -84,7 +84,7 @@
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Deskripsi Produk</label>
+                                        <label for="exampleInputBorder">Deskripsi Produk <abbr style="color: red">*</abbr></label>
                                         <textarea type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder="Deskripsi Barang">
                                             @if (!empty($barang['deskripsi'])) {{ $barang['deskripsi'] }}
                                             @else {{ old('deskripsi') }}
@@ -111,7 +111,7 @@
                                         <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}"  width=300px height=auto>
                                     @endif
                                     <div class="form-group">
-                                        <label for="exampleInputFile">Gambar </label>
+                                        <label for="exampleInputFile">Gambar <abbr style="color: red">*</abbr></label>
                                         <div class="input-group">
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input"  name="gambar_disply" id="gambar_disply"

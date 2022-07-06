@@ -58,19 +58,19 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Kode Produk</label>
+                                                        <label for="exampleInputBorder">Kode Produk <abbr style="color: red">*</abbr></label>
                                                         <input type="text" value="{{ $barang['kode_barang'] }}"
                                                             type="text" class="form-control" id="exampleInputBorder"
                                                             disabled>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Nama Produk </label>
+                                                        <label for="exampleInputBorder">Nama Produk <abbr style="color: red">*</abbr></label>
                                                         <input type="text" value="{{ $barang['nama_barang'] }}"
                                                             type="text" class="form-control" id="exampleInputBorder"
                                                             disabled>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Gambar Produk</label>
+                                                        <label for="exampleInputBorder">Gambar Produk <abbr style="color: red">*</abbr></label>
                                                         @if ($barang->gambar_disply)
                                                             <img src="{{ asset('images/disply/' . $barang->gambar_disply) }}"
                                                                 alt="" width=300px height=auto>
@@ -78,7 +78,7 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="exampleInputBorder">Ukuran, Stock & SKU Produk</label>
+                                                            <label for="exampleInputBorder">Ukuran, Stock & SKU Produk <abbr style="color: red">*</abbr></label>
                                                             <div class="field_wrapper">
                                                                 <input type="text" name="ukuran[]" id="ukuran"
                                                                     value="" name="ukuran[]" style="width: 60px"

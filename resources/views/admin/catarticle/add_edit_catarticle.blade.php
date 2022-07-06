@@ -44,7 +44,7 @@
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Nama Kategori</label>
+                                        <label for="exampleInputBorder">Nama Kategori <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="nama_cat" placeholder="Nama Kategori"
                                             @if (!empty($catarticle['nama_cat'])) value="{{ $catarticle['nama_cat'] }}"
                                             @else value="{{ old('nama_cat') }}"
