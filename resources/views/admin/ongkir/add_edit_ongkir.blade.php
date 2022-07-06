@@ -53,8 +53,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Harga</label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="harga" placeholder="Harga"
-                                            @if (!empty($ongkir['harga'])) value="{{ $ongkir['harga'] }}"
+                                        <input type="number" class="form-control" id="exampleInputBorder" name="harga" placeholder="Harga"
+                                            @if (!empty($ongkir['harga'])) value="<?= "Rp " . number_format($ongkir['harga'],0,',','.')?>"
                                             @else value="{{ old('harga') }}"
                                             @endif
                                         >

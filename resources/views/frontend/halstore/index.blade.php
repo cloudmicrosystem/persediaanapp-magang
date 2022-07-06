@@ -46,7 +46,7 @@
 
     <section>
         <p class="text-bold text-uppercase text-center text-white p-t-120"
-            style="font-size: 20px ; font-family: 'Trebuchet MS'"></p>
+            style="font-size: 20px ; font-family: 'Trebuchet MS'">Store</p>
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
@@ -55,7 +55,7 @@
                             <ul class="list-inline social-media">
                                 <li class="list-inline item">
                                     <a
-                                        href="https://www.google.com/maps/place/Jl.+Suwari+Sel.,+Sukun,+Kec.+Sukun,+Kota+Malang,+Jawa+Timur+65147/@-7.9917017,112.6175466,20z/data=!4m5!3m4!1s0x2e7882a7c6f811d9:0x2ef67369582b980e!8m2!3d-7.9917704!4d112.6178376">
+                                        href="https://www.google.co.id/maps/place/Morfeen+Store/@-7.9916414,112.6157063,17z/data=!3m1!4b1!4m5!3m4!1s0x2e7882a7c716fad5:0x1552d59781a64992!8m2!3d-7.9916803!4d112.6178358">
                                         <img src="images/slide-1.jpeg" class="card-img-top" alt="...">
                                     </a>
                                 </li>

@@ -46,6 +46,7 @@
                                             <th>Provinsi</th>
                                             <th>Harga</th>
                                             <th>Slug</th>
+                                            <th>Status</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
@@ -54,7 +55,7 @@
                                             <tr>
                                                 <td style="text-align: center">{{ $ongkir->firstItem() + $key }}</td>
                                                 <td>{{ $value->provinsi }}</td>
-                                                <td>{{ $value->harga }}</td>
+                                                <td><?= "Rp " . number_format($value->harga,0,',','.')?></td>
                                                 <td>{{ $value->slug }}</td>
                                                 <td>
                                                     @if($value->status == 1)

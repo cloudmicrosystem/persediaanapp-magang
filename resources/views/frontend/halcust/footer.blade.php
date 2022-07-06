@@ -50,13 +50,13 @@
                         </h4>
                         <ul>
                             <li class="txt14">
-                                <a style="color: gray" href="/refund"> Refund</a>
+                                <a style="color: gray" href="/how-to-refund"> Refund</a>
                             </li>
                             <li class="txt14">
                                 <a style="color: gray" href="/how-to-order"> How To Order</a>
                             </li>
                             <li class="txt14">
-                                <a style="color: gray" href="/faq"> FAQ</a>
+                                <a style="color: gray" href="/faq-"> FAQ</a>
                             </li>
                         </ul>
                 </div>
@@ -82,7 +82,7 @@
                                     class="fs-15 c-white"><i aria-hidden="true"><img class="pr-5" style="width: 4%" src="images/icons/shp.png" alt=""></i></a>
                             </div>
                         </li><br>
-                        <img src="{{ asset('images/icons/logo2.png') }}" style="width: 150px">
+                        <img src="{{ asset('images/icons/logo.png') }}" style="width: 300px">
                     </ul>
                 </div>
             </div>
