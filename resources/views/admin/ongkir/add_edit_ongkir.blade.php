@@ -44,7 +44,7 @@
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Nama Provinsi</label>
+                                        <label for="exampleInputBorder">Nama Provinsi <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="provinsi" placeholder="Nama Provinsi"
                                             @if (!empty($ongkir['provinsi'])) value="{{ $ongkir['provinsi'] }}"
                                             @else value="{{ old('provinsi') }}"
@@ -52,7 +52,7 @@
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Harga</label>
+                                        <label for="exampleInputBorder">Harga <abbr style="color: red">*</abbr> </label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="harga" placeholder="Harga"
                                             @if (!empty($ongkir['harga'])) value="{{ $ongkir['harga'] }}"
                                             @else value="{{ old('harga') }}"

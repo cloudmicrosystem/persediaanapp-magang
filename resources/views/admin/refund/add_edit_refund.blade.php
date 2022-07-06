@@ -44,7 +44,7 @@
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Deskripsi</label>
+                                        <label for="exampleInputBorder">Deskripsi <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder="Isi deskripsi"
                                             @if (!empty($refund['deskripsi'])) value="{{ $refund['deskripsi'] }}"
                                             @else value="{{ old('deskripsi') }}"

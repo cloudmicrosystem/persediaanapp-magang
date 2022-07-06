@@ -44,7 +44,7 @@
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label>Pilih Kategori</label>
+                                        <label>Pilih Kategori <abbr style="color: red">*</abbr></label>
                                         <select name="id_catarticle" id="id_catarticle" class="custom-select">
                                             <option selected disabled><b>Pilih Kategori</b></option>
                                             @foreach ($catarticle as $key)
@@ -60,7 +60,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Judul Artikel</label>
+                                        <label for="exampleInputBorder">Judul Artikel <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="judul_artikel" placeholder="Judul Artikel"
                                             @if (!empty($article['judul_artikel'])) value="{{ $article['judul_artikel'] }}"
                                             @else value="{{ old('judul_artikel') }}"
@@ -68,7 +68,7 @@
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Deskripsi Artikel</label>
+                                        <label for="exampleInputBorder">Deskripsi Artikel <abbr style="color: red">*</abbr></label>
                                         <textarea type="text" class="form-control" id="exampleInputBorder" name="deskripsi_artikel" placeholder="Deskripsi Artikel">
                                             @if (!empty($article['deskripsi_artikel'])) {{ $article['deskripsi_artikel'] }}
                                             @else {{ old('deskripsi_artikel') }}
@@ -79,7 +79,7 @@
                                         <img src="{{ asset('images/artikel/'. $article->gambar_artikel) }}" alt="" width=150px height=auto>
                                     @endif
                                     <div class="form-group">
-                                        <label for="exampleInputFile">Gambar Artikel</label>
+                                        <label for="exampleInputFile">Gambar Artikel <abbr style="color: red">*</abbr></label>
                                         <div class="input-group">
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input"  name="gambar_artikel" id="gambar_artikel"
@@ -87,7 +87,7 @@
                                                     @else value="{{ old('gambar_artikel') }}"
                                                     @endif
                                                 >
-                                                <label for="exampleInputFile" class="custom-file-label">Pilih Gambar</label>
+                                                <label for="exampleInputFile" class="custom-file-label">Pilih Gambar </label>
                                             </div>
                                             <div class="input-group-append">
                                                 <span class="input-group-text">Upload</span>
@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Sumber Artikel</label>
+                                        <label for="exampleInputBorder">Sumber Artikel <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="sumber_artikel" placeholder="Sumber Artikel"
                                             @if (!empty($article['sumber_artikel'])) value="{{ $article['sumber_artikel'] }}"
                                             @else value="{{ old('sumber_artikel') }}"

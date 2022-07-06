@@ -44,7 +44,7 @@
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Pertanyaan</label>
+                                        <label for="exampleInputBorder"> Pertanyaan  <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="pertanyaan" placeholder="Isi Pertanyaan"
                                             @if (!empty($faq['pertanyaan'])) value="{{ $faq['pertanyaan'] }}"
                                             @else value="{{ old('pertanyaan') }}"
@@ -52,7 +52,7 @@
                                         >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputBorder">Jawaban</label>
+                                        <label for="exampleInputBorder">Jawaban <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="jawaban" placeholder="isi Jawaban"
                                             @if (!empty($faq['jawaban'])) value="{{ $faq['jawaban'] }}"
                                             @else value="{{ old('jawaban') }}"

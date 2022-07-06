@@ -49,7 +49,7 @@ class FaqController extends Controller
 
             $faq->pertanyaan = $data['pertanyaan'];
             $faq->jawaban = $data['jawaban'];
-
+            $faq->slug = Str::slug($request['pertanyaan']);
 
             if (!empty($data['status'])) {
                 $faq->status = $data['status'];

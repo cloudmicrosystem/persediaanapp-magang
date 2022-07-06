@@ -116,7 +116,7 @@ Route::get('/delete-refund/{slug}', [RefundController::class, 'deleterefund']);
 // FAQ
 Route::get('faq', [FaqController::class, 'index']);
 Route::match(array('get', 'post'), '/add-edit-faq/{slug?}', 'App\Http\Controllers\Admin\FaqController@addEditfaq');
-Route::get('/delete-faq/{slug}', [FaqController::class, 'deletefaq']);
+Route::get('/delete-faq/{id}', [FaqController::class, 'deletefaq']);
 
 
 

@@ -56,26 +56,26 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Code Produk</label>
+                                                    <label for="exampleInputBorder">Code Produk <abbr style="color: red">*</abbr></label>
                                                     <input type="text" value="{{ $barang['kode_barang'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Nama Produk </label>
+                                                    <label for="exampleInputBorder">Nama Produk <abbr style="color: red">*</abbr></label>
                                                     <input type="text" value="{{ $barang['nama_barang'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Harga Produk</label>
+                                                    <label for="exampleInputBorder">Harga Produk <abbr style="color: red">*</abbr></label>
                                                     <input type="text" value="{{ $barang['harga'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Gambar Produk</label>
+                                                    <label for="exampleInputBorder">Gambar Produk <abbr style="color: red">*</abbr></label>
                                                     @if ($barang->gambar_disply)
                                                     <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=300px height=auto>
                                                     @endif
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="exampleInputBorder">Gambar Detail </label>
+                                                        <label for="exampleInputBorder">Gambar Detail <abbr style="color: red">*</abbr></label>
                                                         <div class="field_wrapper">
                                                             <input multiple="" type="file" name="url_gambar[]" id="url_gambar" value="" name="url_gambar[]" placeholder="Gambar Detail Barang" required="">
                                                         </div>
