@@ -38,14 +38,14 @@
                                 <h3 class="card-title">{{ $title }}</h3>
                             </div>
                             <form id="quickForm"
-                                @if(empty($faq['slug'])) action="{{ url('add-edit-faq') }}"
-                                @else action="{{ url('add-edit-faq/' . $faq['slug']) }}"
+                                @if(empty($faq['id'])) action="{{ url('add-edit-faq') }}"
+                                @else action="{{ url('add-edit-faq/' . $faq['id']) }}"
                                 @endif
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputBorder"> Pertanyaan  <abbr style="color: red">*</abbr></label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="pertanyaan" placeholder="Isi Pertanyaan"
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="pertanyaan" placeholder="Pertanyaan"
                                             @if (!empty($faq['pertanyaan'])) value="{{ $faq['pertanyaan'] }}"
                                             @else value="{{ old('pertanyaan') }}"
                                             @endif
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Jawaban <abbr style="color: red">*</abbr></label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="jawaban" placeholder="isi Jawaban"
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="jawaban" placeholder=" Jawaban"
                                             @if (!empty($faq['jawaban'])) value="{{ $faq['jawaban'] }}"
                                             @else value="{{ old('jawaban') }}"
                                             @endif

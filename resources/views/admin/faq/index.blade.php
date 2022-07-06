@@ -62,8 +62,8 @@
                                                         <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
-                                                <td style="text-align: center"><a  href="{{ url('add-edit-faq/'.$value->slug) }}" title="Edit faq"><i class='fas fa-edit'></i></a></td></td>
-                                                <td style="text-align: center"><a class="confirmDelete" name="faq" href="{{ url('delete-faq/'.$value->slug) }}" title="Hapus faq"><i class='fas fa-trash-alt'></i></a></td>
+                                                <td style="text-align: center"><a  href="{{ url('add-edit-faq/'.$value->id) }}" title="Edit faq"><i class='fas fa-edit'></i></a></td></td>
+                                                <td style="text-align: center"><a class="confirmDelete" name="faq" href="{{ url('delete-faq/'.$value->id) }}" title="Hapus faq"><i class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>
                                         @endforeach

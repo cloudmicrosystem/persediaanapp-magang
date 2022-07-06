@@ -38,14 +38,14 @@
                                 <h3 class="card-title">{{ $title }}</h3>
                             </div>
                             <form id="quickForm"
-                                @if(empty($refund['slug'])) action="{{ url('add-edit-refund') }}"
-                                @else action="{{ url('add-edit-refund/' . $refund['slug']) }}"
+                                @if(empty($refund['id'])) action="{{ url('add-edit-refund') }}"
+                                @else action="{{ url('add-edit-refund/' . $refund['id']) }}"
                                 @endif
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Deskripsi <abbr style="color: red">*</abbr></label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder="Isi deskripsi"
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder=" Deskripsi"
                                             @if (!empty($refund['deskripsi'])) value="{{ $refund['deskripsi'] }}"
                                             @else value="{{ old('deskripsi') }}"
                                             @endif

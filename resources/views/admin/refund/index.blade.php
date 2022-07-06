@@ -60,8 +60,8 @@
                                                         <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Non Aktif</div>
                                                     @endif
                                                 </td>
-                                                <td style="text-align: center"><a  href="{{ url('add-edit-refund/'.$value->slug) }}" title="Edit refund"><i class='fas fa-edit'></i></a></td></td>
-                                                <td style="text-align: center"><a class="confirmDelete" name="refund" href="{{ url('delete-refund/'.$value->slug) }}" title="Hapus refund"><i class='fas fa-trash-alt'></i></a></td>
+                                                <td style="text-align: center"><a  href="{{ url('add-edit-refund/'.$value->id) }}" title="Edit refund"><i class='fas fa-edit'></i></a></td></td>
+                                                <td style="text-align: center"><a class="confirmDelete" name="refund" href="{{ url('delete-refund/'.$value->id) }}" title="Hapus refund"><i class='fas fa-trash-alt'></i></a></td>
                                                 </td>
                                             </tr>
                                         @endforeach

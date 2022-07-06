@@ -110,12 +110,12 @@ Route::get('/delete-ongkir/{slug}', [OngkirController::class, 'deleteongkir']);
 
 // REFUND
 Route::get('refund', [RefundController::class, 'index']);
-Route::match(array('get', 'post'), '/add-edit-refund/{slug?}', 'App\Http\Controllers\Admin\RefundController@addEditrefund');
-Route::get('/delete-refund/{slug}', [RefundController::class, 'deleterefund']);
+Route::match(array('get', 'post'), '/add-edit-refund/{id?}', 'App\Http\Controllers\Admin\RefundController@addEditrefund');
+Route::get('/delete-refund/{id}', [RefundController::class, 'deleterefund']);
 
 // FAQ
 Route::get('faq', [FaqController::class, 'index']);
-Route::match(array('get', 'post'), '/add-edit-faq/{slug?}', 'App\Http\Controllers\Admin\FaqController@addEditfaq');
+Route::match(array('get', 'post'), '/add-edit-faq/{id?}', 'App\Http\Controllers\Admin\FaqController@addEditfaq');
 Route::get('/delete-faq/{id}', [FaqController::class, 'deletefaq']);
 
 

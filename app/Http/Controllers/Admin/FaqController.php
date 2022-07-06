@@ -22,15 +22,15 @@ class FaqController extends Controller
         return view('admin.faq.index')->with(compact('faq'));
     }
 
-    public function addEditfaq(Request $request, $slug = null)
+    public function addEditfaq(Request $request, $id = null)
     {
-        if ($slug == "") {
+        if ($id == "") {
             $title = "Tambah faq";
             $faq = new Faq();
             $message = "faq Berhasil Ditambahkan!";
         } else {
             $title = "Edit faq";
-            $faq = Faq::where('slug', $slug)->first();
+            $faq = Faq::where('id', $id)->first();
             $message = "faq Berhasil Diupdate!";
         }
 
@@ -49,7 +49,6 @@ class FaqController extends Controller
 
             $faq->pertanyaan = $data['pertanyaan'];
             $faq->jawaban = $data['jawaban'];
-            $faq->slug = Str::slug($request['pertanyaan']);
 
             if (!empty($data['status'])) {
                 $faq->status = $data['status'];
@@ -65,8 +64,8 @@ class FaqController extends Controller
 
         return view('admin.faq.add_edit_faq')->with(compact('title', 'faq'));
     }
-    public function deletefaq($slug){
-        Faq::where('slug',$slug)->delete();
+    public function deletefaq($id){
+        Faq::where('id',$id)->delete();
 
         $message = " Berhasil Dihapus";
         session::flash('success_message', $message);
