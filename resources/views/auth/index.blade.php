@@ -38,12 +38,12 @@
                         LOGIN
                     </span>
                     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <label for="email" > Email</label>
+                        <label for="email" > Email </label>
                         <input class="input100" type="email" name="email" placeholder="Email" required>
 
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <label for="password">Password</label>
+                        <label for="password">Password </label>
                         <input class="input100" type="password" name="password" placeholder="Password" required>
 
                     </div>
