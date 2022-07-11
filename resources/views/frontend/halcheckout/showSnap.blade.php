@@ -109,13 +109,13 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputEmail1">Sub Total</label>
+                                <label style="color: white" for="exampleInputEmail1">Total Transaksi</label>
                                 <input style="background-color: black; color:white" type="text"
                                     class="form-control border border-white" id="exampleInputEmail1"
                                     placeholder="Total" value="<?= 'Rp ' . number_format($order->total, 0, ',', '.') ?>">
                             </div>
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputPassword1">Ongkir {{$provinsi}}</label>
+                                <label style="color: white" for="exampleInputPassword1">Total Ongkir {{$provinsi}}</label>
                                 <input style="background-color: black; color:white" type="text" value="<?= 'Rp ' . number_format($ongkir, 0, ',', '.') ?>"
                                     class="form-control border border-white" id="exampleInputPassword1"
                                     placeholder="Ongkir">
@@ -126,8 +126,7 @@
                         </div>
                     </form>
                     <button class="btn btn-primary" id="pay-button">
-                        <a href="payment" id="pay-button"></a>
-                                Checkout
+                        <a href="/payment" id="pay-button" style="color: white">Checkout</a>
                     </button>
                 </div>
             </div>

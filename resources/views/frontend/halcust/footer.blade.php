@@ -6,12 +6,12 @@
                 <div class="col-12 col-sm-4  p-t-50">
                     <!-- - -->
                     <h4 class="txt13 m-b-20">
-                        Contact Us
+                        Kontak
                     </h4>
                     <ul class="m-b-70">
                         <li class="txt14 m-b-14">
                             <i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
-                            Jl. Suwari Sel., Sukun, Kec. Sukun, Kota Malang, Jawa Timur 65147
+                            Jl. Suwari Selatan No. 07, Sukun, Kec. Sukun, Kota Malang, Jawa Timur 65147
                         </li>
 
                         <li class="txt14 m-b-14">
@@ -33,30 +33,30 @@
 
                 <div class="col-12 col-sm-4 p-t-50">
                     <h4 class="txt13 m-b-20">
-                        Opening Times
+                       JAM BUKA
                     </h4>
                     <ul>
                         <li class="txt14">
-                            12:00 AM – 9:00 PM
+                            12.00 - 21.30 WIB
                         </li>
 
                         <li class="txt14">
-                            Every Day
+                            Setiap Hari
                         </li> <br>
 
                     </ul>
                         <h4 class="txt13 m-b-20">
-                            Information
+                            INFORMASI
                         </h4>
                         <ul>
+                            <li class="txt14">
+                                <a style="color: gray" href="/FAQ"> FAQ</a>
+                            </li>
                             <li class="txt14">
                                 <a style="color: gray" href="/how-to-refund"> Refund</a>
                             </li>
                             <li class="txt14">
                                 <a style="color: gray" href="/how-to-order"> How To Order</a>
-                            </li>
-                            <li class="txt14">
-                                <a style="color: gray" href="/faq-"> FAQ</a>
                             </li>
                         </ul>
                 </div>
@@ -65,7 +65,7 @@
                     <ul>
                         <br><br>
                         <h4 class="txt13 m-b-15">
-                            Find Us On
+                            MEDIA SOSIAL
                         </h4>
                         <li class="list-inline item">
                             <div class="">

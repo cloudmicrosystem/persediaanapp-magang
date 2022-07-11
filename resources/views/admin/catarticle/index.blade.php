@@ -43,9 +43,9 @@
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>No.</th>
-                                            <th>Nama Kategori</th>
-                                            <th>Slug Kategori</th>
-                                            <th>Status Kategori</th>
+                                            <th>Nama </th>
+                                            <th>Slug </th>
+                                            <th>Status </th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>

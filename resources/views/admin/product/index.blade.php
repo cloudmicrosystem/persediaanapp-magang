@@ -42,6 +42,7 @@
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>No.</th>
+                                            <th>Gambar </th>
                                             <th>Kategori </th>
                                             <th>Kode </th>
                                             <th>Nama </th>
@@ -49,8 +50,7 @@
                                             <th>Harga </th>
                                             <th>Deskripsi </th>
                                             <th>Status </th>
-                                            <th>Apakah Trending</th>
-                                            <th>Gambar </th>
+                                            <th>Trending</th>
                                             <th colspan="4">Aksi</th>
                                         </tr>
                                     </thead>
@@ -58,12 +58,15 @@
                                         @foreach ($barang as $key => $value)
                                             <tr>
                                                 <td style="text-align: center">{{ $barang->firstItem() + $key }}</td>
+                                                <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}"
+                                                    alt="{{ $value->nama_barang }}" width=150px height=auto />
+                                                </td>
                                                 <td>{{ $value->category->nama_kategori }}</td>
                                                 <td>{{ $value->kode_barang }}</td>
                                                 <td>{{ $value->nama_barang }}</td>
                                                 <td>{{ $value->slug }}</td>
                                                 <td><?= "Rp " . number_format($value->harga,0,',','.')?></td>
-                                                <td>{{ $value->deskripsi }}</td>
+                                                <td>{{ Str::limit($value->deskripsi, '50', ' . . . . . . . ') }}</td>
                                                 <td>
                                                     @if($value->status == 1)
                                                         <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>
@@ -78,21 +81,18 @@
                                                         <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Tidak</div>
                                                     @endif
                                                 </td>
-                                                <td><img src="{{ asset('images/disply/' . $value->gambar_disply) }}"
-                                                        alt="{{ $value->nama_barang }}" width=150px height=auto />
-                                                </td>
                                                 <td style="text-align: center"><a title="Edit Produk"
-                                                        href="{{ url('add-edit-product/' . $value->id) }}"><i
+                                                        href="{{ url('add-edit-product/' . $value->slug) }}"><i
                                                             class='fas fa-edit'></i></a></td>
                                                 </td>
-                                                <td style="text-align: center"><a title="Tambah Ukuran"
+                                                <td style="text-align: center"><a title="Tambah Stok"
                                                     href="{{ url('add-atribut/' . $value->id) }}"><i
                                                         class='fas fa-plus'></i></a></td>
                                                 <td style="text-align: center"><a title="Tambah Gambar"
                                                     href="{{ url('add-image/' . $value->id) }}"><i
                                                         class='fas fa-plus-circle'></i></a></td>
                                             </td>
-                                                <td style="text-align: center"> <a class="confirmDelete" name="product" title="Hapus Produk"
+                                                <td style="text-align: center"> <a class="confirmDelete" name="produk" title="Hapus Produk"
                                                         href="{{ url('delete-product/' . $value->id) }}"><i
                                                             class='fas fa-trash-alt'></i></a></td>
                                                 </td>

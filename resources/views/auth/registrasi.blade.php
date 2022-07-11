@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Registrasi </title>
+    <title>Registrasi | Morfeen</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -34,18 +34,18 @@
 
     <div class="limiter">
         <div class="container-login100">
-            <div class="wrap-login100">
+            <div class="wrap-login100 ">
                 <form class="login100-form validate-form" method="POST" action="{{ route('register') }}">
 
                     @csrf
                     <span class="login100-form-title p-b-43" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
-                        REGRISTASI
+                        REGISTRASI AKUN
                     </span>
                     {{-- NAMA --}}
                     <div class="wrap-input100 validate-input">
-                        <label > Nama <abbr style="color: red">*</abbr></label>
-                        <input id="nama" placeholder="Nama" type="text"
-                            class="input100 @error('nama') is-invalid @enderror" name="nama"
+                        <label for="exampleInputBorder">Nama Lengkap<abbr style="color: red">*</abbr></label>
+                        <input id="nama" placeholder="Nama Lengkap" type="text"
+                            class="input100   @error('nama') is-invalid @enderror" name="nama"
                             value="{{ old('nama') }}" required autocomplete="nama" autofocus>
 
                         @error('nama')
@@ -57,7 +57,7 @@
 
                     {{-- ALAMAT --}}
                     <div class="wrap-input100 validate-input">
-                        <label > Alamat <abbr style="color: red">*</abbr></label>
+                        <label > Alamat<abbr style="color: red">*</abbr></label>
                         <input id="alamat" placeholder="Alamat" type="text"
                             class="input100 @error('alamat') is-invalid @enderror" name="alamat"
                             value="{{ old('alamat') }}" required autocomplete="alamat" autofocus>
@@ -72,7 +72,7 @@
                     {{-- NOHP --}}
                     <div class="wrap-input100 validate-input">
                         <label > No Hp <abbr style="color: red">*</abbr></label>
-                        <input id="no_hp" placeholder="Nohp" type="number"
+                        <input id="no_hp" placeholder="No Hp" type="number"
                             class="input100 @error('no_hp') is-invalid @enderror" name="no_hp"
                             value="{{ old('no_hp') }}" required autocomplete="no_hp" autofocus>
 
@@ -98,7 +98,7 @@
                     </div>
 
                     {{-- password --}}
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                    <div class="wrap-input100 validate-input"  data-validate="Password is required">
                         <label > Password <abbr style="color: red">*</abbr></label>
                         <input id="password" placeholder="Password" type="password" class="input100 @error('password') is-invalid @enderror"
                             name="password" required autocomplete="new-password">
@@ -111,8 +111,8 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="password-confirm">
-                        <label >Confirm Password <abbr style="color: red">*</abbr></label>
-                        <input id="password-confirm"  placeholder="Password" type="password" name="password_confirmation" class="input100 @error('password') is-invalid @enderror"
+                        <label >Konfirmasi Password <abbr style="color: red">*</abbr></label>
+                        <input id="password-confirm"  placeholder="Konfirmasi Password" type="password" name="password_confirmation" class="input100 @error('password') is-invalid @enderror"
                         required autocomplete="new-password">
 
                         @error('password')
@@ -134,7 +134,7 @@
                             style="background: transparent; border:transparent; color:black">Kembali ke Login</a>
                     </div>
                 </form>
-                <div class="login100-more" style="background-image: url('images/login.JPG');">
+                <div class="login100-more" style="background-image: url('images/bg2.jpg');">
                 </div>
             </div>
         </div>

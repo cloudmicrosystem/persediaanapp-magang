@@ -30,6 +30,7 @@ use App\Http\Controllers\Users\Haldetailpro;
 Route::group(
     ['middleware' => ['auth']],
     function () {
+        Route::get('/show-profil', [HalcustController::class, 'showUser']);
         Route::get('product/detail-product/{id}', [HalproductController::class, 'detailByProduct']);
         Route::post('/add-to-cart', [CartController::class, 'store']);
         Route::post('/update-to-cart', [CartController::class, 'updateCartQty']);
@@ -52,21 +53,16 @@ Route::get('/artikel', [HalcustController::class, 'showArticle']);
 Route::get('/store', [HalcustController::class, 'showStore']);
 Route::get('/about', [HalcustController::class, 'showAbout']);
 Route::get('/contact', [HalcustController::class, 'showContact']);
-
 Route::get('/how-to-refund', [HalcustController::class, 'showRefund']);
 Route::get('/how-to-order', [HalcustController::class, 'showHow']);
-Route::get('/faq-', [HalcustController::class, 'showFaq']);
-
+Route::get('/FAQ', [HalcustController::class, 'showFaq']);
 Route::get('product', [HalproductController::class, 'index']);
 Route::get('product/{slug}', [HalproductController::class, 'categoryShow']);
 Route::get('product/{cat_slug}/{pro_slug}', [HalproductController::class, 'detailByCategory']);
-
 Route::get('artikel/{slug}', [HalcustController::class, 'showByCatarticle']);
 Route::get('artikel/detail-artikel/{id}', [HaldetailartikelController::class, 'detailByArtikel']);
 
 // ADMIN
-Route::resource('/user', UserController::class);
-
 // KATEGORI PRODUCT
 Route::get('kategori', [CategoryController::class, 'index']);
 Route::match(array('get', 'post'), '/add-edit-category/{slug?}', 'App\Http\Controllers\Admin\CategoryController@addEditCategory');
@@ -74,12 +70,12 @@ Route::get('/delete-category/{slug}', [CategoryController::class, 'deleteCategor
 
 // PRODUCT
 Route::get('barang', [PersediaanController::class, 'index']);
-Route::match(array('get', 'post'), '/add-edit-product/{id?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
-Route::get('/delete-product/{id}', [PersediaanController::class, 'deleteProduct']);
+Route::match(array('get', 'post'), '/add-edit-product/{slug?}', 'App\Http\Controllers\Admin\PersediaanController@addEditProduct');
+Route::get('/delete-product/{slug}', [PersediaanController::class, 'deleteProduct']);
 
 // GAMBAR DETAIL PRODUCT
-Route::match(array('get', 'post'), '/add-image/{slug}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
-Route::get('/delete-image/{slug}', [PersediaanController::class, 'deleteImage']);
+Route::match(array('get', 'post'), '/add-image/{id}', 'App\Http\Controllers\Admin\PersediaanController@addImage');
+Route::get('/delete-image/{id}', [PersediaanController::class, 'deleteImage']);
 
 // ATRIBUT (SIZE, STOCK, SKU)
 Route::post('/edit-atribut/{id}', 'App\Http\Controllers\Admin\PersediaanController@editAtribut');
@@ -118,9 +114,12 @@ Route::get('faq', [FaqController::class, 'index']);
 Route::match(array('get', 'post'), '/add-edit-faq/{id?}', 'App\Http\Controllers\Admin\FaqController@addEditfaq');
 Route::get('/delete-faq/{id}', [FaqController::class, 'deletefaq']);
 
+// USER
+Route::get('user', [UserController::class, 'index']);
+Route::get('admin', [UserController::class, 'showAdmin']);
 
-
-
+// TRANSAKSI
+Route::get('penjualan', [CheckoutController::class, 'showTrans']);
 
 Auth::routes();
 
@@ -131,12 +130,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.dashboard')->middleware('is_admin');
 
 
-    // Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-// Route::group(['middleware' => ['auth','admin']],function(){
-//     Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-// });
-
-// require __DIR__ . '/auth.php';
-//     // ADMIN
-//     Route::middleware(['auth'])->group(function () {
-//     });

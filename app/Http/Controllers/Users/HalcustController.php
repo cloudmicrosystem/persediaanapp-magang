@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers\Users;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\Barang;
-use App\Models\Article;
+use App\Models\Faq;
+use App\Models\User;
 use App\Models\Banner;
+use App\Models\Barang;
+use App\Models\Refund;
+use App\Models\Article;
 use App\Models\Catarticle;
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Request;
 
 class HalcustController extends Controller
 {
@@ -62,7 +65,8 @@ class HalcustController extends Controller
     }
 
     public function showRefund(){
-        return view('frontend.refund.index');
+        $refund = Refund::where('status', '1')->paginate(10);
+        return view('frontend.refund.index')->with(compact('refund'));
     }
 
     public function showHow(){
@@ -70,6 +74,12 @@ class HalcustController extends Controller
     }
 
     public function showFaq(){
-        return view('frontend.halfaq.index');
+        $faq = Faq::where('status','1')->paginate(10);
+        return view('frontend.halfaq.index')->with(compact('faq'));
+    }
+
+    public function showUser(Request $request){
+        $user = User::all();
+        return view('frontend.haluser.index')->with(compact('user'));
     }
 }

@@ -46,8 +46,8 @@
     <!-- Slide1 -->
 
     {{-- Isi halamanAbout --}}
-    <p class="text-bold text-uppercase text-center text-white p-t-100"
-        style="font-size: 20px ; font-family: 'Trebuchet MS'">About</p>
+    <p class="text-bold text-uppercase text-center text-white p-t-120"
+        style="font-size: 20px ; font-family: 'Trebuchet MS'"><strong>About</strong></p>
     <div class="container">
         <section class="product-page pb-4 p-t-50 ">
 

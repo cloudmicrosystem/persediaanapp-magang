@@ -10,7 +10,7 @@
                         <ul class="">
                             <li>
                                 @if ($items->trending == "Yes")
-                                    <label class="float-end badge btn-danger" style="font-size: 14px">Popular Product</label>
+                                    <label class="float-end badge btn-danger" style="font-size: 14px">Popular Produk</label>
                                     {{-- <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Popular Product</div> --}}
                                 @endif
                                 <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">

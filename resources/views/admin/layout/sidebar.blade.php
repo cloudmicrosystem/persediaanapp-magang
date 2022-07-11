@@ -11,9 +11,9 @@
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    {{-- <div class="info">
-                        <a href="#" class="d-block">Welcome {{ Auth::user()->nama }}</a>
-                    </div> --}}
+                    <div class="info">
+                        <a href="#" class="d-block">Selamat Datang {{ Auth::user()->nama }}</a>
+                    </div>
                 </div>
 
                 <!-- SidebarSearch Form -->
@@ -47,6 +47,84 @@
                                 </p>
                             </a>
                         </li>
+
+                        @if (Session::get('page') == 'user' || Session::get('page') == 'admin')
+                            <?php $active = 'active'; ?>
+                        @else
+                            <?php $active = ''; ?>
+                        @endif
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link {{ $active }}">
+                                <i class="nav-icon fas fa-tag"></i>
+                                <p>
+                                    Setting User
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                @if (Session::get('page') == 'user')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="{{ url('/user') }}" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Customer</p>
+                                    </a>
+                                </li>
+                                @if (Session::get('page') == 'admin')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="{{ url('/admin') }}" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Admin</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        @if (Session::get('page') == 'article' || Session::get('page') == 'catarticle')
+                        <?php $active = 'active'; ?>
+                    @else
+                        <?php $active = ''; ?>
+                    @endif
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="#" class="nav-link {{ $active }}">
+                            <i class="nav-icon fas fa-book-open"></i>
+                            <p>
+                                Setting Artikel
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview ">
+                            @if (Session::get('page') == 'article')
+                                <?php $active = 'active'; ?>
+                            @else
+                                <?php $active = ''; ?>
+                            @endif
+                            <li class="nav-item">
+                                <a href="/article" class="nav-link {{ $active }}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Data Artikel</p>
+                                </a>
+                            </li>
+                            @if (Session::get('page') == 'catarticle')
+                                <?php $active = 'active'; ?>
+                            @else
+                                <?php $active = ''; ?>
+                            @endif
+                            <li class="nav-item">
+                                <a href="/catarticle" class="nav-link {{ $active }}">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Kategori Artikel</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
                         @if (Session::get('page') == 'barang' || Session::get('page') == 'kategori')
                             <?php $active = 'active'; ?>
@@ -87,46 +165,43 @@
                             </ul>
                         </li>
 
-                        @if (Session::get('page') == 'article' || Session::get('page') == 'catarticle')
+                        @if (Session::get('page') == 'penjualan' || Session::get('page') == 'laba')
                             <?php $active = 'active'; ?>
                         @else
                             <?php $active = ''; ?>
                         @endif
-
                         <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link {{ $active }}">
                                 <i class="nav-icon fas fa-book-open"></i>
                                 <p>
-                                    Setting Artikel
+                                    Setting Penjualan
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview ">
-                                @if (Session::get('page') == 'article')
+                                @if (Session::get('page') == 'penjualan')
                                     <?php $active = 'active'; ?>
                                 @else
                                     <?php $active = ''; ?>
                                 @endif
                                 <li class="nav-item">
-                                    <a href="/article" class="nav-link {{ $active }}">
+                                    <a href="/penjualan" class="nav-link {{ $active }}">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Artikel</p>
+                                        <p>Data Penjualan</p>
                                     </a>
                                 </li>
-                                @if (Session::get('page') == 'catarticle')
+                                @if (Session::get('page') == 'laba')
                                     <?php $active = 'active'; ?>
                                 @else
                                     <?php $active = ''; ?>
                                 @endif
                                 <li class="nav-item">
-                                    <a href="/catarticle" class="nav-link {{ $active }}">
+                                    <a href="#" class="nav-link {{ $active }}">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Kategori Artikel</p>
+                                        <p>Laporan Laba / Rugi</p>
                                     </a>
                                 </li>
                             </ul>
-
-
                         </li>
 
                         @if (Session::get('page') == 'faq' || Session::get('page') == 'refund' || Session::get('page') == 'banner' || Session::get('page') == 'ongkir')

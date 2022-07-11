@@ -9,7 +9,7 @@
                     <div class="col-sm-12">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Faq</li>
+                            <li class="breadcrumb-item active">FAQ</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -31,10 +31,10 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Faq</h3>
+                                <h3 class="card-title">FAQ</h3>
                                 <a class="btn btn-block btn-success" href="{{ url ('/add-edit-faq')}}"
                                 style="max-width: 150px; float:right; disply:inline-block">
-                                <i>Tambah Faq</i>
+                                <i>Tambah FAQ</i>
                             </a>
                             </div>
                             <!-- /.card-header -->

@@ -4,16 +4,22 @@
     <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
 
     <!-- - -->
-    <ul class="menu-sidebar p-t-100 p-b-20">
+    <ul class="menu-sidebar p-t-100 p-b-20"></ul>
         <li class="t-center m-b-13">
             <h4 class="txt13 m-b-20" style="color: black">
-
+                @if (Auth::user())
+                    <header class="d-block p-b-1">Selamat Datang</header>
+                    <small>{{ Auth::user()->nama }}</small>
+                @endif
             </h4>
         </li>
-        <li class="t-center m-b-13">
+        <li class="t-center m-b-13 pt-4">
             <h4 class="txt13 m-b-20" style="color: black">
                 Menu
             </h4>
+        </li>
+        <li class="t-center m-b-13">
+            <a href="/show-profil" class="txt19">Profil</a>
         </li>
         <li class="t-center m-b-13">
             <a href="/" class="txt19">Home</a>
@@ -40,14 +46,17 @@
         </li>
         <li class="t-center m-b-33">
             <a href="">
-                <form method='POST' action="{{ route('logout') }}">
-                    @csrf
-                    <button class="btn  btn-dark">
-                        <link :href="route('logout')" onclick="event.preventDefault();
-                                this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </button>
-                </form>
+                @if (Auth::user())
+                    <form method='POST' action="{{ route('logout') }}">
+                        @csrf
+                        <button class="btn btn-dark">
+                            <link :href="route('logout')" onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </button>
+                    </form>
+                @endif
+
             </a>
         </li>
     </ul>

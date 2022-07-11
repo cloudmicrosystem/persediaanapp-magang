@@ -43,10 +43,18 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $input = $request->all();
-        $this->validate($request,[
+
+        $rules = [
             'email'=>'required|email',
             'password'=>'required'
-        ]);
+        ];
+
+        $customMessage = [
+            'email.required' => 'Harap isi email terlebih dahulu',
+            'password.required' => 'Harap isi password terlebih dahulu',
+        ];
+
+        $this->validate($request, $rules, $customMessage);
 
         if(Auth::attempt(array('email' => $input ['email'], 'password' => $input['password']))){
             if(auth()->user()->is_admin == 1){
@@ -55,7 +63,7 @@ class LoginController extends Controller
                 return redirect()->route('home');
             }
         }else{
-            return redirect()->route('login')->with('erro','Input proper email or password');
+            return redirect()->route('login')->with('error',$customMessage);
         }
     }
 

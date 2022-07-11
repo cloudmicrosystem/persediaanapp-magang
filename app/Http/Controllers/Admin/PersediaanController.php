@@ -28,15 +28,15 @@ class PersediaanController extends Controller
         return view('admin.product.index')->with(compact('barang'));
     }
 
-    public function addEditProduct(Request $request, $id=null){
-        if($id==""){
-            $title = "Tambah Product";
+    public function addEditProduct(Request $request, $slug=null){
+        if($slug==""){
+            $title = "Tambah Produk";
             $barang = new Barang();
-            $message = "Product Berhasil Ditambahkan!";
+            $message = "Produk Berhasil Ditambahkan!";
         }else{
-            $title = "Edit Product";
-            $barang = Barang::find($id);
-            $message = "Product Berhasil Diupdate!";
+            $title = "Edit Produk";
+            $barang = Barang::where('slug', $slug)->first();
+            $message = "Produk Berhasil Diupdate!";
         }
 
         $category = Kategori::get();
@@ -51,11 +51,11 @@ class PersediaanController extends Controller
                 'deskripsi' => 'required',
             ];
             $customMessages = [
-                'id_kategori.required' => 'Harap pilih kategori product terlebih dahulu',
-                'kode_barang.required' => 'Harap isi kode product terlebih dahulu',
-                'nama_barang.required' => 'Harap isi nama prodcut terlebih dahulu',
-                'harga.required' => 'Harap isi harga product terlebih dahulu',
-                'deskripsi.required' => 'Harap isi deskripsi terlebih dahulu',
+                'id_kategori.required' => 'Harap pilih kategori produk terlebih dahulu',
+                'kode_barang.required' => 'Harap isi kode produk terlebih dahulu',
+                'nama_barang.required' => 'Harap isi nama produk terlebih dahulu',
+                'harga.required' => 'Harap isi harga produk terlebih dahulu',
+                'deskripsi.required' => 'Harap isi deskripsi produk terlebih dahulu',
             ];
             $this->validate($request, $rules, $customMessages);
 
@@ -118,7 +118,7 @@ class PersediaanController extends Controller
 
                     $codeValid = Atribut::where('sku', $val)->count();
                     if($codeValid > 0){
-                        $message = 'Code sudah digunakan sebelumnya';
+                        $message = 'SKU sudah digunakan sebelumnya';
                         session::flash('error_message', $message);
                         return redirect()->back();
                     }
@@ -137,14 +137,14 @@ class PersediaanController extends Controller
 
                     $atribut->save();
                 }
-                $success_message = 'Size & Stock Berhasil Ditambahkan!';
+                $success_message = 'Ukuran & Stok Berhasil Ditambahkan!';
                 session::flash('success_message', $success_message);
                 return redirect()->back();
             }
         }
 
         $barang = Barang::select('id','kode_barang','nama_barang','harga','gambar_disply')->find($id);
-        $title = "Produk Atribut";
+        $title = "Stok Produk";
 
         return view('admin.product.add_atribut')->with(compact('barang','title'));
     }
@@ -159,7 +159,7 @@ class PersediaanController extends Controller
                     (['stock' => $data['stock'][$key]]);
                 }
             }
-            $message = 'Stock Berhasil Diupdate!';
+            $message = 'Stok Berhasil Diupdate!';
             session::flash('success_message', $message);
             return redirect()->back();
         }
@@ -168,7 +168,7 @@ class PersediaanController extends Controller
     public function deleteAtribut($id){
         Atribut::where('id',$id)->delete();
 
-        $message = "Ukuran & Stock Berhasil Dihapus";
+        $message = "Ukuran & Stok Berhasil Dihapus";
         session::flash('success_message', $message);
         return redirect()->back();
     }
@@ -203,12 +203,14 @@ class PersediaanController extends Controller
 
         $barang = Barang::with('image')->select('id','kode_barang','nama_barang','harga','gambar_disply')->find($id);
 
-        $title = "Gambar Product";
+        $title = "Gambar Detail Produk";
         return view('admin.product.add_image')->with(compact('barang','title'));
     }
 
-    public function deleteImage($id){
-        Gambar::where('id',$id)->delete();
+    public function deleteImage(Request $request){
+        $gambar = Gambar::find($request->id);
+        unlink('images/katalog/' . $gambar->url_gambar);
+        Gambar::where('id',$gambar->id)->delete();
 
         $message = "Gambar Berhasil Dihapus";
         session::flash('success_message', $message);

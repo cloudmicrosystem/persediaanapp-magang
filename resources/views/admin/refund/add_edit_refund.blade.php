@@ -45,11 +45,11 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Deskripsi <abbr style="color: red">*</abbr></label>
-                                        <input type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder=" Deskripsi"
-                                            @if (!empty($refund['deskripsi'])) value="{{ $refund['deskripsi'] }}"
+                                        <textarea type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder=" Deskripsi">
+                                        @if (!empty($refund['deskripsi'])) {{ $refund['deskripsi'] }}
                                             @else value="{{ old('deskripsi') }}"
                                             @endif
-                                        >
+                                        </textarea>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"

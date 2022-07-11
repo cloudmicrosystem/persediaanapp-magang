@@ -78,14 +78,14 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="exampleInputBorder">Ukuran, Stock & SKU Produk <abbr style="color: red">*</abbr></label>
+                                                            <label for="exampleInputBorder">Ukuran, Stok & SKU Produk <abbr style="color: red">*</abbr></label>
                                                             <div class="field_wrapper">
                                                                 <input type="text" name="ukuran[]" id="ukuran"
                                                                     value="" name="ukuran[]" style="width: 60px"
                                                                     placeholder="Ukuran" required="">
                                                                 <input type="number" name="stock[]" id="stock"
                                                                     value="" name="stock[]" style="width: 60px"
-                                                                    placeholder="Stock" required="">
+                                                                    placeholder="Stok" required="">
                                                                 <input type="text" name="sku[]" id="sku"
                                                                     value="" name="sku[]" style="width: 60px"
                                                                     placeholder="SKU" required="">
@@ -107,14 +107,14 @@
                                     @csrf
                                     <div class="card card-primary">
                                         <div class="card-header">
-                                            <h3 class="card-title">Ukuran, Stock & SKU Produk {{ $barang->nama_barang }}</h3>
+                                            <h3 class="card-title">Ukuran, Stok & SKU Produk {{ $barang->nama_barang }}</h3>
                                         </div>
                                         <div class="card-body">
                                             <table id="product" class="table table-bordered table-responsive">
                                                 <thead>
                                                     <tr style="text-align: center">
-                                                        <th>Ukuran Produk</th>
-                                                        <th>Stock Produk</th>
+                                                        <th>Ukuran </th>
+                                                        <th>Stok </th>
                                                         <th>SKU</th>
                                                         <th>Status</th>
                                                         <th>Aksi</th>
@@ -142,7 +142,7 @@
                                                                 @endif
                                                             </td>
                                                             <td style="text-align: center">
-                                                                <a class="confirmDelete" name="atribut"
+                                                                <a class="confirmDelete" name="stok"
                                                                     href="{{ url('delete-atribut/' . $key->id) }}"><i
                                                                         class='fas fa-trash-alt'></i>
                                                                 </a>
@@ -152,7 +152,7 @@
                                             </table>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary">Edit Stock</button>
+                                            <button type="submit" class="btn btn-primary">Edit Stok</button>
                                         </div>
                                     </div>
                                 </form>
@@ -160,7 +160,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </div>

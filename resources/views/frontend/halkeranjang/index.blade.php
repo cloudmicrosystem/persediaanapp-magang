@@ -134,10 +134,10 @@
                                         <tr style="color: white; text-align:center">
                                             <td>
                                                 <img src="{{ asset('images/disply/' . $item->barang->gambar_disply) }}"
-                                                    height="200px">
+                                                    height="150px">
                                             </td>
                                             <td>{{ $item->barang->nama_barang }}</td>
-                                            <td> <?= "Rp " . number_format($item->barang->harga,0,',','.')?> </td>
+                                            <td> Rp. <?= number_format($item->barang->harga,0,',','.')?></td>
                                             <td>{{ $item->ukuran }}</td>
                                             <td>
                                                 <form>
@@ -147,13 +147,10 @@
                                                 </form>
                                             </td>
                                             <td>
-                                                <?="Rp ". number_format(($item->barang->harga)*($item->qty),0,',','.')?>
+                                                Rp. <span id="total-{{ $item->id }}"><?= number_format($item->qty * $item->barang->harga,0,',','.')?></span>
                                             </td>
                                             <td>
-                                                <button type="submit" class="btn btn-sm btn-dark mb-2">
-                                                    Update
-                                                </button>
-                                                <button type="submit" class="btn btn-sm btn-danger mb-2 delete-cart-item">
+                                                <button id="" type="submit" class="btn btn-sm btn-danger mb-2 delete-cart-item">
                                                     Hapus
                                                 </button>
                                             </td>
@@ -161,19 +158,23 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <div class="card-footer"></div>
-                                <div class="col-lg-12">
-                                    <h6 style="color: white">Total : <?="Rp ". number_format($grand_total,0,',','.')?></h6>
-                                </div><br>
-                                <a class="btn btn-block btn-success" href="{{ url('/checkout') }}"
-                                    style="max-width: 150px; float:right; disply:inline-block">
-                                    <i>Checkout</i>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="fa-pull-right pt-2 p-r-150">
+                <div class="pb-2">
+                    <h6 style="color: white"><strong>Sub Total : Rp. <span id="grandTotal"><?=number_format($grand_total,0,',','.')?></span></strong></h6>
+                </div>
+                    <button class="btn btn-success">
+                        <a href="/checkout" style="color: white">Checkout</a>
+                    </button>
+                    <button class="btn btn-info">
+                        <a href="/product" style="color: white">Kembali</a>
+                    </button>
+            </div>
+            <br><br><br><br><br><br>
         </div>
     </section>
 
@@ -227,9 +228,9 @@
         function increaseValue(itemId) {
             let data = document.querySelector('#qty-'+itemId);
             let val = parseInt(data.value);
-            val = isNaN(val) ? 0 : val;
+            val = isNaN(val) ? 0 : val; //Ternary condition
             val++;
-            document.querySelector('#qty-'+itemId).value = val;
+            // document.querySelector('#qty-'+itemId).value = val;
             updateCartQty(val,itemId);
         }
 
@@ -239,7 +240,6 @@
             val = isNaN(val) ? 0 : val;
             val < 1 ? val = 1 : '';
             val--;
-            document.querySelector('#qty-'+itemId).value = val;
             updateCartQty(val, itemId);
         }
 
@@ -253,7 +253,9 @@
                     quantity: qty
                 },
                 success: function(res){
-                    console.log("Success:"+res.response)
+                    document.querySelector('#qty-'+res.data.id).value = res.data.qty;
+                    document.querySelector('#total-'+res.data.id).innerHTML = res.harga;
+                    document.querySelector('#grandTotal').innerHTML = res.grandTotal;
                 },
                 error: function (err) {
                     console.log("Error:"+err.response)

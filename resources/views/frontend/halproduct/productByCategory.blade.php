@@ -110,7 +110,6 @@
                 <div class="row">
                     <div class="col-md-3 pt-5">
                         <nav class="nav-category">
-                            <h3><b><i>Category</i></b></h3><br>
                             <form action="" name="sortProducts" id="sortProducts" class="form-horizontal span6">
                                 <div class="control-group">
                                     <label for="exampleFormControlSelect2">Cari berdasarkan</label>
@@ -122,7 +121,8 @@
                                         <option value="product_tinggi" @if(isset($_GET['sort']) && $_GET['sort'] == "product_tinggi") selected="" @endif>Harga tertinggi</option>
                                     </select>
                                 </div>
-                            </form>
+                            </form><br>
+                            <h3 style="font-size: 30px ; font-family: 'Trebuchet MS'"><strong>Kategori</strong> </h3>
                             <ul class="menu-category mt-3 navigation navigation-main" id="main-menu-navigation"
                                 data-menu="menu-navigation">
                                 @foreach ($category2 as $key => $value)
@@ -136,56 +136,6 @@
                         </nav>
                     </div>
 
-                    {{-- Product Card --}}
-                    {{-- <div class="col-md-9 mb-8 pt-5">
-                        <div class="row">
-                            @foreach ($barang as $items)
-                                <div class="col-md-3">
-                                    <div class="row">
-                                        <div class="card">
-                                            <ul>
-                                                <li>
-                                                    <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                                                        <a href="{{ url('product/'.$category->slug.'/'.$items->slug) }}">
-                                                            <img src="{{ asset('images/disply/' . $items->gambar_disply) }}"
-                                                                class="img-fluid img-thumbnail"
-                                                                alt="{{ $items->nama_barang }}"
-                                                                style="border: transparent" />
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <div class="card-body ">
-                                                <div class="t-center">
-                                                    <a href="{{ url('product/'.$category->slug.'/'.$items->slug) }}">
-                                                        <h1 class="card-title"
-                                                            style="font-size: 20px; font-weight:bold">
-                                                            {{ $items->nama_barang }}
-                                                        </h1>
-                                                        <p class="">{{ $items->harga }}</p>
-                                                    </a>
-                                                </div>
-                                                <p style="color: orange" class="m-1 t-center">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </p>
-                                                <p class="t-center m-0">Terjual 10 </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <br>
-                        @if(isset($_GET['sort']) && !empty($_GET['sort']))
-                            {{ $barang->appends(['sort' => $_GET['sort']])->links()}}
-                        @else
-                            {{ $barang->links() }}
-                        @endif
-                    </div> --}}
                     <div class="col-md-9 mb-8 pt-5">
                         <div class="row">
                             @foreach ($barang as $items)

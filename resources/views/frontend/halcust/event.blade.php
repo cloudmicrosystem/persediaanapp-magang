@@ -1,7 +1,7 @@
 <section class="section-event">
     <div class="wrap-slick2">
         <div class="slick2">
-            <div class="item-slick2 item1-slick2" style="background-image: url(images/event.jpg);">
+            <div class="item-slick2 item1-slick2" style="background-image: url(images/bg2.jpg);">
                 <div class="wrap-content-slide2 p-t-50 p-b-50">
                     <div class="container">
                         <!-- - -->

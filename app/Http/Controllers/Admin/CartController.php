@@ -21,18 +21,26 @@ class CartController extends Controller
             'total'=>$total,
         ]);
         return redirect('/cart');
-        // return $this->data;
     }
 
     public function cart(){
-        $this->data['cart'] = Cart::where('user_id','=',Auth::user()->id)->paginate(10);
-        $this->data['grand_total'] = Cart::sum('total');
+        $this->data['cart'] = Cart::where('user_id', Auth::user()->id)->paginate(10);
+        $this->data['grand_total'] = Cart::where('user_id', Auth::user()->id)->sum('total');
 
         return view('frontend.halkeranjang.index', $this->data);
     }
 
     public function updateCartQty(Request $request){
-        echo "<pre>";
-        print_r($request->all());
+        try {
+            $data = Cart::with('barang')->findOrFail($request->id);
+            $data->qty = $request->quantity;
+            $data->total = $request->quantity * $data->barang->harga;
+            $data->save();
+            $harga = number_format($data->total,0,',','.');
+            $grandTotal = number_format(Cart::where('user_id', Auth::user()->id)->sum('total'),0,',','.');
+            return response()->json(['data' => $data, 'harga' => $harga, 'grandTotal' => $grandTotal], 201);
+        } catch (\Throwable $e) {
+            throw $e;
+        }
     }
 }

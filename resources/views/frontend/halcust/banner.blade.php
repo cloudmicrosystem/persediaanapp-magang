@@ -22,7 +22,7 @@
                         MORFEEN THIRTEEN
                     </h3>
                     <a href="/about" class="txt4">
-                        selanjutnya
+                        Lebih Lanjut
                         <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                     </a>
                 </div>

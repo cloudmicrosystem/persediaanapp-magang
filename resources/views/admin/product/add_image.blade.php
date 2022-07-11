@@ -56,7 +56,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Code Produk <abbr style="color: red">*</abbr></label>
+                                                    <label for="exampleInputBorder">Kode Produk <abbr style="color: red">*</abbr></label>
                                                     <input type="text" value="{{ $barang['kode_barang'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
                                                 </div>
                                                 <div class="form-group">
@@ -64,13 +64,9 @@
                                                     <input type="text" value="{{ $barang['nama_barang'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputBorder">Harga Produk <abbr style="color: red">*</abbr></label>
-                                                    <input type="text" value="{{ $barang['harga'] }}" type="text" class="form-control" id="exampleInputBorder" disabled>
-                                                </div>
-                                                <div class="form-group">
                                                     <label for="exampleInputBorder">Gambar Produk <abbr style="color: red">*</abbr></label>
                                                     @if ($barang->gambar_disply)
-                                                    <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=300px height=auto>
+                                                        <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}" alt="" width=300px height=auto>
                                                     @endif
                                                 </div>
                                                 <div class="col-md-6">

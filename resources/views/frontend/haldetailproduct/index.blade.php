@@ -117,14 +117,11 @@
                         <div class="col-6 pt-3 pl-5 pb-3">
                             @if ($barang['trending'] == "Yes")
                                 <label class="float-end badge btn-danger trending_tag" style="font-size: 12px">Popular</label>
-                                {{-- <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Popular Product</div> --}}
-                            @else
-                                <label class="float-end badge btn-dark trending_tag" style="font-size: 12px">{{ $barang['category']['nama_kategori'] }}</label>
-                                {{-- <div class="p-1 mb-1 bg-success text-white" style="text-align: center">{{ $barang['category']['nama_kategori'] }}</div> --}}
                             @endif
-                            <h3 class="my-2">{{ $barang['nama_barang'] }}</h3>
+
+                            <h3 class="my-2">{{ $barang['category']['nama_kategori'] }} - {{ $barang['nama_barang'] }}</h3>
                             <p>{{ $barang['deskripsi'] }}</p>
-                            <h3 class="my-2"><?= "Rp " . number_format($barang['harga'],0,',','.')?></h3>
+                            <h2 class="my-2" style="color: rgb(235, 39, 39)"><?= "Rp " . number_format($barang['harga'],0,',','.')?></h2>
 
                             <form action="{{ url('/add-to-cart') }}" method="post" class="form-horizontal qtyFrom">
                                 @csrf
@@ -135,7 +132,11 @@
                                     <select class="span2 pull-left"  name="ukuran" required>
                                         <option value="">Pilih Opsi</option>
                                             @foreach ($barang['atribut'] as $item)
-                                                <option value="{{ $item['ukuran'] }}">{{ $item['ukuran'] }} </option>
+                                                @if($item['stock'] > 0)
+                                                    <option value="{{ $item['ukuran'] }}">{{ $item['ukuran'] }} </option>
+                                                @elseif($item['stock'] == 0)
+                                                    <option value="{{ $item['ukuran'] }}" disabled>{{ $item['ukuran'] }} (Stok Kosong)</option>
+                                                @endif
                                             @endforeach
                                     </select>
                                 </div>
@@ -143,15 +144,14 @@
                                 <div class="mt-2 ">
                                     <div class="">
                                         <div class="input-group text-center mb-4 " style="width: 130px;">
-                                            <input type="text" name="qty" class="form-control qty-input text-center" value="1" required>
-                                        </div><br>
-                                        <button type="submit" class="btn btn-outline-success">
+                                            <input type="text" name="qty" class="form-control qty-input text-center" value="1" required>                                        </div><br>
+                                        <button type="submit" class="btn btn-success">
                                             <a><i class="fa fa-shopping-cart"></i></a>
-                                            Add to Cart
+                                            Tambah Ke Keranjang
                                         </button>
-                                        <button type="button" class="btn btn-light">
-                                            <a href="/whislist"><i class="fa fa-heart  "></i></a>
-                                            Add to Wishlist
+                                        <button type="button" class="btn btn-close-white">
+                                            <a href="/whislist"><i class="fa fa-heart"></i></a>
+                                            Tambah Disuka
                                         </button>
                                     </div>
                                 </div>
@@ -199,7 +199,7 @@
                             <div class="nav nav-tabs" id="product-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
                                     href="#product-desc" role="tab" aria-controls="product-desc"
-                                    aria-selected="true" style="font-weight: bold">Popular Product</a>
+                                    aria-selected="true" style="font-weight: bold">Popular Produk</a>
                             </div>
                         </nav>
                         <div class="tab-content p-3" id="nav-tabContent">

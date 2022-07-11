@@ -49,50 +49,12 @@
     <div id="page" class="container pt-3 pb-3 py-3 py-md-4">
         <div class="row">
             <div class="col-12 page-content   ">
-                <p class="text-white"><strong>KEBIJAKAN PENGEMBALIAN DANA</strong></p><br>
-                <dl>
-                    <dd class="text-white">- Barang harus dikembalikan dalam waktu 5 hari setelah barang
-                        diterima.</dd>
-                    <dd class="text-white">- Barang harus memiliki tag asli seperti yang disertakan saat
-                        penerimaan.</dd>
-                    <dd class="text-white">- Kami berhak untuk menolak pengembalian dana atau penukaran
-                        apabila barang  <p class="pl-2 text-white"> tersebut
-                        telah berubahan bentuk, terjadi kerusakan, dicuci, atau ketidaklengkapan </p> <p class="pl-2 text-white"> tag asli
-                        yang disertakan. </p> </dd>
-                    <dd class="text-white">- Kami tidak menjamin penukaran atau pengembalian dana untuk
-                        barang yang tidak memenuhi
-                        kriteria pengembalian. Jika anda menerima <p class="pl-2 text-white"> produk yang mengalami kerusakan atau cacat
-                        pada saat menerima pengiriman silahkan memberikan pemberitahuan terlebih dahdlu dalam </p>
-                        <p class="pl-2 text-white"> waktu 2 hari setelah anda menerima produk melalui email morfeen.selfporject@gmail.com
-                        sebelum mengirim barang kembali. </p></dd>
-                    <dd class="text-white">- Anda dapat menggunakan jasa pengiriman lain untuk pengembalian
-                        barang. Untuk memastikan
-                        kami menerima barang yang anda kirim <p class="pl-2 text-white"> silahkan meminta nomor pelacakan dari pengirim dan
-                        konfirmasikan kepada pihak kami melalui email morfeen.selfporject@gmail.com beserta </p>
-                        <p class="pl-2 text-white">  KONFIRMASI PEMBAYARAN anda.</p> </dd>
-                    <dd class="text-white">- Kemas kembali barang pengembalian anda dengan aman.</dd>
-                    <dd class="text-white">- Kirim barang pengembalian anda ke alamat : Jl. Suwari Sel., Sukun, Kec.
-                        Sukun, Kota Malang, Jawa Timur 65147</dd>
-                    <dd class="text-white">- Barang baru akan di kirim setelah kami menerima barang
-                        penukaran anda dan mengkonfirmasi pengembalian atau penukaran anda.</dd>
-                    <dd class="text-white">- Kami tidak bertanggungjawab atas kehilangan barang pengembalian
-                        saat pengiriman kembali.</dd>
-                    <dd class="text-white">- Biaya pengiriman awal tidak dapat dikembalikan.</dd>
-                </dl>
-
-                <p class="text-white mt-3"><strong>KEBIJAKAN PENUKARAN BARANG</strong></p><br>
-                <dl>
-                    <dd class="text-white">1. Kami hanya dapat menukar barang untuk barang yang terapat
-                        kerusakan atau cacat, tidak
-                        menerima penukaran size.</dd>
-                    <dd class="text-white">2. Apabila barang yang bersangkutan telah habis, dana akan
-                        dikembalikan penuh dikurangi
-                        biaya pengiriman awal setelah kami menerima <p class="pl-2 text-white">  pengembalian barang anda. </p></dd>
-                    <dd class="text-white">3. Kami tidak bertanggungjawab atas kehilangan barang
-                        pengembalian saat pengiriman
-                        kembali.
-                    </dd>
-                </dl>
+                <p class="text-white"><strong>KEBIJAKAN REFUND</strong></p><br>
+                <ul class="list-unstyled">
+                    @foreach ($refund as $key => $value)
+                        <li class="text-white"><p class="pl-2 text-white">{{ $refund->firstItem() + $key }} . {{ $value->deskripsi }}</p></li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>
