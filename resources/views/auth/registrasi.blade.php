@@ -43,9 +43,15 @@
                     </span>
                     {{-- NAMA --}}
                     <div class="wrap-input100 validate-input">
+<<<<<<< HEAD
                         <label for="exampleInputBorder">Nama Lengkap<abbr style="color: red">*</abbr></label>
                         <input id="nama" placeholder="Nama Lengkap" type="text"
                             class="input100   @error('nama') is-invalid @enderror" name="nama"
+=======
+                        <label > Nama <abbr style="color: red">*</abbr></label>
+                        <input id="nama" placeholder="Nama" type="text"
+                            class="input100 @error('nama') is-invalid @enderror" name="nama"
+>>>>>>> e49fec9591d2bf16e10a3f5c257d09d49f1d7644
                             value="{{ old('nama') }}" required autocomplete="nama" autofocus>
 
                         @error('nama')
@@ -57,7 +63,11 @@
 
                     {{-- ALAMAT --}}
                     <div class="wrap-input100 validate-input">
+<<<<<<< HEAD
                         <label > Alamat<abbr style="color: red">*</abbr></label>
+=======
+                        <label > Alamat <abbr style="color: red">*</abbr></label>
+>>>>>>> e49fec9591d2bf16e10a3f5c257d09d49f1d7644
                         <input id="alamat" placeholder="Alamat" type="text"
                             class="input100 @error('alamat') is-invalid @enderror" name="alamat"
                             value="{{ old('alamat') }}" required autocomplete="alamat" autofocus>
@@ -72,7 +82,11 @@
                     {{-- NOHP --}}
                     <div class="wrap-input100 validate-input">
                         <label > No Hp <abbr style="color: red">*</abbr></label>
+<<<<<<< HEAD
                         <input id="no_hp" placeholder="No Hp" type="number"
+=======
+                        <input id="no_hp" placeholder="Nohp" type="number"
+>>>>>>> e49fec9591d2bf16e10a3f5c257d09d49f1d7644
                             class="input100 @error('no_hp') is-invalid @enderror" name="no_hp"
                             value="{{ old('no_hp') }}" required autocomplete="no_hp" autofocus>
 
@@ -98,7 +112,11 @@
                     </div>
 
                     {{-- password --}}
+<<<<<<< HEAD
                     <div class="wrap-input100 validate-input"  data-validate="Password is required">
+=======
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+>>>>>>> e49fec9591d2bf16e10a3f5c257d09d49f1d7644
                         <label > Password <abbr style="color: red">*</abbr></label>
                         <input id="password" placeholder="Password" type="password" class="input100 @error('password') is-invalid @enderror"
                             name="password" required autocomplete="new-password">
@@ -111,8 +129,13 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="password-confirm">
+<<<<<<< HEAD
                         <label >Konfirmasi Password <abbr style="color: red">*</abbr></label>
                         <input id="password-confirm"  placeholder="Konfirmasi Password" type="password" name="password_confirmation" class="input100 @error('password') is-invalid @enderror"
+=======
+                        <label >Confirm Password <abbr style="color: red">*</abbr></label>
+                        <input id="password-confirm"  placeholder="Password" type="password" name="password_confirmation" class="input100 @error('password') is-invalid @enderror"
+>>>>>>> e49fec9591d2bf16e10a3f5c257d09d49f1d7644
                         required autocomplete="new-password">
 
                         @error('password')

@@ -39,8 +39,13 @@
                         LOGIN
                     </span>
                     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+<<<<<<< HEAD
                         <label for="email" > Email <abbr style="color: red">*</abbr></label>
                         <input class="input100" type="email" name="email" placeholder="Email" @error('email') is-invalid @enderror">
+=======
+                        <label for="email" > Email </label>
+                        <input class="input100" type="email" name="email" placeholder="Email" required>
+>>>>>>> e49fec9591d2bf16e10a3f5c257d09d49f1d7644
 
                         @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -50,8 +55,13 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
+<<<<<<< HEAD
                         <label for="password">Password <abbr style="color: red">*</abbr></label>
                         <input class="input100" type="password" name="password" placeholder="Password"  @error('password') is-invalid @enderror">
+=======
+                        <label for="password">Password </label>
+                        <input class="input100" type="password" name="password" placeholder="Password" required>
+>>>>>>> e49fec9591d2bf16e10a3f5c257d09d49f1d7644
 
                         @error('password')
                             <span class="invalid-feedback" role="alert">
