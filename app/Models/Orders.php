@@ -30,4 +30,8 @@ class Orders extends Model
     public function ongkir(){
         return $this->belongsTo(Ongkir::class, 'provinsi_id');
     }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

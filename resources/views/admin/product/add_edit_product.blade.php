@@ -38,12 +38,31 @@
                                 <h3 class="card-title">{{ $title }}</h3>
                             </div>
                             <form id="quickForm"
-                                @if(empty($barang['id'])) action="{{ url('add-edit-product') }}"
-                                @else action="{{ url('add-edit-product/' . $barang['id']) }}"
+                                @if(empty($barang['slug'])) action="{{ url('add-edit-product') }}"
+                                @else action="{{ url('add-edit-product/' . $barang['slug']) }}"
                                 @endif
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
                                     <div class="form-group">
+                                        @if ($barang->gambar_disply)
+                                        <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}"  width=300px height=auto>
+                                    @endif
+                                    <div class="form-group pt-2">
+                                        <label for="exampleInputFile">Gambar Produk<abbr style="color: red">*</abbr></label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input"  name="gambar_disply" id="gambar_disply"
+                                                    @if (!empty($barang['gambar_disply'])) value="{{ $barang['gambar_disply'] }}"
+                                                    @else value="{{ old('gambar_disply') }}"
+                                                    @endif
+                                                >
+                                                <label for="exampleInputFile" class="custom-file-label">Pilih Gambar</label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">Upload</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                         <label>Pilih Kategori <abbr style="color: red">*</abbr></label>
                                         <select name="id_kategori" id="id_kategori" class="custom-select">
                                             <option selected disabled><b>Pilih Kategori</b></option>
@@ -77,7 +96,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Harga Produk <abbr style="color: red">*</abbr></label>
-                                        <input type="number" class="form-control" id="rupiah" name="harga" placeholder="Harga Barang"
+                                        <input type="number" class="form-control"  name="harga" placeholder="Harga Barang"
                                             @if (!empty($barang['harga'])) value="{{ $barang['harga'] }}"
                                             @else value="{{ old('harga') }}"
                                             @endif
@@ -85,7 +104,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Deskripsi Produk <abbr style="color: red">*</abbr></label>
-                                        <textarea type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder="Deskripsi Barang">
+                                        <textarea type="text" class="form-control" rows="3" id="exampleInputBorder" name="deskripsi" placeholder="Deskripsi Barang">
                                             @if (!empty($barang['deskripsi'])) {{ $barang['deskripsi'] }}
                                             @else {{ old('deskripsi') }}
                                             @endif
@@ -97,35 +116,19 @@
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Apakah Trending</label>
+                                        <label class="form-check-label" >Trending (Ya / Tidak)</label>
                                     </div>
+                                    <small>NB: Jika checkbox (v = centang) menandakan produk trending</small><br><br>
+
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
                                             @if (!empty($barang['status']) && $barang['status'] == "1")
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Status Kategori</label>
-                                    </div><br>
-                                    @if ($barang->gambar_disply)
-                                        <img src="{{ asset('images/disply/'. $barang->gambar_disply) }}"  width=300px height=auto>
-                                    @endif
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Gambar <abbr style="color: red">*</abbr></label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input"  name="gambar_disply" id="gambar_disply"
-                                                    @if (!empty($barang['gambar_disply'])) value="{{ $barang['gambar_disply'] }}"
-                                                    @else value="{{ old('gambar_disply') }}"
-                                                    @endif
-                                                >
-                                                <label for="exampleInputFile" class="custom-file-label">Pilih Gambar</label>
-                                            </div>
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">Upload</span>
-                                            </div>
-                                        </div>
+                                        <label class="form-check-label" >Status (Aktif / Non Aktif)</label>
                                     </div>
+                                    <small>NB: Jika checkbox (v = centang) menandakan produk aktif (ditampilkan pada halaman customer)</small>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Submit</button>

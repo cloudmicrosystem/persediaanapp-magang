@@ -34,22 +34,36 @@
             <div class="wrap-login100">
                 <form class="login100-form validate-form" action="{{ route('login') }}" method="POST">
                     @csrf
+                    
                     <span class="login100-form-title p-b-43" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
                         LOGIN
                     </span>
                     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <label for="email" > Email</label>
-                        <input class="input100" type="email" name="email" placeholder="Email" required>
+                        <label for="email" > Email <abbr style="color: red">*</abbr></label>
+                        <input class="input100" type="email" name="email" placeholder="Email" @error('email') is-invalid @enderror">
 
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $customMessage }}</strong>
+                            </span>
+                        @enderror
                     </div>
+
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <label for="password">Password</label>
-                        <input class="input100" type="password" name="password" placeholder="Password" required>
+                        <label for="password">Password <abbr style="color: red">*</abbr></label>
+                        <input class="input100" type="password" name="password" placeholder="Password"  @error('password') is-invalid @enderror">
 
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $customMessage }}</strong>
+                            </span>
+                        @enderror
                     </div>
+
                     <div class="flex-sb-m w-full p-t-3 p-b-32">
 
                     </div>
+
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" type="submit">
                             {{ __('Login') }}
@@ -62,7 +76,7 @@
                         <a href="/register">Registrasi Sekarang!</a>
                     </small>
                 </form>
-                <div class="login100-more" style="background-image: url('images/login.JPG');">
+                <div class="login100-more" style="background-image: url('images/bg2.jpg');">
                 </div>
             </div>
         </div>

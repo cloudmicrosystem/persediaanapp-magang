@@ -25,13 +25,13 @@ class FaqController extends Controller
     public function addEditfaq(Request $request, $id = null)
     {
         if ($id == "") {
-            $title = "Tambah faq";
+            $title = "Tambah FAQ";
             $faq = new Faq();
-            $message = "faq Berhasil Ditambahkan!";
+            $message = "FAQ Berhasil Ditambahkan!";
         } else {
-            $title = "Edit faq";
+            $title = "Edit FAQ";
             $faq = Faq::where('id', $id)->first();
-            $message = "faq Berhasil Diupdate!";
+            $message = "FAQ Berhasil Diupdate!";
         }
 
         if ($request->isMethod('post')) {
@@ -67,7 +67,7 @@ class FaqController extends Controller
     public function deletefaq($id){
         Faq::where('id',$id)->delete();
 
-        $message = " Berhasil Dihapus";
+        $message = "FAQ Berhasil Dihapus";
         session::flash('success_message', $message);
         return redirect()->back();
     }

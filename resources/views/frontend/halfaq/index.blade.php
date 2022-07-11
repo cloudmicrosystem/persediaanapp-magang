@@ -52,24 +52,11 @@
                 <div class="content">
                     <p class="text-white"><strong>FAQ</strong></p><br>
                     <dl>
-                        <dd class="text-white">- Bagaimana cara memiliki akun Morfeen Official di website?
-                            <p class="pl-2 text-white">Diharapkan melakukan Regristasi terlebih dahulu</p> </dd>
-                        <dd class="text-white">- Bagaimana cara melakukan pemesanan?
-                            <p class="pl-2 text-white"> Cara pemesanan silahkan klik disini. Harap isi data diri dengan benar agar tidak terjadi
-                            kesalahan saat pengiriman </p> </dd>
-                        <dd class="text-white">- Bagaimana cara melacak pesanan? <br>
-                            <p class="pl-2 text-white"> Apabila anda sudah mendapatkan nomor resi via email, silahkan lacak pesanan anda di
-                            Raja Ongkir dan masukan nomor resi yang kami berikan </p> </dd>
-                        <dd class="text-white">- Kemana harus membayar pesanan? <br>
-                            <p class="pl-2 text-white"> Pihak dari Morfeen menggunakan payment gateway midtrans , di Midtrans sendiri ada banyak
-                            jenis pembayaran nya . </p></dd>
-                        <dd class="text-white">- Berapa lama batas waktu pembayaran pesanan? <br>
-                            <p class="pl-2 text-white"> Batas waktu pesanan anda 1×24 jam, jika melebih batas waktu pembayaran makan pesanan anda
-                            akan otomatis batal </p> </dd>
-                        <dd class="text-white">- Bagaimana cara mengkonfirmasi pembayaran?<br>
-                            <p class="pl-2 text-white">  Silahkan klik disini untuk mengkonfirmasi pembayaran </p> </dd>
-                        <dd class="text-white">- Apa jasa kurir yang digunakan?<br>
-                            <p class="pl-2 text-white"> Kurir yang kami gunakan untuk pengiriman ke seluruh Indonesia yaitu JNE. </p></dd>
+                        @foreach ($faq as $key => $value)
+                            <dd class="text-white">{{ $faq->firstItem() + $key }} . {{ $value->pertanyaan }}
+                                <p class="pl-4 text-white">{{ $value->jawaban }}</p>
+                            </dd>
+                        @endforeach
                     </dl>
                 </div>
             </div>

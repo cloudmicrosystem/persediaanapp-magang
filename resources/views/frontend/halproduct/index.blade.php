@@ -87,7 +87,7 @@
                     <!-- Social -->
                     <div class="social flex-w flex-l-m p-r-20">
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
-                        <a href="/keranjang"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
+                        <a href="/cart"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
                         <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
@@ -110,7 +110,6 @@
                 <div class="row">
                     <div class="col-md-3 pt-5">
                         <nav class="nav-category">
-                            <h3><b><i>Category</i></b></h3><br>
                             <form action="" name="sortProducts" id="sortProducts" class="form-horizontal span6">
                                 <div class="control-group">
                                     <label for="exampleFormControlSelect2">Cari berdasarkan</label>
@@ -122,8 +121,8 @@
                                         <option value="product_tinggi" @if(isset($_GET['sort']) && $_GET['sort'] == "product_tinggi") selected="" @endif>Harga tertinggi</option>
                                     </select>
                                 </div>
-                            </form>
-
+                            </form><br>
+                            <h3 style="font-size: 30px ; font-family: 'Trebuchet MS'"><strong>Kategori</strong> </h3>
                             <ul  class="menu-category mt-3 navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                                 @foreach ($category as $key => $value)
                                     <li>
@@ -145,7 +144,7 @@
                                                 <li>
                                                     @if ($items->trending == "Yes")
                                                         {{-- <label class="float-end badge btn-danger trending_tag" style="font-size: 16px">Popular</label> --}}
-                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Popular Product</div>
+                                                        <div class="p-1 mb-1 bg-danger text-white" style="text-align: center">Popular Produk</div>
                                                     @else
                                                         {{-- <label class="float-end badge btn-dark trending_tag" style="font-size: 16px">Product Morfeen</label> --}}
                                                         <div class="p-1 mb-1 bg-success text-white" style="text-align: center">{{ $items->category->nama_kategori }}</div>

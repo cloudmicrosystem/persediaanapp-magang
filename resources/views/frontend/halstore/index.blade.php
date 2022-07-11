@@ -46,7 +46,7 @@
 
     <section>
         <p class="text-bold text-uppercase text-center text-white p-t-120"
-            style="font-size: 20px ; font-family: 'Trebuchet MS'">Store</p>
+            style="font-size: 20px ; font-family: 'Trebuchet MS'"><strong>Store</strong></p>
         <div class="container">
             <div class="row">
                 <div class="d-flex justify-content-center">
@@ -63,9 +63,9 @@
                             <div class="m-3">
                                 <h4 class="text-center text-uppercase text-white" style="font-weight: bold"> Morfeen
                                     Store Sukun</h4>
-                                <p class="m-1 text-center text-white"> Jl. Suwari Sel., Sukun, Kec. Sukun, Kota
+                                <p class="m-1 text-center text-white"> Jl. Suwari Selatan No. 07 , Sukun, Kec. Sukun, Kota
                                     Malang<br />
-                                    Mon-Sun 12.00-21:00<br />
+                                    Setiap Hari 12.00 - 21.30 WIB<br />
                                     (+62) 887-4116-4285</p>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                                     Store Slorok </h4>
                                 <p class="m-1 text-center text-white "> Jl. Kalibiru No.6, Slorok, Kec. Kromengan,
                                     Kabupaten Malang<br />
-                                    Mon-Sun 12.00-21:00<br />
+                                    Setiap Hari 12.00 - 21.30 WIB<br />
                                     (+62) 887-4116-4285</p>
                             </div>
                         </div>

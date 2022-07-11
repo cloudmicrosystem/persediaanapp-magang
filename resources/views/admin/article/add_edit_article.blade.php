@@ -43,6 +43,25 @@
                                 @endif
                             method="POST" enctype="multipart/form-data"> @csrf
                                 <div class="card-body">
+                                    @if ($article->gambar_artikel)
+                                        <img src="{{ asset('images/artikel/'. $article->gambar_artikel) }}" alt="" width=150px height=auto>
+                                    @endif
+                                    <div class="form-group pt-2">
+                                        <label for="exampleInputFile">Gambar Artikel <abbr style="color: red">*</abbr></label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input"  name="gambar_artikel" id="gambar_artikel"
+                                                    @if (!empty($article['gambar_artikel'])) value="{{ $article['gambar_artikel'] }}"
+                                                    @else value="{{ old('gambar_artikel') }}"
+                                                    @endif
+                                                >
+                                                <label for="exampleInputFile" class="custom-file-label">Pilih Gambar </label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">Upload</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label>Pilih Kategori <abbr style="color: red">*</abbr></label>
                                         <select name="id_catarticle" id="id_catarticle" class="custom-select">
@@ -75,25 +94,6 @@
                                             @endif
                                         </textarea>
                                     </div>
-                                    @if ($article->gambar_artikel)
-                                        <img src="{{ asset('images/artikel/'. $article->gambar_artikel) }}" alt="" width=150px height=auto>
-                                    @endif
-                                    <div class="form-group">
-                                        <label for="exampleInputFile">Gambar Artikel <abbr style="color: red">*</abbr></label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input"  name="gambar_artikel" id="gambar_artikel"
-                                                    @if (!empty($article['gambar_artikel'])) value="{{ $article['gambar_artikel'] }}"
-                                                    @else value="{{ old('gambar_artikel') }}"
-                                                    @endif
-                                                >
-                                                <label for="exampleInputFile" class="custom-file-label">Pilih Gambar </label>
-                                            </div>
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">Upload</span>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputBorder">Sumber Artikel <abbr style="color: red">*</abbr></label>
                                         <input type="text" class="form-control" id="exampleInputBorder" name="sumber_artikel" placeholder="Sumber Artikel"
@@ -103,21 +103,24 @@
                                         >
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
-                                            @if (!empty($article['status']) && $article['status'] == "1")
-                                                checked = ""
-                                            @endif
-                                        >
-                                        <label class="form-check-label" >Status Kategori</label>
-                                    </div>
-                                    <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="featured" id="exampleCheck1" value="Yes"
                                             @if (!empty($article['featured']) && $article['featured'] == "Yes")
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Trending Artikel</label>
+                                        <label class="form-check-label" >Trending (Ya / Tidak)</label>
                                     </div>
+                                    <small>NB: Jika checkbox (v = centang) menandakan artikel trending</small><br><br>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
+                                            @if (!empty($article['status']) && $article['status'] == "1")
+                                                checked = ""
+                                            @endif
+                                        >
+                                        <label class="form-check-label" >Status (Aktif / Non Aktif)</label>
+                                    </div>
+                                    <small>NB: Jika checkbox (v = centang) menandakan artikel aktif (ditampilkan pada halaman customer)</small>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Submit</button>

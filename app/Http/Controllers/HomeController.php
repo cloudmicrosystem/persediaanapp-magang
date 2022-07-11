@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use App\Models\Kategori;
 use App\Models\Barang;
-use App\Models\Banner;
+use App\Models\User;
+use App\Models\Orders;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
@@ -40,8 +40,11 @@ class HomeController extends Controller
             Session::put('page','dashboard');
             $barang = Barang::paginate();
             $article = Article::paginate();
+            $order = Orders::paginate();
+            $users = User::where('is_admin','0')->paginate();
+            $admin = User::where('is_admin','1')->paginate();
 
-            return view('admin.dashboard.dashboard')->with(compact('barang','article'));
+            return view('admin.dashboard.dashboard')->with(compact('barang','article','users','admin', 'order'));
         }else{
             return redirect('/');
         }

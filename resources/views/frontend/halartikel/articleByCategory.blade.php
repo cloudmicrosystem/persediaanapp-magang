@@ -101,8 +101,6 @@
     <!-- Sidebar -->
     @include('frontend.halcust.sidebar')
 
-
-
     <!-- ARTIKEL -->
     <section>
         <h1 class="text-bold text-uppercase text-center  p-t-100 "

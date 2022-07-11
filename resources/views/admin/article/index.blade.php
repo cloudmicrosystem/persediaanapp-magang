@@ -43,14 +43,14 @@
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>No.</th>
-                                            <th>Kategori Artikel</th>
-                                            <th>Judul Artikel</th>
-                                            <th>Slug Artikel</th>
-                                            <th>Deskripsi Artikel</th>
-                                            <th>Gambar Artikel</th>
-                                            <th>Sumber Artikel</th>
-                                            <th>Status Artikel</th>
-                                            <th>Apakah Trending</th>
+                                            <th>Gambar</th>
+                                            <th>Kategori</th>
+                                            <th>Judul</th>
+                                            <th>Slug</th>
+                                            <th>Deskripsi</th>
+                                            <th>Sumber</th>
+                                            <th>Status</th>
+                                            <th>Trending</th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>
@@ -58,13 +58,13 @@
                                         @foreach ($article as $key => $value)
                                             <tr>
                                                 <td style="text-align: center">{{ $article->firstItem() + $key }}</td>
+                                                <td><img src="{{ asset('images/artikel/' . $value->gambar_artikel) }}"
+                                                    alt="{{ $value->judul_artikel }}" width=150px height=auto />
+                                                </td>
                                                 <td>{{ $value->catarticle->nama_cat }}</td>
                                                 <td>{{ $value->judul_artikel }}</td>
                                                 <td>{{ $value->slug }}</td>
-                                                <td>{{ $value->deskripsi_artikel }}</td>
-                                                <td><img src="{{ asset('images/artikel/' . $value->gambar_artikel) }}"
-                                                        alt="{{ $value->judul_artikel }}" width=150px height=auto />
-                                                </td>
+                                                <td>{{ Str::limit($value->deskripsi_artikel, '50', ' . . . . . . . ') }}</td>
                                                 <td>{{ $value->sumber_artikel }}</td>
                                                 <td>
                                                     @if($value->status == 1)

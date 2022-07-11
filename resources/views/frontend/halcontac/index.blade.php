@@ -62,7 +62,7 @@
         <div class="row">
             <div class="card-body  d-flex align-items-center justify-content-center pl-5 p-t-50"
                 style="background: black">
-                <div class="col-md-6 text-center ">
+                <div class="col-md-6 p-b-101 text-center">
                     <h2 style="color: white"><strong>MORFEEN OFFICIAL</strong></h2>
                     <small style="color: white">MALANG | SLOROK</small>
                 </div>

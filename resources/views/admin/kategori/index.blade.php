@@ -31,7 +31,7 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Kategori Product</h3>
+                                <h3 class="card-title">Kategori Produk</h3>
                                 <a class="btn btn-block btn-success" href="{{ url ('/add-edit-category')}}"
                                 style="max-width: 150px; float:right; disply:inline-block">
                                 <i>Tambah Kategori</i>
@@ -43,9 +43,9 @@
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>No.</th>
-                                            <th>Nama Kategori</th>
-                                            <th>Slug Kategori</th>
-                                            <th>Status Kategori</th>
+                                            <th>Nama </th>
+                                            <th>Slug </th>
+                                            <th>Status </th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
                                     </thead>

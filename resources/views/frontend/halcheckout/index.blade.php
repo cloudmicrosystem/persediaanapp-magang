@@ -109,36 +109,48 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputEmail1">Provinsi :</label><br>
+                                <label style="color: white" for="exampleInputEmail1"><strong>Provinsi <abbr style="color: red">*</abbr></strong>
+                                    <br>
+                                    <small>(Pilih provinsi tujuan & akan muncul ongkir sesuai tujuan)</small>
+                                </label><br>
                                 <select class="span2 pull-left" name="provinsi" >
                                     <option value="">Pilih Opsi</option>
                                         @foreach ($ongkir as $item)
-                                            <option value="{{ $item->id }}">{{ $item->provinsi }} | Ongkir <?= "Rp " . number_format($item->harga,0,',','.')?></option>
+                                            <option value="{{ $item->id }}" required>{{ $item->provinsi }} | Ongkir <?= "Rp " . number_format($item->harga,0,',','.')?> / 1 kg</option>
                                         @endforeach
                                 </select>
                             </div><br>
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputEmail1">Kota :</label>
+                                <label style="color: white" for="exampleInputEmail1"><strong>Kota/Kabupaten <abbr style="color: red">*</abbr></strong> <br>
+                                    <small>(Isikan sesuai dengan kota/kabupaten tujuan)</small>
+                                </label>
                                 <input style="background-color: black; color:white" type="text" name="kota"
                                     class="form-control border border-white" id="exampleInputEmail1"
-                                    placeholder="Kota">
+                                    placeholder="Kota" required>
                             </div>
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputPassword1">Alamat :</label>
+                                <label style="color: white" for="exampleInputPassword1"><strong>Alamat <abbr style="color: red">*</abbr></strong> <br>
+                                    <small>(Isikan beserta RT, RW & Kode Pos tujuan)</small>
+                                </label>
                                 <input style="background-color: black; color:white" type="text" name="alamat"
                                     class="form-control border border-white" id="exampleInputPassword1"
-                                    placeholder="Alamat">
+                                    placeholder="Alamat" required>
                             </div>
                             <div class="form-group">
-                                <label style="color: white" for="inputMessage">Keterangan :</label>
+                                <label style="color: white" for="inputMessage"><strong>Keterangan </strong> <br>
+                                    <small>(Isikan sesuai dengan informasi tambahan jika ada)</small>
+                                </label>
                                 <textarea style="background-color: black; color:white" id="inputMessage" name="keterangan"
                                 class="form-control border border-white" rows="4"
-                                    placeholder="Keterangan"></textarea>
+                                    placeholder="Keterangan" ></textarea>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary float-end">
+                                <button class="btn btn-success">
                                     <a href="save-checkout" id="pay-button"></a>
                                             Checkout
+                                </button>
+                                <button class="btn btn-info">
+                                    <a href="cart" style="color: white">Kembali</a>
                                 </button>
                             </div>
                         </div>
@@ -179,11 +191,11 @@
                                         </tr>
                                     @endforeach
 
-                                    <td class="text-white text-center" style="width: 10px; height: auto">Sub Total
-                                    </td>
+                                    <td class="text-white text-center" style="width: 10px; height: auto"><strong>Sub Total :</strong></td>
                                     <td class="text-white ">
                                         <h5 style="color: white">
-                                            <?= 'Rp ' . number_format($grand_total, 0, ',', '.') ?></h5>
+                                            <strong><?= 'Rp ' . number_format($grand_total, 0, ',', '.') ?></strong>
+                                        </h5>
                                     </td>
                                     <div class=""></div>
                                 </table>

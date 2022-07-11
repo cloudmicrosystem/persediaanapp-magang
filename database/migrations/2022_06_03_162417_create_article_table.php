@@ -15,6 +15,7 @@ class CreateArticleTable extends Migration
     {
         Schema::create('article', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->integer('id_catarticle');
             $table->string('judul_artikel');
             $table->string('slug')->unique;

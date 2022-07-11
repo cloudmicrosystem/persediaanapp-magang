@@ -8,6 +8,7 @@ use App\Models\Orders;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Promise\Create;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
@@ -56,7 +57,6 @@ class CheckoutController extends Controller
         else {
         }
     }
-
     public function confirmPayment(Request $request){
 
     }
@@ -86,5 +86,12 @@ class CheckoutController extends Controller
 
         return $this->data['token'] = \Midtrans\Snap::getSnapToken($params);
 
+    }
+
+    public function showTrans(Request $request){
+        Session::put('page', 'penjualan');
+        $order = Orders::paginate(5);
+
+        return view('admin.penjualan.index')->with(compact('order'));
     }
 }
