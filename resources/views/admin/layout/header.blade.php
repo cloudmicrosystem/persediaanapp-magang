@@ -5,7 +5,7 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
                             class="fas fa-bars"></i></a>
-                </li> 
+                </li>
             </ul>
 
             <!-- Right navbar links -->
@@ -141,7 +141,7 @@
                             @csrf
                             <button class="btn btn-outline-info">
                                 <link :href="route('logout')" onclick="event.preventDefault();
-                                      this.closest('form').submit();">
+                                    this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </button>
                         </form>
