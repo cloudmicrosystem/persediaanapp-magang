@@ -51,6 +51,14 @@
                                             @endif
                                         >
                                     </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder">HPP <abbr style="color: red">*</abbr></label>
+                                        <input type="text" class="form-control" id="exampleInputBorder" name="hpp" placeholder="Harga Produksi Produk"
+                                            @if (!empty($category['hpp'])) value="{{ $category['hpp'] }}"
+                                            @else value="{{ old('hpp') }}"
+                                            @endif
+                                        >
+                                    </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" name="status" id="exampleCheck1" value="1"
                                             @if (!empty($category['status']) && $category['status'] == "1")

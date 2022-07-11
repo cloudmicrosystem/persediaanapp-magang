@@ -47,7 +47,7 @@
                                         <label for="exampleInputBorder">Deskripsi <abbr style="color: red">*</abbr></label>
                                         <textarea type="text" class="form-control" id="exampleInputBorder" name="deskripsi" placeholder=" Deskripsi">
                                         @if (!empty($refund['deskripsi'])) {{ $refund['deskripsi'] }}
-                                            @else value="{{ old('deskripsi') }}"
+                                            @else {{ old('deskripsi') }}
                                             @endif
                                         </textarea>
                                     </div>
@@ -57,7 +57,9 @@
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Status Refund</label>
+                                        <label class="form-check-label" >Status (Aktif / Non Aktif)</label>
+                                    </div>
+                                    <small>NB: Jika checkbox (v = centang) menandakan data refund aktif (ditampilkan pada halaman customer)</small>
                                     </div>
                                 </div>
                                 <div class="card-footer">

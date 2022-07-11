@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Session;
 
@@ -26,4 +27,15 @@ class UserController extends Controller
         return view('admin.user.admin')->with(compact('users'));
     }
 
+    protected function create(array $data)
+    {
+        return User::create([
+            'nama' => $data['name'],
+            'alamat' => $data['alamat'],
+            'no_hp' => $data['no_hp'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'is_admin' => 1,
+        ]);
+    }
 }

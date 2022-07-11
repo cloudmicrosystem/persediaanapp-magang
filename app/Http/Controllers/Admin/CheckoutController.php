@@ -3,15 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Cart;
+use App\Models\Barang;
 use App\Models\Ongkir;
 use App\Models\Orders;
+use App\Models\Atribut;
 use App\Models\OrderDetail;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Models\Atribut;
 use GuzzleHttp\Promise\Create;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class CheckoutController extends Controller
 {
@@ -131,8 +134,51 @@ class CheckoutController extends Controller
 
     public function showTrans(Request $request){
         Session::put('page', 'penjualan');
-        $order = Orders::paginate(5);
+        $order = Orders::select('orders.*','ongkir.harga')
+                ->join('ongkir','ongkir.id','=','orders.provinsi_id')
+                ->paginate(5);
 
-        return view('admin.penjualan.index')->with(compact('order'));
+        $this->data['resultQuery'] = Barang::select('category.*', DB::raw("SUM(atribut.stock) AS total"))
+                ->join('category','category.id','=','barang.id_kategori')
+                ->join('atribut','atribut.id_barang','=','barang.id')
+                ->groupBy('category.id')
+                ->get();
+        $this->data['modal']=0;
+        foreach ($this->data['resultQuery'] as $category) {
+        $this->data['modal']+= $category->hpp*$category->total;
+        }
+        $this->data['penjualan'] = Orders::where('transaction_status','=','settlement')
+                    ->sum('total');
+
+        return view('admin.penjualan.index', $this->data)->with(compact('order'));
     }
+
+    public function showLaba($id){
+        $this->data['orders'] = Orders::findOrFail($id);
+        $this->data['orderDetail'] = OrderDetail::where('order_id','=',$id)->get();
+        $this->data['subtotal'] = 0;
+        foreach ($this->data['orderDetail'] as $value) {
+            $this->data['subtotal'] += $value->total;
+        }
+        $this->data['ongkir'] = OrderDetail::where('order_id','=',$id)->sum('qty') * Orders::find($id)->ongkir->harga;
+        return view('admin.penjualan.laba', $this->data);
+    }
+
+    // public function showLaporan(){
+    //     Session::put('page', 'laporan');
+    //     // $order = Orders::paginate(5);
+    //     $this->data['resultQuery'] = Barang::select('category.*', DB::raw("SUM(atribut.stock) AS total"))
+    //                             ->join('category','category.id','=','barang.id_kategori')
+    //                             ->join('atribut','atribut.id_barang','=','barang.id')
+    //                             ->groupBy('category.id')
+    //                             ->get();
+    //     $this->data['modal']=0;
+    //     foreach ($this->data['resultQuery'] as $category) {
+    //         $this->data['modal']+= $category->hpp*$category->total;
+    //     }
+    //     $this->data['penjualan'] = Orders::where('transaction_status','=','settlement')
+    //                             ->sum('total');
+    //     return $this->data;
+    //     // return view('admin.penjualan.laporan');
+    // }
 }

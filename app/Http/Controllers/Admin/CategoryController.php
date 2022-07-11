@@ -47,6 +47,7 @@ class CategoryController extends Controller
 
             $category->nama_kategori = $data['nama_kategori'];
             $category->slug = Str::slug($request['nama_kategori']);
+            $category->hpp = $data['hpp'];
 
             if(!empty($data['status'])){
                 $category->status = $data['status'];

@@ -69,7 +69,9 @@
                                                 checked = ""
                                             @endif
                                         >
-                                        <label class="form-check-label" >Status Kategori</label>
+                                        <label class="form-check-label" >Status (Aktif / Non Aktif)</label>
+                                    </div>
+                                    <small>NB: Jika checkbox (v = centang) menandakan banner aktif (ditampilkan pada halaman customer)</small>
                                     </div>
                                 </div>
                                 <div class="card-footer">

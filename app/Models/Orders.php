@@ -24,7 +24,7 @@ class Orders extends Model
     ];
 
     public function orderDetail(){
-        return $this->hasMany('App\Models\OrderDetail');
+        return $this->hasMany('App\Models\OrderDetail','order_id');
     }
 
     public function ongkir(){

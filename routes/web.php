@@ -122,9 +122,13 @@ Route::get('admin', [UserController::class, 'showAdmin']);
 
 // TRANSAKSI
 Route::get('penjualan', [CheckoutController::class, 'showTrans']);
+Route::get('laba/{id}', [CheckoutController::class, 'showLaba']);
+Route::get('laporan', [CheckoutController::class, 'showLaporan']);
 
 Auth::routes();
 
+Route::get('/create-admin', [UserController::class, 'create']);
+Route::get('admin', [UserController::class, 'showAdmin']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::get('/register', [LoginController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisteredUserController::class, 'store']);

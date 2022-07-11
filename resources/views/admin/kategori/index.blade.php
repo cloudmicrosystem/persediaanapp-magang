@@ -45,6 +45,7 @@
                                             <th>No.</th>
                                             <th>Nama </th>
                                             <th>Slug </th>
+                                            <th>HPP</th>
                                             <th>Status </th>
                                             <th colspan="2">Aksi</th>
                                         </tr>
@@ -55,6 +56,7 @@
                                                 <td style="text-align: center">{{ $category->firstItem() + $key }}</td>
                                                 <td>{{ $value->nama_kategori }}</td>
                                                 <td>{{ $value->slug }}</td>
+                                                <td><?= "Rp " . number_format($value->hpp,0,',','.')?></td>
                                                 <td>
                                                     @if($value->status == 1)
                                                         <div class="p-1 mb-1 bg-success text-white" style="text-align: center">Aktif</div>

@@ -11,10 +11,11 @@ class Kategori extends Model
     protected $table = "category";
     protected $fillable = [
         'nama_kategori',
-        'slug'
+        'slug',
+        'hpp'
     ];
 
-    // public function barang(){
-    //     return $this->hasMany(Barang::class, 'id_kategori', 'id');
-    // }
+    public function barang(){
+        return $this->hasMany(Barang::class, 'id_kategori', 'id');
+    }
 }

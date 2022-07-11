@@ -23,4 +23,5 @@ class Article extends Model
     {
         return $this->belongsTo(Catarticle::class, 'id_catarticle', 'id');
     }
+
 }

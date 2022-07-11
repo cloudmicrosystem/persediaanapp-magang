@@ -165,7 +165,7 @@
                             </ul>
                         </li>
 
-                        @if (Session::get('page') == 'penjualan' || Session::get('page') == 'laba')
+                        @if (Session::get('page') == 'penjualan' || Session::get('page') == 'laporan')
                             <?php $active = 'active'; ?>
                         @else
                             <?php $active = ''; ?>
@@ -190,13 +190,13 @@
                                         <p>Data Penjualan</p>
                                     </a>
                                 </li>
-                                @if (Session::get('page') == 'laba')
+                                @if (Session::get('page') == 'laporan')
                                     <?php $active = 'active'; ?>
                                 @else
                                     <?php $active = ''; ?>
                                 @endif
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link {{ $active }}">
+                                    <a href="/laporan" class="nav-link {{ $active }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Laporan Laba / Rugi</p>
                                     </a>

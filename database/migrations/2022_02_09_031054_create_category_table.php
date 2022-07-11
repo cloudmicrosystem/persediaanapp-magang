@@ -17,6 +17,7 @@ class CreateCategoryTable extends Migration
             $table->id();
             $table->string('nama_kategori');
             $table->string('slug')->unique;
+            $table->integer('hpp');
             $table->integer('status');
             $table->timestamps();
         });
