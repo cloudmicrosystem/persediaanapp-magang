@@ -12,6 +12,7 @@ class OrderDetail extends Model
     protected $fillable =[
         'order_id',
         'barang_id',
+        'ukuran',
         'qty',
         'total',
     ];

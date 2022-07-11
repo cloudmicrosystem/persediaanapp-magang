@@ -150,7 +150,7 @@
                                                 Rp. <span id="total-{{ $item->id }}"><?= number_format($item->qty * $item->barang->harga,0,',','.')?></span>
                                             </td>
                                             <td>
-                                                <button id="" type="submit" class="btn btn-sm btn-danger mb-2 delete-cart-item">
+                                                <button href="{{ url('delete-cart/'.$item->id) }}" class="btn btn-sm btn-danger mb-2 delete-cart-item">
                                                     Hapus
                                                 </button>
                                             </td>

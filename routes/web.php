@@ -36,6 +36,7 @@ Route::group(
         Route::post('/update-to-cart', [CartController::class, 'updateCartQty']);
         Route::post('delete-cart', [CartController::class, 'deleteCart']);
         Route::get('/cart', [CartController::class, 'cart']);
+        Route::get('/delete-cart/{id}', [CartController::class, 'deleteCart']);
         Route::get('/checkout', [CheckoutController::class, 'showCo']);
         Route::post('/save-checkout', [CheckoutController::class, 'saveCheckout']);
         Route::get('/penilaian', [HalcustController::class, 'showRating']);
@@ -45,6 +46,7 @@ Route::group(
 
 Route::middleware(['cors'])->group(function () {
     Route::get('/payment', [CheckoutController::class, 'reqPayment']);
+    Route::post('/confirmPayment', [CheckoutController::class, 'confirmPayment']);
 });
 
 // USER

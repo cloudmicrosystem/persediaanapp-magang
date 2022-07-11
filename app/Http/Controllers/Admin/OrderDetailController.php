@@ -15,6 +15,7 @@ class OrderDetailController extends Controller
         $orderDet = OrderDetail::create([
             'order_id'=> $id,
             'barang_id'=>$request->barang_id,
+            'ukuran'=>$request->ukuran,
             'qty' => $request->qty,
             'total' => $request->total,
         ]);

@@ -51,9 +51,8 @@
                 <div class="wrap_header trans-0-4">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="home">
-                            <img src="{{ asset('images/icons/logo2.png') }}" alt="IMG-LOGO"
-                                data-logofixed="{{ asset('images/icons/logoa.png') }}">
+                        <a href="/">
+                            <img  src="{{ asset('images/icons/logo2.png') }}" alt="IMG-LOGO" data-logofixed="{{ asset('images/icons/logoa.png') }}">
                         </a>
                     </div>
 
@@ -87,6 +86,7 @@
                             </ul>
                         </nav>
                     </div>
+
                     <!-- Social -->
                     <div class="social flex-w flex-l-m p-r-20">
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
@@ -112,11 +112,11 @@
                                 <label style="color: white" for="exampleInputEmail1">Total Transaksi</label>
                                 <input style="background-color: black; color:white" type="text"
                                     class="form-control border border-white" id="exampleInputEmail1"
-                                    placeholder="Total" value="<?= 'Rp ' . number_format($order->total, 0, ',', '.') ?>">
+                                    placeholder="Total" value="<?= 'Rp ' . number_format($order->total, 0, ',', '.') ?>" disabled>
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="exampleInputPassword1">Total Ongkir {{$provinsi}}</label>
-                                <input style="background-color: black; color:white" type="text" value="<?= 'Rp ' . number_format($ongkir, 0, ',', '.') ?>"
+                                <input style="background-color: black; color:white" type="text" value="<?= 'Rp ' . number_format($ongkir, 0, ',', '.') ?>" disabled
                                     class="form-control border border-white" id="exampleInputPassword1"
                                     placeholder="Ongkir">
                             </div>
@@ -126,7 +126,7 @@
                         </div>
                     </form>
                     <button class="btn btn-primary" id="pay-button">
-                        <a href="/payment" id="pay-button" style="color: white">Checkout</a>
+                        <a id="pay-button" style="color: white">Checkout</a>
                     </button>
                 </div>
             </div>
@@ -189,6 +189,28 @@
             onSuccess: function(result){
               /* You may add your own implementation here */
               alert("Pembayaran Sukses!"); console.log(result);
+              $.ajax({
+                url: "/confirmPayment",
+                type:"POST",
+                data:{
+                    result
+                },
+                success:function(response){
+                    console.log(response);
+                    if(response) {
+                    $('.success').text(response.success);
+                    $("#ajaxform")[0].reset();
+                    }
+                },
+                error: function(error) {
+                console.log(error);
+                    $('#nameError').text(response.responseJSON.errors.ukuran);
+                    $('#emailError').text(response.responseJSON.errors.qty);
+                    $('#mobileError').text(response.responseJSON.errors.payment_type);
+                    $('#messageError').text(response.responseJSON.errors.transaction_status);
+                }
+                });
+
             },
             onPending: function(result){
               /* You may add your own implementation here */

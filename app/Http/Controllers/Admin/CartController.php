@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Cart;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
@@ -42,5 +43,10 @@ class CartController extends Controller
         } catch (\Throwable $e) {
             throw $e;
         }
+    }
+
+    public function deleteCart($id){
+        Cart::where('id', $id)->delete();
+        return redirect()->back();
     }
 }

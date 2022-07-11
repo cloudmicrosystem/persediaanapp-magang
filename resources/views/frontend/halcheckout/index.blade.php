@@ -51,12 +51,11 @@
                 <div class="wrap_header trans-0-4">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="home">
-                            <img src="{{ asset('images/icons/logo2.png') }}" alt="IMG-LOGO"
-                                data-logofixed="{{ asset('images/icons/logoa.png') }}">
+                        <a href="/">
+                            <img  src="{{ asset('images/icons/logo2.png') }}" alt="IMG-LOGO" data-logofixed="{{ asset('images/icons/logoa.png') }}">
                         </a>
                     </div>
-
+    
                     <!-- Menu -->
                     <div class="wrap_menu p-l-45 p-l-0-xl">
                         <nav class="menu">
@@ -64,29 +63,30 @@
                                 <li>
                                     <a href="/">Home</a>
                                 </li>
-
+    
                                 <li>
                                     <a href="/product">Product</a>
                                 </li>
-
+    
                                 <li>
                                     <a href="/store">Store</a>
                                 </li>
-
+    
                                 <li>
                                     <a href="/artikel">Artikel</a>
                                 </li>
-
+    
                                 <li>
                                     <a href="/about">About</a>
                                 </li>
-
+    
                                 <li>
                                     <a href="/contact">Contact</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
+    
                     <!-- Social -->
                     <div class="social flex-w flex-l-m p-r-20">
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
@@ -104,14 +104,14 @@
             <div class="row">
                 <div class="col-md-5 my-3 p-t-100">
                     <p class="text-bold text-uppercase text-center text-white"
-                        style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Form Checkout </p>
+                        style="font-size: 20px ; font-family: 'Trebuchet MS'; "> Form Pengiriman </p>
                     <form id="quickForm" action="{{ url('save-checkout') }}" method="POST">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label style="color: white" for="exampleInputEmail1"><strong>Provinsi <abbr style="color: red">*</abbr></strong>
+                                <label style="color: white" for="exampleInputEmail1"><strong>Ongkos Kirim<abbr style="color: red">*</abbr></strong>
                                     <br>
-                                    <small>(Pilih provinsi tujuan & akan muncul ongkir sesuai tujuan)</small>
+                                    <small>(Ongkos kirim berdasarkan provinsi, serta mendapatkan diskon & Menggunakan ekspedisi JNE)</small>
                                 </label><br>
                                 <select class="span2 pull-left" name="provinsi" >
                                     <option value="">Pilih Opsi</option>
@@ -138,11 +138,13 @@
                             </div>
                             <div class="form-group">
                                 <label style="color: white" for="inputMessage"><strong>Keterangan </strong> <br>
-                                    <small>(Isikan sesuai dengan informasi tambahan jika ada)</small>
+                                    <small>(Isikan jika ada informasi tambahan)</small>
                                 </label>
                                 <textarea style="background-color: black; color:white" id="inputMessage" name="keterangan"
                                 class="form-control border border-white" rows="4"
-                                    placeholder="Keterangan" ></textarea>
+                                    placeholder="Keterangan" ></textarea><br>
+                                    <small style="color: white"><abbr style="color: red">*</abbr><strong> NB: <br> Sebelum checkout dimohon untuk memeriksa kembali data pengiriman dan transaksi
+                                        karena apabila sudah checkout tidak bisa dibatalkan atau data akan hilang</strong></small>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-success">

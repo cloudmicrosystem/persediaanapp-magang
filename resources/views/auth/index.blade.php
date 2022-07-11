@@ -39,7 +39,7 @@
                         LOGIN
                     </span>
                     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <label for="email" > Email </label>
+                        <label for="email" > Email  <abbr style="color: red">*</abbr></label>
                         <input class="input100" type="email" name="email" placeholder="Email" required>
 
                         @error('email')
@@ -52,9 +52,6 @@
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
 
                         <label for="password">Password <abbr style="color: red">*</abbr></label>
-
-                        <label for="password">Password <abbr style="color: red">*</abbr></label>
-                        <input class="input100" type="password" name="password" placeholder="Password"  @error('password') is-invalid @enderror">
                         <input class="input100" type="password" name="password" placeholder="Password" required>
 
                         @error('password')

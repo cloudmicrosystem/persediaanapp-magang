@@ -17,6 +17,7 @@ class CreateOrderDetailsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('order_id');
             $table->unsignedBigInteger('barang_id');
+            $table->string('ukuran');
             $table->integer('qty');
             $table->integer('total');
             $table->timestamps();
