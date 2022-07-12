@@ -125,6 +125,7 @@
                             </div>
                         </div>
                     </form>
+                    <small style="color: white"><abbr style="color: red">*</abbr><strong> NB: <br> Langkah selanjutnya klik checkout untuk proses pembayaran</strong></small><br>
                     <button class="btn btn-primary" id="pay-button">
                         <a id="pay-button" style="color: white">Checkout</a>
                     </button>
