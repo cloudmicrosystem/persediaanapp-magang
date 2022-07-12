@@ -64,8 +64,7 @@
                         <div class="product-short-desc">
                             <p class="text-white">Morfeen adalah sebuah bisnis industri kreatif berbasis clothing &
                                 distribution store
-                                yang didirikan pada tahun 2013, diawali dari sebuah pertemanan dekat Fandi Akh & Yovie
-                                kala itu,
+                                yang didirikan pada tahun 2013, dirikan oleh Fandi Akhmad Akbar
                                 beranjak dari sebuah keisengan dan kesenangan atau bisa kita sebut hobi bermain musik.
                                 Sadar jika
                                 bermain musik tidak menghasilkan komersil dan tujuan utama bermusik adalah bersenang-
@@ -75,7 +74,7 @@
                                 perkembangan band nya.
                             </p>
                             <br>
-                            <p class="text-white">Tidak lama kemudian, bersama Yovi, Morfeen mulai beranjak dari fase
+                            <p class="text-white">Tidak lama kemudian, Morfeen mulai beranjak dari fase
                                 pembentukan
                                 sesuai dengan rencana program kerja, maka pada tahun 2015 store pertama didirikan di Jl.
                                 Suwari
