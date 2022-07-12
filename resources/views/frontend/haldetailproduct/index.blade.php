@@ -38,7 +38,7 @@
     <link href="{{ asset('assetcus/css/owl.carousel.min.css') }}">
 
     <!-- css keranjang -->
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.0/css/bootstrap-combined.min.css" rel="stylesheet">
     {{-- <link href="{{ asset('assetcus/cs/style.css') }}" rel="stylesheet" type="text/css" /> --}}
 </head>
 
@@ -92,7 +92,7 @@
                     <div class="social flex-w flex-l-m p-r-20">
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
                         <a href="/cart"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
+                        {{-- <a href="#"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a> --}}
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
                 </div>
@@ -144,10 +144,10 @@
                                             <a><i class="fa fa-shopping-cart"></i></a>
                                             Tambah Ke Keranjang
                                         </button>
-                                        <button type="button" class="btn btn-close-white">
+                                        {{-- <button type="button" class="btn btn-close-white">
                                             <a href="#"><i class="fa fa-heart"></i></a>
                                             Tambah Disuka
-                                        </button>
+                                        </button> --}}
                                     </div>
                                 </div>
                             </form>

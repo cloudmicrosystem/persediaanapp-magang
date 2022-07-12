@@ -85,7 +85,7 @@
                     <div class="social flex-w flex-l-m p-r-20">
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
                         <a href="/cart"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-                        <a href="/#"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
+                        {{-- <a href="/#"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a> --}}
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
                 </div>
