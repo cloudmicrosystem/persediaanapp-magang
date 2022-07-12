@@ -92,7 +92,7 @@
                     <div class="social flex-w flex-l-m p-r-20">
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
                         <a href="/cart"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-                        <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                                             Tambah Ke Keranjang
                                         </button>
                                         <button type="button" class="btn btn-close-white">
-                                            <a href="/whislist"><i class="fa fa-heart"></i></a>
+                                            <a href="#"><i class="fa fa-heart"></i></a>
                                             Tambah Disuka
                                         </button>
                                     </div>
@@ -220,14 +220,6 @@
                                                                     {{ $items->nama_barang }}
                                                                 </h1>
                                                                 <p class=""><?= "Rp " . number_format($items->harga,0,',','.')?></p>
-                                                                <p style="color: orange" class="m-1 t-center">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                </p>
-                                                                <p class="t-center m-0">Terjual 10 </p>
                                                             </a>
                                                         </div>
                                                     </div>

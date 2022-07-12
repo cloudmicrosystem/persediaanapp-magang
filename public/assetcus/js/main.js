@@ -300,4 +300,6 @@
         alert(ukuran);
     });
 
+
+
 })(jQuery);

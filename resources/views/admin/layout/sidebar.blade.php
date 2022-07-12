@@ -48,6 +48,34 @@
                             </a>
                         </li>
 
+                        @if (Session::get('page') == 'penjualan')
+                            <?php $active = 'active'; ?>
+                        @else
+                            <?php $active = ''; ?>
+                        @endif
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link {{ $active }}">
+                                <i class="nav-icon fas fa-book-open"></i>
+                                <p>
+                                    Setting Penjualan
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview ">
+                                @if (Session::get('page') == 'penjualan')
+                                    <?php $active = 'active'; ?>
+                                @else
+                                    <?php $active = ''; ?>
+                                @endif
+                                <li class="nav-item">
+                                    <a href="/penjualan" class="nav-link {{ $active }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Penjualan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
                         @if (Session::get('page') == 'user' || Session::get('page') == 'admin')
                             <?php $active = 'active'; ?>
                         @else
@@ -165,45 +193,6 @@
                             </ul>
                         </li>
 
-                        @if (Session::get('page') == 'penjualan' || Session::get('page') == 'laporan')
-                            <?php $active = 'active'; ?>
-                        @else
-                            <?php $active = ''; ?>
-                        @endif
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link {{ $active }}">
-                                <i class="nav-icon fas fa-book-open"></i>
-                                <p>
-                                    Setting Penjualan
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview ">
-                                @if (Session::get('page') == 'penjualan')
-                                    <?php $active = 'active'; ?>
-                                @else
-                                    <?php $active = ''; ?>
-                                @endif
-                                <li class="nav-item">
-                                    <a href="/penjualan" class="nav-link {{ $active }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Penjualan</p>
-                                    </a>
-                                </li>
-                                @if (Session::get('page') == 'laporan')
-                                    <?php $active = 'active'; ?>
-                                @else
-                                    <?php $active = ''; ?>
-                                @endif
-                                <li class="nav-item">
-                                    <a href="/laporan" class="nav-link {{ $active }}">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Laporan Laba / Rugi</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
                         @if (Session::get('page') == 'faq' || Session::get('page') == 'refund' || Session::get('page') == 'banner' || Session::get('page') == 'ongkir')
                             <?php $active = 'active'; ?>
                         @else
@@ -264,10 +253,7 @@
                                     </a>
                                 </li>
                             </ul>
-
-
                         </li>
-
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

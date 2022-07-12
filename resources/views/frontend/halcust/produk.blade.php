@@ -30,14 +30,6 @@
                                         {{ $items->nama_barang }}
                                     </h1>
                                     <p class=""><?= "Rp " . number_format($items->harga,0,',','.')?></p>
-                                    <p style="color: orange" class="m-1 t-center">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </p>
-                                    <p class="t-center m-0">Terjual 10 </p>
                                 </a>
                             </div>
                         </div>

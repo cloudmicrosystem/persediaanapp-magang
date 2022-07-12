@@ -46,7 +46,7 @@ class CartController extends Controller
     }
 
     public function deleteCart($id){
-        Cart::where('id', $id)->delete();
-        return redirect()->back();
+        Cart::where('id',$id)->delete();
+        return redirect('/cart');
     }
 }

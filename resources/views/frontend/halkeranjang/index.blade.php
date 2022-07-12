@@ -150,7 +150,7 @@
                                                 Rp. <span id="total-{{ $item->id }}"><?= number_format($item->qty * $item->barang->harga,0,',','.')?></span>
                                             </td>
                                             <td>
-                                                <button href="{{ url('delete-cart/'.$item->id) }}" class="btn btn-sm btn-danger mb-2 delete-cart-item">
+                                                <button class="btn btn-sm btn-danger mb-2 " href="{{ url('delete-cart/' . $item->id) }}">
                                                     Hapus
                                                 </button>
                                             </td>
@@ -243,6 +243,11 @@
             updateCartQty(val, itemId);
         }
 
+        function deleteCart(itemId) {
+            let data = document.querySelector(itemId);
+            let val = parseInt(data.value);
+        }
+
         function updateCartQty(qty, id){
             $.ajax({
                 type: 'post',
@@ -262,6 +267,11 @@
                 }
             });
         }
+
+        $(document).on('click', 'btnCartDelete', function(){
+            var cartid = $(this).data('id');
+            alert(cartid); return false;
+        });
     </script>
 </body>
 

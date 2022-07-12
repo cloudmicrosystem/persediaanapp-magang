@@ -34,7 +34,7 @@ Route::group(
         Route::get('product/detail-product/{id}', [HalproductController::class, 'detailByProduct']);
         Route::post('/add-to-cart', [CartController::class, 'store']);
         Route::post('/update-to-cart', [CartController::class, 'updateCartQty']);
-        Route::post('delete-cart', [CartController::class, 'deleteCart']);
+        Route::post('delete-cart-item', [CartController::class, 'deleteCart']);
         Route::get('/cart', [CartController::class, 'cart']);
         Route::get('/delete-cart/{id}', [CartController::class, 'deleteCart']);
         Route::get('/checkout', [CheckoutController::class, 'showCo']);

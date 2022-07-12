@@ -54,23 +54,17 @@
                 <div class="tab-content">
                     <p class="text-white"><strong>CARA PEMESANAN</strong></p><br>
                     <dl>
-                        <dd class="text-white">1. Pilih barang yang akan dibeli pada halaman PRODUCT, lalu klik barang
-                            tersebut dan anda akan otomatis masuk ke halaman DETAIL PRODUCT.</dd>
-                        </dd>
-                        <dd class="text-white">2. Isi berapa jumlah order pada kolom QUANTITY produk kemudian
-                            KLIK ADD TO CART. Setelah CART terisi anda dapat melakukan perubahan <p class="pl-2 text-white"> order yang tidak
-                            diinginkan atau mengubah jumlah order pada halaman SHOPPING CART.</p></dd>
-                        <dd class="text-white">3. Isi informasi diri pada halaman ORDER DETAIL. Apabila ingin
-                            <p class="pl-2 text-white"> memberikan instruksi khusus pada pemesanan yang anda lakukan, anda dapat memberikan
-                            catatan pada kolom CATATAN yang telah kami sediakan pada bagian terbawah halaman ORDER
-                            DETAIL.</p></dd>
-                        <dd class="text-white">4. Setelah informasi lengkap, anda akan mendapatkan Email berupa
-                            INVOICE dan KODE KONFIRMASI PEMBAYARAN.</dd>
-                        <dd class="text-white">5. Segera lakukan pembayaran. Sertakan KODE KONFIRMASI PEMBAYARAN
-                            pada saat anda melakukan pembayaran baik melalui ATM atau <p class="pl-2 text-white"> INTERNET BANKING.</p></dd>
-                        <dd class="text-white">6. Setelah melakukan pembayaran segera lakukan konfirmasi dengan
-                            cara mencantumkan KODE KONFIRMASI PEMBAYARAN. Kami akan <p class="pl-2 text-white"> memvalidasi status pembayaran
-                            dan mengirimkan order sesuai pesanan.</p></dd>
+                        <dd class="text-white">1. Pilih barang yang akan dibeli pada halaman product, lalu klik barang tersebut dan anda akan otomatis masuk ke halaman detail product.</dd>
+                        <dd class="text-white">2. Pada halaman detail product diharapkan untuk mengisi qty dan ukuran yang dipiih</dd>
+                        <dd class="text-white">3. Setelah itu tambahkan barang tersebut ke keranjang untuk proses selanjutnya</dd>
+                        <dd class="text-white">4. Pada halaman keranjang customer dapat mengedit qty dan menghapus barang yang tidak jadi</dd>
+                        <dd class="text-white">5. Setelah itu akan diarahkan ke halaman form checkout</dd>
+                        <dd class="text-white">6. Pada halaman checkout diharapkan mengisikan data untuk pengiriman dan dapat mengecek kembali data yang telah dipilih</dd>
+                        <dd class="text-white">7. Setelah itu akan diarahkan ke halaman yang menampilkan total pembayaran dan ongkir</dd>
+                        <dd class="text-white">8. Klik checkout untuk menampilkan popup pembayaran</dd>
+                        <dd class="text-white">9. Customer dapat memilih metode pembayaran yang akan digunakan</dd>
+                        <dd class="text-white">10. Lalu customer akan mendapatkan sebuah peringatan jika pembayaran sukses/gagal atau belum melakukan pembayaran</dd>
+                        <dd class="text-white">11. Customer akan dihubungi oleh admin untuk mengkonfirmasi dan mengirimkan no resi</dd>
                     </dl>
                 </div>
             </div>

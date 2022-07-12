@@ -85,7 +85,7 @@
                     <div class="social flex-w flex-l-m p-r-20">
                         <a href="/home"><i class="fa fa-user m-l-21" aria-hidden="true"></i></a>
                         <a href="/cart"><i class="fa fa-shopping-cart m-l-21" aria-hidden="true"></i></a>
-                        <a href="/whislist"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-heart  m-l-21" aria-hidden="true"></i></a>
                         <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                     </div>
                 </div>
@@ -125,11 +125,11 @@
 								<h4 class="p-b-16 tit9">
                                     {{ $article['judul_artikel'] }}
 								</h4>
-								{{-- <div class="txt32 flex-w p-b-24">
+								<div class="txt32 flex-w p-b-24">
 									<span>
-                                        <strong>Tanggal & Waktu publikasi :</strong> {{ $article['crea']}}
+                                        Tanggal publikasi : {{ date('F d, Y ', strtotime($article['created_at']) )}} | {{ date('H:i', strtotime($article['created_at']) )}} WIB
 									</span>
-								</div> --}}
+								</div>
 								<p>
                                     {{ $article['deskripsi_artikel']}}
 								</p>

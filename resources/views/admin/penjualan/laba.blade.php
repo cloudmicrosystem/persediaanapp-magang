@@ -27,6 +27,7 @@
                                     <b>No Hp : </b> {{ $orders->user->no_hp }} <br>
                                     <b>Alamat : </b> {{ $orders->alamat }} <br><br>
                                     <b>Tanggal Transaksi :</b> {{ date('F d, Y ', strtotime($orders->updated_at) )}}<br>
+                                    <b>Jam Transaksi : </b>{{ date('H:i', strtotime($orders->updated_at) )}} WIB <br>
                                     <b>Tipe Pembayaran : </b> {{ $orders->payment_type }}
                                 </div>
                                 <!-- /.col -->
